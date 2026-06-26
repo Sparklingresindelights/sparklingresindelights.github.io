@@ -3,45 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resin Jewelry - Sparkling Resin Delights</title>
+    <title>Beaded Bracelets - Sparkling Resin Delights</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #faf6f0; color: #4a4a4a; }
-        nav { background-color: #2f3e46; padding: 15px; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        header { background-color: #d4a373; color: white; padding: 30px 20px; text-align: center; }
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .product-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; padding-bottom: 20px; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #faf6f0; 
+            color: #4a4a4a;
+        }
+        /* Top Navigation Bar */
+        nav {
+            background-color: #2f3e46;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        header {
+            background-color: #d4a373; 
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-family: 'Georgia', serif;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        /* Grid setup for 4 items */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 30px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .product-card h3 {
+            margin: 15px 0 5px 0;
+            color: #2f3e46;
+        }
+        .product-card .price {
+            font-weight: bold;
+            color: #d4a373;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .product-card p {
+            font-size: 0.9rem;
+            color: #777;
+            padding: 0 15px;
+            margin-bottom: 15px;
+            min-height: 40px;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Menu so users can click between pages -->
+    <!-- Consistent Top Navigation -->
     <nav>
         <a href="index.html">Home</a>
-        <a href="resin-jewelry.html" style="text-decoration: underline;">Resin Jewelry</a>
+        <a href="resin-jewelry.html">Resin Jewelry</a>
         <a href="beaded-pens.html">Beaded Pens</a>
-        <a href="keychains.html">Keychains</a>
+        <a href="beaded-keychains.html">Keychains</a>
+        <a href="beaded-bracelets.html">Beaded Bracelets</a>
     </nav>
 
     <header>
         <h1>Handmade Beaded Bracelets</h1>
-        <p>Beautiful beaded designs crafted with love</p>
+        <p>Beautiful beaded bracelet for yourself or as a gift</p>
     </header>
 
     <div class="container">
         <div class="product-grid">
-            <!-- Item 1 -->
+
+            <!-- Pen Item 1 -->
             <div class="product-card">
-                <img src="resin%20-%20necklace.jpg" alt="Necklace" style="width:100%; height:250px; object-fit:cover;">
-                <h3>Floral Resin Necklace</h3>
-                <p>£15.00 - Real dried forget-me-nots inside a silver bezel.</p>
-                <!-- Paste Stripe Button for this specific item here -->
+                <!-- Replace 'beaded - pen.jpg' with your actual image file if needed -->
+                <img src="beaded%20-%20pen.jpg" alt="Pastel Beaded Pen">
+                <h3>Pastel Dreams Pen</h3>
+                <div class="price">£6.50</div>
+                <p>Soft silicone focal beads featuring beautiful pastel marble patterns.</p>
+                <!-- PASTE YOUR STRIPE BUY BUTTON FOR ITEM 1 DIRECTLY BELOW THIS LINE -->
+                
             </div>
-            <!-- Add more item blocks like the one above to grow your list! -->
+
+            <!-- Pen Item 2 -->
+            <div class="product-card">
+                <img src="beaded%20-%20pen.jpg" alt="Glitter Beaded Pen">
+                <h3>Sparkle & Shine Pen</h3>
+                <div class="price">£6.50</div>
+                <p>Bold glitter spacer beads paired with crystal rhinestone accents.</p>
+                <!-- PASTE YOUR STRIPE BUY BUTTON FOR ITEM 2 DIRECTLY BELOW THIS LINE -->
+                
+            </div>
+
+            <!-- Pen Item 3 -->
+            <div class="product-card">
+                <img src="beaded%20-%20pen.jpg" alt="Animal Print Pen">
+                <h3>Wild Side Pen</h3>
+                <div class="price">£7.00</div>
+                <p>Trendy leopard print and cowhide pattern silicone beads.</p>
+                <!-- PASTE YOUR STRIPE BUY BUTTON FOR ITEM 3 DIRECTLY BELOW THIS LINE -->
+                
+            </div>
+
+            <!-- Pen Item 4 -->
+            <div class="product-card">
+                <img src="beaded%20-%20pen.jpg" alt="Seasonal Pen">
+                <h3>Holiday Vibes Pen</h3>
+                <div class="price">£7.00</div>
+                <p>Limited edition festive charm beads to bring joy to your stationery.</p>
+                <!-- PASTE YOUR STRIPE BUY BUTTON FOR ITEM 4 DIRECTLY BELOW THIS LINE -->
+                
+            </div>
+
         </div>
     </div>
 
+    <!-- Required Stripe Payment Script Integration -->
     <script async src="https://stripe.com"></script>
 </body>
 </html>
