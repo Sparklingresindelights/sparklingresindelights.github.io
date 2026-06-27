@@ -5,23 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resin Jewelry - Sparkling Resin Delights</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #faf6f0; color: #4a4a4a; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f4; color: #2f3e46; }
         nav { background-color: #2f3e46; padding: 15px; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        nav a { color: #ffffff; margin: 0 15px; text-decoration: none; font-weight: 600; }
         nav a:hover { text-decoration: underline; }
-        header { background-color: #d4a373; color: white; padding: 40px 20px; text-align: center; }
+        header { background-color: #a3b19b; color: #ffffff; padding: 40px 20px; text-align: center; }
         header h1 { margin: 0; font-size: 2.5rem; font-family: 'Georgia', serif; }
         .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
         .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 30px; }
-        .product-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; padding-bottom: 20px; }
-        .product-card img { width: 100%; height: 250px; object-fit: cover; }
+        .product-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; text-align: center; padding-bottom: 20px; }
+        .product-card img { width: 100%; height: 250px; object-fit: cover; background-color: #f1f5f9; }
         .product-card h3 { margin: 15px 0 5px 0; color: #2f3e46; }
-        .product-card .price { font-weight: bold; color: #d4a373; font-size: 1.2rem; margin-bottom: 10px; }
-        .product-card p { font-size: 0.9rem; color: #777; padding: 0 15px; margin-bottom: 15px; min-height: 40px; }
+        .product-card .price { font-weight: bold; color: #78866b; font-size: 1.2rem; margin-bottom: 10px; }
+        .product-card p { font-size: 0.9rem; color: #64748b; padding: 0 15px; margin-bottom: 15px; min-height: 40px; }
     </style>
 </head>
 <body>
-
     <nav>
         <a href="index.html">Home</a>
         <a href="resin-jewelry.html">Resin Jewelry</a>
@@ -29,54 +28,28 @@
         <a href="beaded-keychains.html">Keychains</a>
         <a href="beaded-bracelets.html">Beaded Bracelets</a>
     </nav>
-
     <header>
         <h1>Handmade Resin Jewelry</h1>
         <p>Crystal-clear flower and glitter preservation pieces</p>
     </header>
-
     <div class="container">
         <div class="product-grid">
-
-            <!-- Jewelry Item 1 -->
             <div class="product-card">
                 <img src="resin%20-%20necklace.jpg" alt="Pressed Flower Necklace">
                 <h3>Pressed Flower Necklace</h3>
                 <div class="price">£14.99</div>
                 <p>Real botanical forget-me-nots cast carefully in clear resin shapes.</p>
-   <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1TmeenDuVnIeP5UhF6p9YqkB"
-  publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
->
-</stripe-buy-button>
-                
+                <!-- PASTE YOUR STRIPE JEWELRY BUTTON 1 DIRECTLY BELOW THIS LINE -->
             </div>
-
-            <!-- Jewelry Item 2 -->
             <div class="product-card">
                 <img src="resin%20-%20necklace.jpg" alt="Glitter Resin Earrings">
                 <h3>Sparkling Resin Earrings</h3>
                 <div class="price">£9.99</div>
                 <p>Fun, lightweight statement drop earrings filled with holographic glitter chunks.</p>
-                <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1TmeisDuVnIeP5UhovztyRZo"
-  publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
->
-</stripe-buy-button>
-                
+                <!-- PASTE YOUR STRIPE JEWELRY BUTTON 2 DIRECTLY BELOW THIS LINE -->
             </div>
-
         </div>
     </div>
-
     <script async src="https://stripe.com"></script>
 </body>
 </html>
