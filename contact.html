@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Custom Orders - Sparkling Resin Delights</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f4; color: #2f3e46; }
+        nav { background-color: #2f3e46; padding: 15px; text-align: center; }
+        nav a { color: #ffffff; margin: 0 15px; text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+        nav a:hover { text-decoration: underline; }
+        header { background-color: #a3b19b; color: #ffffff; padding: 40px 20px; text-align: center; }
+        header h1 { margin: 0; font-size: 2.5rem; font-family: 'Georgia', serif; }
+        .container { max-width: 600px; margin: 40px auto; padding: 30px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 0.95rem; }
+        input[type="text"], input[type="email"], select, textarea { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; font-family: inherit; font-size: 0.95rem; background-color: #f8fafc; }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: #78866b; background-color: #ffffff; }
+        textarea { resize: vertical; min-height: 120px; }
+        .submit-btn { display: block; width: 100%; background-color: #78866b; color: #ffffff; padding: 14px; border: none; border-radius: 25px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: background 0.2s; }
+        .submit-btn:hover { background-color: #616e55; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="resin-jewelry.html">Resin Jewelry</a>
+        <a href="beaded-pens.html">Beaded Pens</a>
+        <a href="beaded-keychains.html">Keychains</a>
+        <a href="beaded-bracelets.html">Beaded Bracelets</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <header>
+        <h1>Custom Orders & Enquiries</h1>
+        <p>Get in touch to personalize your names, colors, and designs</p>
+    </header>
+
+    <div class="container">
+        <!-- REPLACE THE URL IN ACTION BELOW ONCE YOU GET YOUR FORMSPREE ENDPOINT -->
+        <form action="https://formspree.io" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="_replyto" required placeholder="name@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="interest">What are you looking to order?</label>
+                <select id="interest" name="product_type">
+                    <option value="General Enquiry">General Enquiry / Question</option>
+                    <option value="Beaded Pen">Custom Beaded Pen</option>
+                    <option value="Beaded Bracelet">Custom Beaded Bracelet</option>
+                    <option value="Handmade Keychain">Custom Handmade Keychain</option>
+                    <option value="Resin Jewelry">Custom Resin Jewelry</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Custom Details & Request</label>
+                <textarea id="message" name="message" required placeholder="Please describe names, themes, colors, or specific patterns you would like..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Custom Request</button>
+        </form>
+    </div>
+
+</body>
+</html>
