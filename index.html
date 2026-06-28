@@ -9,10 +9,10 @@
             font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f6f4; /* Soft neutral background */
+            background-color: #f4f6f4; 
             color: #2f3e46;
         }
-        /* Tidy Navigation Menu */
+        /* Clean Top Navigation Menu */
         nav {
             background-color: #2f3e46;
             padding: 15px;
@@ -31,7 +31,7 @@
         }
         /* Fresh Header Design */
         header {
-            background-color: #a3b19b; /* Soft Sage Green */
+            background-color: #a3b19b; 
             color: #ffffff;
             padding: 60px 20px;
             text-align: center;
@@ -71,10 +71,10 @@
             line-height: 1.6;
             color: #4f5e66;
         }
-        /* Perfectly Level and Clean Grid Layout */
+        /* level Grid Layout */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 35px;
         }
         .product-card {
@@ -85,14 +85,6 @@
             text-align: center;
             padding-bottom: 25px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-            display: flex;
-            flex-direction: column; /* Forces everything to stack cleanly */
-            justify-content: space-between; /* Pushes the button neatly to the bottom */
-            height: 100%; /* Ensures all cards stay the exact same height */
-        }
-        .product-card-top {
-            display: flex;
-            flex-direction: column;
         }
         .product-card img {
             width: 100%;
@@ -110,94 +102,62 @@
             font-size: 0.95rem;
             color: #64748b;
             padding: 0 20px;
-            margin-bottom: 25px;
+            margin: 0;
             line-height: 1.5;
-        }
-        /* Elegant, Clean Browse Buttons */
-        .buy-btn {
-            display: inline-block;
-            background-color: #78866b; /* Muted Sage Accent */
-            color: #ffffff;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 25px; /* Rounded pill style */
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.2s ease;
-            width: fit-content;
-            margin: 0 auto; /* Centers button inside the card */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .buy-btn:hover {
-            background-color: #616e55;
-            transform: translateY(-1px);
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Navigation Menu -->
+    <!-- Top Navigation Menu (The primary links your customers will use) -->
     <nav>
         <a href="index.html">Home</a>
         <a href="resin-jewelry.html">Resin Jewelry</a>
         <a href="beaded-pens.html">Beaded Pens</a>
         <a href="beaded-keychains.html">Keychains</a>
         <a href="beaded-bracelets.html">Beaded Bracelets</a>
+        <a href="contact.html">Contact Us</a>
     </nav>
 
     <!-- Header Block -->
     <header>
         <h1>Sparkling Resin Delights</h1>
-        <p>Beautiful Resin Jewelry, Beaded Pens, & Beaded Keychains</p>
+        <p>Beautiful Resin Jewelry, Beaded Pens, & Custom Keychains</p>
     </header>
 
     <div class="container">
-        <!-- Kept your exact wording -->
         <div class="shop-intro">
-            <h2>Welcome to Sophie & Dee Boutique</h2>
+            <h2>Welcome to my Boutique</h2>
             <p>Every single item is designed, crafted, and packaged lovingly by hand. Click a category below to browse our specific collections!</p>
         </div>
 
         <div class="product-grid">
             <!-- Category 1: Resin Jewelry -->
             <div class="product-card">
-                <div class="product-card-top">
-                    <img src="resin%20-%20necklace.jpg" alt="Handmade Resin Jewelry">
-                    <h3>Resin Jewelry</h3>
-                    <p>Real dried flowers and sparkling glitter preserved in crystal-clear pendant necklaces and earrings.</p>
-                </div>
-                <a href="resin-jewelry.html" class="buy-btn">Browse Collection</a>
+                <img src="resin%20-%20necklace.jpg" alt="Handmade Resin Jewelry">
+                <h3>Resin Jewelry</h3>
+                <p>Real dried flowers and sparkling glitter preserved in crystal-clear pendant necklaces and earrings.</p>
             </div>
 
             <!-- Category 2: Beaded Pens -->
             <div class="product-card">
-                <div class="product-card-top">
-                    <img src="beaded%20-%20pen.jpg" alt="Colorful Beaded Pens">
-                    <h3>Beaded Pens</h3>
-                    <p>Fun, chunky, and colorful silicone beaded pens to brighten up your desk or office space.</p>
-                </div>
-                <a href="beaded-pens.html" class="buy-btn">Browse Collection</a>
+                <img src="beaded%20-%20pen.jpg" alt="Colorful Beaded Pens">
+                <h3>Beaded Pens</h3>
+                <p>Fun, chunky, and colorful silicone beaded pens to brighten up your desk or office space.</p>
             </div>
 
             <!-- Category 3: Custom Keychains -->
             <div class="product-card">
-                <div class="product-card-top">
-                    <img src="beaded%20-%20keychain.jpg" alt="Handmade Keychains">
-                    <h3>Handmade Keychains</h3>
-                    <p>Personalized letter keychains, tassels, and cute charms perfect for your keys or bag.</p>
-                </div>
-                <a href="beaded-keychains.html" class="buy-btn">Browse Collection</a>
+                <img src="beaded%20-%20keychain.jpg" alt="Handmade Keychains">
+                <h3>Handmade Keychains</h3>
+                <p>Personalized letter keychains, tassels, and cute charms perfect for your keys or bag.</p>
             </div>
             
             <!-- Category 4: Beaded Bracelets -->
             <div class="product-card">
-                <div class="product-card-top">
-                    <!-- Kept your pen file placeholder here until you upload a bracelet photo -->
-                    <img src="beaded%20-%20pen.jpg" alt="Handmade Beaded Bracelets">
-                    <h3>Beaded Bracelets</h3>
-                    <p>Beautiful custom name bracelets, charm sets, and stacked beads designed to match any style.</p>
-                </div>
-                <a href="beaded-bracelets.html" class="buy-btn">Browse Collection</a>
+                <img src="beaded%20-%20pen.jpg" alt="Handmade Beaded Bracelets">
+                <h3>Beaded Bracelets</h3>
+                <p>Beautiful custom name bracelets, charm sets, and stacked beads designed to match any style.</p>
             </div>
         </div>
     </div>
