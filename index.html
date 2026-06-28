@@ -12,7 +12,7 @@
             background-color: #f4f6f4; 
             color: #2f3e46;
         }
-        /* Clean Top Navigation Menu */
+        /* Top Navigation Menu */
         nav {
             background-color: #2f3e46;
             padding: 15px;
@@ -29,7 +29,7 @@
         nav a:hover {
             text-decoration: underline;
         }
-        /* Fresh Header Design */
+        /* Main Header with Top Star Rating Badge */
         header {
             background-color: #a3b19b; 
             color: #ffffff;
@@ -42,9 +42,15 @@
             font-family: 'Georgia', serif;
             letter-spacing: 1px;
         }
+        .top-stars {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin: 12px 0;
+            letter-spacing: 3px;
+        }
         header p {
             font-size: 1.2rem;
-            margin-top: 12px;
+            margin-top: 5px;
             font-style: italic;
             opacity: 0.9;
         }
@@ -71,11 +77,12 @@
             line-height: 1.6;
             color: #4f5e66;
         }
-        /* level Grid Layout */
+        /* Clean Category Grid (No broken image browse buttons) */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 35px;
+            margin-bottom: 60px;
         }
         .product-card {
             background: #ffffff;
@@ -105,11 +112,116 @@
             margin: 0;
             line-height: 1.5;
         }
+        /* Soft Sage Customer Feedback Section */
+        .review-section {
+            background-color: #e9ede9;
+            padding: 45px 20px;
+            border-radius: 12px;
+            margin-top: 60px;
+            text-align: center;
+        }
+        .review-section h2 {
+            font-family: 'Georgia', serif;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #2f3e46;
+        }
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .review-card {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            text-align: left;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+        .card-stars {
+            color: #d4a373; /* Golden Star Color */
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        .review-text {
+            font-style: italic;
+            margin-bottom: 12px;
+            line-height: 1.5;
+            font-size: 0.95rem;
+            color: #334155;
+        }
+        .review-author {
+            font-weight: bold;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+        /* Feedback Entry Form */
+        .feedback-form-container {
+            max-width: 500px;
+            margin: 50px auto 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            text-align: left;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .feedback-form-container label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            color: #2f3e46;
+        }
+        .feedback-form-container input[type="text"], 
+        .feedback-form-container select, 
+        .feedback-form-container textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-family: inherit;
+            font-size: 0.95rem;
+            background-color: #f8fafc;
+        }
+        .feedback-form-container textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+        .feedback-form-container input:focus,
+        .feedback-form-container select:focus,
+        .feedback-form-container textarea:focus {
+            outline: none;
+            border-color: #78866b;
+            background-color: #ffffff;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background-color: #78866b;
+            color: #ffffff;
+            padding: 14px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .submit-btn:hover {
+            background-color: #616e55;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Top Navigation Menu (The primary links your customers will use) -->
+    <!-- Consistent Navigation Links -->
     <nav>
         <a href="index.html">Home</a>
         <a href="resin-jewelry.html">Resin Jewelry</a>
@@ -119,48 +231,69 @@
         <a href="contact.html">Contact Us</a>
     </nav>
 
-    <!-- Header Block -->
+    <!-- Main Header Banner with Stars Built-In -->
     <header>
         <h1>Sparkling Resin Delights</h1>
+        <div class="top-stars">★★★★★</div>
         <p>Beautiful Resin Jewelry, Beaded Pens, & Handmade Keychains</p>
     </header>
 
     <div class="container">
+        <!-- Your Wording -->
         <div class="shop-intro">
             <h2>Welcome to Sophie & Dee's Boutique</h2>
             <p>Every single item is designed, crafted, and packaged lovingly by hand. Click a category to browse our specific collections!</p>
         </div>
 
+        <!-- Clean Product Grid without Double Buttons -->
         <div class="product-grid">
-            <!-- Category 1: Resin Jewelry -->
             <div class="product-card">
                 <img src="resin%20-%20necklace.jpg" alt="Handmade Resin Jewelry">
                 <h3>Resin Jewelry</h3>
                 <p>Real dried flowers and sparkling glitter preserved in crystal-clear pendant necklaces and earrings.</p>
             </div>
 
-            <!-- Category 2: Beaded Pens -->
             <div class="product-card">
                 <img src="beaded%20-%20pen.jpg" alt="Colorful Beaded Pens">
                 <h3>Beaded Pens</h3>
                 <p>Fun, chunky, and colorful silicone beaded pens to brighten up your desk or office space.</p>
             </div>
 
-            <!-- Category 3: Custom Keychains -->
             <div class="product-card">
                 <img src="beaded%20-%20keychain.jpg" alt="Handmade Keychains">
                 <h3>Handmade Keychains</h3>
                 <p>Personalized letter keychains, tassels, and cute charms perfect for your keys or bag.</p>
             </div>
             
-            <!-- Category 4: Beaded Bracelets -->
             <div class="product-card">
-                <img src="beaded%20-%20bracelet.jpg" alt="Handmade Beaded Bracelets">
+                <img src="beaded%20-%20bracelets.jpg" alt="Handmade Beaded Bracelets">
                 <h3>Beaded Bracelets</h3>
                 <p>Beautiful custom name bracelets, charm sets, and stacked beads designed to match any style.</p>
             </div>
         </div>
-    </div>
 
-</body>
-</html>
+        <!-- The Live 5-Star Review Wall Area -->
+        <div class="review-section">
+            <h2>What Our Customers Say</h2>
+            <p style="color: #4f5e66; font-style: italic; margin-bottom: 20px;">Proudly providing 5-star artisan quality across the UK</p>
+            
+            <div class="review-grid">
+                <!-- Example Review 1 -->
+                <div class="review-card">
+                    <div class="card-stars">★★★★★</div>
+                    <p class="review-text">"Absolutely gorgeous resin pendant! The dried flowers inside look incredibly delicate. Fast shipping to London too."</p>
+                    <p class="review-author">— Sarah M.</p>
+                </div>
+                
+                <!-- Example Review 2 -->
+                <div class="review-card">
+                    <div class="card-stars">★★★★★</div>
+                    <p class="review-text">"Bought three beaded pens for my office desk and I am obsessed. They write beautifully and the chunky silicone beads feel so lovely."</p>
+                    <p class="review-author">— Emma R.</p>
+                </div>
+            </div>
+
+            <!-- Customer Review Submission Form -->
+            <div class="feedback-form-container">
+                <h3 style="text-align:center; margin-top:0; font-family:'Georgia', serif; color: #2f3e46;">Leave Us Feedback</h3>
+                
