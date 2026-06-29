@@ -38,11 +38,13 @@
     </header>
 
     <div class="container">
-        <!-- REPLACE THE URL IN ACTION BELOW ONCE YOU GET YOUR FORMSPREE ENDPOINT -->
-        <form action="https://formspree.io" method="POST">
-            <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+        ``html
+<form action="https://formspree.io/f/xvzjqwbz" method="POST">
+  <input type="email" name="email" required />
+  <textarea name="message" required></textarea>
+  <button type="submit">Send</button>
+</form>
+```
             </div>
 
             <div class="form-group">
