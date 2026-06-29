@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cups & Glasses | Sparkling Res Delights</title>
+    <style>
+        /* Base styles matching a clean, modern shop look */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        h1 {
+            margin: 0 0 10px 0;
+            color: #b5179e; /* Elegant pink/purple accent */
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            background-color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        nav a {
+            margin: 0 12px;
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #b5179e;
+        }
+
+        nav a.active {
+            color: #b5179e;
+            border-bottom: 2px solid #b5179e;
+            padding-bottom: 4px;
+        }
+
+        /* Container & Grid Grid */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .intro-text {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* Individual Product Cards */
+        .product-card {
+            background: #fff;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 6px;
+            background-color: #f0f0f0; /* Fallback background color */
+        }
+
+        .product-title {
+            font-size: 18px;
+            margin: 15px 0 8px 0;
+            color: #222;
+        }
+
+        .product-desc {
+            font-size: 14px;
+            color: #777;
+            margin: 0 0 15px 0;
+            min-height: 40px;
+        }
+
+        .product-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #b5179e;
+            margin-bottom: 15px;
+        }
+
+        .btn-inquire {
+            display: inline-block;
+            background-color: #b5179e;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background 0.2s;
+            width: 80%;
+        }
+
+        .btn-inquire:hover {
+            background-color: #7209b7;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Sparkling Res Delights</h1>
+    </header>
+
+    <!-- The updated nav bar with this page active -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="resin-jewelry.html">Resin Jewelry</a>
+        <a href="beaded-pens.html">Beaded Pens</a>
+        <a href="beaded-keychains.html">Keychains</a>
+        <a href="beaded-bracelets.html">Beaded Bracelets</a>
+        <a href="cups-and-glasses.html" class="active">Cups & Glasses</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <div class="container">
+        <div class="intro-text">
+            <h2>Handcrafted Resin Cups & Glasses</h2>
+            <p>Explore our beautiful selection of custom, glass-like resin custom tumblers, wine glasses, and mugs. Perfect for special gifts or personal luxuries.</p>
+        </div>
+
+        <!-- Product Gallery Grid -->
+        <div class="product-grid">
+
+            <!-- Item 1 -->
+            <div class="product-card">
+                <!-- Swap 'item1.jpg' with your real uploaded image filename -->
+                <img src="item1.jpg" alt="Custom Glitter Tumbler" class="product-image">
+                <h3 class="product-title">Glitter Resin Tumbler</h3>
+                <p class="product-desc">Double-walled insulated tumbler coated in smooth, glass-like premium resin.</p>
+                <div class="product-price">£20.00</div>
+                <a href="contact.html" class="btn-inquire">Inquire to Buy</a>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="product-card">
+                <img src="item2.jpg" alt="Floral Resin Wine Glass" class="product-image">
+                <h3 class="product-title">Floral Resin Wine Glass</h3>
+                <p class="product-desc">Elegant stemmed glassware featuring beautiful embedded real dried flowers and sparkles.</p>
+                <div class="product-price">£15.00</div>
+                <a href="contact.html" class="btn-inquire">Inquire to Buy</a>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="product-card">
+                <img src="item3.jpg" alt="Customized Cold Cup" class="product-image">
+                <h3 class="product-title">Customized Cold Cup</h3>
+                <p class="product-desc">Personalized cold cup with matching resin rhinestones and heavy glitter accents.</p>
+                <div class="product-price">£18.00</div>
+                <a href="contact.html" class="btn-inquire">Inquire to Buy</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
