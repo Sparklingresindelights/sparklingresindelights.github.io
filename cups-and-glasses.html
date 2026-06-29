@@ -3,192 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cups & Glasses | Sparkling Res Delights</title>
+    <title>Cups & Glasses | Sparkling Resin Delights</title>
     <style>
-        /* Base styles matching a clean, modern shop look */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fafafa;
-            color: #333;
+            background-color: #f4f6f4; 
+            color: #2f3e46;
         }
-
-        header {
-            background-color: #fff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #eee;
-        }
-
-        h1 {
-            margin: 0 0 10px 0;
-            color: #b5179e; /* Elegant pink/purple accent */
-        }
-
-        /* Navigation Bar Styles */
+        /* Top Navigation Menu */
         nav {
-            background-color: #fff;
+            background-color: #2f3e46;
+            padding: 15px;
             text-align: center;
-            padding: 15px 0;
-            border-bottom: 1px solid #eee;
         }
-
         nav a {
-            margin: 0 12px;
+            color: #ffffff;
+            margin: 0 15px;
             text-decoration: none;
-            color: #555;
-            font-weight: bold;
-            font-size: 15px;
-            transition: color 0.2s;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
         }
-
         nav a:hover {
-            color: #b5179e;
+            text-decoration: underline;
         }
-
-        nav a.active {
-            color: #b5179e;
-            border-bottom: 2px solid #b5179e;
-            padding-bottom: 4px;
+        /* Active indicator matching your theme */
+        nav a.active-page {
+            text-decoration: underline;
+            color: #e9ede9;
         }
-
-        /* Container & Grid Grid */
+        /* Main Header with Top Star Rating Badge */
+        header {
+            background-color: #a3b19b; 
+            color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-family: 'Georgia', serif;
+            letter-spacing: 1px;
+        }
+        .top-stars {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin: 12px 0;
+            letter-spacing: 3px;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 5px;
+            font-style: italic;
+            opacity: 0.9;
+        }
         .container {
-            max-width: 1200px;
-            margin: 40px auto;
+            max-width: 1100px;
+            margin: 50px auto;
             padding: 0 20px;
         }
-
-        .intro-text {
+        .shop-intro {
             text-align: center;
-            max-width: 600px;
-            margin: 0 auto 40px auto;
-            font-size: 16px;
-            color: #666;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
-
+        .shop-intro h2 {
+            font-family: 'Georgia', serif;
+            font-size: 1.8rem;
+            color: #2f3e46;
+            margin-bottom: 15px;
+        }
+        .shop-intro p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #4f5e66;
+        }
+        /* Clean Category Grid */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            gap: 35px;
+            margin-bottom: 60px;
         }
-
-        /* Individual Product Cards */
         .product-card {
-            background: #fff;
-            border: 1px solid #eaeaea;
-            border-radius: 8px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
             text-align: center;
-            padding: 20px;
-            transition: transform 0.2s, box-shadow 0.2s;
+            padding-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
         }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-
-        .product-image {
+        .product-card img {
             width: 100%;
-            height: 250px;
+            height: 280px;
             object-fit: cover;
-            border-radius: 6px;
-            background-color: #f0f0f0; /* Fallback background color */
+            background-color: #f1f5f9;
         }
-
-        .product-title {
-            font-size: 18px;
-            margin: 15px 0 8px 0;
-            color: #222;
+        .product-card h3 {
+            margin: 20px 0 8px 0;
+            color: #2f3e46;
+            font-size: 1.3rem;
+            font-family: 'Georgia', serif;
         }
-
-        .product-desc {
-            font-size: 14px;
-            color: #777;
+        .product-card p {
+            font-size: 0.95rem;
+            color: #64748b;
+            padding: 0 20px;
             margin: 0 0 15px 0;
-            min-height: 40px;
+            line-height: 1.5;
         }
-
         .product-price {
-            font-size: 20px;
-            font-weight: bold;
-            color: #b5179e;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #2f3e46;
             margin-bottom: 15px;
         }
-
-        .btn-inquire {
+        /* Beautiful theme-matching inquiry button */
+        .inquire-btn {
             display: inline-block;
-            background-color: #b5179e;
-            color: white;
+            background-color: #78866b;
+            color: #ffffff;
+            padding: 12px 25px;
             text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            font-weight: bold;
-            font-size: 14px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin: 0 auto;
+            width: 70%;
             transition: background 0.2s;
-            width: 80%;
         }
-
-        .btn-inquire:hover {
-            background-color: #7209b7;
+        .inquire-btn:hover {
+            background-color: #616e55;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Sparkling Res Delights</h1>
-    </header>
-
-    <!-- The updated nav bar with this page active -->
+    <!-- Consistent Navigation Links -->
     <nav>
         <a href="index.html">Home</a>
         <a href="resin-jewelry.html">Resin Jewelry</a>
         <a href="beaded-pens.html">Beaded Pens</a>
         <a href="beaded-keychains.html">Keychains</a>
         <a href="beaded-bracelets.html">Beaded Bracelets</a>
-        <a href="cups-and-glasses.html" class="active">Cups & Glasses</a>
+        <a href="cups-and-glasses.html" class="active-page">Cups & Glasses</a>
         <a href="contact.html">Contact Us</a>
     </nav>
 
+    <!-- Main Header Banner with Stars Built-In -->
+    <header>
+        <h1>Sparkling Resin Delights</h1>
+        <div class="top-stars">★★★★★</div>
+        <p>Custom Resin Tumblers, Wine Glasses, & Drinkware</p>
+    </header>
+
     <div class="container">
-        <div class="intro-text">
-            <h2>Handcrafted Resin Cups & Glasses</h2>
-            <p>Explore our beautiful selection of custom, glass-like resin custom tumblers, wine glasses, and mugs. Perfect for special gifts or personal luxuries.</p>
+        <!-- Introduction Wording -->
+        <div class="shop-intro">
+            <h2>Custom Resin Cups & Glasses Collection</h2>
+            <p>Add a beautiful shimmer to your everyday sips. Every piece features durable, food-safe premium resin layered with stunning glitters, custom vinyl names, or delicate florals.</p>
         </div>
 
-        <!-- Product Gallery Grid -->
+        <!-- Matching Product Showcase Grid -->
         <div class="product-grid">
-
-            <!-- Item 1 -->
+            
+            <!-- Product Item 1 -->
             <div class="product-card">
-                <!-- Swap 'item1.jpg' with your real uploaded image filename -->
-                <img src="item1.jpg" alt="Custom Glitter Tumbler" class="product-image">
-                <h3 class="product-title">Glitter Resin Tumbler</h3>
-                <p class="product-desc">Double-walled insulated tumbler coated in smooth, glass-like premium resin.</p>
-                <div class="product-price">£20.00</div>
-                <a href="contact.html" class="btn-inquire">Inquire to Buy</a>
+                <div>
+                    <!-- Replace tumbler.jpg with your uploaded image filename -->
+                    <img src="tumbler.jpg" alt="Glitter Resin Tumbler">
+                    <h3>Glitter Resin Tumbler</h3>
+                    <p>Double-walled insulated tumbler coated in custom chunky glitter and glass-smooth resin layers.</p>
+                </div>
+                <div>
+                    <div class="product-price">£20.00</div>
+                    <a href="contact.html" class="inquire-btn">Inquire to Order</a>
+                </div>
             </div>
 
-            <!-- Item 2 -->
+            <!-- Product Item 2 -->
             <div class="product-card">
-                <img src="item2.jpg" alt="Floral Resin Wine Glass" class="product-image">
-                <h3 class="product-title">Floral Resin Wine Glass</h3>
-                <p class="product-desc">Elegant stemmed glassware featuring beautiful embedded real dried flowers and sparkles.</p>
-                <div class="product-price">£15.00</div>
-                <a href="contact.html" class="btn-inquire">Inquire to Buy</a>
+                <div>
+                    <!-- Replace wine-glass.jpg with your uploaded image filename -->
+                    <img src="wine-glass.jpg" alt="Hand-Poured Resin Wine Glass">
+                    <h3>Resin Wine Glass</h3>
+                    <p>Elegant stemmed glassware featuring beautiful custom floral or metallic foil resin decorations.</p>
+                </div>
+                <div>
+                    <div class="product-price">£15.00</div>
+                    <a href="contact.html" class="inquire-btn">Inquire to Order</a>
+                </div>
             </div>
 
-            <!-- Item 3 -->
+            <!-- Product Item 3 -->
             <div class="product-card">
-                <img src="item3.jpg" alt="Customized Cold Cup" class="product-image">
-                <h3 class="product-title">Customized Cold Cup</h3>
-                <p class="product-desc">Personalized cold cup with matching resin rhinestones and heavy glitter accents.</p>
-                <div class="product-price">£18.00</div>
-                <a href="contact.html" class="btn-inquire">Inquire to Buy</a>
+                <div>
+                    <!-- Replace glass-cup.jpg with your uploaded image filename -->
+                    <img src="glass-cup.jpg" alt="Personalised Cold Cup">
+                    <h3>Personalised Cold Cup</h3>
+                    <p>A sparkling glass or acrylic cold cup tailored with your custom name vinyl and matching accents.</p>
+                </div>
+                <div>
+                    <div class="product-price">£18.00</div>
+                    <a href="contact.html" class="inquire-btn">Inquire to Order</a>
+                </div>
             </div>
 
         </div>
