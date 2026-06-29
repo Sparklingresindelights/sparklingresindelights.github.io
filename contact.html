@@ -38,37 +38,29 @@
     </header>
 
     <div class="container">
-<!-- Success Message (hidden by default, shows on success) -->
-<div data-fs-success style="display:none; color: green; font-weight: bold; margin-bottom: 15px;">
-  Thank you! Your message has been sent successfully.
-</div>
+<form action="https://formsubmit.co" method="POST" style="max-width: 500px; margin: 0 auto; font-family: sans-serif;">
+  
+  <!-- Anti-Spam HoneyPot (Hidden from users, catches automated bots) -->
+  <input type="text" name="_honey" style="display:none">
+  
+  <!-- Disables the FormSubmit landing page recaptcha for a cleaner experience -->
+  <input type="hidden" name="_captcha" value="false">
 
-<!-- General Error Message (hidden by default) -->
-<div data-fs-error style="display:none; color: red; font-weight: bold; margin-bottom: 15px;"></div>
-
-<!-- Contact Form -->
-<form id="github-contact-form">
   <div style="margin-bottom: 15px;">
-    <label for="email" style="display: block; margin-bottom: 5px;">Email Address:</label>
-    <input type="email" id="email" name="email" data-fs-field required style="width: 100%; padding: 8px;" />
-    <span data-fs-error="email" style="color: red; font-size: 14px;"></span>
+    <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Your Email Address:</label>
+    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" placeholder="name@example.com">
   </div>
 
   <div style="margin-bottom: 15px;">
-    <label for="message" style="display: block; margin-bottom: 5px;">Message:</label>
-    <textarea id="message" name="message" data-fs-field required style="width: 100%; padding: 8px; height: 100px;"></textarea>
-    <span data-fs-error="message" style="color: red; font-size: 14px;"></span>
+    <label for="message" style="display: block; margin-bottom: 5px; font-weight: bold;">Your Message:</label>
+    <textarea id="message" name="message" required style="width: 100%; padding: 10px; height: 120px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" placeholder="Type your message here..."></textarea>
   </div>
 
-  <button type="submit" data-fs-submit-btn style="padding: 10px 20px; cursor: pointer;">Send Message</button>
+  <button type="submit" style="background-color: #007bff; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: bold; width: 100%;">
+    Send Message
+  </button>
 </form>
 
-<!-- Formspree Scripts (Place right before your closing </body> tag) -->
-<script>
-  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-  formspree('initForm', { formElement: '#github-contact-form', formId: 'xvzjqwbz' });
-</script>
-<script src="https://unpkg.com" defer></script>
     </div>
 
 </body>
