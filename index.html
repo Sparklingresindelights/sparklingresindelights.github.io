@@ -11,7 +11,7 @@
     
     <style>
         :root {
-            --bg-color: #fcfbfa; /* Luxury creamy-white background */
+            --bg-color: #fcfbfa; 
             --primary-dark: #2f3e46;
             --sage-accent: #8fa187;
             --sage-hover: #72846b;
@@ -68,7 +68,7 @@
             letter-spacing: -0.5px;
         }
         .top-stars {
-            color: #d4a373; /* Sophisticated gold star color */
+            color: #d4a373; 
             font-size: 1.1rem;
             margin: 15px 0;
             letter-spacing: 6px;
@@ -119,13 +119,12 @@
             background: #ffffff;
             border-radius: 4px;
             overflow: hidden;
-            text-align: left; /* Editorial alignment */
+            text-align: left; 
             padding-bottom: 20px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-decoration: none; /* Make card clickable later */
+            text-decoration: none; 
             display: block;
         }
-        /* Asymmetric positioning to make it look designer-made */
         .product-card:nth-child(even) {
             transform: translateY(25px);
         }
@@ -287,7 +286,7 @@
             background-color: var(--sage-accent);
         }
 
-        /* Footer styling for premium completeness */
+        /* Footer styling */
         footer {
             text-align: center;
             padding: 60px 20px;
@@ -298,14 +297,13 @@
             margin-top: 100px;
         }
 
-        /* Smooth Tablet & Mobile Optimization */
         @media (max-width: 992px) {
             .product-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 40px 25px;
             }
             .product-card:nth-child(even) {
-                transform: none; /* Reset staggering for alignment on grid screens */
+                transform: none; 
             }
             header h1 {
                 font-size: 2.6rem;
@@ -323,3 +321,15 @@
             nav a {
                 display: inline-block;
                 margin: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="resin-jewelry.html">Resin Jewelry</a>
+        <a href="beaded-pens.html">Beaded Pens</a>
+        <a href="beaded-keychains.html">Keychains</a>
+        <a href="beaded-bracelets.html">Bracelets</a>
