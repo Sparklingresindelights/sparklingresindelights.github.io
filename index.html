@@ -6,36 +6,163 @@
     <title>Sparkling Resin Delights</title>
     <style>
         body {
-            font-family: sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 40px;
-            text-align: center;
-            background-color: #f4f6f4;
+            padding: 0;
+            background-color: #fcfbfa; /* Luxury creamy-white background */
             color: #2f3e46;
+        }
+        /* Minimalist Navigation */
+        nav {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #eae6e1;
         }
         nav a {
-            margin: 0 10px;
+            color: #2f3e46;
+            margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
-            color: #2f3e46;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        h1 {
-            color: #78866b;
-            margin-top: 40px;
+        /* Elegant Banner */
+        header {
+            background-color: #f3f5f2; /* Soft light sage tint */
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 1px solid #eae6e1;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            letter-spacing: 1px;
+        }
+        .stars {
+            color: #d4a373; /* Elegant gold stars */
+            font-size: 1.2rem;
+            margin: 10px 0;
+            letter-spacing: 4px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .intro {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+            line-height: 1.6;
+        }
+        /* Chic 4-Column Professional Photo Grid */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        .photo-card {
+            background: #ffffff;
+            border: 1px solid #eae6e1;
+            border-radius: 4px;
+            overflow: hidden;
+            text-align: left;
+            padding-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.01);
+            text-decoration: none;
+            color: inherit;
+        }
+        .img-box {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            background-color: #f1f5f9;
+        }
+        .photo-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .photo-card h3 {
+            margin: 15px 15px 5px 15px;
+            font-size: 1.15rem;
+        }
+        .photo-card p {
+            margin: 0 15px 10px 15px;
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.5;
+        }
+        /* Responsive sizing for tablets and mobile phones */
+        @media (max-width: 992px) {
+            .photo-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 576px) {
+            .photo-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="index.html">Home</a> | 
-        <a href="resin-jewelry.html">Resin Jewelry</a> | 
+        <a href="index.html">Home</a>
+        <a href="resin-jewelry.html">Resin Jewelry</a>
         <a href="beaded-pens.html">Beaded Pens</a>
+        <a href="beaded-keychains.html">Keychains</a>
+        <a href="beaded-bracelets.html">Bracelets</a>
+        <a href="cups-and-glasses.html">Cups & Glasses</a>
+        <a href="contact.html">Contact Us</a>
     </nav>
 
-    <h1>Sparkling Resin Delights</h1>
-    <p>★★★★★</p>
-    <p>Our brand new boutique layout is currently loading. If you can see this text, our connection is working perfectly!</p>
+    <header>
+        <h1>Sparkling Resin Delights</h1>
+        <div class="stars">★★★★★</div>
+        <p>Beautiful Handcrafted Creations made by Sophie & Dee</p>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <h2>Welcome to Our Boutique</h2>
+            <p>Every piece is uniquely designed, crafted, and packaged lovingly by hand. Browse our collections below!</p>
+        </div>
+
+        <div class="photo-grid">
+            <a href="resin-jewelry.html" class="photo-card">
+                <div class="img-box">
+                    <img src="resin%20-%20necklace.jpg" alt="Resin Jewelry">
+                </div>
+                <h3>Resin Jewelry</h3>
+                <p>Real dried flowers and sparkling glitter preserved in crystal-clear pendant necklaces.</p>
+            </a>
+
+            <a href="beaded-pens.html" class="photo-card">
+                <div class="img-box">
+                    <img src="beaded%20-%20pen.jpg" alt="Beaded Pens">
+                </div>
+                <h3>Beaded Pens</h3>
+                <p>Fun, chunky, and colorful silicone beaded pens to brighten up your desk space.</p>
+            </a>
+
+            <a href="beaded-keychains.html" class="photo-card">
+                <div class="img-box">
+                    <img src="beaded%20-%20keychain.jpg" alt="Handmade Keychains">
+                </div>
+                <h3>Handmade Keychains</h3>
+                <p>Personalized letter keychains custom-crafted with elegant leaf accents.</p>
+            </a>
+
+            <a href="beaded-bracelets.html" class="photo-card">
+                <div class="img-box">
+                    <img src="beaded%20-%20bracelet.jpg" alt="Beaded Bracelets">
+                </div>
+                <h3>Beaded Bracelets</h3>
+                <p>Delicately arranged stacked wristwear using beautiful custom beads and charms.</p>
+            </a>
+        </div>
+    </div>
 
 </body>
 </html>
