@@ -4,125 +4,254 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beaded Pens - Sparkling Resin Delights</title>
+    <!-- Google Fonts for a High-End Look -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f4; color: #2f3e46; }
-        nav { background-color: #2f3e46; padding: 15px; text-align: center; }
-        nav a { color: #ffffff; margin: 0 15px; text-decoration: none; font-weight: 600; }
-        nav a:hover { text-decoration: underline; }
-        header { background-color: #a3b19b; color: #ffffff; padding: 40px 20px; text-align: center; }
-        header h1 { margin: 0; font-size: 2.5rem; font-family: 'Georgia', serif; }
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 30px; }
-        .product-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; text-align: center; padding-bottom: 20px; }
-        .product-card img { width: 100%; height: 250px; object-fit: cover; background-color: #f1f5f9; }
-        .product-card h3 { margin: 15px 0 5px 0; color: #2f3e46; }
-        .product-card .price { font-weight: bold; color: #78866b; font-size: 1.2rem; margin-bottom: 10px; }
-        .product-card p { font-size: 0.9rem; color: #64748b; padding: 0 15px; margin-bottom: 15px; min-height: 40px; }
+        :root {
+            --bg-color: #fcfbfa; 
+            --primary-dark: #2f3e46;
+            --sage-accent: #8fa187;
+            --text-main: #334155;
+            --text-muted: #64748b;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color); 
+            color: var(--text-main);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Minimalist Top Navigation Menu */
+        nav {
+            background-color: #ffffff;
+            padding: 20px 15px;
+            text-align: center;
+            border-bottom: 1px solid #eae6e1;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: var(--primary-dark);
+            margin: 0 18px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: var(--sage-accent);
+        }
+
+        /* Elegant Editorial Header */
+        header {
+            background-color: #f3f5f2; 
+            color: var(--primary-dark);
+            padding: 70px 20px;
+            text-align: center;
+            border-bottom: 1px solid #eae6e1;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+        }
+        header p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            margin: 10px 0 0 0;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 30px;
+        }
+
+        /* High-End Boutique Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        .product-card {
+            background: #ffffff;
+            border: 1px solid #eae6e1;
+            border-radius: 4px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Hover Reveal Interactive Image Box */
+        .img-gallery-box {
+            position: relative;
+            width: 100%;
+            height: 380px;
+            overflow: hidden;
+            background-color: #f8fafc;
+            cursor: pointer;
+        }
+        .img-gallery-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        /* Second image state (hidden initially) */
+        .img-gallery-box img.alt-view {
+            opacity: 0;
+        }
+        /* Fade swap logic on hover */
+        .product-card:hover .img-gallery-box img.main-view {
+            opacity: 0;
+            transform: scale(1.02);
+        }
+        .product-card:hover .img-gallery-box img.alt-view {
+            opacity: 1;
+            transform: scale(1.02);
+        }
+
+        .product-info {
+            padding: 20px 20px 0 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-card h3 {
+            margin: 0 0 10px 0;
+            color: var(--primary-dark);
+            font-size: 1.3rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+        }
+        .product-card .price {
+            font-weight: 500;
+            color: var(--primary-dark);
+            font-size: 1.15rem;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+        .product-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0 0 25px 0;
+            line-height: 1.6;
+            font-weight: 300;
+            min-height: 80px;
+        }
+
+        /* Polished Stripe Button Container */
+        .stripe-container {
+            margin-top: auto;
+            padding: 0 10px;
+        }
+
+        /* Responsive Optimization */
+        @media (max-width: 992px) {
+            .product-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+            .img-gallery-box { height: 320px; }
+        }
+        @media (max-width: 600px) {
+            .product-grid { grid-template-columns: 1fr; }
+            .container { padding: 0 20px; }
+        }
     </style>
 </head>
 <body>
+
     <nav>
-    <a href="index.html">Home</a>
-    <a href="resin-jewelry.html">Resin Jewelry</a>
-    <a href="beaded-pens.html">Beaded Pens</a>
-    <a href="beaded-keychains.html">Keychains</a>
-    <a href="beaded-bracelets.html">Beaded Bracelets</a>
-    <a href="cups-and-glasses.html">Cups & Glasses</a>
-    <a href="contact.html">Contact Us</a>
-</nav>
+        <a href="index.html">Home</a>
+        <a href="resin-jewelry.html">Resin Jewelry</a>
+        <a href="beaded-pens.html">Beaded Pens</a>
+        <a href="beaded-keychains.html">Keychains</a>
+        <a href="beaded-bracelets.html">Bracelets</a>
+        <a href="cups-and-glasses.html">Cups & Glasses</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
     <header>
         <h1>Handmade Beaded Pens</h1>
         <p>Chunky, vibrant, and fun statement pens for your desk</p>
     </header>
+
     <div class="container">
         <div class="product-grid">
+            
+            <!-- Item 1: Pink Kisses -->
             <div class="product-card">
-                <img src="pink%20-%20kisses.jpg" alt="Soft Pink Beaded Pen">
-                <h3>Pink Kisses Pen</h3>
-                <div class="price">£6.50</div>
-                <p>All things cute and pink! Features a soft pink silicone bead with a white kiss print, sparkly pink crystal spacers, a faceted pink heart, and a pretty red patterned crystal bead. So fun and girly!.</p>
-               <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1TnD4VDuVnIeP5UhdRFlBdK6"
-  publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
->
-</stripe-buy-button>
-            </div>
-            <div class="product-card">
-                <img src="beaded%20-%20pen.jpg" alt="Pretty Pink Beaded Pen">
-                <h3>Pretty Pink Bow Pen</h3>
-                <div class="price">£6.50</div>
-                <p>Sweet and whimsical! Comes with a soft pink silicone bead, clear pink heart, cute pink star charm, and a clear crystal bead with a darling bow detail – a total delight!</p>
-                <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1TnWpWDuVnIeP5UhQNiPRgzk"
-  publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
->
-</stripe-buy-button>
+                <div class="img-gallery-box">
+                    <img class="main-view" src="pink%20-%20kisses.jpg" alt="Pink Kisses Pen">
+                    <!-- TIP: Replace 'pink%20-%20kisses.jpg' here with a close-up angle photo file if you upload one! -->
+                    <img class="alt-view" src="pink%20-%20kisses.jpg" alt="Pink Kisses Pen Close-Up">
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Pink Kisses Pen</h3>
+                        <div class="price">£6.50</div>
+                        <p>All things cute and pink! Features a soft pink silicone bead with a white kiss print, sparkly pink crystal spacers, a faceted pink heart, and a pretty red patterned crystal bead. So fun and girly!</p>
+                    </div>
+                    <div class="stripe-container">
+                        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+                        <stripe-buy-button
+                          buy-button-id="buy_btn_1TnD4VDuVnIeP5UhdRFlBdK6"
+                          publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
+                        ></stripe-buy-button>
+                    </div>
+                </div>
             </div>
 
-            <!-- Pen Item 2 -->
+            <!-- Item 2: Pretty Pink Bow -->
             <div class="product-card">
-                <img src="purple%20-%20magic.jpg" alt="Purple Beaded Pen">
-                <h3>Sparkling Purple Magic Pen</h3>
-                <div class="price">£6.50</div>
-                <p>For lovers of all things purple! Includes a soft matte purple silicone bead, iridescent shimmer crystal, faceted purple heart, and a glossy resin accent bead – it catches the light beautifully.</p>
-               <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1TnD6JDuVnIeP5UhPeR4zWIC"
-  publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
->
-</stripe-buy-button>
-                
+                <div class="img-gallery-box">
+                    <img class="main-view" src="beaded%20-%20pen.jpg" alt="Pretty Pink Bow Pen">
+                    <img class="alt-view" src="beaded%20-%20pen.jpg" alt="Pretty Pink Bow Pen Close-Up">
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Pretty Pink Bow Pen</h3>
+                        <div class="price">£6.50</div>
+                        <p>Sweet and whimsical! Comes with a soft pink silicone bead, clear pink heart, cute pink star charm, and a clear crystal bead with a darling bow detail – a total delight!</p>
+                    </div>
+                    <div class="stripe-container">
+                        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+                        <stripe-buy-button
+                          buy-button-id="buy_btn_1TnWpWDuVnIeP5UhQNiPRgzk"
+                          publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
+                        ></stripe-buy-button>
+                    </div>
+                </div>
             </div>
 
-            <!-- Pen Item 3 -->
+            <!-- Item 3: Sparkling Purple Magic -->
             <div class="product-card">
-                <img src="purple%20-%20white.jpg" alt="White Beaded Pen">
-                <h3>Dreamy White & Purple Pen</h3>
-                <div class="price">£7.00</div>
-                <p>For lovers of all things purple! Includes a soft matte purple silicone bead, iridescent shimmer crystal, faceted purple heart, and a glossy resin accent bead – it catches the light beautifully.</p>
-               <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1TnD7kDuVnIeP5UhFwjYTe48"
-  publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
->
-</stripe-buy-button>
-                
-            </div>
-
-            <!-- Pen Item 4 -->
-            <div class="product-card">
-                <img src="betty%20-%20boop.jpg" alt="Betty Boop Retro Pen">
-                <h3>Betty Boop Retro Fun Pen</h3>
-                <div class="price">£7.00</div>
-                <p>A playful retro design! Features a classic Betty Boop themed bead, shimmering purple crystal, faceted purple spacer, and soft purple silicone – perfect for fans of vintage style.</p>
-                <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1TnCzBDuVnIeP5UhjEDby6XX"
-  publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
->
-</stripe-buy-button>
-                
-            </div>
-
-   </div>
-    </div>
-    <script async src="https://stripe.com"></script>
-</body>
-</html>
+                <div class="img-gallery-box">
+                    <img class="main-view" src="purple%20-%20magic.jpg" alt="Sparkling Purple Magic Pen">
+                    <img class="alt-view" src="purple%20-%20magic.jpg" alt="Sparkling Purple Magic Pen Close-Up">
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Sparkling Purple Magic Pen</h3>
+                        <div class="price">£6.50</div>
+                        <p>For lovers of all things purple! Includes a soft matte purple silicone bead, iridescent shimmer crystal, faceted purple heart, and a glossy resin accent bead – it catches the light beautifully.</p>
+                    </div>
