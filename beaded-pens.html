@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
+    <!-- Pre-loading Stripe global script to ensure button renders immediately -->
+    <script async src="https://stripe.com"></script>
+
     <style>
         :root {
             --bg-color: #fcfbfa; 
@@ -120,7 +123,7 @@
             transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
         }
         .product-card:hover .img-gallery-box img {
-            transform: scale(1.05); /* Smooth modern magnification */
+            transform: scale(1.05); 
         }
 
         .product-info {
@@ -159,6 +162,7 @@
             padding: 10px;
             background-color: #faf9f6;
             border-radius: 4px;
+            min-height: 50px;
         }
 
         /* Footer styling for brand safety */
@@ -214,7 +218,6 @@
                         <p>All things cute and pink! Features a soft pink silicone bead with a white kiss print, sparkly pink crystal spacers, a faceted pink heart, and a pretty red patterned crystal bead. So fun and girly!</p>
                     </div>
                     <div class="stripe-container">
-                        <script async src="https://stripe.com"></script>
                         <stripe-buy-button
                           buy-button-id="buy_btn_1TnD4VDuVnIeP5UhdRFlBdK6"
                           publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
@@ -235,7 +238,6 @@
                         <p>Sweet and whimsical! Comes with a soft pink silicone bead, clear pink heart, cute pink star charm, and a clear crystal bead with a darling bow detail – a total delight!</p>
                     </div>
                     <div class="stripe-container">
-                        <script async src="https://stripe.com"></script>
                         <stripe-buy-button
                           buy-button-id="buy_btn_1TnWpWDuVnIeP5UhQNiPRgzk"
                           publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
@@ -256,7 +258,6 @@
                         <p>For lovers of all things purple! Includes a soft matte purple silicone bead, iridescent shimmer crystal, faceted purple heart, and a glossy resin accent bead – it catches the light beautifully.</p>
                     </div>
                     <div class="stripe-container">
-                        <script async src="https://stripe.com"></script>
                         <stripe-buy-button
                           buy-button-id="buy_btn_1TnD6JDuVnIeP5UhPeR4zWIC"
                           publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
@@ -268,3 +269,21 @@
             <!-- Item 4: Dreamy White & Purple -->
             <div class="product-card">
                 <div class="img-gallery-box">
+                    <img src="purple%20-%20white.jpg" alt="Dreamy White & Purple Pen">
+                </div>
+                <div class="product-info">
+                    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
