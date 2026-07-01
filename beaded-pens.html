@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
-    <!-- Pre-loading Stripe global script to ensure button renders immediately -->
+    <!-- Pre-loading Stripe global script -->
     <script async src="https://stripe.com"></script>
 
     <style>
@@ -90,7 +90,6 @@
             gap: 40px;
         }
         
-        /* Modern Lift Card Animation */
         .product-card {
             background: #ffffff;
             border: 1px solid #eae6e1;
@@ -102,29 +101,55 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-        }
-        .product-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(47, 62, 70, 0.06);
         }
 
-        /* Elegant Image Container with Internal Zoom */
-        .img-gallery-box {
+        /* High-End Carousel Slider container */
+        .slideshow-container {
+            position: relative;
             width: 100%;
             height: 380px;
             overflow: hidden;
             background-color: #f8fafc;
         }
-        .img-gallery-box img {
+        .slides-wrapper {
+            display: flex;
             width: 100%;
             height: 100%;
+            transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .slide-img {
+            min-width: 100%;
+            height: 100%;
             object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
         }
-        .product-card:hover .img-gallery-box img {
-            transform: scale(1.05); 
+
+        /* Minimalist Sleek Slide Buttons */
+        .slide-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.85);
+            border: none;
+            color: var(--primary-dark);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: background 0.2s, color 0.2s;
+            z-index: 10;
         }
+        .slide-btn:hover {
+            background: var(--primary-dark);
+            color: #ffffff;
+        }
+        .prev-btn { left: 12px; }
+        .next-btn { right: 12px; }
 
         .product-info {
             padding: 25px 20px 0 20px;
@@ -156,7 +181,6 @@
             min-height: 80px;
         }
 
-        /* Balanced Stripe Button Box */
         .stripe-container {
             margin-top: auto;
             padding: 10px;
@@ -165,7 +189,6 @@
             min-height: 50px;
         }
 
-        /* Footer styling for brand safety */
         footer {
             text-align: center;
             padding: 60px 20px;
@@ -175,10 +198,9 @@
             margin-top: 80px;
         }
 
-        /* Responsive Breakpoints */
         @media (max-width: 992px) {
             .product-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
-            .img-gallery-box { height: 320px; }
+            .slideshow-container { height: 320px; }
         }
         @media (max-width: 600px) {
             .product-grid { grid-template-columns: 1fr; }
@@ -208,8 +230,15 @@
             
             <!-- Item 1: Pink Kisses -->
             <div class="product-card">
-                <div class="img-gallery-box">
-                    <img src="pink%20-%20kisses.jpg" alt="Pink Kisses Pen">
+                <div class="slideshow-container" data-current-slide="0">
+                    <button class="slide-btn prev-btn" onclick="changeSlide(this, -1)">&#8249;</button>
+                    <div class="slides-wrapper">
+                        <img class="slide-img" src="pink%20-%20kisses.jpg" alt="Pink Kisses Pen View 1">
+                        <!-- TIP: Replace these placeholders below with your secondary/close up image filenames! -->
+                        <img class="slide-img" src="pink%20-%20kisses1.jpg" alt="Pink Kisses Pen View 2">
+                        <img class="slide-img" src="pink%20-%20kisses2.jpg" alt="Pink Kisses Pen View 3">
+                    </div>
+                    <button class="slide-btn next-btn" onclick="changeSlide(this, 1)">&#8250;</button>
                 </div>
                 <div class="product-info">
                     <div>
@@ -218,33 +247,35 @@
                         <p>All things cute and pink! Features a soft pink silicone bead with a white kiss print, sparkly pink crystal spacers, a faceted pink heart, and a pretty red patterned crystal bead. So fun and girly!</p>
                     </div>
                     <div class="stripe-container">
-                        <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1ToKctDuVnIeP5UhuQXkigTO"
-  publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
->
-</stripe-buy-button>
+                        <stripe-buy-button
+                          buy-button-id="buy_btn_1TnD4VDuVnIeP5UhdRFlBdK6"
+                          publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
+                        ></stripe-buy-button>
                     </div>
                 </div>
             </div>
 
-            <!-- Item 2: Pretty Pink Bow -->
+            <!-- Item 1: Pretty Pink Bow -->
             <div class="product-card">
-                <div class="img-gallery-box">
-                    <img src="beaded%20-%20pen.jpg" alt="Pretty Pink Bow Pen">
+                <div class="slideshow-container" data-current-slide="0">
+                    <button class="slide-btn prev-btn" onclick="changeSlide(this, -1)">&#8249;</button>
+                    <div class="slides-wrapper">
+                        <img class="slide-img" src="beaded%20-%20pen.jpg" alt="Pretty Pink Bow Pen View 1">
+                        <!-- TIP: Replace these placeholders below with your secondary/close up image filenames! -->
+                        <img class="slide-img" src="beaded%20pen1-%201.jpg" alt="Pretty Pink Bow Pen View 2">
+                        <img class="slide-img" src="beaded%20-%20pen2.jpg" alt="Pretty Pink Bow Pen View 3">
+                    </div>
+                    <button class="slide-btn next-btn" onclick="changeSlide(this, 1)">&#8250;</button>
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Pretty Pink Bow Pen</h3>
+                        <h3>Pretty Pink Bow</h3>
                         <div class="price">£6.50</div>
-                        <p>Sweet and whimsical! Comes with a soft pink silicone bead, clear pink heart, cute pink star charm, and a clear crystal bead with a darling bow detail – a total delight!</p>
+                        <p>Sweet and Whimsical! Comes with a soft pink silicone bead, clear pink heaert, cute pink star charm, and a clear bead with a darling bow detail - a total delight!</p>
                     </div>
                     <div class="stripe-container">
                         <stripe-buy-button
-                          buy-button-id="buy_btn_1TnWpWDuVnIeP5UhQNiPRgzk"
+                          buy-button-id="buy_btn_1TnD4VDuVnIeP5UhdRFlBdK6"
                           publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
                         ></stripe-buy-button>
                     </div>
@@ -253,31 +284,71 @@
 
             <!-- Item 3: Sparkling Purple Magic -->
             <div class="product-card">
-                <div class="img-gallery-box">
-                    <img src="purple%20-%20magic.jpg" alt="Sparkling Purple Magic Pen">
+                <div class="slideshow-container" data-current-slide="0">
+                    <button class="slide-btn prev-btn" onclick="changeSlide(this, -1)">&#8249;</button>
+                    <div class="slides-wrapper">
+                        <img class="slide-img" src="purple%20-%20magic.jpg" alt="Sparkling Purple Magic Pen View 1">
+                        <!-- TIP: Replace these placeholders below with your secondary/close up image filenames! -->
+                        <img class="slide-img" src="purple%20-%20magic1.jpg" alt="Sparkling Purple Magic Pen View 2">
+                        <img class="slide-img" src="purple%20-%20magic2.jpg" alt="Sparkling Purple Magic Pen View 3">
+                    </div>
+                    <button class="slide-btn next-btn" onclick="changeSlide(this, 1)">&#8250;</button>
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Sparkling Purple Magic Pen</h3>
+                        <h3>Sparkling Purple Magic</h3>
                         <div class="price">£6.50</div>
                         <p>For lovers of all things purple! Includes a soft matte purple silicone bead, iridescent shimmer crystal, faceted purple heart, and a glossy resin accent bead – it catches the light beautifully.</p>
                     </div>
                     <div class="stripe-container">
                         <stripe-buy-button
-                          buy-button-id="buy_btn_1TnD6JDuVnIeP5UhPeR4zWIC"
+                          buy-button-id="buy_btn_1TnD4VDuVnIeP5UhdRFlBdK6"
                           publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
                         ></stripe-buy-button>
                     </div>
                 </div>
             </div>
 
-            <!-- Item 4: Dreamy White & Purple -->
+            <!-- Item 4: Dreamy White and Purple -->
             <div class="product-card">
-                <div class="img-gallery-box">
-                    <img src="purple%20-%20white.jpg" alt="Dreamy White & Purple Pen">
+                <div class="slideshow-container" data-current-slide="0">
+                    <button class="slide-btn prev-btn" onclick="changeSlide(this, -1)">&#8249;</button>
+                    <div class="slides-wrapper">
+                        <img class="slide-img" src="purple%20-%20white.jpg" alt="Dreamy White and Purple Pen View 1">
+                        <!-- TIP: Replace these placeholders below with your secondary/close up image filenames! -->
+                        <img class="slide-img" src="purple%20-%20white1.jpg" alt="Dreamy White and Purple Pen View 2">
+                        <img class="slide-img" src="purple%20-%20white2.jpg" alt="Dreamy White and Purple Pen View 3">
+                    </div>
+                    <button class="slide-btn next-btn" onclick="changeSlide(this, 1)">&#8250;</button>
                 </div>
                 <div class="product-info">
                     <div>
+                        <h3>Dreamy White and Purple</h3>
+                        <div class="price">£6.50</div>
+                        <p>Soft matte white silicone beads paired with a gorgeous white bead swirled with soft purple – simple, elegant, and totally charming.</p>
+                    </div>
+                    <div class="stripe-container">
+                        <stripe-buy-button
+                          buy-button-id="buy_btn_1TnD4VDuVnIeP5UhdRFlBdK6"
+                          publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
+                        ></stripe-buy-button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
