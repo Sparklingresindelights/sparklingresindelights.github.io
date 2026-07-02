@@ -124,6 +124,72 @@ title: Home
             object-fit: cover;
         }
 
+        /* Clean Styling for the Web3Forms Fields */
+        .feedback-form-container {
+            background: #ffffff; 
+            padding: 40px 30px; 
+            border-radius: 4px; 
+            border: 1px solid #eae6e1; 
+            text-align: left; 
+            margin-bottom: 40px;
+        }
+        .feedback-form-container h3 {
+            font-family: 'Playfair Display', serif; 
+            font-weight: 400; 
+            font-size: 1.5rem; 
+            margin-top: 0; 
+            margin-bottom: 25px; 
+            color: #2f3e46;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .feedback-form-container label {
+            display: block; 
+            font-weight: 500; 
+            margin-bottom: 8px; 
+            font-size: 0.8rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            color: #2f3e46;
+        }
+        .feedback-form-container input[type="text"],
+        .feedback-form-container input[type="email"],
+        .feedback-form-container select,
+        .feedback-form-container textarea {
+            width: 100%; 
+            padding: 14px; 
+            border: 1px solid #dcd7d0; 
+            border-radius: 2px; 
+            box-sizing: border-box; 
+            font-size: 0.95rem; 
+            background-color: #faf9f6;
+            font-family: 'Inter', sans-serif;
+            color: #2f3e46;
+        }
+        .feedback-form-container textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .submit-btn {
+            display: block; 
+            width: 100%; 
+            background-color: #2f3e46; 
+            color: #ffffff; 
+            padding: 16px; 
+            border: none; 
+            border-radius: 2px; 
+            font-weight: 500; 
+            font-size: 0.9rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .submit-btn:hover {
+            background-color: #8fa187;
+        }
+
         @media (max-width: 992px) {
             .split-layout { flex-direction: column; }
             .right-slideshow { width: 100%; height: 450px; }
@@ -146,18 +212,16 @@ title: Home
 
     <div class="split-layout">
         
-        <!-- Left Side: Header with Built-In Top-Left Slideshow, Info, Grid, Form -->
+        <!-- Left Side: Header, Info, Grid, Form -->
         <div class="left-content">
             
             <div class="header-box">
-                <!-- Text on the Left Side of the Box -->
                 <div class="header-text">
                     <h1 style="margin: 0; font-size: 2.8rem; font-family: 'Playfair Display', serif; font-weight: 400; letter-spacing: -0.5px; text-align: left;">Sparkling Resin Delights</h1>
                     <div style="color: #d4a373; font-size: 1rem; margin: 12px 0; letter-spacing: 4px; text-align: left;">★★★★★</div>
                     <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; margin: 10px 0 0 0; font-style: italic; color: #64748b; text-align: left;">Beautiful Resin Jewelry, Beaded Pens, & Handmade Keychains</p>
                 </div>
                 
-                <!-- New Chic Slideshow in the Top Left Corner Slot -->
                 <div class="top-left-slideshow">
                     <div class="topLeftSlide active"><img src="beaded%20-%20pen.jpg" alt="Pen Feature"></div>
                     <div class="topLeftSlide"><img src="resin%20-%20necklace.jpg" alt="Jewelry Feature"></div>
@@ -183,60 +247,3 @@ title: Home
             <!-- Review Section -->
             <div style="background-color: #f3f5f2; padding: 40px 30px; border-radius: 4px; text-align: left; margin-bottom: 40px;">
                 <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 400; margin-bottom: 30px; color: #2f3e46;">Kind Words From Our Collectors</h2>
-                <div style="display: grid; grid-template-columns: 1fr; gap: 20px;">
-                    <div style="background: #ffffff; padding: 25px; border-radius: 4px; border: 1px solid #eae6e1;">
-                        <div style="color: #d4a373; font-size: 0.9rem; margin-bottom: 10px;">★★★★★</div>
-                        <div style="font-family: 'Playfair Display', serif; font-style: italic; margin-bottom: 15px; color: #334155;">"The resin necklace is absolutely breathtaking. You can see how much love went into making it!"</div>
-                        <div style="font-weight: 500; font-size: 0.8rem; text-transform: uppercase; color: #64748b;">— Emily R.</div>
-                    </div>
-                    <div style="background: #ffffff; padding: 25px; border-radius: 4px; border: 1px solid #eae6e1;">
-                        <div style="color: #d4a373; font-size: 0.9rem; margin-bottom: 10px;">★★★★★</div>
-                        <div style="font-family: 'Playfair Display', serif; font-style: italic; margin-bottom: 15px; color: #334155;">"My beaded pens arrived safely and they make working at my desk so much fun."</div>
-                        <div style="font-weight: 500; font-size: 0.8rem; text-transform: uppercase; color: #64748b;">— Jessica M.</div>
-                    </div>
-                </div>
-            </div>
-
-             <!-- Feedback Entry Form -->
-            <div style="background: #ffffff; padding: 40px 30px; border-radius: 4px; border: 1px solid #eae6e1; text-align: left; margin-bottom: 40px;">
-                <h3 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.5rem; margin-top: 0; margin-bottom: 25px; color: #2f3e46;">Leave Us Feedback</h3>
-                
-                <!-- Seamless Web3Forms Pipeline -->
-                <form action="https://web3forms.com" method="POST">
-                    
-                    <!-- Insert the code string Web3Forms just emailed you right here -->
-                    <input type="hidden" name="access_key" value=cb4b22c0-fa2c-4ffc-828d-6a2504dda17b>
-                    
-                    <!-- Seamlessly redirects your customers straight back to your homepage without ever showing an ad or error -->
-                    <input type="hidden" name="redirect" value="https://sparklingresindelights.co.uk">
-                    
-                    <!-- Invisible bot protection trap -->
-                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-                    <div style="margin-bottom: 20px;">
-                        <label style="display: block; font-weight: 500; margin-bottom: 8px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #2f3e46;">Your Name</label>
-                        <input type="text" name="Collector Name" required placeholder="e.g. Sarah J." style="width: 100%; padding: 14px; border: 1px solid #dcd7d0; border-radius: 2px; box-sizing: border-box; background-color: #faf9f6;">
-                    </div>
-                    
-                    <div style="margin-bottom: 20px;">
-                        <label style="display: block; font-weight: 500; margin-bottom: 8px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #2f3e46;">Rating</label>
-                        <select name="Star Rating" style="width: 100%; padding: 14px; border: 1px solid #dcd7d0; border-radius: 2px; box-sizing: border-box; background-color: #faf9f6;">
-                            <option value="5 Stars">★★★★★ (5 Stars)</option>
-                            <option value="4 Stars">★★★★☆ (4 Stars)</option>
-                            <option value="3 Stars">★★★☆☆ (3 Stars)</option>
-                            <option value="2 Stars">★★☆☆☆ (2 Stars)</option>
-                            <option value="1 Star">★☆☆☆☆ (1 Star)</option>
-                        </select>
-                    </div>
-                    
-                    <div style="margin-bottom: 20px;">
-                        <label style="display: block; font-weight: 500; margin-bottom: 8px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #2f3e46;">Your Thoughts</label>
-                        <textarea name="Review Thoughts" required placeholder="Share your experience..." style="width: 100%; padding: 14px; border: 1px solid #dcd7d0; border-radius: 2px; box-sizing: border-box; background-color: #faf9f6; min-height: 100px; resize: vertical;"></textarea>
-                    </div>
-                    
-                    <button type="submit" style="display: block; width: 100%; background-color: #2f3e46; color: #ffffff; padding: 16px; border: none; border-radius: 2px; font-weight: 500; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1.5px; cursor: pointer;">Submit Review</button>
-                </form>
-            </div>
-                    <button type="submit" style="display: block; width: 100%; background-color: #2f3e46; color: #ffffff; padding: 16px; border: none; border-radius: 2px; font-weight: 500; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1.5px; cursor: pointer;">Submit Review</button>
-                </form>
-            </div>
