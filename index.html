@@ -1,53 +1,111 @@
---
+---
 layout: default
 title: Home
 ---
 
-<!-- Flawless Layout Spacer: Explicitly forces everything below the nav menu -->
-<div style="display: block; clear: both; width: 100%; margin-top: 60px; background-color: #fcfbfa; padding-top: 10px;">
+<!-- Fixes theme overlap and restores your luxury background canvas -->
+<div style="display: block; clear: both; width: 100%; margin-top: 50px; background-color: #fcfbfa; padding-top: 20px;">
 
     <!-- Elegant Editorial Header Banner -->
-    <header style="background-color: #f3f5f2; color: #2f3e46; padding: 80px 20px; text-align: center; border-bottom: 1px solid #eae6e1; margin-bottom: 60px; border-radius: 4px;">
+    <header style="background-color: #f3f5f2; color: #2f3e46; padding: 90px 20px; text-align: center; border-bottom: 1px solid #eae6e1; margin-bottom: 60px;">
         <h1 style="margin: 0; font-size: 3.5rem; font-family: 'Playfair Display', serif; font-weight: 400; letter-spacing: -0.5px;">Sparkling Resin Delights</h1>
         <div style="color: #d4a373; font-size: 1.1rem; margin: 15px 0; letter-spacing: 6px;">★★★★★</div>
         <p style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin: 10px 0 0 0; font-style: italic; color: #64748b;">Beautiful Resin Jewelry, Beaded Pens, & Handmade Keychains</p>
     </header>
 
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 30px;">
-        <div style="text-align: center; margin-bottom: 70px; max-width: 600px; margin-left: auto; margin-right: auto;">
+        <div style="text-align: center; margin-bottom: 80px; max-width: 600px; margin-left: auto; margin-right: auto;">
             <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 400; color: #2f3e46; margin-bottom: 20px;">Welcome to Sophie & Dee's Boutique</h2>
             <p style="font-size: 1.05rem; line-height: 1.7; color: #64748b; font-weight: 300; margin: 0;">Every single item is designed, crafted, and packaged lovingly by hand. Click a category to browse our specific collections!</p>
         </div>
 
-        <!-- 4-Column Photo Grid Layout -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 90px;">
-            <a href="resin-jewelry.html" style="background: #ffffff; border-radius: 4px; overflow: hidden; text-align: left; padding-bottom: 20px; text-decoration: none; display: block; border: 1px solid #eae6e1;">
-                <div style="width: 100%; height: 340px; overflow: hidden; background-color: #f8fafc;"><img src="resin%20-%20necklace.jpg" alt="Handmade Resin Jewelry" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        <!-- Injecting internal styles right here to force the staggered sliding lift effects to work safely with Jekyll -->
+        <style>
+            .staggered-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 30px;
+                margin-bottom: 120px;
+            }
+            .boutique-card {
+                background: #ffffff;
+                border-radius: 4px;
+                overflow: hidden;
+                text-align: left; 
+                padding-bottom: 20px;
+                border: 1px solid #eae6e1;
+                text-decoration: none; 
+                display: block;
+                transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+            }
+            /* This creates the beautiful high-end staggered position look you loved! */
+            .boutique-card:nth-child(even) {
+                transform: translateY(30px);
+            }
+            /* Combines the lift motion with the slide effect on hover */
+            .boutique-card:hover {
+                box-shadow: 0 15px 35px rgba(47, 62, 70, 0.06);
+            }
+            .boutique-card:nth-child(odd):hover {
+                transform: translateY(-8px);
+            }
+            .boutique-card:nth-child(even):hover {
+                transform: translateY(22px);
+            }
+            .zoom-box {
+                width: 100%;
+                height: 340px;
+                overflow: hidden;
+                background-color: #f8fafc;
+            }
+            .zoom-box img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            }
+            .boutique-card:hover .zoom-box img {
+                transform: scale(1.04);
+            }
+            @media (max-width: 992px) {
+                .staggered-grid { grid-template-columns: repeat(2, 1fr); gap: 40px 25px; }
+                .boutique-card:nth-child(even) { transform: none; }
+                .boutique-card:nth-child(odd):hover, .boutique-card:nth-child(even):hover { transform: translateY(-6px); }
+            }
+            @media (max-width: 576px) {
+                .staggered-grid { grid-template-columns: 1fr; gap: 45px; }
+            }
+        </style>
+
+        <!-- Staggered Boutique Grid Layout -->
+        <div class="staggered-grid">
+            <a href="resin-jewelry.html" class="boutique-card">
+                <div class="zoom-box"><img src="resin%20-%20necklace.jpg" alt="Handmade Resin Jewelry"></div>
                 <h3 style="margin: 20px 15px 6px 15px; color: #2f3e46; font-size: 1.25rem; font-family: 'Playfair Display', serif; font-weight: 400;">Resin Jewelry</h3>
                 <p style="font-size: 0.9rem; color: #64748b; margin: 0 15px; line-height: 1.6; font-weight: 300;">Real dried flowers and sparkling glitter preserved in crystal-clear pendant necklaces and earrings.</p>
             </a>
 
-            <a href="beaded-pens.html" style="background: #ffffff; border-radius: 4px; overflow: hidden; text-align: left; padding-bottom: 20px; text-decoration: none; display: block; border: 1px solid #eae6e1;">
-                <div style="width: 100%; height: 340px; overflow: hidden; background-color: #f8fafc;"><img src="beaded%20-%20pen.jpg" alt="Colorful Beaded Pens" style="width: 100%; height: 100%; object-fit: cover;"></div>
+            <a href="beaded-pens.html" class="boutique-card">
+                <div class="zoom-box"><img src="beaded%20-%20pen.jpg" alt="Colorful Beaded Pens"></div>
                 <h3 style="margin: 20px 15px 6px 15px; color: #2f3e46; font-size: 1.25rem; font-family: 'Playfair Display', serif; font-weight: 400;">Beaded Pens</h3>
                 <p style="font-size: 0.9rem; color: #64748b; margin: 0 15px; line-height: 1.6; font-weight: 300;">Fun, chunky, and colorful silicone beaded pens to brighten up your desk or office space.</p>
             </a>
 
-            <a href="beaded-keychains.html" style="background: #ffffff; border-radius: 4px; overflow: hidden; text-align: left; padding-bottom: 20px; text-decoration: none; display: block; border: 1px solid #eae6e1;">
-                <div style="width: 100%; height: 340px; overflow: hidden; background-color: #f8fafc;"><img src="beaded%20-%20keychain.jpg" alt="Handmade Keychains" style="width: 100%; height: 100%; object-fit: cover;"></div>
+            <a href="beaded-keychains.html" class="boutique-card">
+                <div class="zoom-box"><img src="beaded%20-%20keychain.jpg" alt="Handmade Keychains"></div>
                 <h3 style="margin: 20px 15px 6px 15px; color: #2f3e46; font-size: 1.25rem; font-family: 'Playfair Display', serif; font-weight: 400;">Handmade Keychains</h3>
                 <p style="font-size: 0.9rem; color: #64748b; margin: 0 15px; line-height: 1.6; font-weight: 300;">Personalized letter keychains custom-crafted with gold leaf accents and dreamy pastel details.</p>
             </a>
 
-            <a href="beaded-bracelets.html" style="background: #ffffff; border-radius: 4px; overflow: hidden; text-align: left; padding-bottom: 20px; text-decoration: none; display: block; border: 1px solid #eae6e1;">
-                <div style="width: 100%; height: 340px; overflow: hidden; background-color: #f8fafc;"><img src="beaded%20-%20bracelet.jpg" alt="Handmade Beaded Bracelets" style="width: 100%; height: 100%; object-fit: cover;"></div>
+            <a href="beaded-bracelets.html" class="boutique-card">
+                <div class="zoom-box"><img src="beaded%20-%20bracelet.jpg" alt="Handmade Beaded Bracelets"></div>
                 <h3 style="margin: 20px 15px 6px 15px; color: #2f3e46; font-size: 1.25rem; font-family: 'Playfair Display', serif; font-weight: 400;">Beaded Bracelets</h3>
                 <p style="font-size: 0.9rem; color: #64748b; margin: 0 15px; line-height: 1.6; font-weight: 300;">Delicately arranged stacked wristwear using high-grade crystals, custom letters, and charms.</p>
             </a>
         </div>
 
         <!-- Review Section -->
-        <div style="background-color: #f3f5f2; padding: 80px 30px; border-radius: 4px; text-align: center;">
+        <div style="background-color: #f3f5f2; padding: 80px 30px; border-radius: 4px; text-align: center; margin-top: 60px;">
             <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 400; margin-bottom: 40px; color: #2f3e46;">Kind Words From Our Collectors</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
                 <div style="background: #ffffff; padding: 35px; border-radius: 4px; text-align: left; box-shadow: 0 5px 15px rgba(0,0,0,0.01); border: 1px solid #eae6e1;">
@@ -79,15 +137,4 @@ title: Home
                             <option>★★☆☆☆ (2 Stars)</option>
                             <option>★☆☆☆☆ (1 Star)</option>
                         </select>
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <label style="display: block; font-weight: 500; margin-bottom: 8px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #2f3e46;">Your Thoughts</label>
-                        <textarea required placeholder="Share your experience with our pieces..." style="width: 100%; padding: 14px; border: 1px solid #dcd7d0; border-radius: 2px; box-sizing: border-box; font-size: 0.95rem; background-color: #faf9f6; min-height: 100px; resize: vertical;"></textarea>
-                    </div>
-                    <button type="submit" style="display: block; width: 100%; background-color: #2f3e46; color: #ffffff; padding: 16px; border: none; border-radius: 2px; font-weight: 500; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1.5px; cursor: pointer;">Submit Review</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
                
