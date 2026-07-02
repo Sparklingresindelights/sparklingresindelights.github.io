@@ -26,11 +26,139 @@ title: Home
         <a href="contact.html" style="color: #2f3e46; margin: 0 18px; text-decoration: none; font-weight: 500; font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; font-family: 'Inter', sans-serif;">Contact Us</a>
     </nav>
 
-    <!-- Left-Aligned Luxury Banner Screen -->
-    <header style="background-color: #f3f5f2; color: #2f3e46; padding: 80px 40px; text-align: left; border-bottom: 1px solid #eae6e1; max-width: 1200px; margin: 40px auto; border-radius: 4px; box-sizing: border-box;">
-        <h1 style="margin: 0; font-size: 3.5rem; font-family: 'Playfair Display', serif; font-weight: 400; letter-spacing: -0.5px;">Sparkling Resin Delights</h1>
-        <div style="color: #d4a373; font-size: 1.1rem; margin: 12px 0; letter-spacing: 4px;">★★★★★</div>
-        <p style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin: 10px 0 0 0; font-style: italic; color: #64748b;">Beautiful Resin Jewelry, Beaded Pens, & Handmade Keychains</p>
+    <!-- Injecting interactive animation styles safely -->
+    <style>
+        /* Split Header Layout */
+        .split-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f3f5f2;
+            max-width: 1200px;
+            margin: 40px auto;
+            border-radius: 4px;
+            border: 1px solid #eae6e1;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .header-left {
+            flex: 1;
+            padding: 60px 40px;
+            text-align: left;
+        }
+        .header-right {
+            width: 400px;
+            height: 380px;
+            position: relative;
+            overflow: hidden;
+            background-color: #e2e8f0;
+        }
+        
+        /* Smooth Vertical Sliding Animation */
+        .vertical-slider {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            animation: slideVertical 12s infinite ease-in-out;
+        }
+        .vertical-slider img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        
+        @keyframes slideVertical {
+            0%, 20% { transform: translateY(0); }
+            25%, 45% { transform: translateY(-380px); }
+            50%, 70% { transform: translateY(-760px); }
+            75%, 95% { transform: translateY(-1140px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Home Page Staggered Grid Setup */
+        .staggered-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 120px;
+        }
+        .boutique-card {
+            background: #ffffff;
+            border-radius: 4px;
+            overflow: hidden;
+            text-align: left; 
+            padding-bottom: 20px;
+            border: 1px solid #eae6e1;
+            text-decoration: none; 
+            display: block;
+            transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+        }
+        .boutique-card:nth-child(even) {
+            transform: translateY(30px);
+        }
+        .boutique-card:hover {
+            box-shadow: 0 15px 35px rgba(47, 62, 70, 0.06);
+        }
+        .boutique-card:nth-child(odd):hover {
+            transform: translateY(-8px);
+        }
+        .boutique-card:nth-child(even):hover {
+            transform: translateY(22px);
+        }
+        .zoom-box {
+            width: 100%;
+            height: 340px;
+            overflow: hidden;
+            background-color: #f8fafc;
+        }
+        .zoom-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .boutique-card:hover .zoom-box img {
+            transform: scale(1.04);
+        }
+
+        @media (max-width: 992px) {
+            .split-header { flex-direction: column; align-items: stretch; margin: 20px; }
+            .header-right { width: 100%; height: 300px; }
+            .vertical-slider img { height: 300px; }
+            @keyframes slideVertical {
+                0%, 20% { transform: translateY(0); }
+                25%, 45% { transform: translateY(-300px); }
+                50%, 70% { transform: translateY(-600px); }
+                75%, 95% { transform: translateY(-900px); }
+                100% { transform: translateY(0); }
+            }
+            .staggered-grid { grid-template-columns: repeat(2, 1fr); gap: 40px 25px; }
+            .boutique-card:nth-child(even) { transform: none; }
+            .boutique-card:nth-child(odd):hover, .boutique-card:nth-child(even):hover { transform: translateY(-6px); }
+        }
+        @media (max-width: 576px) {
+            .staggered-grid { grid-template-columns: 1fr; gap: 45px; }
+            .header-left { padding: 40px 20px; }
+        }
+    </style>
+
+    <!-- Luxury Split Header Box (Left Content, Right Continuous Vertical Slider) -->
+    <header class="split-header">
+        <div class="header-left">
+            <h1 style="margin: 0; font-size: 3.5rem; font-family: 'Playfair Display', serif; font-weight: 400; letter-spacing: -0.5px;">Sparkling Resin Delights</h1>
+            <div style="color: #d4a373; font-size: 1.1rem; margin: 12px 0; letter-spacing: 4px;">★★★★★</div>
+            <p style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin: 10px 0 0 0; font-style: italic; color: #64748b;">Beautiful Resin Jewelry, Beaded Pens, & Handmade Keychains</p>
+        </div>
+        <div class="header-right">
+            <div class="vertical-slider">
+                <img src="resin%20-%20necklace.jpg" alt="Resin Jewelry Showcase">
+                <img src="beaded%20-%20pen.jpg" alt="Beaded Pens Showcase">
+                <img src="beaded%20-%20keychain.jpg" alt="Keychains Showcase">
+                <img src="beaded%20-%20bracelet.jpg" alt="Bracelets Showcase">
+            </div>
+        </div>
     </header>
 
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 40px; box-sizing: border-box;">
@@ -38,62 +166,6 @@ title: Home
             <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 400; color: #2f3e46; margin-bottom: 20px;">Welcome to Sophie & Dee's Boutique</h2>
             <p style="font-family: 'Inter', sans-serif; font-size: 1.05rem; line-height: 1.7; color: #64748b; font-weight: 300; margin: 0;">Every single item is designed, crafted, and packaged lovingly by hand. Click a category to browse our specific collections!</p>
         </div>
-
-        <!-- Injecting interactive animation styles safely layout -->
-        <style>
-            .staggered-grid {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                gap: 30px;
-                margin-bottom: 120px;
-            }
-            .boutique-card {
-                background: #ffffff;
-                border-radius: 4px;
-                overflow: hidden;
-                text-align: left; 
-                padding-bottom: 20px;
-                border: 1px solid #eae6e1;
-                text-decoration: none; 
-                display: block;
-                transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
-            }
-            .boutique-card:nth-child(even) {
-                transform: translateY(30px);
-            }
-            .boutique-card:hover {
-                box-shadow: 0 15px 35px rgba(47, 62, 70, 0.06);
-            }
-            .boutique-card:nth-child(odd):hover {
-                transform: translateY(-8px);
-            }
-            .boutique-card:nth-child(even):hover {
-                transform: translateY(22px);
-            }
-            .zoom-box {
-                width: 100%;
-                height: 340px;
-                overflow: hidden;
-                background-color: #f8fafc;
-            }
-            .zoom-box img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-            }
-            .boutique-card:hover .zoom-box img {
-                transform: scale(1.04);
-            }
-            @media (max-width: 992px) {
-                .staggered-grid { grid-template-columns: repeat(2, 1fr); gap: 40px 25px; }
-                .boutique-card:nth-child(even) { transform: none; }
-                .boutique-card:nth-child(odd):hover, .boutique-card:nth-child(even):hover { transform: translateY(-6px); }
-            }
-            @media (max-width: 576px) {
-                .staggered-grid { grid-template-columns: 1fr; gap: 45px; }
-            }
-        </style>
 
         <!-- Staggered Boutique Grid Layout -->
         <div class="staggered-grid">
@@ -108,28 +180,5 @@ title: Home
                 <h3 style="margin: 20px 15px 6px 15px; color: #2f3e46; font-size: 1.25rem; font-family: 'Playfair Display', serif; font-weight: 400;">Beaded Pens</h3>
                 <p style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #64748b; margin: 0 15px; line-height: 1.6; font-weight: 300;">Fun, chunky, and colorful silicone beaded pens to brighten up your desk or office space.</p>
             </a>
-
-            <a href="beaded-keychains.html" class="boutique-card">
-                <div class="zoom-box"><img src="beaded%20-%20keychain.jpg" alt="Handmade Keychains"></div>
-                <h3 style="margin: 20px 15px 6px 15px; color: #2f3e46; font-size: 1.25rem; font-family: 'Playfair Display', serif; font-weight: 400;">Handmade Keychains</h3>
-                <p style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #64748b; margin: 0 15px; line-height: 1.6; font-weight: 300;">Personalized letter keychains custom-crafted with gold leaf accents and dreamy pastel details.</p>
-            </a>
-
-            <a href="beaded-bracelets.html" class="boutique-card">
-                <div class="zoom-box"><img src="beaded%20-%20bracelet.jpg" alt="Handmade Beaded Bracelets"></div>
-                <h3 style="margin: 20px 15px 6px 15px; color: #2f3e46; font-size: 1.25rem; font-family: 'Playfair Display', serif; font-weight: 400;">Beaded Bracelets</h3>
-                <p style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #64748b; margin: 0 15px; line-height: 1.6; font-weight: 300;">Delicately arranged stacked wristwear using high-grade crystals, custom letters, and charms.</p>
-            </a>
-        </div>
-
-        <!-- Review Section -->
-        <div style="background-color: #f3f5f2; padding: 80px 30px; border-radius: 4px; text-align: center; margin-top: 60px;">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 400; margin-bottom: 40px; color: #2f3e46;">Kind Words From Our Collectors</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
-                <div style="background: #ffffff; padding: 35px; border-radius: 4px; text-align: left; box-shadow: 0 5px 15px rgba(0,0,0,0.01); border: 1px solid #eae6e1;">
-                    <div style="color: #d4a373; font-size: 1rem; margin-bottom: 15px; letter-spacing: 2px;">★★★★★</div>
-                    <div style="font-family: 'Playfair Display', serif; font-style: italic; margin-bottom: 20px; line-height: 1.6; font-size: 1.05rem; color: #334155;">"The resin necklace is absolutely breathtaking. You can see how much love went into making it!"</div>
-                    <div style="font-family: 'Inter', sans-serif; font-weight: 500; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #64748b;">— Emily R.</div>
-                </div>
-                <div style="background: #ffffff; padding: 35px; border-radius: 4px; text-align: left; box-shadow: 0 5px 15px rgba(0,0,0,0.01); border: 1px solid #eae6e1;">
+                
 
