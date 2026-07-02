@@ -1,308 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sparkling Resin Delights</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fcfbfa; /* Luxury creamy-white background */
-            color: #2f3e46;
-        }
-        /* Minimalist Navigation */
-        nav {
-            background-color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #eae6e1;
-        }
-        nav a {
-            color: #2f3e46;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        /* Elegant Banner */
-        header {
-            background-color: #f3f5f2; /* Soft light sage tint */
-            padding: 60px 20px;
-            text-align: center;
-            border-bottom: 1px solid #eae6e1;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.8rem;
-            letter-spacing: 1px;
-        }
-        .stars {
-            color: #d4a373; /* Elegant gold stars */
-            font-size: 1.2rem;
-            margin: 10px 0;
-            letter-spacing: 4px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-        .intro {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto 50px auto;
-            line-height: 1.6;
-        }
-        /* Chic 4-Column Professional Photo Grid */
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin-bottom: 80px;
-        }
-        .photo-card {
-            background: #ffffff;
-            border: 1px solid #eae6e1;
-            border-radius: 4px;
-            overflow: hidden;
-            text-align: left;
-            padding-bottom: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.01);
-            text-decoration: none;
-            color: inherit;
-        }
-        .img-box {
-            width: 100%;
-            height: 300px;
-            overflow: hidden;
-            background-color: #f1f5f9;
-        }
-        .photo-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .photo-card h3 {
-            margin: 15px 15px 5px 15px;
-            font-size: 1.15rem;
-        }
-        .photo-card p {
-            margin: 0 15px 10px 15px;
-            font-size: 0.9rem;
-            color: #64748b;
-            line-height: 1.5;
-        }
+---
+layout: default
+title: Home
+---
 
-        /* Clean Testimonial Section */
-        .review-section {
-            background-color: #f3f5f2;
-            padding: 60px 20px;
-            border-radius: 4px;
-            margin-top: 40px;
-            text-align: center;
-        }
-        .review-section h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-        }
-        .review-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            max-width: 1000px;
-            margin: 0 auto 50px auto;
-        }
-        .review-card {
-            background: #ffffff;
-            padding: 25px;
-            border-radius: 4px;
-            text-align: left;
-            border: 1px solid #eae6e1;
-        }
-        .card-stars {
-            color: #d4a373;
-            font-size: 1rem;
-            margin-bottom: 10px;
-            letter-spacing: 2px;
-        }
-        .review-text {
-            font-style: italic;
-            margin-bottom: 15px;
-            line-height: 1.5;
-            font-size: 0.95rem;
-        }
-        .review-author {
-            font-weight: bold;
-            font-size: 0.85rem;
-            color: #64748b;
-        }
+<!-- Elegant Editorial Header -->
+<header style="background-color: #f3f5f2; color: #2f3e46; padding: 90px 20px; text-align: center; border-bottom: 1px solid #eae6e1;">
+    <h1 style="margin: 0; font-size: 3.5rem; font-family: 'Playfair Display', serif; font-weight: 400; letter-spacing: -0.5px;">Sparkling Resin Delights</h1>
+    <div style="color: #d4a373; font-size: 1.1rem; margin: 15px 0; letter-spacing: 6px;">★★★★★</div>
+    <p style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin: 10px 0 0 0; font-style: italic; color: #64748b;">Beautiful Resin Jewelry, Beaded Pens, & Handmade Keychains</p>
+</header>
 
-        /* Modern Feedback Form Layout */
-        .feedback-form-container {
-            max-width: 460px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 35px;
-            border-radius: 4px;
-            border: 1px solid #eae6e1;
-            text-align: left;
-        }
-        .feedback-form-container h3 {
-            margin-top: 0;
-            margin-bottom: 20px;
-            text-align: center;
-            font-size: 1.4rem;
-        }
-        .form-group {
-            margin-bottom: 18px;
-        }
-        .feedback-form-container label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 6px;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .feedback-form-container input[type="text"], 
-        .feedback-form-container select, 
-        .feedback-form-container textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #cbd5e1;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-family: inherit;
-            font-size: 0.95rem;
-            background-color: #faf9f6;
-        }
-        .feedback-form-container textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-        .submit-btn {
-            display: block;
-            width: 100%;
-            background-color: #2f3e46;
-            color: #ffffff;
-            padding: 14px;
-            border: none;
-            border-radius: 4px;
-            font-weight: bold;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        .submit-btn:hover {
-            background-color: #4f5e66;
-        }
+<div style="max-width: 1200px; margin: 80px auto; padding: 0 30px;">
+    <div style="text-align: center; margin-bottom: 70px; max-width: 600px; margin-left: auto; margin-right: auto;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 400; color: #2f3e46; margin-bottom: 20px;">Welcome to Sophie & Dee's Boutique</h2>
+        <p style="font-size: 1.05rem; line-height: 1.7; color: #64748b; font-weight: 300; margin: 0;">Every single item is designed, crafted, and packaged lovingly by hand. Click a category to browse our specific collections!</p>
+    </div>
 
-        /* Footer Element */
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            font-size: 0.8rem;
-            color: #64748b;
-            border-top: 1px solid #eae6e1;
-            margin-top: 80px;
-        }
+    <!-- 4-Column Photo Grid Layout -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 90px;">
+        <a href="resin-jewelry.html" style="background: #ffffff; border-radius: 4px; overflow: hidden; text-align: left; padding-bottom: 20px; text-decoration: none; display: block; border: 1px solid #eae6e1;">
+            <div style="width: 100%; height: 340px; overflow: hidden; background-color: #f8fafc;"><img src="resin%20-%20necklace.jpg" alt="Handmade Resin Jewelry" style="width: 100%; height: 100%; object-fit: cover;"></div>
+            <h3 style="margin: 20px 15px 6px 15px; color: #2f3e46; font-size: 1.25rem; font-family: 'Playfair Display', serif; font-weight: 400;">Resin Jewelry</h3>
+            <p style="font-size: 0.9rem; color: #64748b; margin: 0 15px; line-height: 1.6; font-weight: 300;">Real dried flowers and sparkling glitter preserved in crystal-clear pendant necklaces and earrings.</p>
+        </a>
 
-        /* Responsive sizing for tablets and mobile phones */
-        @media (max-width: 992px) {
-            .photo-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 576px) {
-            .photo-grid { grid-template-columns: 1fr; }
-        }
-    </style>
-</head>
-<body>
+        <a href="beaded-pens.html" style="background: #ffffff; border-radius: 4px; overflow: hidden; text-align: left; padding-bottom: 20px; text-decoration: none; display: block; border: 1px solid #eae6e1;">
+            <div style="width: 100%; height: 340px; overflow: hidden; background-color: #f8fafc;"><img src="beaded%20-%20pen.jpg" alt="Colorful Beaded Pens" style="width: 100%; height: 100%; object-fit: cover;"></div>
+            <h3 style="margin: 20px 15px 6px 15px; color: #2f3e46; font-size: 1.25rem; font-family: 'Playfair Display', serif; font-weight: 400;">Beaded Pens</h3>
+            <p style="font-size: 0.9rem; color: #64748b; margin: 0 15px; line-height: 1.6; font-weight: 300;">Fun, chunky, and colorful silicone beaded pens to brighten up your desk or office space.</p>
+        </a>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="resin-jewelry.html">Resin Jewelry</a>
-        <a href="beaded-pens.html">Beaded Pens</a>
-        <a href="beaded-keychains.html">Keychains</a>
-        <a href="beaded-bracelets.html">Bracelets</a>
-        <a href="cups-and-glasses.html">Cups & Glasses</a>
-        <a href="contact.html">Contact Us</a>
-    </nav>
+        <a href="beaded-keychains.html" style="background: #ffffff; border-radius: 4px; overflow: hidden; text-align: left; padding-bottom: 20px; text-decoration: none; display: block; border: 1px solid #eae6e1;">
+            <div style="width: 100%; height: 340px; overflow: hidden; background-color: #f8fafc;"><img src="beaded%20-%20keychain.jpg" alt="Handmade Keychains" style="width: 100%; height: 100%; object-fit: cover;"></div>
+            <h3 style="margin: 20px 15px 6px 15px; color: #2f3e46; font-size: 1.25rem; font-family: 'Playfair Display', serif; font-weight: 400;">Handmade Keychains</h3>
+            <p style="font-size: 0.9rem; color: #64748b; margin: 0 15px; line-height: 1.6; font-weight: 300;">Personalized letter keychains custom-crafted with gold leaf accents and dreamy pastel details.</p>
+        </a>
 
-    <header>
-        <h1>Sparkling Resin Delights</h1>
-        <div class="stars">★★★★★</div>
-        <p>Beautiful Handcrafted Creations made by Sophie & Dee</p>
-    </header>
+        <a href="beaded-bracelets.html" style="background: #ffffff; border-radius: 4px; overflow: hidden; text-align: left; padding-bottom: 20px; text-decoration: none; display: block; border: 1px solid #eae6e1;">
+            <div style="width: 100%; height: 340px; overflow: hidden; background-color: #f8fafc;"><img src="beaded%20-%20bracelet.jpg" alt="Handmade Beaded Bracelets" style="width: 100%; height: 100%; object-fit: cover;"></div>
+            <h3 style="margin: 20px 15px 6px 15px; color: #2f3e46; font-size: 1.25rem; font-family: 'Playfair Display', serif; font-weight: 400;">Beaded Bracelets</h3>
+            <p style="font-size: 0.9rem; color: #64748b; margin: 0 15px; line-height: 1.6; font-weight: 300;">Delicately arranged stacked wristwear using high-grade crystals, custom letters, and charms.</p>
+        </a>
+    </div>
 
-    <div class="container">
-        <div class="intro">
-            <h2>Welcome to Our Boutique</h2>
-            <p>Every piece is uniquely designed, crafted, and packaged lovingly by hand. Browse our collections below!</p>
-        </div>
-
-        <div class="photo-grid">
-            <a href="resin-jewelry.html" class="photo-card">
-                <div class="img-box">
-                    <img src="resin%20-%20necklace.jpg" alt="Resin Jewelry">
-                </div>
-                <h3>Resin Jewelry</h3>
-                <p>Real dried flowers and sparkling glitter preserved in crystal-clear pendant necklaces.</p>
-            </a>
-
-            <a href="beaded-pens.html" class="photo-card">
-                <div class="img-box">
-                    <img src="beaded%20-%20pen.jpg" alt="Beaded Pens">
-                </div>
-                <h3>Beaded Pens</h3>
-                <p>Fun, chunky, and colorful silicone beaded pens to brighten up your desk space.</p>
-            </a>
-
-            <a href="beaded-keychains.html" class="photo-card">
-                <div class="img-box">
-                    <img src="beaded%20-%20keychain.jpg" alt="Handmade Keychains">
-                </div>
-                <h3>Handmade Keychains</h3>
-                <p>Personalized letter keychains custom-crafted with elegant leaf accents.</p>
-            </a>
-
-            <a href="beaded-bracelets.html" class="photo-card">
-                <div class="img-box">
-                    <img src="beaded%20-%20bracelet.jpg" alt="Beaded Bracelets">
-                </div>
-                <h3>Beaded Bracelets</h3>
-                <p>Delicately arranged stacked wristwear using beautiful custom beads and charms.</p>
-            </a>
-        </div>
-
-        <div class="review-section">
-            <h2>Kind Words From Our Collectors</h2>
-            
-            <div class="review-grid">
-                <div class="review-card">
-                    <div class="card-stars">★★★★★</div>
-                    <div class="review-text">"The resin necklace is absolutely breathtaking. You can see how much love went into making it!"</div>
-                    <div class="review-author">— Emily R.</div>
-                </div>
-                
-                <div class="review-card">
-                    <div class="card-stars">★★★★★</div>
-                    <div class="review-text">"My beaded pens arrived safely and they make working at my desk so much fun. Absolutely love them!"</div>
-                    <div class="review-author">— Jessica M.</div>
-                </div>
+    <!-- Review Section -->
+    <div style="background-color: #f3f5f2; padding: 80px 30px; border-radius: 4px; margin-top: 120px; text-align: center;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 400; margin-bottom: 40px; color: #2f3e46;">Kind Words From Our Collectors</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
+            <div style="background: #ffffff; padding: 35px; border-radius: 4px; text-align: left; box-shadow: 0 5px 15px rgba(0,0,0,0.01);">
+                <div style="color: #d4a373; font-size: 1rem; margin-bottom: 15px; letter-spacing: 2px;">★★★★★</div>
+                <div style="font-family: 'Playfair Display', serif; font-style: italic; margin-bottom: 20px; line-height: 1.6; font-size: 1.05rem; color: #334155;">"The resin necklace is absolutely breathtaking. You can see how much love went into making it!"</div>
+                <div style="font-weight: 500; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #64748b;">— Emily R.</div>
             </div>
+            <div style="background: #ffffff; padding: 35px; border-radius: 4px; text-align: left; box-shadow: 0 5px 15px rgba(0,0,0,0.01);">
+                <div style="color: #d4a373; font-size: 1rem; margin-bottom: 15px; letter-spacing: 2px;">★★★★★</div>
+                <div style="font-family: 'Playfair Display', serif; font-style: italic; margin-bottom: 20px; line-height: 1.6; font-size: 1.05rem; color: #334155;">"My beaded pens arrived safely and they make working at my desk so much fun. Absolutely love them!"</div>
+                <div style="font-weight: 500; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #64748b;">— Jessica M.</div>
+            </div>
+        </div>
 
-            <div class="feedback-form-container">
-                <h3>Leave Us Feedback</h3>
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <label for="customer-name">Your Name</label>
-                        <input type="text" id="customer-name" name="name" required placeholder="e.g. Sarah J.">
-                    </div>
+        <!-- Feedback Form -->
+        <div style="max-width: 460px; margin: 80px auto 0 auto; background: #ffffff; padding: 40px; border-radius: 4px; border: 1px solid #eae6e1; text-align: left;">
+            <h3 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.6rem; margin-top: 0; margin-bottom: 25px; text-align: center; color: #2f3e46;">Leave Us Feedback</h3>
+            <form action="#" method="POST">
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-weight: 500; margin-bottom: 8px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #2f3e46;">Your Name</label>
+                    <input type="text" required placeholder="e.g. Sarah J." style="width: 100%; padding: 14px; border: 1px solid #dcd7d0; border-radius: 2px; box-sizing: border-box; font-size: 0.95rem; background-color: #faf9f6;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-weight: 500; margin-bottom: 8px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #2f3e46;">Rating</label>
+                    <select style="width: 100%; padding: 14px; border: 1px solid #dcd7d0; border-radius: 2px; box-sizing: border-box; font-size: 0.95rem; background-color: #faf9f6;">
+                        <option>★★★★★ (5 Stars)</option>
+                        <option>★★★★☆ (4 Stars)</option>
+                        <option>★★★☆☆ (3 Stars)</option>
+                        <option>★★☆☆☆ (2 Stars)</option>
+                        <option>★☆☆☆☆ (1 Star)</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-weight: 500; margin-bottom: 8px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #2f3e46;">Your Thoughts</label>
+                    <textarea required placeholder="Share your experience with our pieces..." style="width: 100%; padding: 14px; border: 1px solid #dcd7d0; border-radius: 2px; box-sizing: border-box; font-size: 0.95rem; background-color: #faf9f6; min-height: 100px; resize: vertical;"></textarea>
+                </div>
+                <button type="submit" style="display: block; width: 100%; background-color: #2f3e46; color: #ffffff; padding: 16px; border: none; border-radius: 2px; font-weight: 500; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1.5px; cursor: pointer;">Submit Review</button>
+            </form>
+        </div>
+    </div>
+</div>
                     
-                    <div class="form-group">
+               
