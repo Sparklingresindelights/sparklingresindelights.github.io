@@ -49,11 +49,55 @@ title: Home
             display: flex;
             flex-direction: column;
         }
+
+        /* High-End Top Left Header Split Box */
+        .header-box {
+            background-color: #f3f5f2;
+            padding: 40px;
+            border-bottom: 1px solid #eae6e1;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        .header-text {
+            flex: 1;
+        }
+
+        /* Chic Minimalist Fade Slideshow for the Top Left Corner */
+        .top-left-slideshow {
+            width: 240px;
+            height: 180px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            border: 1px solid #eae6e1;
+            background-color: #ffffff;
+        }
+        .topLeftSlide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+        .topLeftSlide.active {
+            opacity: 1;
+        }
+        .topLeftSlide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         
-        /* Elongated Side Slideshow Column Frame */
+        /* Elongated Side Slideshow Column Frame (Right) */
         .right-slideshow {
             width: 420px;
-            /* Height increased significantly so photos display further down the page */
             height: 720px; 
             position: relative;
             overflow: hidden;
@@ -67,7 +111,6 @@ title: Home
             left: 0;
             width: 100%;
             height: 100%;
-            /* Transition set to a luxurious, relaxing duration */
             transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1); 
         }
         .vertical-slide {
@@ -81,10 +124,11 @@ title: Home
             object-fit: cover;
         }
 
-        /* Responsive adjustments for smaller windows */
         @media (max-width: 992px) {
             .split-layout { flex-direction: column; }
             .right-slideshow { width: 100%; height: 450px; }
+            .header-box { flex-direction: column-reverse; text-align: center; }
+            .top-left-slideshow { width: 100%; height: 220px; }
         }
     </style>
 </head>
@@ -102,20 +146,32 @@ title: Home
 
     <div class="split-layout">
         
-        <!-- Left Side: Content, Grid, Form -->
+        <!-- Left Side: Header with Built-In Top-Left Slideshow, Info, Grid, Form -->
         <div class="left-content">
-            <header style="background-color: #f3f5f2; padding: 60px 40px; text-align: left; border-bottom: 1px solid #eae6e1; border-radius: 4px; box-sizing: border-box; margin-bottom: 40px;">
-                <h1 style="margin: 0; font-size: 3.2rem; font-family: 'Playfair Display', serif; font-weight: 400; letter-spacing: -0.5px;">Sparkling Resin Delights</h1>
-                <div style="color: #d4a373; font-size: 1.1rem; margin: 12px 0; letter-spacing: 4px;">★★★★★</div>
-                <p style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin: 10px 0 0 0; font-style: italic; color: #64748b;">Beautiful Resin Jewelry, Beaded Pens, & Handmade Keychains</p>
-            </header>
+            
+            <div class="header-box">
+                <!-- Text on the Left Side of the Box -->
+                <div class="header-text">
+                    <h1 style="margin: 0; font-size: 2.8rem; font-family: 'Playfair Display', serif; font-weight: 400; letter-spacing: -0.5px; text-align: left;">Sparkling Resin Delights</h1>
+                    <div style="color: #d4a373; font-size: 1rem; margin: 12px 0; letter-spacing: 4px; text-align: left;">★★★★★</div>
+                    <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; margin: 10px 0 0 0; font-style: italic; color: #64748b; text-align: left;">Beautiful Resin Jewelry, Beaded Pens, & Handmade Keychains</p>
+                </div>
+                
+                <!-- New Chic Slideshow in the Top Left Corner Slot -->
+                <div class="top-left-slideshow">
+                    <div class="topLeftSlide active"><img src="beaded%20-%20pen.jpg" alt="Pen Feature"></div>
+                    <div class="topLeftSlide"><img src="resin%20-%20necklace.jpg" alt="Jewelry Feature"></div>
+                    <div class="topLeftSlide"><img src="beaded%20-%20bracelet.jpg" alt="Bracelet Feature"></div>
+                    <div class="topLeftSlide"><img src="beaded%20-%20keychain.jpg" alt="Keychain Feature"></div>
+                </div>
+            </div>
 
             <div style="text-align: left; margin-bottom: 40px; max-width: 700px;">
                 <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 400; color: #2f3e46; margin-bottom: 15px;">Welcome to Sophie & Dee's Boutique</h2>
                 <p style="font-size: 1.05rem; line-height: 1.7; color: #64748b; font-weight: 300; margin: 0;">Every single item is designed, crafted, and packaged lovingly by hand. Click a category to browse our specific collections!</p>
             </div>
 
-            <!-- Categories Text Index links -->
+            <!-- Collections Index Links -->
             <div style="margin-bottom: 60px; font-family: 'Playfair Display', serif;">
                 <h3 style="font-size: 1.4rem; font-weight: 400; border-bottom: 1px solid #eae6e1; padding-bottom: 10px; margin-bottom: 20px;">Explore Our Collections</h3>
                 <a href="resin-jewelry.html" style="display: block; padding: 12px 0; color: #2f3e46; text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #eae6e1;">&rarr; Resin Jewelry</a>
@@ -142,28 +198,8 @@ title: Home
             </div>
 
             <!-- Feedback Entry Form -->
-            <div style="background: #ffffff; padding: 40px 30px; border-radius: 4px; border: 1px solid #eae6e1; text-align: left;">
+            <div style="background: #ffffff; padding: 40px 30px; border-radius: 4px; border: 1px solid #eae6e1; text-align: left; margin-bottom: 40px;">
                 <h3 style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.5rem; margin-top: 0; margin-bottom: 25px; color: #2f3e46;">Leave Us Feedback</h3>
                 <form action="#" method="POST">
                     <div style="margin-bottom: 20px;">
                         <label style="display: block; font-weight: 500; margin-bottom: 8px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #2f3e46;">Your Name</label>
-                        <input type="text" required placeholder="e.g. Sarah J." style="width: 100%; padding: 14px; border: 1px solid #dcd7d0; border-radius: 2px; box-sizing: border-box; background-color: #faf9f6;">
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <label style="display: block; font-weight: 500; margin-bottom: 8px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #2f3e46;">Rating</label>
-                        <select style="width: 100%; padding: 14px; border: 1px solid #dcd7d0; border-radius: 2px; box-sizing: border-box; background-color: #faf9f6;">
-                            <option>★★★★★ (5 Stars)</option>
-                            <option>★★★★☆ (4 Stars)</option>
-                            <option>★★★☆☆ (3 Stars)</option>
-                            <option>★★☆☆☆ (2 Stars)</option>
-                            <option>★☆☆☆☆ (1 Star)</option>
-                        </select>
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <label style="display: block; font-weight: 500; margin-bottom: 8px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #2f3e46;">Your Thoughts</label>
-                        <textarea required placeholder="Share your experience..." style="width: 100%; padding: 14px; border: 1px solid #dcd7d0; border-radius: 2px; box-sizing: border-box; background-color: #faf9f6; min-height: 100px; resize: vertical;"></textarea>
-                    </div>
-                    <button type="submit" style="display: block; width: 100%; background-color: #2f3e46; color: #ffffff; padding: 16px; border: none; border-radius: 2px; font-weight: 500; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1.5px; cursor: pointer;">Submit Review</button>
-                </form>
-            </div>
-        </div>
