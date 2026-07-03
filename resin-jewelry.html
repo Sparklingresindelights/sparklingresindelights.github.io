@@ -63,7 +63,7 @@ title: Resin Jewelry
         }
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
         }
         .product-card {
@@ -82,13 +82,57 @@ title: Resin Jewelry
         .product-card:hover {
             transform: translateY(-4px);
         }
-        .product-card img {
+        
+        /* Interactive Multi-Image Slideshow Frame */
+        .product-slideshow {
+            position: relative;
             width: 100%;
-            height: 320px;
-            object-fit: cover;
+            height: 340px;
             background-color: #faf9f6;
             border-bottom: 1px solid #eae6e1;
+            overflow: hidden;
         }
+        .product-slideshow img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            pointer-events: none;
+        }
+        .product-slideshow img.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        /* Clean Minimalist Slider Navigation Buttons */
+        .slide-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid #eae6e1;
+            color: #2f3e46;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            z-index: 10;
+            transition: background 0.2s;
+        }
+        .slide-btn:hover {
+            background: #ffffff;
+        }
+        .prev-btn { left: 12px; }
+        .next-btn { right: 12px; }
+
         .product-card-info {
             padding: 20px 20px 10px 20px;
             flex-grow: 1;
@@ -118,9 +162,13 @@ title: Resin Jewelry
             margin-bottom: 15px;
             letter-spacing: 0.5px;
         }
-        /* Custom spacing wrapper to keep Stripe button neat */
+        
+        /* Elegant Custom Wrapper to scale down Stripe Buy Button sizing */
         .stripe-btn-wrapper {
-            padding: 0 20px;
+            max-width: 200px;
+            margin: 0 auto;
+            padding: 0 10px;
+            overflow: hidden;
         }
     </style>
 </head>
@@ -144,9 +192,18 @@ title: Resin Jewelry
     <div class="container">
         <div class="product-grid">
             
-            <!-- Product 1 -->
+            <!-- Product 1: Necklace -->
             <div class="product-card">
-                <img src="resin%20-%20necklaces~2.jpg" alt="Pressed Flower Necklace">
+                <div class="product-slideshow" id="slideshow-necklace">
+                    <button class="slide-btn prev-btn" onclick="moveSlide('slideshow-necklace', -1)">&lsaquo;</button>
+                    <!-- Main view image -->
+                    <img src="resin%20-%20necklaces~2.jpg" alt="Pressed Flower Necklace Front View" class="active">
+                    <!-- New alternative views loaded sequentially -->
+                    <img src="resin%20-%20necklace1.jpg" alt="Pressed Flower Necklace Detail View 1">
+                    <img src="resin%20-%20necklace.jpg" alt="Pressed Flower Necklace Detail View 2">
+                    <img src="resin%20-%20necklace3.jpg" alt="Pressed Flower Necklace Detail View 3">
+                    <button class="slide-btn next-btn" onclick="moveSlide('slideshow-necklace', 1)">&rsaquo;</button>
+                </div>
                 <div class="product-card-info">
                     <div>
                         <h3>Handmade Pressed Flower Resin Necklace</h3>
@@ -155,7 +212,7 @@ title: Resin Jewelry
                     <div class="price">£14.99</div>
                 </div>
                 <div class="stripe-btn-wrapper">
-                    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+                    <script async src="https://stripe.com"></script>
                     <stripe-buy-button
                       buy-button-id="buy_btn_1TmqhFDuVnIeP5Uhr4Kzxe8R"
                       publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
@@ -163,9 +220,17 @@ title: Resin Jewelry
                 </div>
             </div>
 
-            <!-- Product 2 -->
+            <!-- Product 2: Earrings -->
             <div class="product-card">
-                <img src="resin%20-%20earrings.jpg" alt="Glitter Resin Earrings">
+                <div class="product-slideshow" id="slideshow-earrings">
+                    <button class="slide-btn prev-btn" onclick="moveSlide('slideshow-earrings', -1)">&lsaquo;</button>
+                    <!-- Main view image -->
+                    <img src="resin%20-%20earrings.jpg" alt="Glitter Resin Earrings Front View" class="active">
+                    <!-- New alternative views loaded sequentially -->
+                    <img src="resin%20-%20earrings1.jpg" alt="Glitter Resin Earrings Detail View 1">
+                    <img src="resin%20-%20earrings2.jpg" alt="Glitter Resin Earrings Detail View 2">
+                    <button class="slide-btn next-btn" onclick="moveSlide('slideshow-earrings', 1)">&rsaquo;</button>
+                </div>
                 <div class="product-card-info">
                     <div>
                         <h3>Handmade Gold-Sun Resin Drop Earrings</h3>
@@ -174,7 +239,7 @@ title: Resin Jewelry
                     <div class="price">£9.99</div>
                 </div>
                 <div class="stripe-btn-wrapper">
-                    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+                    <script async src="https://stripe.com"></script>
                     <stripe-buy-button
                       buy-button-id="buy_btn_1TmeisDuVnIeP5UhovztyRZo"
                       publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
@@ -185,5 +250,19 @@ title: Resin Jewelry
         </div>
     </div>
 
-</body>
-</html>
+    <script>
+        // Universal slider controller function for multiple product display tracks
+        function moveSlide(containerId, direction) {
+            const container = document.getElementById(containerId);
+            const images = container.getElementsByTagName('img');
+            let activeIndex = -1;
+            
+            // Find current active image item
+            for (let i = 0; i < images.length; i++) {
+                if (images[i].classList.contains('active')) {
+                    activeIndex = i;
+                    break;
+                }
+            }
+            
+            if (activeIndex !== -1) {
