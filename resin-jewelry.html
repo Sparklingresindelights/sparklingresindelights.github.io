@@ -83,12 +83,12 @@ title: Resin Jewelry
             transform: translateY(-4px);
         }
         
-        /* Interactive Multi-Image Slideshow Frame */
+       /* Interactive Multi-Image Slideshow Frame */
         .product-slideshow {
             position: relative;
             width: 100%;
             height: 340px;
-            background-color: #faf9f6;
+            background-color: #faf9f6; /* A clean cream background for any side bars */
             border-bottom: 1px solid #eae6e1;
             overflow: hidden;
         }
@@ -98,7 +98,9 @@ title: Resin Jewelry
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain; /* This guarantees the entire product is perfectly visible! */
+            padding: 15px;       /* Adds a safe margin around your jewelry photos */
+            box-sizing: border-box;
             opacity: 0;
             transition: opacity 0.6s ease-in-out;
         }
