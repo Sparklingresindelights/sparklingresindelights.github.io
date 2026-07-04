@@ -10,7 +10,7 @@ title: Beaded Pens
     <title>Beaded Pens - Sparkling Resin Delights</title>
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com" rel="stylesheet">
     
     <style>
         :root {
@@ -104,7 +104,6 @@ title: Beaded Pens
             transform: translateY(-4px);
         }
 
-        /* High-End Carousel Container using containment scale parameters */
         .slideshow-container {
             position: relative;
             width: 100%;
@@ -119,14 +118,16 @@ title: Beaded Pens
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Keeps full pen length completely visible */
+            object-fit: contain; 
             padding: 20px;
             box-sizing: border-box;
             opacity: 0;
-            transition: opacity 0.5s ease-in-out;
+            transition: opacity 0.4s ease-in-out;
+            pointer-events: none;
         }
         .slideshow-container img.active {
             opacity: 1;
+            pointer-events: auto;
         }
 
         .slide-btn {
@@ -186,7 +187,6 @@ title: Beaded Pens
             font-weight: 300;
         }
 
-        /* Scaled footprint boundaries for Stripe components */
         .stripe-container {
             max-width: 200px;
             margin: auto auto 0 auto;
@@ -237,9 +237,9 @@ title: Beaded Pens
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
-                    <img src="pink%20-%20kisses.jpg" alt="Pink Kisses Pen View 1" class="active">
-                    <img src="pink%20-%20kisses1.jpg" alt="Pink Kisses Pen View 2">
-                    <img src="pink%20-%20kisses2.jpg" alt="Pink Kisses Pen View 3">
+                    <img src="pink - kisses.jpg" alt="Pink Kisses Pen View 1" class="active">
+                    <img src="pink - kisses1.jpg" alt="Pink Kisses Pen View 2">
+                    <img src="pink - kisses2.jpg" alt="Pink Kisses Pen View 3">
                     <button class="slide-btn next-btn" type="button">&rsaquo;</button>
                 </div>
                 <div class="product-info">
@@ -247,7 +247,7 @@ title: Beaded Pens
                         <h3>Pink Kisses Pen</h3>
                         <p>All things cute and pink! Features a soft pink silicone bead with a white kiss print, sparkly pink crystal spacers, a faceted pink heart, and a pretty red patterned crystal bead. So fun and girly!</p>
                     </div>
-                  
+                   
                 </div>
                 <div class="stripe-container">
                     <stripe-buy-button
@@ -261,9 +261,9 @@ title: Beaded Pens
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
-                    <img src="beaded%20-%20pen.jpg" alt="Pretty Pink Bow Pen View 1" class="active">
-                    <img src="beaded%20-%20pen1.jpg" alt="Pretty Pink Bow Pen View 2">
-                    <img src="beaded%20-%20pen2.jpg" alt="Pretty Pink Bow Pen View 3">
+                    <img src="beaded - pen.jpg" alt="Pretty Pink Bow Pen View 1" class="active">
+                    <img src="beaded - pen1.jpg" alt="Pretty Pink Bow Pen View 2">
+                    <img src="beaded - pen2.jpg" alt="Pretty Pink Bow Pen View 3">
                     <button class="slide-btn next-btn" type="button">&rsaquo;</button>
                 </div>
                 <div class="product-info">
@@ -280,14 +280,13 @@ title: Beaded Pens
                     ></stripe-buy-button>
                 </div>
             </div>
-
             <!-- Item 3: Betty Boop -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
-                    <img src="betty%20-%20boop.jpg" alt="Betty Boop Pen View 1" class="active">
-                    <img src="betty%20-%20boop1.jpg" alt="Betty Boop Pen View 2">
-                    <img src="betty%20-%20boop2.jpg" alt="Betty Boop Pen View 3">
+                    <img src="betty - boop.jpg" alt="Betty Boop Pen View 1" class="active">
+                    <img src="betty - boop1.jpg" alt="Betty Boop Pen View 2">
+                    <img src="betty - boop2.jpg" alt="Betty Boop Pen View 3">
                     <button class="slide-btn next-btn" type="button">&rsaquo;</button>
                 </div>
                 <div class="product-info">
@@ -295,7 +294,7 @@ title: Beaded Pens
                         <h3>Betty Boop Pen</h3>
                         <p>A playful retro design! Features a classic Betty Boop themed bead, shimmering purple crystal, faceted purple spacer, and soft purple silicone – perfect for fans of vintage style.</p>
                     </div>
-                  
+                   
                 </div>
                 <div class="stripe-container">
                     <stripe-buy-button
@@ -305,13 +304,13 @@ title: Beaded Pens
                 </div>
             </div>
 
- <!-- Item 4: Sparkling Purple Magic -->
+            <!-- Item 4: Sparkling Purple Magic -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
-                    <img src="purple%20-%20magic.jpg" alt="Purple Magic Pen View 1" class="active">
-                    <img src="purple%20-%20magic1.jpg" alt="Purple Magic Pen View 2">
-                    <img src="purple%20-%20magic2.jpg" alt="Purple Magic Pen View 3">
+                    <img src="purple - magic.jpg" alt="Purple Magic Pen View 1" class="active">
+                    <img src="purple - magic1.jpg" alt="Purple Magic Pen View 2">
+                    <img src="purple - magic2.jpg" alt="Purple Magic Pen View 3">
                     <button class="slide-btn next-btn" type="button">&rsaquo;</button>
                 </div>
                 <div class="product-info">
@@ -319,7 +318,7 @@ title: Beaded Pens
                         <h3>Sparkling Purple Magic Pen</h3>
                         <p>For lovers of all things purple! Includes a soft matte purple silicone bead, iridescent shimmer crystal, faceted purple heart, and a glossy resin accent bead – it catches the light beautifully.</p>
                     </div>
-                  
+                   
                 </div>
                 <div class="stripe-container">
                     <stripe-buy-button
@@ -329,13 +328,13 @@ title: Beaded Pens
                 </div>
             </div>
 
-<!-- Item 5: Dreamy White & Purple -->
+            <!-- Item 5: Dreamy White & Purple -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
-                    <img src="purple%20-%20white.jpg" alt="Purple White Pen View 1" class="active">
-                    <img src="purple%20-%20white1.jpg" alt="Purple White Pen View 2">
-                    <img src="purple%20-%20white2.jpg" alt="Purple White Pen View 3">
+                    <img src="purple - white.jpg" alt="Purple White Pen View 1" class="active">
+                    <img src="purple - white1.jpg" alt="Purple White Pen View 2">
+                    <img src="purple - white2.jpg" alt="Purple White Pen View 3">
                     <button class="slide-btn next-btn" type="button">&rsaquo;</button>
                 </div>
                 <div class="product-info">
@@ -343,7 +342,7 @@ title: Beaded Pens
                         <h3>Dreamy White & Purple Pen</h3>
                         <p>Soft matte white silicone beads paired with a gorgeous white bead swirled with soft purple – simple, elegant, and totally charming.</p>
                     </div>
-                  
+                    <div class="price">£6.50</div>
                 </div>
                 <div class="stripe-container">
                     <stripe-buy-button
@@ -353,6 +352,41 @@ title: Beaded Pens
                 </div>
             </div>
 
+        </div> <!-- End of .product-grid -->
+    </div> <!-- End of .container -->
+
+    <footer>
+        <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.slideshow-container').forEach(slideshow => {
+            const images = slideshow.querySelectorAll('img');
+            const prevBtn = slideshow.querySelector('.prev-btn');
+            const nextBtn = slideshow.querySelector('.next-btn');
+            let currentIndex = 0;
+
+            function updateSlides(newIndex) {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (newIndex + images.length) % images.length;
+                images[currentIndex].classList.add('active');
+            }
+
+            if(prevBtn && nextBtn) {
+                prevBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    updateSlides(currentIndex - 1);
+                });
+
+                nextBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    updateSlides(currentIndex + 1);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
 
 
 
