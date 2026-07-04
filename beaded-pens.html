@@ -1,17 +1,17 @@
+---
+layout: null
+title: Beaded Pens
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beaded Pens - Sparkling Resin Delights</title>
-    <!-- Google Fonts for a High-End Look -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
-    <!-- Pre-loading Stripe global script -->
-    <script async src="https://stripe.com"></script>
-
     <style>
         :root {
             --bg-color: #fcfbfa; 
@@ -30,7 +30,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Minimalist Navigation */
         nav {
             background-color: #ffffff;
             padding: 20px 15px;
@@ -54,7 +53,6 @@
             color: var(--sage-accent);
         }
 
-        /* Elegant Editorial Header */
         header {
             background-color: #f3f5f2; 
             color: var(--primary-dark);
@@ -83,10 +81,9 @@
             padding: 0 30px;
         }
 
-        /* High-End Boutique Product Grid */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
         }
         
@@ -101,30 +98,37 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            transition: transform 0.2s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-4px);
         }
 
-        /* High-End Carousel Slider container */
+        /* High-End Carousel Container using containment scale parameters */
         .slideshow-container {
             position: relative;
             width: 100%;
             height: 380px;
             overflow: hidden;
-            background-color: #f8fafc;
+            background-color: #faf9f6;
+            border-bottom: 1px solid #eae6e1;
         }
-        .slides-wrapper {
-            display: flex;
+        .slideshow-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            object-fit: contain; /* Keeps full pen length completely visible */
+            padding: 20px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
         }
-        .slide-img {
-            min-width: 100%;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .slideshow-container img.active {
+            opacity: 1;
         }
 
-        /* Minimalist Sleek Slide Buttons */
         .slide-btn {
             position: absolute;
             top: 50%;
@@ -144,6 +148,7 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
             transition: background 0.2s, color 0.2s;
             z-index: 50;
+            user-select: none;
         }
         .slide-btn:hover {
             background: var(--primary-dark);
@@ -169,7 +174,7 @@
         .product-card .price {
             font-weight: 500;
             color: var(--primary-dark);
-            font-size: 1.15rem;
+            font-size: 1.25rem;
             margin-bottom: 15px;
             letter-spacing: 0.5px;
         }
@@ -179,15 +184,15 @@
             margin: 0 0 25px 0;
             line-height: 1.6;
             font-weight: 300;
-            min-height: 80px;
         }
 
+        /* Scaled footprint boundaries for Stripe components */
         .stripe-container {
-            margin-top: auto;
-            padding: 10px;
-            background-color: #faf9f6;
-            border-radius: 4px;
-            min-height: 50px;
+            max-width: 200px;
+            margin: auto auto 0 auto;
+            padding: 0 10px;
+            min-height: 45px;
+            width: 100%;
         }
 
         footer {
@@ -200,14 +205,13 @@
         }
 
         @media (max-width: 992px) {
-            .product-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
             .slideshow-container { height: 320px; }
         }
         @media (max-width: 600px) {
-            .product-grid { grid-template-columns: 1fr; }
             .container { padding: 0 20px; }
         }
     </style>
+    <script async src="https://stripe.com"></script>
 </head>
 <body>
 
@@ -231,51 +235,55 @@
             
             <!-- Item 1: Pink Kisses -->
             <div class="product-card">
-                <div class="slideshow-container" data-current-slide="0">
-                    <button class="slide-btn prev-btn" type="button" onclick="changeSlide(this, -1)">&lsaquo;</button>
-                    <div class="slides-wrapper">
-                        <img class="slide-img" src="pink%20-%20kisses.jpg" alt="Pink Kisses Pen View 1">
-                        <img class="slide-img" src="pink%20-%20kisses1.jpg" alt="Pink Kisses Pen View 2">
-                        <img class="slide-img" src="pink%20-%20kisses2.jpg" alt="Pink Kisses Pen View 3">
-                    </div>
-                    <button class="slide-btn next-btn" type="button" onclick="changeSlide(this, 1)">&rsaquo;</button>
+                <div class="slideshow-container">
+                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
+                    <img src="pink%20-%20kisses.jpg" alt="Pink Kisses Pen View 1" class="active">
+                    <img src="pink%20-%20kisses1.jpg" alt="Pink Kisses Pen View 2">
+                    <img src="pink%20-%20kisses2.jpg" alt="Pink Kisses Pen View 3">
+                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
                 </div>
                 <div class="product-info">
                     <div>
                         <h3>Pink Kisses Pen</h3>
-                        <div class="price">£6.50</div>
                         <p>All things cute and pink! Features a soft pink silicone bead with a white kiss print, sparkly pink crystal spacers, a faceted pink heart, and a pretty red patterned crystal bead. So fun and girly!</p>
                     </div>
-                    <div class="stripe-container">
-                        <stripe-buy-button
-                          buy-button-id="buy_btn_1TnD4VDuVnIeP5UhdRFlBdK6"
-                          publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
-                        ></stripe-buy-button>
-                    </div>
+                    <div class="price">£6.50</div>
+                </div>
+                <div class="stripe-container">
+                    <stripe-buy-button
+                      buy-button-id="buy_btn_1TnD4VDuVnIeP5UhdRFlBdK6"
+                      publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
+                    ></stripe-buy-button>
                 </div>
             </div>
 
             <!-- Item 2: Pretty Pink Bow -->
             <div class="product-card">
-                <div class="slideshow-container" data-current-slide="0">
-                    <button class="slide-btn prev-btn" type="button" onclick="changeSlide(this, -1)">&lsaquo;</button>
-                    <div class="slides-wrapper">
-                        <img class="slide-img" src="beaded%20-%20pen.jpg" alt="Pretty Pink Bow Pen View 1">
-                        <!-- Add second photo file name inside src="" below if you upload one for this pen! -->
-                        <img class="slide-img" src="beaded%20-%20pen.jpg" alt="Pretty Pink Bow Pen View 2">
-                    </div>
-                    <button class="slide-btn next-btn" type="button" onclick="changeSlide(this, 1)">&rsaquo;</button>
+                <div class="slideshow-container">
+                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
+                    <img src="beaded%20-%20pen.jpg" alt="Pretty Pink Bow Pen View 1" class="active">
+                    <img src="beaded%20-%20pen1.jpg" alt="Pretty Pink Bow Pen View 2">
+                    <img src="beaded%20-%20pen2.jpg" alt="Pretty Pink Bow Pen View 3">
+                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
                 </div>
                 <div class="product-info">
                     <div>
                         <h3>Pretty Pink Bow Pen</h3>
-                        <div class="price">£6.50</div>
                         <p>Sweet and whimsical! Comes with a soft pink silicone bead, clear pink heart, cute pink star charm, and a clear crystal bead with a darling bow detail – a total delight!</p>
                     </div>
-                    <div class="stripe-container">
-                        <stripe-buy-button
-                          buy-button-id="buy_btn_1TnWpWDuVnIeP5UhQNiPRgzk"
+                    <div class="price">£6.50</div>
+                </div>
+                <div class="stripe-container">
+                    <stripe-buy-button
+                      buy-button-id="buy_btn_1TnWpWDuVnIeP5UhQNiPRgzk"
+                      publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
+                    ></stripe-buy-button>
+                </div>
+            </div>
 
+            <!-- Item 3: Purple Magic -->
+            <div class="product-card">
+                <div class="slideshow-container">
 
 
 
