@@ -81,10 +81,11 @@ title: Beaded Pens
             padding: 0 20px;
         }
 
+        /* Strict Grid Configuration: Balanced columns across screen sizes */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 30px;
         }
         
         .product-card {
@@ -93,7 +94,7 @@ title: Beaded Pens
             border-radius: 4px;
             overflow: hidden;
             text-align: center;
-            padding-bottom: 20px;
+            padding-bottom: 25px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.01);
             display: flex;
             flex-direction: column;
@@ -166,7 +167,7 @@ title: Beaded Pens
             justify-content: space-between;
         }
         .product-card h3 {
-            margin: 0 0 8px 0;
+            margin: 0 0 10px 0;
             color: var(--primary-dark);
             font-size: 1.15rem;
             font-family: 'Playfair Display', serif;
@@ -279,9 +280,14 @@ title: Beaded Pens
                       buy-button-id="buy_btn_1TnWpWDuVnIeP5UhQNiPRgzk"
                       publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
                     ></stripe-buy-button>
+                </div>
+            </div>
 
+            <!-- Item 3: Betty Boop -->
+            <div class="product-card">
+                <div class="slideshow-container">
                     ```html
-            <!-- Item 4: The Willie Pen (NOW POSITIONED ON THE LEFT!) -->
+            <!-- Item 4: The Willie Pen -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
