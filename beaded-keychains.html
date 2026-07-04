@@ -1,129 +1,401 @@
+---
+layout: null
+title: Keychains
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Handmade Keychains - Sparkling Resin Delights</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com" rel="stylesheet">
+    
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f4; color: #2f3e46; }
-        nav { background-color: #2f3e46; padding: 15px; text-align: center; }
-        nav a { color: #ffffff; margin: 0 15px; text-decoration: none; font-weight: 600; }
-        nav a:hover { text-decoration: underline; }
-        header { background-color: #a3b19b; color: #ffffff; padding: 40px 20px; text-align: center; }
-        header h1 { margin: 0; font-size: 2.5rem; font-family: 'Georgia', serif; }
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 30px; }
-        .product-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; text-align: center; padding-bottom: 20px; }
-        .product-card img { width: 100%; height: 250px; object-fit: cover; background-color: #f1f5f9; }
-        .product-card h3 { margin: 15px 0 5px 0; color: #2f3e46; }
-        .product-card .price { font-weight: bold; color: #78866b; font-size: 1.2rem; margin-bottom: 10px; }
-        .product-card p { font-size: 0.9rem; color: #64748b; padding: 0 15px; margin-bottom: 15px; min-height: 40px; }
+        :root {
+            --bg-color: #fcfbfa; 
+            --primary-dark: #2f3e46;
+            --sage-accent: #8fa187;
+            --text-main: #334155;
+            --text-muted: #64748b;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color); 
+            color: var(--text-main);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            background-color: #ffffff;
+            padding: 20px 15px;
+            text-align: center;
+            border-bottom: 1px solid #eae6e1;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: var(--primary-dark);
+            margin: 0 18px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: var(--sage-accent);
+        }
+
+        header {
+            background-color: #f3f5f2; 
+            color: var(--primary-dark);
+            padding: 70px 20px;
+            text-align: center;
+            border-bottom: 1px solid #eae6e1;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+        }
+        header p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            margin: 10px 0 0 0;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* Strict Grid Configuration for balanced row spacing */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .product-card {
+            background: #ffffff;
+            border: 1px solid #eae6e1;
+            border-radius: 4px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 280px; 
+            overflow: hidden;
+            background-color: #faf9f6;
+            border-bottom: 1px solid #eae6e1;
+        }
+        .slideshow-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+            padding: 15px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            pointer-events: none;
+        }
+        .slideshow-container img.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .slide-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #eae6e1;
+            color: var(--primary-dark);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: background 0.2s, color 0.2s;
+            z-index: 50;
+            user-select: none;
+        }
+        .slide-btn:hover {
+            background: var(--primary-dark);
+            color: #ffffff;
+        }
+        .prev-btn { left: 8px; }
+        .next-btn { right: 8px; }
+
+        .product-info {
+            padding: 20px 15px 0 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-card h3 {
+            margin: 0 0 10px 0;
+            color: var(--primary-dark);
+            font-size: 1.15rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+        }
+        .product-card .price {
+            font-weight: 500;
+            color: var(--primary-dark);
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+        .product-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0 0 20px 0;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+
+        .stripe-container {
+            max-width: 180px;
+            margin: auto auto 0 auto;
+            padding: 0 5px;
+            min-height: 45px;
+            width: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border-top: 1px solid #eae6e1;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 992px) {
+            .product-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .slideshow-container { height: 260px; }
+        }
+        @media (max-width: 650px) {
+            .product-grid { grid-template-columns: 1fr; gap: 30px; }
+        }
     </style>
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="resin-jewelry.html">Resin Jewelry</a>
-    <a href="beaded-pens.html">Beaded Pens</a>
-    <a href="beaded-keychains.html">Keychains</a>
-    <a href="beaded-bracelets.html">Beaded Bracelets</a>
-    <a href="cups-and-glasses.html">Cups & Glasses</a>
-    <a href="contact.html">Contact Us</a>
-</nav>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="resin-jewelry.html">Resin Jewelry</a>
+        <a href="beaded-pens.html">Beaded Pens</a>
+        <a href="beaded-keychains.html">Keychains</a>
+        <a href="beaded-bracelets.html">Bracelets</a>
+        <a href="cups-and-glasses.html">Cups & Glasses</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
     <header>
         <h1>Custom Handmade Keychains</h1>
         <p>Beads & Brightness - Carry Joy Where Ever You Go</p>
     </header>
+
     <div class="container">
         <div class="product-grid">
+            
+            <!-- Item 1: Emerald Green -->
             <div class="product-card">
-                <img src="beaded%20-%20keychain.jpg" alt="Emerald Green Keychain">
-                <h3>Emerald Green Keychain</h3>
-                <div class="price">£5.50</div>
-                <p>Rich and striking, featuring smooth dark green matte silicone beads, a black silicone bead, a sparkling turquoise crystal spacer, a detailed zinc alloy snake, and a matching angel pendant. A bold, eye-catching colour combination.</p>
-               <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1TnYtdDuVnIeP5Uh4CV9IE3S"
-  publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
->
-</stripe-buy-button>
-            </div>
-            <div class="product-card">
-                <img src="soft%20-%20grey.jpg" alt="Soft Grey Keychain">
-                <h3>Soft Grey Keychain</h3>
-                <div class="price">£6.50</div>
-                <p>A minimalist, elegant design with smooth matte grey silicone beads, a white silicone bead, a shimmering white crystal spacer, a textured zinc alloy snake, and a delicate angel pendant. Perfect for a subtle, sophisticated look.</p>
+                <div class="slideshow-container">
+                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
+                    <img src="beaded - keychain.jpg" alt="Emerald Green Keychain View 1" class="active">
+                    <img src="beaded - keychain1.jpg" alt="Emerald Green Keychain View 2">
+                    <img src="beaded - keychain2.jpg" alt="Emerald Green Keychain View 3">
+                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Emerald Green Keychain</h3>
+                        <p>Rich and striking, featuring smooth dark green matte silicone beads, a black silicone bead, a sparkling turquoise crystal spacer, a detailed zinc alloy snake, and a matching angel pendant. A bold, eye-catching colour combination.</p>
+                    </div>
+                    
                 <script async
   src="https://js.stripe.com/v3/buy-button.js">
 </script>
 
 <stripe-buy-button
-  buy-button-id="buy_btn_1TnZ8dDuVnIeP5Uhr1V20tvv"
+  buy-button-id="buy_btn_1TpZNvDuVnIeP5UhVGSnXJOT"
   publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
 >
 </stripe-buy-button>
             </div>
-            
-            <!-- Pen Item 2 -->
+
+            <!-- Item 2: Soft Grey -->
             <div class="product-card">
-                <img src="pink%20-%20leopard.jpg" alt="Fun Print Beaded Keychain">
-                <h3>Pink Leopard Print Keychain</h3>
-                <div class="price">£6.50</div>
-                <p>Features fun pale pink cow/leopard print silicone beads, a smooth matte pink silicone bead, a sparkling purple crystal spacer, a detailed zinc alloy snake charm, and finished with a sweet angel pendant. A playful, bold style that stands out.</p>
+                <div class="slideshow-container">
+                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
+                    <img src="soft - grey.jpg" alt="Soft Grey Keychain View 1" class="active">
+                    <img src="soft - grey1.jpg" alt="Soft Grey Keychain View 2">
+                    <img src="soft - grey2.jpg" alt="Soft Grey Keychain View 3">
+                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Soft Grey Keychain</h3>
+                        <p>A minimalist, elegant design with smooth matte grey silicone beads, a white silicone bead, a shimmering white crystal spacer, a textured zinc alloy snake, and a delicate angel pendant. Perfect for a subtle, sophisticated look.</p>
+                    </div>
+                    
                <script async
   src="https://js.stripe.com/v3/buy-button.js">
 </script>
 
 <stripe-buy-button
-  buy-button-id="buy_btn_1TnZ4SDuVnIeP5UhoJcatukC"
+  buy-button-id="buy_btn_1TpZLADuVnIeP5UhCDAXVa28"
   publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
 >
 </stripe-buy-button>
- 
-                
             </div>
-
-            <!-- Pen Item 3 -->
+             <!-- Item 3: Pink Leopard Print -->
             <div class="product-card">
-                <img src="pink%20-%20floral.jpg" alt="Sweet & Girlie Keychain">
-                <h3>Pink Floral Keychain</h3>
-                <div class="price">£7.00</div>
-                <p>Sweet & Feminine, with soft matte pink silicone beads, a pretty black silicone bead printed with pink flowers, a shimmering white crystal spacer, a zinc alloy snake detail, and a lovely angel charm pendant. A perfect mix of edge & softness.</p>
-                 <script async
+                <div class="slideshow-container">
+                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
+                    <img src="pink - leopard.jpg" alt="Pink Leopard Print Keychain View 1" class="active">
+                    <img src="pink - leopard1.jpg" alt="Pink Leopard Print Keychain View 2">
+                    <img src="pink - leopard2.jpg" alt="Pink Leopard Print Keychain View 3">
+                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Pink Leopard Print Keychain</h3>
+                        <p>Features fun pale pink cow/leopard print silicone beads, a smooth matte pink silicone bead, a sparkling purple crystal spacer, a detailed zinc alloy snake charm, and finished with a sweet angel pendant. A playful, bold style that stands out.</p>
+                    </div>
+                    
+               <script async
   src="https://js.stripe.com/v3/buy-button.js">
 </script>
 
 <stripe-buy-button
-  buy-button-id="buy_btn_1TnZAdDuVnIeP5UhbDrubEVB"
+  buy-button-id="buy_btn_1TpZJpDuVnIeP5UhJ1u9UgLA"
   publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
 >
 </stripe-buy-button>
-                
-            </div>
+                </div>
 
-            <!-- Pen Item 4 -->
+            <!-- Item 4: Pink Floral -->
             <div class="product-card">
-                <img src="sky%20-%20blue.jpg" alt="Soft & Subtle Keychain">
-                <h3>Sky Blue Keychain</h3>
-                <div class="price">£7.00</div>
-                <p>Light & cheerful, with soft light blue matte silicone beads, a light blue crystal spacer, a pretty printed white bead with blue & purple swirls, a zinc alloy snake charm, and a sweet angel pendant. Bright & refreshing.</p>
-             <script async
+                <div class="slideshow-container">
+                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
+                    <img src="pink - floral.jpg" alt="Pink Floral Keychain View 1" class="active">
+                    <img src="pink - floral1.jpg" alt="Pink Floral Keychain View 2">
+                    <img src="pink - floral2.jpg" alt="Pink Floral Keychain View 3">
+                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Pink Floral Keychain</h3>
+                        <p>Sweet & Feminine, with soft matte pink silicone beads, a pretty black silicone bead printed with pink flowers, a shimmering white crystal spacer, a zinc alloy snake detail, and a lovely angel charm pendant. A perfect mix of edge & softness.</p>
+                    </div>
+                    
+               <script async
   src="https://js.stripe.com/v3/buy-button.js">
 </script>
 
 <stripe-buy-button
-  buy-button-id="buy_btn_1TnZ0cDuVnIeP5UhKgQMlgYT"
+  buy-button-id="buy_btn_1TpZIVDuVnIeP5Uh84I1vz1t"
   publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
 >
 </stripe-buy-button>
-                
-            </div>
+                </div>
 
-       </div>
-    </div>
-    <script async src="https://stripe.com"></script>
+            <!-- Item 5: Sky Blue -->
+            <div class="product-card">
+                <div class="slideshow-container">
+                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
+                    <img src="sky - blue.jpg" alt="Sky Blue Keychain View 1" class="active">
+                    <img src="sky - blue1.jpg" alt="Sky Blue Keychain View 2">
+                    <img src="sky - blue2.jpg" alt="Sky Blue Keychain View 3">
+                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Sky Blue Keychain</h3>
+                        <p>Light & cheerful, with soft light blue matte silicone beads, a light blue crystal spacer, a pretty printed white bead with blue & purple swirls, a zinc alloy snake charm, and a sweet angel pendant. Bright & refreshing.</p>
+                    </div>
+                    
+               <script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1TpZGeDuVnIeP5UhyjbuLbqC"
+  publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
+>
+</stripe-buy-button>
+
+        </div> <!-- End of .product-grid -->
+    </div> <!-- End of .container -->
+
+    <footer>
+        <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.slideshow-container').forEach(slideshow => {
+            const images = slideshow.querySelectorAll('img');
+            const prevBtn = slideshow.querySelector('.prev-btn');
+            const nextBtn = slideshow.querySelector('.next-btn');
+            let currentIndex = 0;
+
+            function updateSlides(newIndex) {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (newIndex + images.length) % images.length;
+                images[currentIndex].classList.add('active');
+            }
+
+            if(prevBtn && nextBtn) {
+                prevBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    updateSlides(currentIndex - 1);
+                });
+
+                nextBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    updateSlides(currentIndex + 1);
+                });
+            }
+        });
+    </script>
 </body>
 </html>
+
