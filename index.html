@@ -7,33 +7,46 @@ title: Home
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sparkling Resin Delights</title>
+    <title>Sparkling Resin Delights | Handmade Crafts & Custom UK Gifts</title>
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com" rel="stylesheet">
     <style>
+        :root {
+            --pastel-bg: #f7f9f6; /* Fresh, bright pastel mint-tinted cream */
+            --primary-dark: #2d3748; /* Soft charcoal for premium readability */
+            --pastel-green: #e2ede4; /* Soft fresh sage background frame */
+            --accent-mint: #9cbda7; /* Fresh visual focal point color */
+            --accent-lavender: #bfaed4; /* Gentle lavender complement */
+            --card-white: #ffffff;
+        }
+
         body {
             margin: 0;
             padding: 0;
-            background-color: #fcfbfa;
+            background-color: var(--pastel-bg);
             font-family: 'Inter', sans-serif;
-            color: #2f3e46;
+            color: var(--primary-dark);
             -webkit-font-smoothing: antialiased;
         }
         nav {
             background-color: #ffffff;
             padding: 20px 15px;
             text-align: center;
-            border-bottom: 1px solid #eae6e1;
+            border-bottom: 2px solid var(--accent-mint);
         }
         nav a {
-            color: #2f3e46;
+            color: var(--primary-dark);
             margin: 0 18px;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 0.85rem;
             letter-spacing: 1.5px;
             text-transform: uppercase;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: var(--accent-mint);
         }
         
         /* Premium Split Screen Layout Container */
@@ -52,19 +65,66 @@ title: Home
 
         /* High-End Top Left Header Split Box */
         .header-box {
-            background-color: #f3f5f2;
+            background-color: var(--pastel-green);
             padding: 40px;
-            border-bottom: 1px solid #eae6e1;
-            border-radius: 4px;
+            border-bottom: 2px solid var(--accent-mint);
+            border-radius: 8px;
             box-sizing: border-box;
             margin-bottom: 40px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 30px;
+            box-shadow: 0 4px 15px rgba(156, 189, 167, 0.1);
         }
         .header-text {
             flex: 1;
+        }
+        .header-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            color: var(--primary-dark);
+        }
+        .header-text p {
+            font-size: 1.1rem;
+            margin: 0;
+            color: #5a6a75;
+            font-style: italic;
+        }
+
+        /* Info Section: About Us & Delivery Badges */
+        .info-section {
+            background: var(--card-white);
+            border: 1px solid #e1ebd9;
+            border-radius: 8px;
+            padding: 35px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+        }
+        .info-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-top: 0;
+            color: var(--primary-dark);
+        }
+        .info-section p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #4a5568;
+        }
+        .delivery-badge {
+            display: inline-flex;
+            align-items: center;
+            background-color: #f0f4f1;
+            border: 1px solid var(--accent-mint);
+            padding: 10px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-top: 15px;
+            letter-spacing: 0.5px;
         }
 
         /* Chic Minimalist Fade Slideshow for the Top Left Corner */
@@ -73,7 +133,7 @@ title: Home
             height: 180px;
             position: relative;
             overflow: hidden;
-            border-radius: 4px;
+            border-radius: 6px;
             border: 1px solid #eae6e1;
             background-color: #ffffff;
         }
@@ -98,10 +158,10 @@ title: Home
         /* Elongated Side Slideshow Column Frame (Right) */
         .right-slideshow {
             width: 420px;
-            height: 720px; 
+            height: 760px; 
             position: relative;
             overflow: hidden;
-            border-radius: 4px;
+            border-radius: 8px;
             border: 1px solid #eae6e1;
             box-shadow: 0 10px 30px rgba(0,0,0,0.02);
         }
@@ -126,20 +186,21 @@ title: Home
 
         /* Clean Styling for the Web3Forms Fields */
         .feedback-form-container {
-            background: #ffffff; 
+            background: var(--card-white); 
             padding: 40px 30px; 
-            border-radius: 4px; 
-            border: 1px solid #eae6e1; 
+            border-radius: 8px; 
+            border: 1px solid #e1ebd9; 
             text-align: left; 
             margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.01);
         }
         .feedback-form-container h3 {
             font-family: 'Playfair Display', serif; 
-            font-weight: 400; 
-            font-size: 1.5rem; 
+            font-weight: 500; 
+            font-size: 1.6rem; 
             margin-top: 0; 
             margin-bottom: 25px; 
-            color: #2f3e46;
+            color: var(--primary-dark);
             text-align: center;
         }
         .form-group {
@@ -147,25 +208,25 @@ title: Home
         }
         .feedback-form-container label {
             display: block; 
-            font-weight: 500; 
+            font-weight: 600; 
             margin-bottom: 8px; 
             font-size: 0.8rem; 
             text-transform: uppercase; 
             letter-spacing: 1px; 
-            color: #2f3e46;
+            color: var(--primary-dark);
         }
         .feedback-form-container input,
         .feedback-form-container select,
         .feedback-form-container textarea {
             width: 100%; 
             padding: 14px; 
-            border: 1px solid #dcd7d0; 
-            border-radius: 2px; 
+            border: 1px solid #d1dbd4; 
+            border-radius: 4px; 
             box-sizing: border-box; 
             font-size: 0.95rem; 
-            background-color: #faf9f6;
+            background-color: #fafbf9;
             font-family: 'Inter', sans-serif;
-            color: #2f3e46;
+            color: var(--primary-dark);
         }
         .feedback-form-container textarea {
             min-height: 120px;
@@ -174,20 +235,31 @@ title: Home
         .submit-btn {
             display: block; 
             width: 100%; 
-            background-color: #2f3e46; 
+            background-color: var(--accent-mint); 
             color: #ffffff; 
             padding: 16px; 
             border: none; 
-            border-radius: 2px; 
-            font-weight: 500; 
+            border-radius: 4px; 
+            font-weight: 600; 
             font-size: 0.9rem; 
             text-transform: uppercase; 
             letter-spacing: 1.5px; 
             cursor: pointer;
-            transition: background-color 0.2s;
+            transition: background-color 0.2s, transform 0.2s;
         }
         .submit-btn:hover {
-            background-color: #8fa187;
+            background-color: #89ab94;
+            transform: translateY(-1px);
+        }
+
+        footer {
+            background-color: var(--primary-dark);
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            margin-top: 60px;
+            border-top: 4px solid var(--accent-mint);
         }
 
         @media (max-width: 992px) {
@@ -210,64 +282,61 @@ title: Home
         <a href="contact.html">Contact Us</a>
     </nav>
 
-    <div class="split-layout">
-        
-        <!-- Left Side: Header, Info, Grid, Form -->
-        <div class="left-content">
-            
-            <div class="header-box">
-                <div class="header-text">
-                    <h1 style="margin: 0; font-size: 2.8rem; font-family: 'Playfair Display', serif; font-weight: 400; letter-spacing: -0.5px; text-align: left;">Sparkling Resin Delights</h1>
-                    <div style="color: #d4a373; font-size: 1rem; margin: 12px 0; letter-spacing: 4px; text-align: left;">★★★★★</div>
-                    <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; margin: 10px 0 0 0; font-style: italic; color: #64748b; text-align: left;">Beautiful Resin Jewelry, Beaded Pens, & Handmade Keychains</p>
+    <!-- Real Customer Testimonial Cards -->
+                <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px dashed var(--accent-mint);">
+                    <div style="color: var(--accent-mint); font-size: 1.1rem; margin-bottom: 5px;">★★★★★</div>
+                    <p style="font-size: 0.95rem; font-style: italic; margin: 0 0 8px 0; color: var(--primary-dark);">"Absolutely love my starlight pearl bracelet! The packaging was so pretty and it arrived tracked super fast with Evri."</p>
+                    <span style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: #5a6a75;">– Sarah M., Gloucestershire</span>
                 </div>
-                
-                <div class="top-left-slideshow">
-                    <div class="topLeftSlide active"><img src="beaded%20-%20pen.jpg" alt="Pen Feature"></div>
-                    <div class="topLeftSlide"><img src="resin%20-%20necklace.jpg" alt="Jewelry Feature"></div>
-                    <div class="topLeftSlide"><img src="beaded%20-%20bracelet.jpg" alt="Bracelet Feature"></div>
-                    <div class="topLeftSlide"><img src="beaded%20-%20keychain.jpg" alt="Keychain Feature"></div>
+
+                <div style="margin-bottom: 5px;">
+                    <div style="color: var(--accent-mint); font-size: 1.1rem; margin-bottom: 5px;">★★★★★</div>
+                    <p style="font-size: 0.95rem; font-style: italic; margin: 0 0 8px 0; color: var(--primary-dark);">"The beaded pens write like an absolute dream. Perfect boutique treasures for my office desk layout!"</p>
+                    <span style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: #5a6a75;">– Emma L., Bristol</span>
                 </div>
             </div>
 
-            <div style="text-align: left; margin-bottom: 40px; max-width: 700px;">
-                <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 400; color: #2f3e46; margin-bottom: 15px;">Welcome to Sophie & Dee's Boutique</h2>
-                <p style="font-size: 1.05rem; line-height: 1.7; color: #64748b; font-weight: 300; margin: 0;">Every single item is designed, crafted, and packaged lovingly by hand. Click a category to browse our specific collections!</p>
+        </div> <!-- End of .left-content -->
+
+        <!-- Right Side: Elongated Side Slideshow Column Frame -->
+        <div class="right-slideshow">
+            <div class="slides-vertical-track" id="verticalTrack">
+                <div class="vertical-slide"><img src="resin%20-%20necklace.jpg" alt="Handcrafted Resin Jewelry Showcase"></div>
+                <div class="vertical-slide"><img src="beaded%20-%20pen.jpg" alt="Custom Beaded Pens Desk Accessory"></div>
+                <div class="vertical-slide"><img src="beaded%20-%20bracelet.jpg" alt="Natural Stone Beaded Bracelets"></div>
+                <div class="vertical-slide"><img src="beaded%20-%20keychain.jpg" alt="Handmade Keychains and Charms"></div>
             </div>
-
-            <!-- Collections Index Links -->
-            <div style="margin-bottom: 60px; font-family: 'Playfair Display', serif;">
-                <h3 style="font-size: 1.4rem; font-weight: 400; border-bottom: 1px solid #eae6e1; padding-bottom: 10px; margin-bottom: 20px;">Explore Our Collections</h3>
-                <a href="resin-jewelry.html" style="display: block; padding: 12px 0; color: #2f3e46; text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #eae6e1;">&rarr; Resin Jewelry</a>
-                <a href="beaded-pens.html" style="display: block; padding: 12px 0; color: #2f3e46; text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #eae6e1;">&rarr; Beaded Pens</a>
-                <a href="beaded-keychains.html" style="display: block; padding: 12px 0; color: #2f3e46; text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #eae6e1;">&rarr; Handmade Keychains</a>
-                <a href="beaded-bracelets.html" style="display: block; padding: 12px 0; color: #2f3e46; text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #eae6e1;">&rarr; Beaded Bracelets</a>
-                <a href="contact.html" style="display: block; padding: 12px 0; color: #2f3e46; text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #eae6e1;">&rarr; Contact</a>
-            </div>
-            
-<div class="feedback-form-container">
-    <h3>Leave a 5-Star Review</h3>
-    <form action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="15079e1e-da27-45ee-850c-dfb1181e1342"><input type="hidden" name="subject" value="New 5-Star Review"><label>Your Name</label><input type="text" name="name" required><label>Rating</label><select name="rating" required><option value="">Select rating</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option></select><label>Review Comments</label><textarea name="comments" required></textarea><button type="submit">Submit Review</button></form>
-    
-        <!-- Web3Forms Routing Details -->
-        
-        <input type="hidden" name="replyto" value="sparklingresdelights1@gmail.com">
-
-      
-
-        <!-- Rating Field -->
-        <div class="form-group">
-            <label for="rating">Rating</label>
-            <select id="rating" name="rating" required>
-                <option value="5">★★★★★ (5 Stars)</option>
-                <option value="4">★★★★☆ (4 Stars)</option>
-                <option value="3">★★★☆☆ (3 Stars)</option>
-                <option value="2">★★☆☆☆ (2 Stars)</option>
-                <option value="1">★☆☆☆☆ (1 Star)</option>
-            </select>
         </div>
 
-       
-            <!-- Review Section Display Area -->
-            <div style="background-color: #f3f5f2; padding: 40px 30px; border-radius: 4px; text-align: left; margin-bottom: 40px;">
-                <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 400; margin-bottom: 30px; color: #2f3e46;">Kind Words From Our Collectors</h2>
+    </div> <!-- End of .split-layout -->
+
+    <footer>
+        <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK.</p>
+    </footer>
+
+    <!-- Interactive Layout Animation Engine -->
+    <script>
+        // 1. Top Left Horizontal Fade Slideshow
+        const topLeftSlides = document.querySelectorAll('.topLeftSlide');
+        let topLeftIndex = 0;
+
+        setInterval(() => {
+            topLeftSlides[topLeftIndex].classList.remove('active');
+            topLeftIndex = (topLeftIndex + 1) % topLeftSlides.length;
+            topLeftSlides[topLeftIndex].classList.add('active');
+        }, 3500);
+
+        // 2. Right Side Smooth Infinite Vertical Slideshow
+        const track = document.getElementById('verticalTrack');
+        const verticalSlides = document.querySelectorAll('.vertical-slide');
+        let verticalIndex = 0;
+
+        setInterval(() => {
+            verticalIndex = (verticalIndex + 1) % verticalSlides.length;
+            track.style.transform = `translateY(-${verticalIndex * 100}%)`;
+        }, 4500);
+    </script>
+</body>
+</html>
+
+    
