@@ -300,17 +300,18 @@ title: Home
                 <a href="contact.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #d1dbd4; font-weight: 500;">&rarr; Contact Us</a>
             </div>
             
-            <form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="cb4b22c0-fa2c-4ffc-828d-6a2504dda17b">
-  <input type="text" name="name" required>
-  <input type="email" name="email" required>
-  <textarea name="message" required></textarea>
-  <button type="submit">Submit Form</button>
-</form>
+           
+           <!-- Beautifully Tidied Web3Forms Review Form -->
+            <div class="feedback-form-container">
+                <h3>Leave a 5-Star Review</h3>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="cb4b22c0-fa2c-4ffc-828d-6a2504dda17b">
+                    <input type="hidden" name="subject" value="New 5-Star Review">
+                    <input type="hidden" name="replyto" value="sparklingresdelights1@gmail.com">
 
                     <div class="form-group">
-                        <label>Your Name</label>
-                        <input type="text" name="name" required>
+                        <label for="reviewer_name">Your Name</label>
+                        <input type="text" id="reviewer_name" name="name" required placeholder="Enter your name">
                     </div>
 
                     <div class="form-group">
@@ -325,8 +326,8 @@ title: Home
                     </div>
 
                     <div class="form-group">
-                        <label>Review Comments</label>
-                        <textarea name="comments" required></textarea>
+                        <label for="comments">Review Comments</label>
+                        <textarea id="comments" name="comments" required placeholder="Write your kind comments here..."></textarea>
                     </div>
 
                     <button type="submit" class="submit-btn">Submit Review</button>
@@ -352,7 +353,7 @@ title: Home
 
         </div> <!-- End of .left-content -->
 
-        <!-- Right Side: Elongated Slide Column Frame -->
+        <!-- Right Side: Elongated Slide Column Frame (Now loaded with your beautiful images!) -->
         <div class="right-slideshow">
             <div class="slides-vertical-track" id="verticalTrack">
                 <div class="vertical-slide"><img src="resin%20-%20necklace.jpg" alt="Handcrafted Resin Jewelry Showcase"></div>
@@ -388,5 +389,4 @@ title: Home
     </script>
 </body>
 </html>
-
     
