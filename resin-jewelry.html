@@ -11,128 +11,165 @@ title: Resin Jewelry
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com" rel="stylesheet">
+    
     <style>
+        :root {
+            --bg-color: #f5fbf7; /* A bright, fresh sage-cream backdrop */
+            --primary-dark: #1e293b;
+            --bright-teal: #00c49f; /* Fresh jewelry accent */
+            --bright-gold: #ffb703; /* Sparkling sun/glitter accent */
+            --card-bg: #ffffff;
+            --text-muted: #475569;
+        }
+
         body {
+            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fcfbfa;
-            font-family: 'Inter', sans-serif;
-            color: #2f3e46;
+            background-color: var(--bg-color); 
+            color: var(--primary-dark);
             -webkit-font-smoothing: antialiased;
         }
+
         nav {
             background-color: #ffffff;
             padding: 20px 15px;
             text-align: center;
-            border-bottom: 1px solid #eae6e1;
+            border-bottom: 2px solid var(--bright-teal); /* Bright fresh border */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav a {
-            color: #2f3e46;
+            color: var(--primary-dark);
             margin: 0 18px;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 0.85rem;
             letter-spacing: 1.5px;
             text-transform: uppercase;
+            transition: color 0.2s;
         }
+        nav a:hover {
+            color: var(--bright-teal);
+        }
+
+        /* Vibrant Editorial Header with a striking background gradient */
         header {
-            background-color: #f3f5f2;
-            padding: 60px 20px;
+            background: linear-gradient(135deg, #00c49f 0%, #2f3e46 50%, #ffb703 100%); 
+            color: #ffffff;
+            padding: 80px 20px;
             text-align: center;
-            border-bottom: 1px solid #eae6e1;
+            border-bottom: 3px solid #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 196, 159, 0.15);
         }
         header h1 {
             margin: 0;
-            font-size: 2.8rem;
+            font-size: 3.5rem;
             font-family: 'Playfair Display', serif;
-            font-weight: 400;
+            font-weight: 600;
             letter-spacing: -0.5px;
-            color: #2f3e46;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
         header p {
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            margin: 12px 0 0 0;
+            font-size: 1.4rem;
+            margin: 15px 0 0 0;
             font-style: italic;
-            color: #64748b;
+            color: #ffffff;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            opacity: 0.95;
         }
+
         .container {
             max-width: 1200px;
-            margin: 50px auto;
-            padding: 0 30px;
+            margin: 60px auto;
+            padding: 0 20px;
         }
+
+        /* Fixed Grid Layout: Balanced columns across screen sizes */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
         }
+        
         .product-card {
-            background: #ffffff;
-            border: 1px solid #eae6e1;
-            border-radius: 4px;
+            background: var(--card-bg);
+            border: 2px solid #eae6e1;
+            border-radius: 8px;
             overflow: hidden;
             text-align: center;
             padding-bottom: 25px;
+            box-shadow: 0 8px 24px rgba(30, 41, 59, 0.04);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.01);
-            transition: transform 0.2s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
         }
         .product-card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-6px);
+            border-color: var(--bright-teal);
+            box-shadow: 0 12px 30px rgba(0, 196, 159, 0.15);
         }
-        
-       /* Interactive Multi-Image Slideshow Frame */
-        .product-slideshow {
+
+        /* Bright Slideshow Container height parameters */
+        .slideshow-container {
             position: relative;
             width: 100%;
-            height: 340px;
-            background-color: #faf9f6; /* A clean cream background for any side bars */
-            border-bottom: 1px solid #eae6e1;
+            height: 300px; 
             overflow: hidden;
+            background: radial-gradient(circle, #ffffff 60%, #e6f7f4 100%);
+            border-bottom: 2px solid #eae6e1;
         }
-        .product-slideshow img {
+        .slideshow-container img {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: contain; /* This guarantees the entire product is perfectly visible! */
-            padding: 15px;       /* Adds a safe margin around your jewelry photos */
+            object-fit: contain; 
+            padding: 15px;
             box-sizing: border-box;
             opacity: 0;
-            transition: opacity 0.6s ease-in-out;
+            transition: opacity 0.4s ease-in-out;
+            pointer-events: none;
         }
-        .product-slideshow img.active {
+        .slideshow-container img.active {
             opacity: 1;
+            pointer-events: auto;
         }
-        
-        /* Premium Navigation Overlays */
-        .slide-nav-btn {
+
+        .slide-btn {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.9);
-            border: 1px solid #eae6e1;
-            color: #2f3e46;
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid var(--bright-teal);
+            color: var(--bright-teal);
             width: 36px;
             height: 36px;
             border-radius: 50%;
+            font-size: 1.2rem;
+            font-weight: bold;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
-            z-index: 10;
+            box-shadow: 0 4px 10px rgba(0, 196, 159, 0.1);
+            transition: all 0.2s;
+            z-index: 50;
             user-select: none;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        .prev-arrow { left: 15px; }
-        .next-arrow { right: 15px; }
+        .slide-btn:hover {
+            background: var(--bright-teal);
+            color: #ffffff;
+        }
+        .prev-btn { left: 10px; }
+        .next-btn { right: 10px; }
 
-        .product-card-info {
-            padding: 20px 20px 10px 20px;
+        .product-info {
+            padding: 25px 20px 0 20px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
@@ -140,35 +177,53 @@ title: Resin Jewelry
         }
         .product-card h3 {
             margin: 0 0 10px 0;
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
+            color: var(--primary-dark);
             font-size: 1.3rem;
-            color: #2f3e46;
-            line-height: 1.4;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+        .product-card .price {
+            font-weight: 600;
+            color: var(--bright-teal);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
         }
         .product-card p {
             font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0 0 25px 0;
             line-height: 1.6;
-            color: #64748b;
-            margin: 0 0 15px 0;
-            font-weight: 300;
+            font-weight: 400;
         }
-        .product-card .price {
-            font-weight: 500;
-            color: #2f3e46;
-            font-size: 1.25rem;
-            margin-bottom: 20px;
-            letter-spacing: 0.5px;
-        }
-        
-        /* Balanced Stripe Wrapper Footprint Container */
-        .stripe-btn-box {
+
+        .stripe-container {
+            max-width: 180px;
+            margin: auto auto 0 auto;
+            padding: 0 5px;
             min-height: 45px;
-            margin-top: auto;
-            padding: 0 20px;
+            width: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #ffffff;
+            background-color: var(--primary-dark);
+            border-top: 4px solid var(--bright-teal);
+            margin-top: 80px;
+        }
+
+        @media (max-width: 992px) {
+            .product-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .slideshow-container { height: 280px; }
+        }
+        @media (max-width: 650px) {
+            .product-grid { grid-template-columns: 1fr; gap: 30px; }
         }
     </style>
-    <!-- Core External Stripe Resource Asset Loaded in Head for stability -->
     <script async src="https://stripe.com"></script>
 </head>
 <body>
@@ -191,69 +246,67 @@ title: Resin Jewelry
     <div class="container">
         <div class="product-grid">
             
-            <!-- Product 1: Necklace -->
+            <!-- Item 1: Necklace -->
             <div class="product-card">
-                <div class="product-slideshow" data-slideshow-id="necklace">
-                    <button class="slide-nav-btn prev-arrow">&lsaquo;</button>
-                    <img src="resin%20-%20necklace~3.jpg" alt="Pressed Flower Necklace Front View" class="active">
-                    <img src="resin%20-%20necklace1.jpg" alt="Pressed Flower Necklace Detail View 1">
-                    <img src="resin%20-%20necklace.jpg" alt="Pressed Flower Necklace Detail View 2">
-                  
-                    <button class="slide-nav-btn next-arrow">&rsaquo;</button>
+                <div class="slideshow-container">
+                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
+                    <img src="resin - necklaces~2.jpg" alt="Pressed Flower Necklace Front View" class="active">
+                    <img src="resin - necklace1.jpg" alt="Pressed Flower Necklace Detail View 1">
+                    <img src="resin - necklace.jpg" alt="Pressed Flower Necklace Detail View 2">
+                    <img src="resin - necklace3.jpg" alt="Pressed Flower Necklace Detail View 3">
+                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
                 </div>
-                <div class="product-card-info">
+                <div class="product-info">
                     <div>
                         <h3>Handmade Pressed Flower Resin Necklace</h3>
                         <p>Delicate White Wildflower Blooms Paired With Deep Green Glittery Resin.</p>
                     </div>
-                   
+                    <div class="price">£14.99</div>
                 </div>
-                <div class="stripe-btn-box">
-                   <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
+                <div class="stripe-container">
+                    <stripe-buy-button
+                      buy-button-id="buy_btn_1TmqhFDuVnIeP5Uhr4Kzxe8R"
+                      publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
+                    ></stripe-buy-button>
+                </div>
+            </div>
 
-<stripe-buy-button
-  buy-button-id="buy_btn_1TpDPNDuVnIeP5UhDvdb8Fae"
-  publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
->
-</stripe-buy-button>
-
-            <!-- Product 2: Earrings -->
+            <!-- Item 2: Earrings -->
             <div class="product-card">
-                <div class="product-slideshow" data-slideshow-id="earrings">
-                    <button class="slide-nav-btn prev-arrow">&lsaquo;</button>
-                    <img src="resin%20-%20earrings.jpg" alt="Glitter Resin Earrings Front View" class="active">
-                    <img src="resin%20-%20earrings1.jpg" alt="Glitter Resin Earrings Detail View 1">
-                    <img src="resin%20-%20earrings2.jpg" alt="Glitter Resin Earrings Detail View 2">
-                    <button class="slide-nav-btn next-arrow">&rsaquo;</button>
+                <div class="slideshow-container">
+                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
+                    <img src="resin - earrings.jpg" alt="Glitter Resin Earrings Front View" class="active">
+                    <img src="resin - earrings1.jpg" alt="Glitter Resin Earrings Detail View 1">
+                    <img src="resin - earrings2.jpg" alt="Glitter Resin Earrings Detail View 2">
+                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
                 </div>
-                <div class="product-card-info">
+                <div class="product-info">
                     <div>
                         <h3>Handmade Gold-Sun Resin Drop Earrings</h3>
                         <p>Shimmering Colourful Shards Set in Clear Resin, With A Delicate Gold Sun At The Centre.</p>
                     </div>
-                   
+                    <div class="price">£9.99</div>
                 </div>
-               <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
+                <div class="stripe-container">
+                    <stripe-buy-button
+                      buy-button-id="buy_btn_1TmeisDuVnIeP5UhovztyRZo"
+                      publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
+                    ></stripe-buy-button>
+                </div>
+            </div>
 
-<stripe-buy-button
-  buy-button-id="buy_btn_1TpDJgDuVnIeP5Uh5Ob4kNPD"
-  publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
->
-</stripe-buy-button>
+        </div> <!-- End of .product-grid -->
+    </div> <!-- End of .container -->
 
-        </div>
-    </div>
+    <footer>
+        <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures.</p>
+    </footer>
 
     <script>
-        // Clean Error-Resistant Event-Driven Slider Core Logic
-        document.querySelectorAll('.product-slideshow').forEach(slideshow => {
+        document.querySelectorAll('.slideshow-container').forEach(slideshow => {
             const images = slideshow.querySelectorAll('img');
-            const prevBtn = slideshow.querySelector('.prev-arrow');
-            const nextBtn = slideshow.querySelector('.next-arrow');
+            const prevBtn = slideshow.querySelector('.prev-btn');
+            const nextBtn = slideshow.querySelector('.next-btn');
             let currentIndex = 0;
 
             function updateSlides(newIndex) {
@@ -262,15 +315,17 @@ title: Resin Jewelry
                 images[currentIndex].classList.add('active');
             }
 
-            prevBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                updateSlides(currentIndex - 1);
-            });
+            if(prevBtn && nextBtn) {
+                prevBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    updateSlides(currentIndex - 1);
+                });
 
-            nextBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                updateSlides(currentIndex + 1);
-            });
+                nextBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    updateSlides(currentIndex + 1);
+                });
+            }
         });
     </script>
 </body>
