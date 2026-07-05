@@ -353,14 +353,9 @@ title: Home
 
         </div> <!-- End of .left-content -->
 
-        <!-- Right Side: Elongated Slide Column Frame (Now loaded with your beautiful images!) -->
-        <div class="right-slideshow">
-            <div class="slides-vertical-track" id="verticalTrack">
-                <div class="vertical-slide"><img src="resin%20-%20necklace.jpg" alt="Handcrafted Resin Jewelry Showcase"></div>
-                <div class="vertical-slide"><img src="beaded%20-%20pen.jpg" alt="Custom Beaded Pens Desk Accessory"></div>
-                <div class="vertical-slide"><img src="beaded%20-%20bracelet.jpg" alt="Natural Stone Beaded Bracelets"></div>
-                <div class="vertical-slide"><img src="beaded%20-%20keychain.jpg" alt="Handmade Keychains and Charms"></div>
-            </div>
+        <!-- Right Side: Beautiful Calming Scenery Window instead of Dark Blue Block -->
+        <div class="right-slideshow" style="background-image: url('calming - water.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <!-- The slide tracking is removed. The image fills the entire block naturally -->
         </div>
 
     </div> <!-- End of .split-layout -->
@@ -369,8 +364,9 @@ title: Home
         <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK.</p>
     </footer>
 
-    <!-- Image Slideshow Automation Script -->
+    <!-- Simplified Layout Animation Engine -->
     <script>
+        // Only tracking the mini top-left thumbnail fade box now
         const topLeftSlides = document.querySelectorAll('.topLeftSlide');
         let topLeftIndex = 0;
         setInterval(() => {
@@ -378,15 +374,6 @@ title: Home
             topLeftIndex = (topLeftIndex + 1) % topLeftSlides.length;
             topLeftSlides[topLeftIndex].classList.add('active');
         }, 3500);
-
-        const track = document.getElementById('verticalTrack');
-        const verticalSlides = document.querySelectorAll('.vertical-slide');
-        let verticalIndex = 0;
-        setInterval(() => {
-            verticalIndex = (verticalIndex + 1) % verticalSlides.length;
-            track.style.transform = `translateY(-${verticalIndex * 100}%)`;
-        }, 4500);
     </script>
 </body>
 </html>
-    
