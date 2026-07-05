@@ -1,226 +1,370 @@
+---
+layout: null
+title: Cups & Glasses
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cups & Glasses | Sparkling Resin Delights</title>
+    <title>Cups & Glasses - Sparkling Resin Delights</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com" rel="stylesheet">
+    
     <style>
+        :root {
+            --bg-color: #fff9f5; /* A bright, energetic warm cream */
+            --primary-dark: #1e293b;
+            --bright-pink: #ff007f; /* Energetic boutique accent */
+            --bright-cyan: #00d2ff; /* Fresh glass accent */
+            --card-bg: #ffffff;
+            --text-muted: #475569;
+        }
+
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f6f4; 
-            color: #2f3e46;
+            background-color: var(--bg-color); 
+            color: var(--primary-dark);
+            -webkit-font-smoothing: antialiased;
         }
-        /* Top Navigation Menu */
+
         nav {
-            background-color: #2f3e46;
-            padding: 15px;
+            background-color: #ffffff;
+            padding: 20px 15px;
             text-align: center;
+            border-bottom: 2px solid #ff007f; /* Fun bright accent border */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav a {
-            color: #ffffff;
-            margin: 0 15px;
+            color: var(--primary-dark);
+            margin: 0 18px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.2s;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: var(--bright-pink);
         }
-        /* Active indicator matching your theme */
-        nav a.active-page {
-            text-decoration: underline;
-            color: #e9ede9;
-        }
-        /* Main Header with Top Star Rating Badge */
+
+        /* Vibrant Editorial Header with a striking background gradient */
         header {
-            background-color: #a3b19b; 
+            background: linear-gradient(135deg, #ff007f 0%, #7000ff 50%, #00d2ff 100%); 
             color: #ffffff;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
+            border-bottom: 3px solid #ffffff;
+            box-shadow: 0 4px 20px rgba(255, 0, 127, 0.15);
         }
         header h1 {
             margin: 0;
-            font-size: 3rem;
-            font-family: 'Georgia', serif;
-            letter-spacing: 1px;
-        }
-        .top-stars {
-            color: #ffffff;
-            font-size: 1.5rem;
-            margin: 12px 0;
-            letter-spacing: 3px;
+            font-size: 3.5rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
         header p {
-            font-size: 1.2rem;
-            margin-top: 5px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin: 15px 0 0 0;
             font-style: italic;
-            opacity: 0.9;
+            color: #ffffff;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            opacity: 0.95;
         }
+
         .container {
-            max-width: 1100px;
-            margin: 50px auto;
+            max-width: 1200px;
+            margin: 60px auto;
             padding: 0 20px;
         }
-        .shop-intro {
-            text-align: center;
-            margin-bottom: 50px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .shop-intro h2 {
-            font-family: 'Georgia', serif;
-            font-size: 1.8rem;
-            color: #2f3e46;
-            margin-bottom: 15px;
-        }
-        .shop-intro p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #4f5e66;
-        }
-        /* Clean Category Grid */
+
+        /* Fixed Grid Layout: Balanced columns across screen sizes */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 35px;
-            margin-bottom: 60px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
         }
+        
         .product-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
+            background: var(--card-bg);
+            border: 2px solid #eae6e1;
+            border-radius: 8px;
             overflow: hidden;
             text-align: center;
             padding-bottom: 25px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            box-shadow: 0 8px 24px rgba(30, 41, 59, 0.04);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
         }
-        .product-card img {
+        .product-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--bright-cyan);
+            box-shadow: 0 12px 30px rgba(0, 210, 255, 0.15);
+        }
+
+        /* Bright Slideshow Container height parameters */
+        .slideshow-container {
+            position: relative;
             width: 100%;
-            height: 280px;
-            object-fit: cover;
-            background-color: #f1f5f9;
+            height: 300px; 
+            overflow: hidden;
+            background: radial-gradient(circle, #ffffff 60%, #fff0f5 100%);
+            border-bottom: 2px solid #eae6e1;
+        }
+        .slideshow-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+            padding: 15px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            pointer-events: none;
+        }
+        .slideshow-container img.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .slide-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid #ff007f;
+            color: var(--bright-pink);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(255, 0, 127, 0.1);
+            transition: all 0.2s;
+            z-index: 50;
+            user-select: none;
+        }
+        .slide-btn:hover {
+            background: var(--bright-pink);
+            color: #ffffff;
+        }
+        .prev-btn { left: 10px; }
+        .next-btn { right: 10px; }
+
+        .product-info {
+            padding: 25px 20px 0 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .product-card h3 {
-            margin: 20px 0 8px 0;
-            color: #2f3e46;
+            margin: 0 0 10px 0;
+            color: var(--primary-dark);
             font-size: 1.3rem;
-            font-family: 'Georgia', serif;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+        .product-card .price {
+            font-weight: 600;
+            color: var(--bright-pink);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
         }
         .product-card p {
-            font-size: 0.95rem;
-            color: #64748b;
-            padding: 0 20px;
-            margin: 0 0 15px 0;
-            line-height: 1.5;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0 0 25px 0;
+            line-height: 1.6;
+            font-weight: 400;
         }
-        .product-price {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #2f3e46;
-            margin-bottom: 15px;
+
+        .stripe-container {
+            max-width: 180px;
+            margin: auto auto 0 auto;
+            padding: 0 5px;
+            min-height: 45px;
+            width: 100%;
         }
-        /* Beautiful theme-matching inquiry button */
-        .inquire-btn {
-            display: inline-block;
-            background-color: #78866b;
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
             color: #ffffff;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            margin: 0 auto;
-            width: 70%;
-            transition: background 0.2s;
+            background-color: var(--primary-dark);
+            border-top: 4px solid var(--bright-pink);
+            margin-top: 80px;
         }
-        .inquire-btn:hover {
-            background-color: #616e55;
-            text-decoration: none;
+
+        @media (max-width: 992px) {
+            .product-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .slideshow-container { height: 280px; }
+        }
+        @media (max-width: 650px) {
+            .product-grid { grid-template-columns: 1fr; gap: 30px; }
         }
     </style>
+    <script async src="https://stripe.com"></script>
 </head>
 <body>
 
-    <!-- Consistent Navigation Links -->
     <nav>
         <a href="index.html">Home</a>
         <a href="resin-jewelry.html">Resin Jewelry</a>
         <a href="beaded-pens.html">Beaded Pens</a>
         <a href="beaded-keychains.html">Keychains</a>
-        <a href="beaded-bracelets.html">Beaded Bracelets</a>
-        <a href="cups-and-glasses.html" class="active-page">Cups & Glasses</a>
+        <a href="beaded-bracelets.html">Bracelets</a>
+        <a href="cups-and-glasses.html">Cups & Glasses</a>
         <a href="contact.html">Contact Us</a>
     </nav>
 
-    <!-- Main Header Banner with Stars Built-In -->
     <header>
-        <h1>Sparkling Resin Delights</h1>
-        <div class="top-stars">★★★★★</div>
-        <p>Custom Resin Tumblers, Wine Glasses, & Drinkware</p>
+        <h1>Custom Handcrafted Glassware</h1>
+        <p>Vibrant custom styles to brighten up your favorite drinks</p>
     </header>
 
     <div class="container">
-        <!-- Introduction Wording -->
-        <div class="shop-intro">
-            <h2>Custom Resin Cups & Glasses Collection</h2>
-            <p>Add a beautiful shimmer to your everyday sips. Every piece features durable, food-safe premium resin layered with stunning glitters, custom vinyl names, or delicate florals.</p>
-        </div>
-
-        <!-- Matching Product Showcase Grid -->
         <div class="product-grid">
             
-            <!-- Product Item 1 -->
+            <!-- Item 1: Stunning Sea Turtle Glass Cup – Custom Design with Resin Lid & Reusable Straw -->
             <div class="product-card">
-                <div>
-                    <!-- Replace tumbler.jpg with your uploaded image filename -->
-                    <img src="fairy%20-%20cow.jpg" alt="Handmade Beautiful Ceramic Mug">
-                    <h3>Handmade Beautiful Ceramic Mug</h3>
-                    <p>Fairy Highland Cow: An adorable chubby highland cow with a red bow, rainbow wings, and colourful flowers, accented with butterflies and daises – full of cute, cheerful charm.</p>
+                <div class="slideshow-container">
+                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
+                    <img src="sea-turtle.jpg" alt="Sea Turtle Glass View 1" class="active">
+                    <img src="sea-turtle1.jpg" alt="Sea Turtle Glass View 2">
+                    <img src="sea-turtle2.jpg" alt="Sea Turtle Glass View 3">
+                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
                 </div>
-                <div>
-                    <div class="product-price">£20.00</div>
+                <div class="product-info">
+                    <div>
+                        <h3>Stunning Sea Turtle Glass Cup – Custom Design with Resin Lid & Reusable Straw</h3>
+                        <p>Vibrant sea turtle design + handmade resin lid with flowers & teddy bear! Comes with bamboo top and reusable glass straw. Perfect for iced coffee, water and more </p>
+                    </div>
+                    
+                </div>
+                <div class="stripe-container">
+                    <script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1TplyhDuVnIeP5UhBeIjRMsf"
+  publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
+>
+</stripe-buy-button>
+                </div>
+            </div>
+
+            <!-- Item 2: Luxury Heel -->
+            <div class="product-card">
+                <div class="slideshow-container">
+                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
+                    <img src="luxury - heel.jpg" alt="Luxury Heel Glass View 1" class="active">
+                    <img src="luxury - heel1.jpg" alt="Luxury Heel Glass View 2">
+                    <img src="luxury - heel2.jpg" alt="Luxury Heel Glass View 3">
+                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Handmade Beautiful Ceramic Mug</h3>
+                        <p>Luxury Heel & Peony: Sophisticated style with deep pink peonies, glossy high heels, perfume, and diamond accents</p>
+                    </div>
                    
                 </div>
+                <div class="stripe-container">
+                    <script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1Tpm5hDuVnIeP5Uh4Ta8Ta7y"
+  publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
+>
+</stripe-buy-button>
+                </div>
             </div>
 
-            <!-- Product Item 2 -->
+            <!-- Item 3: Fairy Cow -->
             <div class="product-card">
-                <div>
-                    <!-- Replace wine-glass.jpg with your uploaded image filename -->
-                    <img src="sea%20-%20turtle.jpg" alt="Stunning Sea Turtle Glass Cup">
-                    <h3>Stunning Sea Turtle Glass Cup</h3>
-                    <p>Stunning Sea Turtle Glass Cup – Custom Design. Vibrant sea turtle design + handmade resin lid with flowers & teddy bear! Comes with bamboo top and reusable glass straw. Perfect for iced coffee, water and more.</p>
+                <div class="slideshow-container">
+                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
+                    <img src="fairy-cow.jpg" alt="Fairy Cow Cup View 1" class="active">
+                    <img src="fairy-cow1.jpg" alt="Fairy Cow Cup View 2">
+                    <img src="fairy-cow2.jpg" alt="Fairy Cow Cup View 3">
+                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
                 </div>
-                <div>
+                <div class="product-info">
+                    <div>
+                        <h3>Handmade Beautiful Ceramic Mug</h3>
+                        <p>Fairy Highland Cow: An adorable chubby highland cow with a red bow, rainbow wings, and colourful flowers, accented with butterflies and daises – full of cute, cheerful charm</p>
+                    </div>
                     
-                  
+                </div>
+                <div class="stripe-container">
+                    <script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1TpmAdDuVnIeP5UhbhT0iuTZ"
+  publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
+>
+</stripe-buy-button>
                 </div>
             </div>
 
-            <!-- Product Item 3 -->
-            <div class="product-card">
-                <div>
-                    <!-- Replace glass-cup.jpg with your uploaded image filename -->
-                    <img src="luxury%20-%20heel.jpg" alt="Handmade Beautiful Ceramic Mug">
-                    <h3>Handmade Beautiful Ceramic Mug</h3>
-                    <p>Luxury Heel & Peony: Sophisticated style with deep pink peonies, glossy high heels, perfume, and diamond accents.</p>
-                </div>
-                <div>
-                    
-                  
-                </div>
-            </div>
+        </div> <!-- End of .product-grid -->
+    </div> <!-- End of .container -->
 
-        </div>
-    </div>
+    <footer>
+        <p>&copy; 2026 Sparkling Resin Delights. Beautifully Handcrafted Boutique Treasures.</p>
+    </footer>
 
+    <script>
+        document.querySelectorAll('.slideshow-container').forEach(slideshow => {
+            const images = slideshow.querySelectorAll('img');
+            const prevBtn = slideshow.querySelector('.prev-btn');
+            const nextBtn = slideshow.querySelector('.next-btn');
+            let currentIndex = 0;
+
+            function updateSlides(newIndex) {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (newIndex + images.length) % images.length;
+                images[currentIndex].classList.add('active');
+            }
+
+            if(prevBtn && nextBtn) {
+                prevBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    updateSlides(currentIndex - 1);
+                });
+
+                nextBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    updateSlides(currentIndex + 1);
+                });
+            }
+        });
+    </script>
 </body>
 </html>
