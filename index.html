@@ -300,13 +300,13 @@ title: Home
                 <a href="contact.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #d1dbd4; font-weight: 500;">&rarr; Contact Us</a>
             </div>
             
-            <!-- Restored Web3Forms Review Form -->
-            <div class="feedback-form-container">
-                <h3>Leave a 5-Star Review</h3>
-                <form action="https://web3forms.com" method="POST">
-                    <input type="hidden" name="access_key" value="15079e1e-da27-45ee-850c-dfb1181e1342">
-                    <input type="hidden" name="subject" value="New 5-Star Review">
-                    <input type="hidden" name="replyto" value="sparklingresdelights1@gmail.com">
+            <form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="cb4b22c0-fa2c-4ffc-828d-6a2504dda17b">
+  <input type="text" name="name" required>
+  <input type="email" name="email" required>
+  <textarea name="message" required></textarea>
+  <button type="submit">Submit Form</button>
+</form>
 
                     <div class="form-group">
                         <label>Your Name</label>
