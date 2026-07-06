@@ -68,54 +68,66 @@ title: Home
             border-radius: 8px;
             box-sizing: border-box;
             margin-bottom: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
             box-shadow: 0 4px 15px rgba(156, 189, 167, 0.1);
         }
-        .header-text {
-            flex: 1;
+        .header-text h1 {
+            margin: 0; 
+            font-size: 2.8rem; 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 600; 
+            letter-spacing: -0.5px; 
+            color: var(--primary-dark);
         }
 
-        .top-left-slideshow {
-            width: 240px;
-            height: 180px;
+        /* Fresh Bottom Left Slideshow Frame */
+        .bottom-left-slideshow {
+            width: 100%;
+            height: 380px;
             position: relative;
             overflow: hidden;
-            border-radius: 6px;
+            border-radius: 8px;
             border: 1px solid #eae6e1;
             background-color: #ffffff;
+            margin-bottom: 40px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.02);
         }
-        .topLeftSlide {
+        .bottomSlide {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             opacity: 0;
-            transition: opacity 1.5s ease-in-out;
+            transition: opacity 1.2s ease-in-out;
         }
-        .topLeftSlide.active {
+        .bottomSlide.active {
             opacity: 1;
         }
-        .topLeftSlide img {
+        .bottomSlide img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
         
-        .right-scenery-panel {
+        /* Premium Right Side Image Showcase Grid Panel */
+        .right-image-panel {
             width: 420px;
-            height: 780px; 
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .showcase-image-box {
+            flex: 1;
             border-radius: 8px;
             border: 1px solid #eae6e1;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-            background-image: url('calming-water.jpg'); 
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat;
-            background-color: #e2ede4; /* Pastel green fallback background */
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.02);
+            background-color: var(--pastel-green);
+        }
+        .showcase-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .info-section {
@@ -229,9 +241,8 @@ title: Home
 
         @media (max-width: 992px) {
             .split-layout { flex-direction: column; }
-            .right-scenery-panel { width: 100%; height: 450px; }
-            .header-box { flex-direction: column-reverse; text-align: center; }
-            .top-left-slideshow { width: 100%; height: 220px; }
+            .right-image-panel { width: 100%; height: auto; }
+            .showcase-image-box { height: 300px; }
         }
     </style>
 </head>
@@ -247,35 +258,34 @@ title: Home
         <a href="contact.html">Contact Us</a>
     </nav>
 
-    <div class="split-layout">
+     <div class="split-layout">
         
+        <!-- Left Side Main Column Layout -->
         <div class="left-content">
             
+            <!-- Clean Header Branding Box -->
             <div class="header-box">
                 <div class="header-text">
-                    <h1 style="margin: 0; font-size: 2.8rem; font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.5px; text-align: left; color: var(--primary-dark);">Sparkling Resin Delights</h1>
+                    <h1>Sparkling Resin Delights</h1>
                     <div style="color: var(--accent-mint); font-size: 1rem; margin: 12px 0; letter-spacing: 4px; text-align: left;">★★★★★</div>
                     <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; margin: 10px 0 0 0; font-style: italic; color: #5a6a75; text-align: left;">Beautiful Resin Jewelry, Beaded Pens, & Handmade Keychains</p>
                 </div>
-                
-                <div class="top-left-slideshow">
-                    <div class="topLeftSlide active"><img src="beaded%20-%20pen.jpg" alt="Pen Feature"></div>
-                    <div class="topLeftSlide"><img src="resin%20-%20necklace.jpg" alt="Jewelry Feature"></div>
-                    <div class="topLeftSlide"><img src="beaded%20-%20bracelet.jpg" alt="Bracelet Feature"></div>
-                    <div class="topLeftSlide"><img src="beaded%20-%20keychain.jpg" alt="Keychain Feature"></div>
-                </div>
             </div>
 
+            <!-- Welcome Boutique Text -->
             <div class="info-section">
                 <h2>Welcome to Sophie & Dee's Boutique</h2>
                 <p>Welcome to our little corner of handcrafted joy! Every single item you see here is designed, mixed, poured, and packaged lovingly by hand right here in the UK by us. We pride ourselves on creating beautiful, individual treasures that bring a splash of sparkling delight to your everyday life. Thank you for supporting our small business journey!</p>
             </div>
 
+            <!-- Evri Tracked Shipping Information Frame -->
             <div class="info-section" style="border-left: 4px solid var(--accent-mint);">
                 <h2>Reliable UK Shipping</h2>
                 <p>We want your handcrafted goodies to reach you safely and quickly. All orders across the UK are carefully packaged and sent with reliable tracking via Evri postage services, giving you absolute peace of mind from our studio straight to your front door.</p>
+                <div class="delivery-badge">📦 Tracked UK Delivery via Evri</div>
+            </div>
 
-                <!-- Collections Index Links -->
+            <!-- Collections Index Links -->
             <div style="margin-bottom: 60px; font-family: 'Playfair Display', serif;">
                 <h3 style="font-size: 1.4rem; font-weight: 500; border-bottom: 2px solid var(--pastel-green); padding-bottom: 10px; margin-bottom: 20px; color: var(--primary-dark);">Explore Our Collections</h3>
                 <a href="resin-jewelry.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #d1dbd4; font-weight: 500;">&rarr; Resin Jewelry</a>
@@ -284,6 +294,14 @@ title: Home
                 <a href="beaded-bracelets.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #d1dbd4; font-weight: 500;">&rarr; Beaded Bracelets</a>
                 <a href="cups-and-glasses.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #d1dbd4; font-weight: 500;">&rarr; Cups & Glasses</a>
                 <a href="contact.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #d1dbd4; font-weight: 500;">&rarr; Contact Us</a>
+            </div>
+
+            <!-- New Interactive Bottom Left Slideshow Gallery -->
+            <div class="bottom-left-slideshow">
+                <div class="bottomSlide active"><img src="beaded%20-%20pen.jpg" alt="Handmade Beaded Pens Showcase"></div>
+                <div class="bottomSlide"><img src="resin%20-%20necklace.jpg" alt="Handcrafted Resin Jewelry Gallery"></div>
+                <div class="bottomSlide"><img src="beaded%20-%20bracelet.jpg" alt="Gemstone Beaded Bracelets Collection"></div>
+                <div class="bottomSlide"><img src="beaded%20-%20keychain.jpg" alt="Boutique Keychains and Charms"></div>
             </div>
             
             <!-- Tidied Web3Forms Review Form -->
@@ -338,8 +356,17 @@ title: Home
 
         </div> <!-- End of .left-content -->
 
-        <!-- Right Side: Beautiful Calming Scenery Panel Windows Box -->
-        <div class="right-scenery-panel"></div>
+        <!-- Right Side: Dual Stacked Image Column Panel -->
+        <div class="right-image-panel">
+            <!-- Top Panel Image: Calming Water Scenery Picture -->
+            <div class="showcase-image-box">
+                <img src="calming-water.jpg" alt="Calming Water Scenery View">
+            </div>
+            <!-- Bottom Panel Image: Additional Boutique Feature Lookbook Pic -->
+            <div class="showcase-image-box">
+                <img src="resin%20-%20necklace.jpg" alt="Sparkling Boutique Showcase Item">
+            </div>
+        </div>
 
     </div> <!-- End of .split-layout -->
 
@@ -347,16 +374,15 @@ title: Home
         <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK.</p>
     </footer>
 
-    <!-- Small Top Left Gallery Running Script -->
+    <!-- Bottom Left Slideshow Animation Engine -->
     <script>
-        const topLeftSlides = document.querySelectorAll('.topLeftSlide');
-        let topLeftIndex = 0;
+        const bottomSlides = document.querySelectorAll('.bottomSlide');
+        let bottomIndex = 0;
         setInterval(() => {
-            topLeftSlides[topLeftIndex].classList.remove('active');
-            topLeftIndex = (topLeftIndex + 1) % topLeftSlides.length;
-            topLeftSlides[topLeftIndex].classList.add('active');
-        }, 3500);
+            bottomSlides[bottomIndex].classList.remove('active');
+            bottomIndex = (bottomIndex + 1) % bottomSlides.length;
+            bottomSlides[bottomIndex].classList.add('active');
+        }, 3800);
     </script>
 </body>
 </html>
-
