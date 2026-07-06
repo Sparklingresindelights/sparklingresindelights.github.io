@@ -105,32 +105,17 @@ title: Home
             object-fit: cover;
         }
         
-        .right-slideshow {
+        .right-scenery-panel {
             width: 420px;
             height: 780px; 
-            position: relative;
-            overflow: hidden;
             border-radius: 8px;
             border: 1px solid #eae6e1;
             box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-        }
-        .slides-vertical-track {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1); 
-        }
-        .vertical-slide {
-            width: 100%;
-            height: 100%;
-            position: relative;
-        }
-        .vertical-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            background-image: url('calming-water.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            background-color: #e2ede4; /* Pastel green fallback background */
         }
 
         .info-section {
@@ -244,7 +229,7 @@ title: Home
 
         @media (max-width: 992px) {
             .split-layout { flex-direction: column; }
-            .right-slideshow { width: 100%; height: 450px; }
+            .right-scenery-panel { width: 100%; height: 450px; }
             .header-box { flex-direction: column-reverse; text-align: center; }
             .top-left-slideshow { width: 100%; height: 220px; }
         }
@@ -288,8 +273,9 @@ title: Home
 
             <div class="info-section" style="border-left: 4px solid var(--accent-mint);">
                 <h2>Reliable UK Shipping</h2>
+                <p>We want your handcrafted goodies to reach you safely and quickly. All orders across the UK are carefully packaged and sent with reliable tracking via Evri postage services, giving you absolute peace of mind from our studio straight to your front door.</p>
 
-                 <!-- Collections Index Links -->
+                <!-- Collections Index Links -->
             <div style="margin-bottom: 60px; font-family: 'Playfair Display', serif;">
                 <h3 style="font-size: 1.4rem; font-weight: 500; border-bottom: 2px solid var(--pastel-green); padding-bottom: 10px; margin-bottom: 20px; color: var(--primary-dark);">Explore Our Collections</h3>
                 <a href="resin-jewelry.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #d1dbd4; font-weight: 500;">&rarr; Resin Jewelry</a>
@@ -300,18 +286,17 @@ title: Home
                 <a href="contact.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #d1dbd4; font-weight: 500;">&rarr; Contact Us</a>
             </div>
             
-           
-           <!-- Beautifully Tidied Web3Forms Review Form -->
+            <!-- Tidied Web3Forms Review Form -->
             <div class="feedback-form-container">
                 <h3>Leave a 5-Star Review</h3>
                 <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="cb4b22c0-fa2c-4ffc-828d-6a2504dda17b">
+                    <input type="hidden" name="access_key" value="15079e1e-da27-45ee-850c-dfb1181e1342">
                     <input type="hidden" name="subject" value="New 5-Star Review">
                     <input type="hidden" name="replyto" value="sparklingresdelights1@gmail.com">
 
                     <div class="form-group">
-                        <label for="reviewer_name">Your Name</label>
-                        <input type="text" id="reviewer_name" name="name" required placeholder="Enter your name">
+                        <label>Your Name</label>
+                        <input type="text" name="name" required placeholder="Enter your name">
                     </div>
 
                     <div class="form-group">
@@ -326,15 +311,15 @@ title: Home
                     </div>
 
                     <div class="form-group">
-                        <label for="comments">Review Comments</label>
-                        <textarea id="comments" name="comments" required placeholder="Write your kind comments here..."></textarea>
+                        <label>Review Comments</label>
+                        <textarea name="comments" required placeholder="Write your comments..."></textarea>
                     </div>
 
                     <button type="submit" class="submit-btn">Submit Review</button>
                 </form>
             </div>
-
-                 <!-- Real Customer Reviews Area -->
+            
+            <!-- Real Customer Reviews Area -->
             <div style="background-color: var(--pastel-green); padding: 40px 30px; border-radius: 8px; text-align: left; margin-bottom: 40px; border-bottom: 2px solid var(--accent-mint);">
                 <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 500; margin-bottom: 30px; color: var(--primary-dark);">Kind Words From Our Collectors</h2>
                 
@@ -353,10 +338,8 @@ title: Home
 
         </div> <!-- End of .left-content -->
 
-        <!-- Right Side: Beautiful Calming Scenery Window instead of Dark Blue Block -->
-        <div class="right-slideshow" style="background-image: url('calming - water.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-            <!-- The vertical scrolling slides are removed. The scenery image fills this space naturally -->
-        </div>
+        <!-- Right Side: Beautiful Calming Scenery Panel Windows Box -->
+        <div class="right-scenery-panel"></div>
 
     </div> <!-- End of .split-layout -->
 
@@ -364,9 +347,8 @@ title: Home
         <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK.</p>
     </footer>
 
-    <!-- Image Slideshow Automation Script -->
+    <!-- Small Top Left Gallery Running Script -->
     <script>
-        // Keeps your small top-left product thumbnail slideshow running perfectly!
         const topLeftSlides = document.querySelectorAll('.topLeftSlide');
         let topLeftIndex = 0;
         setInterval(() => {
@@ -377,5 +359,4 @@ title: Home
     </script>
 </body>
 </html>
-            
 
