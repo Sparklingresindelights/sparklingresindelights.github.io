@@ -7,18 +7,19 @@ title: Beaded Pens
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beaded Pens - Sparkling Resin Delights</title>
+    <title>Luxury Custom Beaded Pens & Desk Accessories | Handmade UK</title>
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com" rel="stylesheet">
     
     <style>
         :root {
-            --bg-color: #fcfbfa; 
-            --primary-dark: #2f3e46;
-            --sage-accent: #8fa187;
-            --text-main: #334155;
-            --text-muted: #64748b;
+            --bg-color: #fffbfc; /* Airy white with a tiny hint of blush pink */
+            --primary-dark: #2d3748; /* Soft readable charcoal text color */
+            --baby-pink: #ffeef2; /* Dreamy pale baby pink for accents */
+            --pink-focal: #ffb6c1; /* Soft pink for focal highlights and hover effects */
+            --card-bg: #ffffff;
+            --text-muted: #5a6a75;
         }
 
         body {
@@ -26,7 +27,7 @@ title: Beaded Pens
             margin: 0;
             padding: 0;
             background-color: var(--bg-color); 
-            color: var(--text-main);
+            color: var(--primary-dark);
             -webkit-font-smoothing: antialiased;
         }
 
@@ -34,7 +35,7 @@ title: Beaded Pens
             background-color: #ffffff;
             padding: 20px 15px;
             text-align: center;
-            border-bottom: 1px solid #eae6e1;
+            border-bottom: 2px solid var(--baby-pink);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -43,41 +44,44 @@ title: Beaded Pens
             color: var(--primary-dark);
             margin: 0 18px;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 0.85rem;
             letter-spacing: 1.5px;
             text-transform: uppercase;
             transition: color 0.2s;
         }
         nav a:hover {
-            color: var(--sage-accent);
+            color: var(--pink-focal);
         }
 
+        /* Editorial Header with a baby pink fading softly into a subtle white */
         header {
-            background-color: #f3f5f2; 
+            background: linear-gradient(135deg, #ffdeee 0%, #fffbfd 100%); 
             color: var(--primary-dark);
-            padding: 70px 20px;
+            padding: 80px 20px;
             text-align: center;
-            border-bottom: 1px solid #eae6e1;
+            border-bottom: 3px solid #ffffff;
+            box-shadow: 0 4px 20px rgba(255, 222, 238, 0.25);
         }
         header h1 {
             margin: 0;
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-family: 'Playfair Display', serif;
-            font-weight: 400;
+            font-weight: 600;
             letter-spacing: -0.5px;
         }
         header p {
             font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-            margin: 10px 0 0 0;
+            font-size: 1.4rem;
+            margin: 15px 0 0 0;
             font-style: italic;
             color: var(--text-muted);
+            opacity: 0.95;
         }
 
         .container {
             max-width: 1200px;
-            margin: 50px auto;
+            margin: 60px auto;
             padding: 0 20px;
         }
 
@@ -88,29 +92,31 @@ title: Beaded Pens
         }
         
         .product-card {
-            background: #ffffff;
-            border: 1px solid #eae6e1;
-            border-radius: 4px;
+            background: var(--card-bg);
+            border: 2px solid var(--baby-pink);
+            border-radius: 8px;
             overflow: hidden;
             text-align: center;
             padding-bottom: 25px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+            box-shadow: 0 8px 24px rgba(45, 55, 72, 0.02);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: transform 0.2s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
         }
         .product-card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-6px);
+            border-color: var(--pink-focal);
+            box-shadow: 0 12px 30px rgba(255, 182, 193, 0.2);
         }
 
         .slideshow-container {
             position: relative;
             width: 100%;
-            height: 280px; 
+            height: 300px; 
             overflow: hidden;
-            background-color: #faf9f6;
-            border-bottom: 1px solid #eae6e1;
+            background: radial-gradient(circle, #ffffff 60%, #fff5f7 100%);
+            border-bottom: 2px solid var(--baby-pink);
         }
         .slideshow-container img {
             position: absolute;
@@ -135,31 +141,32 @@ title: Beaded Pens
             top: 50%;
             transform: translateY(-50%);
             background: rgba(255, 255, 255, 0.95);
-            border: 1px solid #eae6e1;
+            border: 2px solid var(--baby-pink);
             color: var(--primary-dark);
-            width: 32px;
-            height: 32px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: bold;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            transition: background 0.2s, color 0.2s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            transition: all 0.2s;
             z-index: 50;
             user-select: none;
         }
         .slide-btn:hover {
-            background: var(--primary-dark);
+            background: var(--pink-focal);
+            border-color: var(--pink-focal);
             color: #ffffff;
         }
-        .prev-btn { left: 8px; }
-        .next-btn { right: 8px; }
+        .prev-btn { left: 10px; }
+        .next-btn { right: 10px; }
 
         .product-info {
-            padding: 20px 15px 0 15px;
+            padding: 25px 20px 0 20px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
@@ -168,23 +175,23 @@ title: Beaded Pens
         .product-card h3 {
             margin: 0 0 10px 0;
             color: var(--primary-dark);
-            font-size: 1.15rem;
+            font-size: 1.3rem;
             font-family: 'Playfair Display', serif;
-            font-weight: 400;
+            font-weight: 600;
         }
         .product-card .price {
-            font-weight: 500;
-            color: var(--primary-dark);
-            font-size: 1.15rem;
-            margin-bottom: 12px;
+            font-weight: 600;
+            color: var(--pink-focal);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
             letter-spacing: 0.5px;
         }
         .product-card p {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: var(--text-muted);
-            margin: 0 0 20px 0;
-            line-height: 1.5;
-            font-weight: 300;
+            margin: 0 0 25px 0;
+            line-height: 1.6;
+            font-weight: 400;
         }
 
         .stripe-container {
@@ -197,16 +204,18 @@ title: Beaded Pens
 
         footer {
             text-align: center;
-            padding: 50px 20px;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            border-top: 1px solid #eae6e1;
-            margin-top: 60px;
+            padding: 60px 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #ffffff;
+            background-color: var(--primary-dark);
+            border-top: 4px solid var(--baby-pink);
+            margin-top: 80px;
         }
 
         @media (max-width: 992px) {
             .product-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-            .slideshow-container { height: 260px; }
+            .slideshow-container { height: 280px; }
         }
         @media (max-width: 650px) {
             .product-grid { grid-template-columns: 1fr; gap: 30px; }
@@ -227,7 +236,7 @@ title: Beaded Pens
     </nav>
 
     <header>
-        <h1>Luxury Custom Beaded Pens & Desk Accessories | Handmade UK</h1>
+        <h1>Luxury Custom Beaded Pens & Desk Accessories</h1>
         <p>Add a touch of boutique sparkle to your workspace with our custom beaded pens. Handcrafted across the UK using high-quality silken beads, sparkling crystals, and durable focal points, these pens write smoothly and look gorgeous on any desk. Ideal for journaling, office gifts, or teacher appreciation presents, our unique beaded stationery brings everyday luxury and fun to your writing routine.</p>
     </header>
 
@@ -248,7 +257,6 @@ title: Beaded Pens
                         <h3>Pink Kisses Pen</h3>
                         <p>All things cute and pink! Features a soft pink silicone bead with a white kiss print, sparkly pink crystal spacers, a faceted pink heart, and a pretty red patterned crystal bead. So fun and girly!</p>
                     </div>
-                   
                 </div>
                 <div class="stripe-container">
                     <stripe-buy-button
@@ -272,7 +280,6 @@ title: Beaded Pens
                         <h3>Pretty Pink Bow Pen</h3>
                         <p>Sweet and whimsical! Comes with a soft pink silicone bead, clear pink heart, cute pink star charm, and a clear crystal bead with a darling bow detail – a total delight!</p>
                     </div>
-                   
                 </div>
                 <div class="stripe-container">
                     <stripe-buy-button
@@ -281,6 +288,7 @@ title: Beaded Pens
                     ></stripe-buy-button>
                 </div>
             </div>
+
             <!-- Item 3: Betty Boop -->
             <div class="product-card">
                 <div class="slideshow-container">
@@ -295,7 +303,6 @@ title: Beaded Pens
                         <h3>Betty Boop Pen</h3>
                         <p>A playful retro design! Features a classic Betty Boop themed bead, shimmering purple crystal, faceted purple spacer, and soft purple silicone – perfect for fans of vintage style.</p>
                     </div>
-                   
                 </div>
                 <div class="stripe-container">
                     <stripe-buy-button
@@ -319,7 +326,6 @@ title: Beaded Pens
                         <h3>Dreamy White & Purple Pen</h3>
                         <p>Soft matte white silicone beads paired with a gorgeous white bead swirled with soft purple – simple, elegant, and totally charming.</p>
                     </div>
-                   
                 </div>
                 <div class="stripe-container">
                     <stripe-buy-button
@@ -343,7 +349,6 @@ title: Beaded Pens
                         <h3>The Willie Pen</h3>
                         <p>Cute pink pen with sparkling crystal details and smooth black ink. Perfect for journaling, office use, and gifts for stationery lovers.</p>
                     </div>
-                   
                 </div>
                 <div class="stripe-container">
                     <stripe-buy-button
@@ -353,35 +358,11 @@ title: Beaded Pens
                 </div>
             </div>
 
-            <!-- Item 6: Sparkling Purple Magic -->
-            <div class="product-card">
-                <div class="slideshow-container">
-                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
-                    <img src="purple - magic.jpg" alt="Purple Magic Pen View 1" class="active">
-                    <img src="purple - magic1.jpg" alt="Purple Magic Pen View 2">
-                    <img src="purple - magic2.jpg" alt="Purple Magic Pen View 3">
-                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
-                </div>
-                <div class="product-info">
-                    <div>
-                        <h3>Sparkling Purple Magic Pen</h3>
-                        <p>For lovers of all things purple! Includes a soft matte purple silicone bead, iridescent shimmer crystal, faceted purple heart, and a glossy resin accent bead – it catches the light beautifully.</p>
-                    </div>
-                    
-                </div>
-                <div class="stripe-container">
-                    <stripe-buy-button
-                      buy-button-id="buy_btn_1TpRjoDuVnIeP5UhTRcnZKuM"
-                      publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
-                    ></stripe-buy-button>
-                </div>
-            </div>
-
         </div> <!-- End of .product-grid -->
     </div> <!-- End of .container -->
 
     <footer>
-        <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures.</p>
+        <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK.</p>
     </footer>
 
     <script>
@@ -413,6 +394,7 @@ title: Beaded Pens
 </body>
 </html>
 
+   
             
 
            
