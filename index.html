@@ -79,14 +79,15 @@ title: Home
             color: var(--primary-dark);
         }
 
+        /* Improved Slideshow Frame Box for clean resizing */
         .bottom-left-slideshow {
             width: 100%;
             height: 380px;
             position: relative;
             overflow: hidden;
             border-radius: 8px;
-            border: 1px solid #eae6e1;
-            background-color: #ffffff;
+            border: 1px solid var(--pastel-yellow);
+            background: radial-gradient(circle, #ffffff 60%, #fffef5 100%);
             margin-bottom: 40px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.02);
         }
@@ -98,6 +99,8 @@ title: Home
             height: 100%;
             opacity: 0;
             transition: opacity 1.2s ease-in-out;
+            box-sizing: border-box;
+            padding: 20px; /* Adds breathing room around the product images */
         }
         .bottomSlide.active {
             opacity: 1;
@@ -105,7 +108,7 @@ title: Home
         .bottomSlide img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain; /* Keeps same images but prevents stretching/cutting off */
         }
         
         .right-image-panel {
@@ -245,6 +248,8 @@ title: Home
     </style>
 </head>
 <body>
+    </head>
+<body>
 
     <nav>
         <a href="index.html">Home</a>
@@ -284,103 +289,104 @@ title: Home
             </div>
 
             <!-- Collections Index Links -->
-            <div style="margin-bottom: 60px; font-family: 'Playfair Display', serif;">
-                <h3 style="font-size: 1.4rem; font-weight: 500; border-bottom: 2px solid var(--pastel-yellow); padding-bottom: 10px; margin-bottom: 20px; color: var(--primary-dark);">Explore Our Collections</h3>
-                <a href="resin-jewelry.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #e3d69c; font-weight: 500;">&rarr; Resin Jewelry</a>
-                <a href="beaded-pens.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #e3d69c; font-weight: 500;">&rarr; Beaded Pens</a>
-                <a href="beaded-keychains.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #e3d69c; font-weight: 500;">&rarr; Handmade Keychains</a>
-                <a href="beaded-bracelets.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #e3d69c; font-weight: 500;">&rarr; Beaded Bracelets</a>
-                <a href="cups-and-glasses.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #e3d69c; font-weight: 500;">&rarr; Cups & Glasses</a>
-                <a href="contact.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #e3d69c; font-weight: 500;">&rarr; Contact Us</a>
-            </div>
+        <div style="margin-bottom: 60px; font-family: 'Playfair Display', serif;">
+            <h3 style="font-size: 1.4rem; font-weight: 500; border-bottom: 2px solid var(--pastel-yellow); padding-bottom: 10px; margin-bottom: 20px; color: var(--primary-dark);">Explore Our Collections</h3>
+            <a href="resin-jewelry.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #e3d69c; font-weight: 500;">&rarr; Resin Jewelry</a>
+            <a href="beaded-pens.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #e3d69c; font-weight: 500;">&rarr; Beaded Pens</a>
+            <a href="beaded-keychains.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #e3d69c; font-weight: 500;">&rarr; Handmade Keychains</a>
+            <a href="beaded-bracelets.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #e3d69c; font-weight: 500;">&rarr; Beaded Bracelets</a>
+            <a href="cups-and-glasses.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #e3d69c; font-weight: 500;">&rarr; Cups & Glasses</a>
+            <a href="contact.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #e3d69c; font-weight: 500;">&rarr; Contact Us</a>
+        </div>
 
-            <!-- Interactive Bottom Left Slideshow Gallery -->
-            <div class="bottom-left-slideshow">
-                <div class="bottomSlide active"><img src="beaded%20-%20pen.jpg" alt="Handmade Beaded Pens Showcase"></div>
-                <div class="bottomSlide"><img src="resin%20-%20necklace.jpg" alt="Handcrafted Resin Jewelry Gallery"></div>
-                <div class="bottomSlide"><img src="beaded%20-%20bracelet.jpg" alt="Gemstone Beaded Bracelets Collection"></div>
-                <div class="bottomSlide"><img src="beaded%20-%20keychain.jpg" alt="Boutique Keychains and Charms"></div>
-            </div>
-            
-            <!-- Tidied Web3Forms Review Form -->
-            <div class="feedback-form-container">
-                <h3>Leave a 5-Star Review</h3>
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="15079e1e-da27-45ee-850c-dfb1181e1342">
-                    <input type="hidden" name="subject" value="New 5-Star Review">
-                    <input type="hidden" name="replyto" value="sparklingresdelights1@gmail.com">
+        <!-- Interactive Bottom Left Slideshow Gallery -->
+        <div class="bottom-left-slideshow">
+            <div class="bottomSlide active"><img src="beaded%20-%20pen.jpg" alt="Handmade Beaded Pens Showcase"></div>
+            <div class="bottomSlide"><img src="resin%20-%20necklace.jpg" alt="Handcrafted Resin Jewelry Gallery"></div>
+            <div class="bottomSlide"><img src="beaded%20-%20bracelet.jpg" alt="Gemstone Beaded Bracelets Collection"></div>
+            <div class="bottomSlide"><img src="beaded%20-%20keychain.jpg" alt="Boutique Keychains and Charms"></div>
+        </div>
+        
+        <!-- Tidied Web3Forms Review Form -->
+        <div class="feedback-form-container">
+            <h3>Leave a 5-Star Review</h3>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="15079e1e-da27-45ee-850c-dfb1181e1342">
+                <input type="hidden" name="subject" value="New 5-Star Review">
+                <input type="hidden" name="replyto" value="sparklingresdelights1@gmail.com">
 
-                    <div class="form-group">
-                        <label>Your Name</label>
-                        <input type="text" name="name" required placeholder="Enter your name">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="rating">Rating</label>
-                        <select id="rating" name="rating" required>
-                            <option value="5">★★★★★ (5 Stars)</option>
-                            <option value="4">★★★★☆ (4 Stars)</option>
-                            <option value="3">★★★☆☆ (3 Stars)</option>
-                            <option value="2">★★☆☆☆ (2 Stars)</option>
-                            <option value="1">★☆☆☆☆ (1 Star)</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Review Comments</label>
-                        <textarea name="comments" required placeholder="Write your comments..."></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Submit Review</button>
-                </form>
-            </div>
-            
-            <!-- Real Customer Reviews Area -->
-            <div style="background-color: var(--pastel-yellow); padding: 40px 30px; border-radius: 8px; text-align: left; margin-bottom: 40px; border-bottom: 2px solid #f5ea9e;">
-                <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 500; margin-bottom: 30px; color: var(--primary-dark);">Kind Words From Our Collectors</h2>
-                
-                <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px dashed var(--accent-gold);">
-                    <div style="color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 5px;">★★★★★</div>
-                    <p style="font-size: 0.95rem; font-style: italic; margin: 0 0 8px 0; color: var(--primary-dark);">"Absolutely love my starlight pearl bracelet! The packaging was so pretty and it arrived tracked super fast with Evri."</p>
-                    <span style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: #5a6a75;">– Sarah M., Gloucestershire</span>
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" name="name" required placeholder="Enter your name">
                 </div>
 
-                <div style="margin-bottom: 5px;">
-                    <div style="color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 5px;">★★★★★</div>
-                    <p style="font-size: 0.95rem; font-style: italic; margin: 0 0 8px 0; color: var(--primary-dark);">"The beaded pens write like an absolute dream. Perfect boutique treasures for my office desk layout!"</p>
-                    <span style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: #5a6a75;">– Emma L., Bristol</span>
+                <div class="form-group">
+                    <label for="rating">Rating</label>
+                    <select id="rating" name="rating" required>
+                        <option value="5">★★★★★ (5 Stars)</option>
+                        <option value="4">★★★★☆ (4 Stars)</option>
+                        <option value="3">★★★☆☆ (3 Stars)</option>
+                        <option value="2">★★☆☆☆ (2 Stars)</option>
+                        <option value="1">★☆☆☆☆ (1 Star)</option>
+                    </select>
                 </div>
+
+                <div class="form-group">
+                    <label>Review Comments</label>
+                    <textarea name="comments" required placeholder="Write your comments..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Review</button>
+            </form>
+        </div>
+        
+        <!-- Real Customer Reviews Area -->
+        <div style="background-color: var(--pastel-yellow); padding: 40px 30px; border-radius: 8px; text-align: left; margin-bottom: 40px; border-bottom: 2px solid #f5ea9e;">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 500; margin-bottom: 30px; color: var(--primary-dark);">Kind Words From Our Collectors</h2>
+            
+            <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px dashed var(--accent-gold);">
+                <div style="color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 5px;">★★★★★</div>
+                <p style="font-size: 0.95rem; font-style: italic; margin: 0 0 8px 0; color: var(--primary-dark);">"Absolutely love my starlight pearl bracelet! The packaging was so pretty and it arrived tracked super fast with Evri."</p>
+                <span style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: #5a6a75;">– Sarah M., Gloucestershire</span>
             </div>
 
-        </div> <!-- End of .left-content -->
-
-        <!-- Right Side: Dual Stacked Image Column Panel -->
-        <div class="right-image-panel">
-            <!-- Top Panel Image: Sea Turtle Glass -->
-            <div class="showcase-image-box">
-                <img src="sea-turtle.jpg" alt="Sea Turtle Glass View">
-            </div>
-            <!-- Bottom Panel Image: Additional Boutique Feature Lookbook Pic -->
-            <div class="showcase-image-box">
-                <img src="resin - earrings.jpg" alt="Sparkling Boutique Showcase Item">
+            <div style="margin-bottom: 5px;">
+                <div style="color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 5px;">★★★★★</div>
+                <p style="font-size: 0.95rem; font-style: italic; margin: 0 0 8px 0; color: var(--primary-dark);">"The beaded pens write like an absolute dream. Perfect boutique treasures for my office desk layout!"</p>
+                <span style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: #5a6a75;">– Emma L., Bristol</span>
             </div>
         </div>
 
-    </div> <!-- End of .split-layout -->
+    </div> <!-- End of .left-content -->
 
-    <footer>
-        <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK.</p>
-    </footer>
+    <!-- Right Side: Dual Stacked Showcase Grid (Loaded with your real photos!) -->
+    <div class="right-image-panel">
+        <div class="showcase-image-box">
+            <img src="sea-turtle.jpg" alt="Sea Turtle Glass View">
+        </div>
+        <div class="showcase-image-box">
+            <img src="resin - earrings.jpg" alt="Sparkling Boutique Showcase Item">
+        </div>
+    </div>
 
-    <!-- Bottom Left Slideshow Animation Engine -->
-    <script>
-        const bottomSlides = document.querySelectorAll('.bottomSlide');
-        let bottomIndex = 0;
-        setInterval(() => {
-            bottomSlides[bottomIndex].classList.remove('active');
-            bottomIndex = (bottomIndex + 1) % bottomSlides.length;
-            bottomSlides[bottomIndex].classList.add('active');
-        }, 3800);
-    </script>
+</div> <!-- End of .split-layout -->
+
+<footer>
+    <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK.</p>
+</footer>
+
+<!-- Bottom Left Slideshow Animation Engine -->
+<script>
+    const bottomSlides = document.querySelectorAll('.bottomSlide');
+    let bottomIndex = 0;
+    setInterval(() => {
+        bottomSlides[bottomIndex].classList.remove('active');
+        bottomIndex = (bottomIndex + 1) % bottomSlides.length;
+        bottomSlides[bottomIndex].classList.add('active');
+    }, 3800);
+</script>
 </body>
 </html>
+    
+
+            
