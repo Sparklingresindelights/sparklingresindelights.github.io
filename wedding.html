@@ -1,0 +1,421 @@
+---
+layout: null
+title: Weddings & Hen Parties
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handmade Hen Party Wine Glass Bracelets & Personalized Glass Charms | UK Shop</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #fffdfd; /* Romantic soft blush/ivory background */
+            --primary-dark: #2d3748; /* Soft charcoal text for premium reading */
+            --bridal-pink: #fbeee8; /* Elegant pale bridal pink for borders and banners */
+            --gold-detail: #dcae82; /* Luxurious champagne gold for highlights and headers */
+            --card-bg: #ffffff;
+            --text-muted: #64748b;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color); 
+            color: var(--primary-dark);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            background-color: #ffffff;
+            padding: 20px 15px;
+            text-align: center;
+            border-bottom: 2px solid var(--bridal-pink);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: var(--primary-dark);
+            margin: 0 18px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: var(--gold-detail);
+        }
+
+        /* Romantic Editorial Header with a dreamy bridal blush to ivory white gradient */
+        header {
+            background: linear-gradient(135deg, #fbeee8 0%, #fffbfc 100%); 
+            color: var(--primary-dark);
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 3px solid #ffffff;
+            box-shadow: 0 4px 20px rgba(251, 238, 232, 0.3);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3.5rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+        header p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin: 15px 0 0 0;
+            font-style: italic;
+            color: var(--text-muted);
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 15px auto 0 auto;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        /* 3-Column Balanced Product Card Layout */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .product-card {
+            background: var(--card-bg);
+            border: 2px solid var(--bridal-pink);
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 25px;
+            box-shadow: 0 8px 24px rgba(45, 55, 72, 0.01);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold-detail);
+            box-shadow: 0 12px 30px rgba(220, 174, 130, 0.15);
+        }
+
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 300px; 
+            overflow: hidden;
+            background: radial-gradient(circle, #ffffff 60%, #fffaf8 100%);
+            border-bottom: 2px solid var(--bridal-pink);
+        }
+        .slideshow-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+            padding: 15px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            pointer-events: none;
+        }
+        .slideshow-container img.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .slide-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid var(--bridal-pink);
+            color: var(--primary-dark);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            transition: all 0.2s;
+            z-index: 50;
+            user-select: none;
+        }
+        .slide-btn:hover {
+            background: var(--gold-detail);
+            border-color: var(--gold-detail);
+            color: #ffffff;
+        }
+        .prev-btn { left: 10px; }
+        .next-btn { right: 10px; }
+
+        .product-info {
+            padding: 25px 20px 0 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-card h3 {
+            margin: 0 0 10px 0;
+            color: var(--primary-dark);
+            font-size: 1.3rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+        .product-card .price {
+            font-weight: 600;
+            color: var(--gold-detail);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+        .product-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0 0 25px 0;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        .stripe-container {
+            max-width: 180px;
+            margin: auto auto 0 auto;
+            padding: 0 5px;
+            min-height: 45px;
+            width: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #ffffff;
+            background-color: var(--primary-dark);
+            border-top: 4px solid var(--bridal-pink);
+            margin-top: 80px;
+        }
+
+        @media (max-width: 992px) {
+            .product-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .slideshow-container { height: 280px; }
+        }
+        @media (max-width: 650px) {
+            .product-grid { grid-template-columns: 1fr; gap: 30px; }
+        }
+    </style>
+    <script async src="https://stripe.com"></script>
+</head>
+<body>
+
+   <nav>
+        <a href="index.html">Home</a>
+        <a href="resin-jewelry.html">Resin Jewelry</a>
+        <a href="beaded-pens.html">Beaded Pens</a>
+        <a href="beaded-keychains.html">Keychains</a>
+        <a href="beaded-bracelets.html">Bracelets</a>
+        <a href="cups-and-glasses.html">Cups & Glasses</a>
+        <a href="wedding.html">Weddings & Hen Parties</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <header>
+        <h1>Handmade Wedding & Hen Party Collection</h1>
+        <p>Celebrate your special day with our bespoke Handmade Hen Party Wine Glass Beaded Bracelets and Personalised Glass Charms. Lovingly handcrafted in the UK by us, these unique boutique accessories double as gorgeous keepsakes and beautiful tabletop decor. Available in six distinctive styles, they bring a thoughtful touch of bespoke charm to any bridal shower, rehearsal dinner, or wedding table layout.</p>
+    </header>
+
+    <div class="container">
+      <!-- Group Discount & Bulk Booking Banner Box -->
+<div class="info-section" style="border: 2px dashed var(--gold-detail); background-color: #fffaf8; margin-bottom: 50px; text-align: center; padding: 40px 30px;">
+    <h2 style="color: var(--primary-dark); font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 10px;">Plan Your Perfect Celebration</h2>
+    <h3 style="color: var(--gold-detail); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; margin-top: 0; margin-bottom: 20px;">📦 Exclusive Bulk & Hen Party Discounts Available</h3>
+    <p style="font-size: 1rem; line-height: 1.7; color: var(--primary-dark); max-width: 800px; margin: 0 auto 25px auto;">
+        Whether you are styling intimate tables for your wedding day or hosting a sparkling hen party weekend, we love crafting custom orders for your guests! Every glass charm bracelet can be individually personalised with initials or color themes to match your wedding palette. 
+    </p>
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 25px;">
+        <span style="background: #ffffff; border: 1px solid var(--bridal-pink); padding: 10px 20px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; color: var(--primary-dark);">💖 Orders over 10 items: 10% OFF</span>
+        <span style="background: #ffffff; border: 1px solid var(--bridal-pink); padding: 10px 20px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; color: var(--primary-dark);">🥂 Orders over 20 items: 15% OFF</span>
+    </div>
+    <p style="font-size: 0.9rem; font-style: italic; color: var(--text-muted); margin: 0;">
+        Need custom wedding colors or custom lettering? Head over to our <a href="contact.html" style="color: var(--gold-detail); font-weight: 600; text-decoration: underline;">Contact Page</a> to chat directly with Sophie & Dee about your bespoke layout package!
+    </p>
+</div>
+        <div class="product-grid">
+            
+            <!-- Item 1: Classic Elegance -->
+            <div class="product-card">
+                <div class="slideshow-container">
+                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
+                    <img src="classic-elegance-charm.jpg" alt="Classic Elegance Glass Charm View 1" class="active">
+                    <img src="classic-elegance-charm1.jpg" alt="Classic Elegance Glass Charm View 2">
+                    <img src="classic-elegance-charm2.jpg" alt="Classic Elegance Glass Charm View 3">
+                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Classic Elegance Charms</h3>
+                        <p>Timeless and sophisticated. Handcrafted using premium creamy faux pearls, delicate silver crystals, and elegant traditional glass charms. Perfect for formal wedding reception layouts or sophisticated bridal showers.</p>
+                    </div>
+                </div>
+                <div class="stripe-container">
+                    <!-- PASTE YOUR STRIPE BUY BUTTON FOR THIS THEME DIRECTLY BELOW -->
+                </div>
+            </div>
+
+            <!-- Item 2: Bright & Playful -->
+            <div class="product-card">
+                <div class="slideshow-container">
+                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
+                    <img src="bright-playful-charm.jpg" alt="Bright and Playful Glass Charm View 1" class="active">
+                    <img src="bright-playful-charm1.jpg" alt="Bright and Playful Glass Charm View 2">
+                    <img src="bright-playful-charm2.jpg" alt="Bright and Playful Glass Charm View 3">
+                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Bright & Playful Charms</h3>
+                        <p>Vibrant, energetic, and full of fun! Features a pop of cheerful, bold boutique colors and custom focal beads. Ideal for a lively hen do celebration, cocktail parties, or a modern, colorful bridesmaid setup.</p>
+                    </div>
+                </div>
+                <div class="stripe-container">
+                    <!-- PASTE YOUR STRIPE BUY BUTTON FOR THIS THEME DIRECTLY BELOW -->
+                </div>
+            </div>
+
+            <!-- Item 3: Rustic Sweetness -->
+            <div class="product-card">
+                <div class="slideshow-container">
+                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
+                    <img src="rustic-sweetness-charm.jpg" alt="Rustic Sweetness Glass Charm View 1" class="active">
+                    <img src="rustic-sweetness-charm1.jpg" alt="Rustic Sweetness Glass Charm View 2">
+                    <img src="rustic-sweetness-charm2.jpg" alt="Rustic Sweetness Glass Charm View 3">
+                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Rustic Sweetness Charms</h3>
+                        <p>Charming, natural, and down-to-earth. Blends warm organic elements with dainty neutral details for a cozy, handcrafted feel. A beautiful choice for barn weddings or countryside garden hen parties.</p>
+                    </div>
+                </div>
+                <div class="stripe-container">
+                    <!-- PASTE YOUR STRIPE BUY BUTTON FOR THIS THEME DIRECTLY BELOW -->
+                </div>
+            </div>
+           <!-- Item 4: Soft Pastel Charm -->
+            <div class="product-card">
+                <div class="slideshow-container">
+                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
+                    <img src="soft-pastel-charm.jpg" alt="Soft Pastel Charm Glass Charm View 1" class="active">
+                    <img src="soft-pastel-charm1.jpg" alt="Soft Pastel Charm Glass Charm View 2">
+                    <img src="soft-pastel-charm2.jpg" alt="Soft Pastel Charm Glass Charm View 3">
+                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Soft Pastel Charm</h3>
+                        <p>Dreamy, romantic, and sweet. A calming blend of delicate blush pinks, soft lavenders, and mint green pastel beads. Perfect for a relaxed bridal brunch layout or a classic springtime wedding table display.</p>
+                    </div>
+                </div>
+                <div class="stripe-container">
+                    <!-- PASTE YOUR STRIPE BUY BUTTON FOR THIS THEME DIRECTLY BELOW -->
+                </div>
+            </div>
+
+            <!-- Item 5: Sparkle & Glamour -->
+            <div class="product-card">
+                <div class="slideshow-container">
+                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
+                    <img src="sparkle-glamour-charm.jpg" alt="Sparkle and Glamour Glass Charm View 1" class="active">
+                    <img src="sparkle-glamour-charm1.jpg" alt="Sparkle and Glamour Glass Charm View 2">
+                    <img src="sparkle-glamour-charm2.jpg" alt="Sparkle and Glamour Glass Charm View 3">
+                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Sparkle & Glamour Charms</h3>
+                        <p>High-shine luxury for a dazzling night. Loaded with premium faceted crystals, glitter accents, and shining metallic spacer beads that catch the event light perfectly. Ideal for glamorous evening hen dos.</p>
+                    </div>
+                </div>
+                <div class="stripe-container">
+                    <!-- PASTE YOUR STRIPE BUY BUTTON FOR THIS THEME DIRECTLY BELOW -->
+                </div>
+            </div>
+
+            <!-- Item 6: Fun Boho Style -->
+            <div class="product-card">
+                <div class="slideshow-container">
+                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
+                    <img src="fun-boho-charm.jpg" alt="Fun Boho Style Glass Charm View 1" class="active">
+                    <img src="fun-boho-charm1.jpg" alt="Fun Boho Style Glass Charm View 2">
+                    <img src="fun-boho-charm2.jpg" alt="Fun Boho Style Glass Charm View 3">
+                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Fun Boho Style Charms</h3>
+                        <p>Free-spirited, unique, and organic. Features an eclectic mix of natural stones, irregular crystals, and textured charms for a completely custom feel. The ultimate choice for a festival-themed wedding or woodland hen celebration.</p>
+                    </div>
+                </div>
+                <div class="stripe-container">
+                    <!-- PASTE YOUR STRIPE BUY BUTTON FOR THIS THEME DIRECTLY BELOW -->
+                </div>
+            </div>
+
+        </div> <!-- End of .product-grid -->
+    </div> <!-- End of .container -->
+
+    <footer>
+        <p>&copy; 2026 Sparkling Resin Delights. Handmade Wedding Keepsakes Shipped Across the UK via Tracked Evri Delivery.</p>
+    </footer>
+
+    <!-- Image Slideshow Automation Script -->
+    <script>
+        document.querySelectorAll('.slideshow-container').forEach(slideshow => {
+            const images = slideshow.querySelectorAll('img');
+            const prevBtn = slideshow.querySelector('.prev-btn');
+            const nextBtn = slideshow.querySelector('.next-btn');
+            let currentIndex = 0;
+
+            function updateSlides(newIndex) {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (newIndex + images.length) % images.length;
+                images[currentIndex].classList.add('active');
+            }
+
+            if(prevBtn && nextBtn) {
+                prevBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    updateSlides(currentIndex - 1);
+                });
+
+                nextBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    updateSlides(currentIndex + 1);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+    
