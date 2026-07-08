@@ -12,10 +12,8 @@ title: Resin Jewelry
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com" rel="stylesheet">
     
-    <!-- Snipcart Shopping Basket Engine Integration -->
-    <link rel="preconnect" href="https://snipcart.com">
-    <link rel="preconnect" href="https://snipcart.com">
-    <link rel="stylesheet" href="https://snipcart.com/themes/v3.4.1/default/snipcart.css" />
+    <!-- Payhip Secure Shopping Cart Loader -->
+    <script type="text/javascript" src="https://payhip.com"></script>
     
     <style>
         :root {
@@ -202,33 +200,28 @@ title: Resin Jewelry
             font-weight: 400;
         }
 
-        /* Adjusted button container width to seamlessly fit multi-item cart buttons */
+        /* Tidy container to center Payhip's direct button rows beautifully */
         .stripe-container {
-            max-width: 180px;
+            max-width: 160px;
             margin: auto auto 0 auto;
             padding: 0 5px;
             min-height: 45px;
             width: 100%;
+            display: flex;
+            justify-content: center;
         }
 
-        /* Customized styling for Snipcart's button inside your style block */
-        .snipcart-add-item {
-            display: block;
-            width: 100%;
-            background-color: var(--bright-teal);
-            color: #ffffff;
-            padding: 12px;
-            border: none;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-        .snipcart-add-item:hover {
-            background-color: #009e82;
+        /* Matching Payhip's injected direct button to your website style variables */
+        .payhip-add-to-cart-btn {
+            background-color: var(--bright-teal) !important;
+            color: #ffffff !important;
+            border-radius: 4px !important;
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 600 !important;
+            letter-spacing: 1px !important;
+            text-transform: uppercase !important;
+            padding: 12px 24px !important;
+            font-size: 0.85rem !important;
         }
 
         footer {
@@ -252,18 +245,7 @@ title: Resin Jewelry
     </style>
 </head>
 <body>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="resin-jewelry.html">Resin Jewelry</a>
-        <a href="beaded-pens.html">Beaded Pens</a>
-        <a href="beaded-keychains.html">Keychains</a>
-        <a href="beaded-bracelets.html">Bracelets</a>
-        <a href="cups-and-glasses.html">Cups & Glasses</a>
-        <a href="wedding.html">Weddings & Hen Parties</a>
-        <a href="contact.html">Contact Us</a>
-    </nav>
-     <header>
+    <header>
         <h1>Handmade Resin Jewelry & Crystal Pendants | Unique UK Boutique</h1>
         <p>Discover unique, wearable art with our handcrafted resin jewelry collection. Made locally in the UK, each necklace, pendant, and earring set features beautifully preserved details, sparkling glitter, and vibrant colors locked in crystal-clear resin. Lightweight, durable, and completely individual, our jewelry pieces make the perfect thoughtful gift or personal statement accessory for anyone who loves botanical, celestial, or abstract designs.</p>
     </header>
@@ -288,14 +270,8 @@ title: Resin Jewelry
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <button class="snipcart-add-item"
-                        data-item-id="forest-queen-lace-necklace"
-                        data-item-name="Forest Queen Anne's Lace Resin Necklace"
-                        data-item-price="18.99"
-                        data-item-url="/resin-jewelry.html"
-                        data-item-description="Handcrafted UK pressed flower necklace featuring white wildflowers against a deep green glittery resin backdrop.">
-                        Add to Basket
-                    </button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODES FOR ITEM 1 DIRECTLY BELOW -->
+                    <a href="https://payhip.com/b/B5mkM" class="payhip-buy-button" data-theme="green" data-product="B5mkM">Add to Cart</a>
                 </div>
             </div>
 
@@ -316,14 +292,8 @@ title: Resin Jewelry
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <button class="snipcart-add-item"
-                        data-item-id="gold-sun-celestial-earrings"
-                        data-item-name="Handmade Gold Sun Celestial Resin Drop Earrings"
-                        data-item-price="12.00"
-                        data-item-url="/resin-jewelry.html"
-                        data-item-description="UK handcrafted dangling celestial earrings featuring colorful shimmering shards and gold sun charms.">
-                        Add to Basket
-                    </button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODES FOR ITEM 2 DIRECTLY BELOW -->
+                    
                 </div>
             </div>
 
@@ -344,14 +314,8 @@ title: Resin Jewelry
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <button class="snipcart-add-item"
-                        data-item-id="pink-buttercup-necklace"
-                        data-item-name="Pink Buttercup Pressed Flower Resin Necklace"
-                        data-item-price="18.99"
-                        data-item-url="/resin-jewelry.html"
-                        data-item-description="Artisan botanical necklace featuring yellow buttercup blooms over a soft blush pink background base.">
-                        Add to Basket
-                    </button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODES FOR ITEM 3 DIRECTLY BELOW -->
+                    
                 </div>
             </div>
 
@@ -372,18 +336,12 @@ title: Resin Jewelry
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <button class="snipcart-add-item"
-                        data-item-id="pink-glitter-oval-hoops"
-                        data-item-name="Pink Glitter Oval Hoop Resin Earrings"
-                        data-item-price="7.50"
-                        data-item-url="/resin-jewelry.html"
-                        data-item-description="Handcrafted crystal-clear resin hoops featuring a unique half transparent and half soft pink shimmer design.">
-                        Add to Basket
-                    </button>
-                 </div>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODES FOR ITEM 4 DIRECTLY BELOW -->
+                    
+                </div>
             </div>    
-             
-           <!-- Item 5: Sunset Gummy Bear Drops -->
+
+             <!-- Item 5: Sunset Gummy Bear Drops -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -400,14 +358,8 @@ title: Resin Jewelry
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <button class="snipcart-add-item"
-                        data-item-id="sunset-gummy-bear-drops"
-                        data-item-name="Sunset Gummy Bear Drop Earrings"
-                        data-item-price="8.00"
-                        data-item-url="/resin-jewelry.html"
-                        data-item-description="Fun, nostalgic resin drop earrings designed with a warm red-to-peach ombre sunset gradient.">
-                        Add to Basket
-                    </button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODES FOR ITEM 5 DIRECTLY BELOW -->
+                    
                 </div>
             </div>  
                
@@ -428,14 +380,8 @@ title: Resin Jewelry
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <button class="snipcart-add-item"
-                        data-item-id="warm-marbled-orange-ovals"
-                        data-item-name="Warm Marbled Orange Oval Earrings"
-                        data-item-price="8.00"
-                        data-item-url="/resin-jewelry.html"
-                        data-item-description="Unique high-gloss resin drop earrings individually swirled with rich orange and warm amber tones.">
-                        Add to Basket
-                    </button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODES FOR ITEM 6 DIRECTLY BELOW -->
+                    
                 </div>
             </div>  
                     
@@ -456,14 +402,8 @@ title: Resin Jewelry
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <button class="snipcart-add-item"
-                        data-item-id="resin-vintage-pendant-earrings"
-                        data-item-name="Resin Vintage Pendant Earrings"
-                        data-item-price="15.00"
-                        data-item-url="/resin-jewelry.html"
-                        data-item-description="Vintage drop earrings featuring preserved real pink flowers and green leaves inside an antique bronze frame.">
-                        Add to Basket
-                    </button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODES FOR ITEM 7 DIRECTLY BELOW -->
+                    
                 </div>
             </div>               
             
@@ -474,10 +414,7 @@ title: Resin Jewelry
         <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK via Tracked Evri Delivery.</p>
     </footer>
 
-    <!-- Snipcart Hidden Live Script Controller Injection -->
-    <script async src="https://snipcart.com"></script>
-    <div id="snipcart" data-api-key="YOUR_SNIPCART_PUBLIC_API_KEY_FROM_DASHBOARD" hidden></div>
-
+    <!-- Interactive Multiview Gallery Controller Script -->
     <script>
         document.querySelectorAll('.slideshow-container').forEach(slideshow => {
             const images = slideshow.querySelectorAll('img');
@@ -506,5 +443,6 @@ title: Resin Jewelry
     </script>
 </body>
 </html>
+                       
 
             
