@@ -12,6 +12,9 @@ title: Beaded Pens
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com" rel="stylesheet">
     
+    <!-- Payhip Secure Shopping Cart Loader -->
+    <script type="text/javascript" src="https://payhip.com"></script>
+    
     <style>
         :root {
             --bg-color: #fffbfc; /* Airy white with a tiny hint of blush pink */
@@ -194,12 +197,28 @@ title: Beaded Pens
             font-weight: 400;
         }
 
+        /* Perfectly centered container for Payhip's direct button injection */
         .stripe-container {
-            max-width: 180px;
+            max-width: 160px;
             margin: auto auto 0 auto;
             padding: 0 5px;
             min-height: 45px;
             width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Tailoring Payhip's button template styles to fit the baby pink aesthetic variables */
+        .payhip-add-to-cart-btn {
+            background-color: var(--pink-focal) !important;
+            color: #ffffff !important;
+            border-radius: 4px !important;
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 600 !important;
+            letter-spacing: 1px !important;
+            text-transform: uppercase !important;
+            padding: 12px 24px !important;
+            font-size: 0.85rem !important;
         }
 
         footer {
@@ -221,11 +240,9 @@ title: Beaded Pens
             .product-grid { grid-template-columns: 1fr; gap: 30px; }
         }
     </style>
-    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
 <body>
-
-   <nav>
+    <nav>
         <a href="index.html">Home</a>
         <a href="resin-jewelry.html">Resin Jewelry</a>
         <a href="beaded-pens.html">Beaded Pens</a>
@@ -255,15 +272,14 @@ title: Beaded Pens
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Pink Kisses Pen</h3>
-                        <p>All things cute and pink! Features a soft pink silicone bead with a white kiss print, sparkly pink crystal spacers, a faceted pink heart, and a pretty red patterned crystal bead. So fun and girly!</p>
+                        <h3>Pink Kisses Handmade Beaded Pen | Cute UK Stationery Gift</h3>
+                        <p class="price">£7.00</p>
+                        <p>Bring a splash of playful style to your stationery collection with our lovely Pink Kisses handmade beaded pen. Lovingly crafted in the UK, this beautiful writing accessory features a soft pink matte silicone bead printed with a classic white kiss pattern, paired with sparkly pink crystal spacers, a faceted heart, and a vibrant patterned bead. Perfect for bullet journaling, high school study desks, or a unique Valentine's token gift.</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <stripe-buy-button
-                      buy-button-id="buy_btn_1TpRhoDuVnIeP5UhFTeaLzWl"
-                      publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
-                    ></stripe-buy-button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 1 DIRECTLY BELOW -->
+                    <a href="https://payhip.com/b/f0rg7" class="payhip-buy-button" data-theme="green" data-product="f0rg7">Add To Cart</a>
                 </div>
             </div>
 
@@ -278,15 +294,14 @@ title: Beaded Pens
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Pretty Pink Bow Pen</h3>
-                        <p>Sweet and whimsical! Comes with a soft pink silicone bead, clear pink heart, cute pink star charm, and a clear crystal bead with a darling bow detail – a total delight!</p>
+                        <h3>Pretty Pink Bow Custom Beaded Pen | Whimsical UK Desk Decor</h3>
+                        <p class="price">£6.00</p>
+                        <p>Add a touch of whimsical charm to your daily planning routine with our Pretty Pink Bow custom beaded pen. Handcrafted in our UK boutique studio, this sweet writing instrument combines a smooth pastel pink silicone bead with a crystal-clear pink heart focal charm, a cute pink star accent, and a darling bow crystal detail. It makes a beautiful, lightweight treat for your workspace layout or a thoughtful teacher appreciation gift.</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <stripe-buy-button
-                      buy-button-id="buy_btn_1TpRosDuVnIeP5Uhn9dkQhlb"
-                      publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
-                    ></stripe-buy-button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 2 DIRECTLY BELOW -->
+                    <a href="https://payhip.com/b/v4Zxs" class="payhip-buy-button" data-theme="green" data-product="v4Zxs">Add To Cart</a>
                 </div>
             </div>
 
@@ -301,15 +316,14 @@ title: Beaded Pens
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Betty Boop Pen</h3>
-                        <p>A playful retro design! Features a classic Betty Boop themed bead, shimmering purple crystal, faceted purple spacer, and soft purple silicone – perfect for fans of vintage style.</p>
+                        <h3>Retro Betty Boop Beaded Pen | Playful Vintage Stationery UK</h3>
+                        <p class="price">£7.00</p>
+                        <p>Celebrate vintage style with our fun and nostalgic Betty Boop custom beaded pen. Featuring an iconic, officially themed Betty Boop focal bead, this playful retro design is accented with a shimmering purple crystal, a faceted spacer bead, and a smooth matte purple silicone grip. Expertly made in the UK, it is the perfect unique collectible gift for vintage cartoon fans, journalers, and office desk styling.</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <stripe-buy-button
-                      buy-button-id="buy_btn_1TpRgXDuVnIeP5UhjLjnPFRg"
-                      publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
-                    ></stripe-buy-button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 3 DIRECTLY BELOW -->
+                    <a href="https://payhip.com/b/3Ma8C" class="payhip-buy-button" data-theme="green" data-product="3Ma8C">Add To Cart</a>
                 </div>
             </div>
 
@@ -324,15 +338,14 @@ title: Beaded Pens
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Dreamy White & Purple Pen</h3>
-                        <p>Soft matte white silicone beads paired with a gorgeous white bead swirled with soft purple – simple, elegant, and totally charming.</p>
+                        <h3>Dreamy Purple & White Swirl Beaded Pen | Elegant UK Journal Gift</h3>
+                        <p class="price">£5.00</p>
+                        <p>Embrace quiet sophistication while you write with our elegant Dreamy White & Purple custom beaded pen. Handcrafted across the UK using premium materials, this soothing stationery accessory features clean, soft matte white silicone beads beautifully contrasted against a gorgeous focal bead swirled with rich pastel purple marble tones. An ideal, sophisticated treat for daily mindfulness journaling or an elegant boutique gift for coworkers.</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <stripe-buy-button
-                      buy-button-id="buy_btn_1TpRlnDuVnIeP5UhOzebzmZV"
-                      publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
-                    ></stripe-buy-button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 4 DIRECTLY BELOW -->
+                    <a href="https://payhip.com/b/fN2Bk" class="payhip-buy-button" data-theme="green" data-product="fN2Bk">Add To Cart</a>
                 </div>
             </div>
 
@@ -347,15 +360,14 @@ title: Beaded Pens
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>The Willie Pen</h3>
-                        <p>Cute pink pen with sparkling crystal details and smooth black ink. Perfect for journaling, office use, and gifts for stationery lovers.</p>
+                        <h3>The Willie Pink Beaded Pen | Sparkling Crystal Executive Gift UK</h3>
+                        <p class="price">£6.00</p>
+                        <p>Elevate your workspace layout with the sleek elegance of The Willie pink beaded pen. Lovingly handcrafted in the UK, this beautiful luxury ballpoint features smooth, premium black ink paired with a soft pink core frame and dazzling, light-catching crystal detail pieces. Comfortably weighted for everyday writing, it makes an excellent, high-quality stocking filler, office graduation present, or professional treat for stationery lovers.</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <stripe-buy-button
-                      buy-button-id="buy_btn_1TpRs5DuVnIeP5UhBnSjLyYe"
-                      publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
-                    ></stripe-buy-button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 5 DIRECTLY BELOW -->
+                    <a href="https://payhip.com/b/DTdw2" class="payhip-buy-button" data-theme="green" data-product="DTdw2">Add To Cart</a>
                 </div>
             </div>
 
@@ -363,9 +375,10 @@ title: Beaded Pens
     </div> <!-- End of .container -->
 
     <footer>
-        <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK.</p>
+        <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK via Tracked Evri Delivery.</p>
     </footer>
 
+    <!-- Multi-View Image Slider Engine Controller -->
     <script>
         document.querySelectorAll('.slideshow-container').forEach(slideshow => {
             const images = slideshow.querySelectorAll('img');
@@ -395,7 +408,7 @@ title: Beaded Pens
 </body>
 </html>
 
-   
+           
             
 
            
