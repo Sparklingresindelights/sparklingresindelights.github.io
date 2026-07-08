@@ -7,10 +7,15 @@ title: Resin Jewelry
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resin Jewelry - Sparkling Resin Delights</title>
+    <title>Handmade Resin Jewelry & Crystal Pendants | Unique UK Boutique</title>
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com" rel="stylesheet">
+    
+    <!-- Snipcart Shopping Basket Engine Integration -->
+    <link rel="preconnect" href="https://snipcart.com">
+    <link rel="preconnect" href="https://snipcart.com">
+    <link rel="stylesheet" href="https://snipcart.com/themes/v3.4.1/default/snipcart.css" />
     
     <style>
         :root {
@@ -197,12 +202,33 @@ title: Resin Jewelry
             font-weight: 400;
         }
 
+        /* Adjusted button container width to seamlessly fit multi-item cart buttons */
         .stripe-container {
             max-width: 180px;
             margin: auto auto 0 auto;
             padding: 0 5px;
             min-height: 45px;
             width: 100%;
+        }
+
+        /* Customized styling for Snipcart's button inside your style block */
+        .snipcart-add-item {
+            display: block;
+            width: 100%;
+            background-color: var(--bright-teal);
+            color: #ffffff;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .snipcart-add-item:hover {
+            background-color: #009e82;
         }
 
         footer {
@@ -224,11 +250,10 @@ title: Resin Jewelry
             .product-grid { grid-template-columns: 1fr; gap: 30px; }
         }
     </style>
-    <script async src="https://stripe.com"></script>
 </head>
 <body>
 
-   <nav>
+    <nav>
         <a href="index.html">Home</a>
         <a href="resin-jewelry.html">Resin Jewelry</a>
         <a href="beaded-pens.html">Beaded Pens</a>
@@ -238,8 +263,7 @@ title: Resin Jewelry
         <a href="wedding.html">Weddings & Hen Parties</a>
         <a href="contact.html">Contact Us</a>
     </nav>
-
-    <header>
+     <header>
         <h1>Handmade Resin Jewelry & Crystal Pendants | Unique UK Boutique</h1>
         <p>Discover unique, wearable art with our handcrafted resin jewelry collection. Made locally in the UK, each necklace, pendant, and earring set features beautifully preserved details, sparkling glitter, and vibrant colors locked in crystal-clear resin. Lightweight, durable, and completely individual, our jewelry pieces make the perfect thoughtful gift or personal statement accessory for anyone who loves botanical, celestial, or abstract designs.</p>
     </header>
@@ -247,7 +271,7 @@ title: Resin Jewelry
     <div class="container">
         <div class="product-grid">
             
-            <!-- Item 1: Necklace -->
+            <!-- Item 1: Forest Queen Anne's Lace Necklace -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -258,19 +282,24 @@ title: Resin Jewelry
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Forest Queen Anne’s Lace Pressed Flower Resin Necklace | Handmade UK</h3>
+                        <h3>Forest Queen Anne’s Lace Pressed Flower Resin Necklace</h3>
+                        <p class="price">£18.99</p>
                         <p>Carry the quiet magic of the woods with you with our Forest Queen Anne’s Lace pressed flower resin necklace. Lovingly handcrafted in the UK, this beautiful botanical pendant features delicate, real white wildflower blooms intricately preserved inside a high-gloss, crystal-clear resin lens. The natural floral details are set against a rich, deep green glittery resin background that shimmers elegantly as it catches the light. Combining a whimsical cottagecore aesthetic with premium, lightweight comfort, this nature-inspired necklace makes an enchanting birthday present, thoughtful anniversary token, or personal treasure for anyone who loves unique crystal and floral jewelry.</p>
-                        <p>£18.99</p>
                     </div>
-                   
                 </div>
                 <div class="stripe-container">
-                  <a href"https://buy.stripe.com/3cIdR96sS3ZqaOg7jOcAo0X"><button>BuyNow</button>
-                  </a>
+                    <button class="snipcart-add-item"
+                        data-item-id="forest-queen-lace-necklace"
+                        data-item-name="Forest Queen Anne's Lace Resin Necklace"
+                        data-item-price="18.99"
+                        data-item-url="/resin-jewelry.html"
+                        data-item-description="Handcrafted UK pressed flower necklace featuring white wildflowers against a deep green glittery resin backdrop.">
+                        Add to Basket
+                    </button>
                 </div>
             </div>
 
-            <!-- Item 2: Earrings -->
+            <!-- Item 2: Gold Sun Celestial Earrings -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -281,19 +310,24 @@ title: Resin Jewelry
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Handmade Gold Sun Celestial Resin Drop Earrings | Colorful Shard Jewelry UK</h3>
+                        <h3>Handmade Gold Sun Celestial Resin Drop Earrings</h3>
+                        <p class="price">£12.00</p>
                         <p>Add a touch of celestial magic to your accessory collection with our Handmade Gold-Sun Resin Drop Earrings. Lovingly handcrafted in the UK, these enchanting dangling earrings feature mesmerizing, colorful shimmering shards frozen inside a high-gloss, crystal-clear resin background that catches and reflects the light beautifully with every movement. At the absolute heart of each drop sits a delicate, intricately detailed gold sun charm, blending modern whimsical vibes with a clean, high-end boutique finish. Lightweight and comfortable for all-day wear, these unique bohemian earrings make a stunning birthday present, thoughtful token gift, or personal treasure for anyone who loves star, moon, and sun-inspired styling.</p>
-                        <p>£12.00</p>
                     </div>
-                   
                 </div>
                 <div class="stripe-container">
-                <a href"https://buy.stripe.com/28EcN5bNcbrS5tW5bGcAo10"><button>BuyNow</button>
-                </a>
+                    <button class="snipcart-add-item"
+                        data-item-id="gold-sun-celestial-earrings"
+                        data-item-name="Handmade Gold Sun Celestial Resin Drop Earrings"
+                        data-item-price="12.00"
+                        data-item-url="/resin-jewelry.html"
+                        data-item-description="UK handcrafted dangling celestial earrings featuring colorful shimmering shards and gold sun charms.">
+                        Add to Basket
+                    </button>
                 </div>
             </div>
 
-             <!-- Item 3: Necklace -->
+             <!-- Item 3: Pink Buttercup Necklace -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -304,107 +338,132 @@ title: Resin Jewelry
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Pink Buttercup Pressed Flower Resin Necklace | Handmade UK Floral Gift</h3>
+                        <h3>Pink Buttercup Pressed Flower Resin Necklace</h3>
+                        <p class="price">£18.99</p>
                         <p>Brighten up your style with our stunning Pink Buttercup pressed flower resin necklace. Lovingly handcrafted in the UK, this unique botanical pendant features real, hand-preserved sunny yellow buttercup blooms frozen forever inside a high-gloss, crystal-clear resin lens. The vibrant yellow petals are set against a soft, delicate blush pink base background, creating a beautiful contrast that feels like a warm spring morning. Combining a whimsical cottagecore aesthetic with a premium, lightweight finish, this nature-inspired necklace makes an enchanting birthday present, thoughtful bridesmaid gift, or personal token for anyone who loves artisan floral jewelry.</p>
-                        <p>£18.99</p>
                     </div>
-                   
                 </div>
                 <div class="stripe-container">
-                 <a href"https://buy.stripe.com/bJeeVd8B0dA03lOgUocAo0Z"><button>BuyNow</button>
-                 </a>
+                    <button class="snipcart-add-item"
+                        data-item-id="pink-buttercup-necklace"
+                        data-item-name="Pink Buttercup Pressed Flower Resin Necklace"
+                        data-item-price="18.99"
+                        data-item-url="/resin-jewelry.html"
+                        data-item-description="Artisan botanical necklace featuring yellow buttercup blooms over a soft blush pink background base.">
+                        Add to Basket
+                    </button>
                 </div>
             </div>
 
-             <!-- Item 4: Pink Glitter Oval Hoops -->
+            <!-- Item 4: Pink Glitter Oval Hoops -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
-                    <img src="pink glitter oval hoops.jpg" alt="Pink Glitter Oval Hoops Front View" class="active">
+                    <img src="pink glitter oval hoops.jpg" alt="Pink Glitter Oval Hoops" class="active">
                     <img src="pink glitter oval hoops1.jpg" alt="Pink Glitter Oval Hoops View 1">
                     <img src="pink glitter oval hoops2.jpg" alt="Pink Glitter Oval Hoops View 2">
                     <button class="slide-btn next-btn" type="button">&rsaquo;</button>
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Pink Glitter Oval Hoop Resin Earrings | Handcrafted UK Gift</h3>
+                        <h3>Pink Glitter Oval Hoops</h3>
+                        <p class="price">£7.50</p>
                         <p>Add a touch of elegant sparkle to your jewelry collection with our Pink Glitter Oval Hoops. Lovingly handcrafted from crystal-clear resin, these unique earrings feature a striking half-and-half design—one side remains beautifully transparent while the other is filled with a soft, mesmerizing pink shimmer. Lightweight and comfortable for all-day wear, they make a gorgeous boutique treat or a thoughtful gift for anyone who loves pretty pastel aesthetics.</p>
-                        <p>£7.50</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                 <a href"https://buy.stripe.com/6oU00jaJ8eE41dG47CcAo11"><button>BuyNow</button>
-                 </a>
+                    <button class="snipcart-add-item"
+                        data-item-id="pink-glitter-oval-hoops"
+                        data-item-name="Pink Glitter Oval Hoop Resin Earrings"
+                        data-item-price="7.50"
+                        data-item-url="/resin-jewelry.html"
+                        data-item-description="Handcrafted crystal-clear resin hoops featuring a unique half transparent and half soft pink shimmer design.">
+                        Add to Basket
+                    </button>
                  </div>
             </div>    
              
-
            <!-- Item 5: Sunset Gummy Bear Drops -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
-                    <img src="sunset gummy bear drops.jpg" alt="Sunset Gummy Bear Drops Front View" class="active">
+                    <img src="sunset gummy bear drops.jpg" alt="Sunset Gummy Bear Drops" class="active">
                     <img src="sunset gummy bear drops1.jpg" alt="Sunset Gummy Bear Drops View 1">
                     <img src="sunset gummy bear drops2.jpg" alt="Sunset Gummy Bear Drops View 2">
                     <button class="slide-btn next-btn" type="button">&rsaquo;</button>
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Sunset Gummy Bear Drop Earrings | Fun Ombre Resin Jewelry UK</h3>
+                        <h3>Sunset Gummy Bear Drops</h3>
+                        <p class="price">£8.00</p>
                         <p>Bring a playful, nostalgic vibe to your style with our Sunset Gummy Bear Drops. Expertly designed to look exactly like the classic sweet treats, these fun drop earrings feature a stunning red-to-peach ombre gradient that perfectly captures the warm colors of a summer sunset. Handcrafted from premium resin with a glossy finish, these lightweight, whimsical earrings make a playful fashion statement and an adorable, unique gift idea.</p>
-                        <p>£8.00</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                 <a href"https://buy.stripe.com/8x24gz3gG53uf4wfQkcAo12"><button>BuyNow</button>
-                 </a>
+                    <button class="snipcart-add-item"
+                        data-item-id="sunset-gummy-bear-drops"
+                        data-item-name="Sunset Gummy Bear Drop Earrings"
+                        data-item-price="8.00"
+                        data-item-url="/resin-jewelry.html"
+                        data-item-description="Fun, nostalgic resin drop earrings designed with a warm red-to-peach ombre sunset gradient.">
+                        Add to Basket
+                    </button>
                 </div>
             </div>  
                
-
             <!-- Item 6: Warm Marbled Orange Ovals -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
-                    <img src="warm marbled orange ovals.jpg" alt="Warm Marbled Orange Ovals Front View" class="active">
+                    <img src="warm marbled orange ovals.jpg" alt="Warm Marbled Orange Ovals" class="active">
                     <img src="warm marbled orange ovals1.jpg" alt="Warm Marbled Orange Ovals View 1">
                     <img src="warm marbled orange ovals2.jpg" alt="Warm Marbled Orange Ovals View 2">
                     <button class="slide-btn next-btn" type="button">&rsaquo;</button>
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Marbled Orange Oval Resin Earrings | Handmade UK Autumn Aesthetics</h3>
+                        <h3>Warm Marbled Orange Ovals</h3>
+                        <p class="price">£8.00</p>
                         <p>Embrace cozy, elegant tones with our Warm Marbled Orange Ovals. Each earring is completely unique, individually swirled with rich natural orange and warm amber tones to create a gorgeous marbled finish. Crafted from high-gloss boutique resin, these smooth oval drop earrings capture the light beautifully. They add an effortlessly chic, sophisticated pop of earthy color to any outfit and make an ideal gift for nature and gemstone tone lovers.</p>
-                        <p>£8.00</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                 <a href"https://buy.stripe.com/fZu9ATdVkanO4pS33ycAo13"><button>BuyNow</button>
-                 </a>
-                    </div>
-               </div>  
+                    <button class="snipcart-add-item"
+                        data-item-id="warm-marbled-orange-ovals"
+                        data-item-name="Warm Marbled Orange Oval Earrings"
+                        data-item-price="8.00"
+                        data-item-url="/resin-jewelry.html"
+                        data-item-description="Unique high-gloss resin drop earrings individually swirled with rich orange and warm amber tones.">
+                        Add to Basket
+                    </button>
+                </div>
+            </div>  
                     
-            <!-- Item 7: Resin Vintage Pentant Earrings -->
+            <!-- Item 7: Resin Vintage Pendant Earrings -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
-                    <img src="resin vintage.jpg" alt="Resin Vintage Pendant Front View" class="active">
+                    <img src="resin vintage.jpg" alt="Resin Vintage Pendant" class="active">
                     <img src="resin vintage1.jpg" alt="Resin Vintage Pendant View 1">
                     <img src="resin vintage2.jpg" alt="Resin Vintage Pendant View 2">
                     <button class="slide-btn next-btn" type="button">&rsaquo;</button>
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Resin Vintage Pendant Earrings | Handmade Antique Floral Drops UK</h3>
+                        <h3>Resin Vintage Pendant Earrings</h3>
+                        <p class="price">£15.00</p>
                         <p>Add a touch of classic charm to your wardrobe with our beautiful Resin Vintage Pendant Earrings. Handcrafted in the UK, these elegant vintage-style dangling earrings feature an ornate, antique bronze-coloured frame that frames a striking oval centrepiece. Locked inside crystal-clear, high-gloss resin are real, delicately preserved small pink flowers and vibrant green botanical leaves. Combining romantic cottagecore vibes with a rustic, antique finish, these lightweight drop earrings make a thoughtful birthday present, unique Mother's Day gift, or personal treasure for lovers of traditional floral jewelry.</p>
-                        <p>£15.00</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                <a href"https://buy.stripe.com/dRm4gz2cC1Rig8AfQkcAo1f"><button>BuyNow</button>
-                 </a>
-
-                    
+                    <button class="snipcart-add-item"
+                        data-item-id="resin-vintage-pendant-earrings"
+                        data-item-name="Resin Vintage Pendant Earrings"
+                        data-item-price="15.00"
+                        data-item-url="/resin-jewelry.html"
+                        data-item-description="Vintage drop earrings featuring preserved real pink flowers and green leaves inside an antique bronze frame.">
+                        Add to Basket
+                    </button>
                 </div>
             </div>               
             
@@ -412,8 +471,12 @@ title: Resin Jewelry
     </div> <!-- End of .container -->
 
     <footer>
-        <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures.</p>
+        <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK via Tracked Evri Delivery.</p>
     </footer>
+
+    <!-- Snipcart Hidden Live Script Controller Injection -->
+    <script async src="https://snipcart.com"></script>
+    <div id="snipcart" data-api-key="YOUR_SNIPCART_PUBLIC_API_KEY_FROM_DASHBOARD" hidden></div>
 
     <script>
         document.querySelectorAll('.slideshow-container').forEach(slideshow => {
@@ -443,3 +506,5 @@ title: Resin Jewelry
     </script>
 </body>
 </html>
+
+            
