@@ -11,6 +11,9 @@ title: Keychains
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com" rel="stylesheet">
+    
+    <!-- Payhip Secure Shopping Cart Loader -->
+    <script type="text/javascript" src="https://payhip.com"></script>
      <style>
         :root {
             --bg-color: #fbf9f4; /* Calming pastel beige background */
@@ -195,12 +198,28 @@ title: Keychains
             font-weight: 400;
         }
 
+        /* Perfectly centered container for Payhip's direct button rows */
         .stripe-container {
-            max-width: 180px;
+            max-width: 160px;
             margin: auto auto 0 auto;
             padding: 0 5px;
             min-height: 45px;
             width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Customizing Payhip's standard injected layout button style variables */
+        .payhip-add-to-cart-btn {
+            background-color: var(--gold-detail) !important;
+            color: #ffffff !important;
+            border-radius: 4px !important;
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 600 !important;
+            letter-spacing: 1px !important;
+            text-transform: uppercase !important;
+            padding: 12px 24px !important;
+            font-size: 0.85rem !important;
         }
 
         footer {
@@ -222,11 +241,9 @@ title: Keychains
             .product-grid { grid-template-columns: 1fr; gap: 30px; }
         }
     </style>
-    <script async src="https://stripe.com"></script>
 </head>
 <body>
-
-   <nav>
+    <nav>
         <a href="index.html">Home</a>
         <a href="resin-jewelry.html">Resin Jewelry</a>
         <a href="beaded-pens.html">Beaded Pens</a>
@@ -256,16 +273,14 @@ title: Keychains
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Emerald Green Keychain</h3>
-                        <p>Rich and striking, featuring smooth dark green matte silicone beads, a black silicone bead, a sparkling turquoise crystal spacer, a detailed zinc alloy snake, and a matching angel pendant. A bold, eye-catching colour combination.</p>
+                        <h3>Emerald Green Beaded Keychain with Angel & Snake Charm | UK Shop/h3>
+                        <p class="price">£9.99</p>
+                        <p>Make a bold statement with our rich and striking Emerald Green beaded keychain. Lovingly handcrafted in the UK, this eye-catching bag charm combines smooth dark green matte silicone beads, a solid black bead, a sparkling turquoise crystal spacer, a detailed zinc alloy snake, and a matching guardian angel pendant. Built on ultra-durable hardware, it makes an affordable, high-quality stocking filler, token gift, or personal treat to bring a vibrant pop of color to your everyday keys or purse layout</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-                    <stripe-buy-button
-                      buy-button-id="buy_btn_1TpiBiDuVnIeP5UhQFkbGFY5"
-                      publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
-                    ></stripe-buy-button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 1 DIRECTLY BELOW -->
+                    <a href="https://payhip.com/b/3928C" class="payhip-buy-button" data-theme="green" data-product="3928C">Add To Cart</a>
                 </div>
             </div>
 
@@ -280,16 +295,14 @@ title: Keychains
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Soft Grey Keychain</h3>
-                        <p>A minimalist, elegant design with smooth matte grey silicone beads, a white silicone bead, a shimmering white crystal spacer, a textured zinc alloy snake, and a delicate angel pendant. Perfect for a subtle, sophisticated look.</p>
+                        <h3>Soft Grey Minimalist Beaded Keychain & Purse Charm | Handmade UK</h3>
+                        <p class="price">£9.99</p>
+                        <p>Embrace effortless sophistication with our Soft Grey minimalist beaded keychain. This elegant, handcrafted design features smooth matte grey silicone beads, a clean white accent bead, a shimmering white crystal spacer, a textured zinc alloy snake charm, and a delicate angel pendant. Perfect for a subtle, premium look, this lightweight keyring clips seamlessly onto car keys, backpacks, or daily essentials, making it a beautiful, sophisticated birthday present or small thank-you gift</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-                    <stripe-buy-button
-                      buy-button-id="buy_btn_1TpiE7DuVnIeP5Uh9l8bRzNB"
-                      publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
-                    ></stripe-buy-button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 2 DIRECTLY BELOW -->
+                    <a href="https://payhip.com/b/CBU04" class="payhip-buy-button" data-theme="green" data-product="CBU04">Add To Cart</a>
                 </div>
             </div>
 
@@ -304,20 +317,18 @@ title: Keychains
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Pink Leopard Print Keychain</h3>
-                        <p>Features fun pale pink cow/leopard print silicone beads, a smooth matte pink silicone bead, a sparkling purple crystal spacer, a detailed zinc alloy snake charm, and finished with a sweet angel pendant. A playful, bold style that stands out.</p>
+                        <h3>Pink Leopard Print Beaded Keychain | Fun Whimsical Bag Charm UK</h3>
+                        <p class="price">£9.99</p>
+                        <p>Stand out from the crowd with our playful and bold Pink Leopard Print beaded keychain. Handcrafted in our UK studio, this fun accessory features pale pink cow and leopard print silicone beads, a smooth matte pink bead, a sparkling purple crystal spacer, a detailed zinc alloy snake charm, and a sweet angel pendant. Designed with ultra-durable hardware, it adds instant personality to any handbag or purse, making it a brilliant, unique treat or gift for friends</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-                    <stripe-buy-button
-                      buy-button-id="buy_btn_1TpiFNDuVnIeP5UhbLC22PDy"
-                      publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
-                    ></stripe-buy-button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 3 DIRECTLY BELOW -->
+                    <a href="https://payhip.com/b/tbvIC" class="payhip-buy-button" data-theme="green" data-product="tbvIC">Add To Cart</a>
                 </div>
             </div>
 
-           <!-- Item 4: Pink Floral -->
+            <!-- Item 4: Pink Floral -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -328,16 +339,14 @@ title: Keychains
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Pink Floral Keychain</h3>
-                        <p>Sweet & Feminine, with soft matte pink silicone beads, a pretty black silicone bead printed with pink flowers, a shimmering white crystal spacer, a zinc alloy snake detail, and a lovely angel charm pendant. A perfect mix of edge & softness.</p>
+                        <h3>Pink Floral Pressed Style Beaded Keychain | Cottagecore UK Gift</h3>
+                        <p class="price">£9.99</p>
+                        <p>Bring a sweet, feminine touch to your daily routine with our lovely Pink Floral beaded keychain. This nature-inspired cottagecore charm blends soft matte pink silicone beads with a beautiful black silicone bead printed with delicate pink flowers. Accented with a shimmering white crystal spacer, a zinc alloy snake detail, and a lovely angel charm pendant, this handmade keyring offers the perfect mix of edge and softness for backpacks, car key rings, or daily essential styling</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-                    <stripe-buy-button
-                      buy-button-id="buy_btn_1TpiGmDuVnIeP5UhhAv3O6Hs"
-                      publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
-                    ></stripe-buy-button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 4 DIRECTLY BELOW -->
+                    <a href="https://payhip.com/b/CZ8vL" class="payhip-buy-button" data-theme="green" data-product="CZ8vL">Add To Cart</a>
                 </div>
             </div>
 
@@ -352,16 +361,14 @@ title: Keychains
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Sky Blue Keychain</h3>
-                        <p>Light & cheerful, with soft light blue matte silicone beads, a light blue crystal spacer, a pretty printed white bead with blue & purple swirls, a zinc alloy snake charm, and a sweet angel pendant. Bright & refreshing.</p>
+                        <h3>Sky Blue Swirl Beaded Keychain & Backpack Charm | Handmade UK</h3>
+                        <p class="price">9.99</p>
+                        <p>Brighten up your workspace or school bags with our light and cheerful Sky Blue beaded keychain. Handcrafted across the UK using high-quality hardware, this refreshing design features soft light blue matte silicone beads, a light blue crystal spacer, a zinc alloy snake charm, a sweet angel pendant, and a gorgeous printed white bead swirled with blue and purple marble patterns. It makes a beautiful, refreshing token gift, new driver celebration treat, or stocking filler</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-                    <stripe-buy-button
-                      buy-button-id="buy_btn_1TpiHtDuVnIeP5UhF7h5AHA8"
-                      publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
-                    ></stripe-buy-button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 5 DIRECTLY BELOW -->
+                   <a href="https://payhip.com/b/wj9G4" class="payhip-buy-button" data-theme="green" data-product="wj9G4">Add To Cart</a> 
                 </div>
             </div>
 
@@ -369,9 +376,10 @@ title: Keychains
     </div> <!-- End of .container -->
 
     <footer>
-        <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK.</p>
+        <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK via Tracked Evri Delivery.</p>
     </footer>
 
+    <!-- Multi-View Image Slider Engine Controller -->
     <script>
         document.querySelectorAll('.slideshow-container').forEach(slideshow => {
             const images = slideshow.querySelectorAll('img');
@@ -400,5 +408,4 @@ title: Keychains
     </script>
 </body>
 </html>
-
        
