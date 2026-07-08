@@ -7,10 +7,13 @@ title: Cups & Glasses
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cups & Glasses - Sparkling Resin Delights</title>
+    <title>Handcrafted Custom Glassware & Drinkware | Unique UK Boutique</title>
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com" rel="stylesheet">
+    
+    <!-- Payhip Secure Shopping Cart Loader -->
+    <script type="text/javascript" src="https://payhip.com"></script>
     
     <style>
         :root {
@@ -197,12 +200,28 @@ title: Cups & Glasses
             font-weight: 400;
         }
 
+        /* Perfectly centered container for Payhip's direct button injection */
         .stripe-container {
-            max-width: 180px;
+            max-width: 160px;
             margin: auto auto 0 auto;
             padding: 0 5px;
             min-height: 45px;
             width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Customizing Payhip's standard injected layout button style variables */
+        .payhip-add-to-cart-btn {
+            background-color: var(--bright-pink) !important;
+            color: #ffffff !important;
+            border-radius: 4px !important;
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 600 !important;
+            letter-spacing: 1px !important;
+            text-transform: uppercase !important;
+            padding: 12px 24px !important;
+            font-size: 0.85rem !important;
         }
 
         footer {
@@ -224,10 +243,8 @@ title: Cups & Glasses
             .product-grid { grid-template-columns: 1fr; gap: 30px; }
         }
     </style>
-    <script async src="https://stripe.com"></script>
 </head>
 <body>
-
     <nav>
         <a href="index.html">Home</a>
         <a href="resin-jewelry.html">Resin Jewelry</a>
@@ -246,37 +263,8 @@ title: Cups & Glasses
 
     <div class="container">
         <div class="product-grid">
-            
-            <!-- Item 1: Stunning Sea Turtle Glass Cup – Custom Design with Resin Lid & Reusable Straw -->
-            <div class="product-card">
-                <div class="slideshow-container">
-                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
-                    <img src="sea-turtle.jpg" alt="Sea Turtle Glass View 1" class="active">
-                    <img src="sea-turtle1.jpg" alt="Sea Turtle Glass View 2">
-                    <img src="sea-turtle2.jpg" alt="Sea Turtle Glass View 3">
-                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
-                </div>
-                <div class="product-info">
-                    <div>
-                        <h3>Stunning Sea Turtle Glass Cup – Custom Design with Resin Lid & Reusable Straw</h3>
-                        <p>Vibrant sea turtle design + handmade resin lid with flowers & teddy bear! Comes with bamboo top and reusable glass straw. Perfect for iced coffee, water and more </p>
-                    </div>
-                    
-                </div>
-                <div class="stripe-container">
-                    <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
 
-<stripe-buy-button
-  buy-button-id="buy_btn_1TplyhDuVnIeP5UhBeIjRMsf"
-  publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
->
-</stripe-buy-button>
-                </div>
-            </div>
-
-            <!-- Item 2: Luxury Heel -->
+            <!-- Item 1: Luxury Heel & Peony Mug -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -287,25 +275,18 @@ title: Cups & Glasses
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Handmade Beautiful Ceramic Mug</h3>
-                        <p>Luxury Heel & Peony: Sophisticated style with deep pink peonies, glossy high heels, perfume, and diamond accents</p>
+                        <h3>Luxury Heel & Peony Ceramic Mug | Chic Fashion Giftware UK</h3>
+                        <p class="price">£12.50</p>
+                        <p>Treat yourself or a style lover to our stunning Luxury Heel & Peony handmade ceramic mug. Designed with a sophisticated boutique aesthetic, this high-quality mug features rich pink peonies, high-gloss stilettos, elegant perfume bottles, and sparkling diamond illustrations. Hand-finished with a beautiful gloss sheen, it brings an instant touch of designer glamour to your morning coffee or work desk layout. A perfect birthday gift for her, graduation present, or luxury treat for your kitchen cupboard collection</p>
                     </div>
-                   
                 </div>
                 <div class="stripe-container">
-                    <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1Tpm5hDuVnIeP5Uh4Ta8Ta7y"
-  publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
->
-</stripe-buy-button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR THE LUXURY HEEL MUG DIRECTLY BELOW -->
+                    <a href="https://payhip.com/b/CQEAP" class="payhip-buy-button" data-theme="green" data-product="CQEAP">Add To Cart</a>
                 </div>
             </div>
 
-            <!-- Item 3: Fairy Cow -->
+            <!-- Item 2: Fairy Highland Cow Mug -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -316,21 +297,14 @@ title: Cups & Glasses
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Handmade Beautiful Ceramic Mug</h3>
-                        <p>Fairy Highland Cow: An adorable chubby highland cow with a red bow, rainbow wings, and colourful flowers, accented with butterflies and daises – full of cute, cheerful charm</p>
+                        <h3>Fairy Highland Cow Ceramic Mug | Cute Magical Flower Gift UK</h3>
+                        <p class="price">£12.50</p>
+                        <p>Brighten up your morning routine with our absolutely adorable Fairy Highland Cow custom ceramic mug. This whimsical, handcrafted design features a lovely chubby highland cow wearing a bright red bow, magical rainbow fairy wings, and vibrant floral crowns, accented with dancing wild butterflies and sweet daisies. Full of cheerful artisan charm and built to last, this colorful mug makes an enchanting birthday present, secret Santa token, or cute kitchen collection treat for cow and cottagecore lovers across the UK </p>
                     </div>
-                    
                 </div>
                 <div class="stripe-container">
-                    <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1TpmAdDuVnIeP5UhbhT0iuTZ"
-  publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
->
-</stripe-buy-button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR THE FAIRY COW MUG DIRECTLY BELOW -->
+                    <a href="https://payhip.com/b/kw2AC" class="payhip-buy-button" data-theme="green" data-product="kw2AC">Add To Cart</a>
                 </div>
             </div>
 
@@ -338,9 +312,10 @@ title: Cups & Glasses
     </div> <!-- End of .container -->
 
     <footer>
-        <p>&copy; 2026 Sparkling Resin Delights. Beautifully Handcrafted Boutique Treasures.</p>
+        <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK via Tracked Evri Delivery.</p>
     </footer>
 
+    <!-- Multi-View Image Slider Engine Controller -->
     <script>
         document.querySelectorAll('.slideshow-container').forEach(slideshow => {
             const images = slideshow.querySelectorAll('img');
@@ -369,3 +344,5 @@ title: Cups & Glasses
     </script>
 </body>
 </html>
+
+    
