@@ -7,10 +7,13 @@ title: Bracelets
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beaded Bracelets - Sparkling Resin Delights</title>
+    <title>Handcrafted Beaded Bracelets & Gemstone Wristwear | UK Boutique</title>
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com" rel="stylesheet">
+    
+    <!-- Payhip Secure Shopping Cart Loader -->
+    <script type="text/javascript" src="https://payhip.com"></script>
     
     <style>
         :root {
@@ -197,12 +200,28 @@ title: Bracelets
             font-weight: 400;
         }
 
+        /* Perfectly centered container for Payhip's direct button injection rules */
         .stripe-container {
-            max-width: 180px;
+            max-width: 160px;
             margin: auto auto 0 auto;
             padding: 0 5px;
             min-height: 45px;
             width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Tailoring Payhip's template buttons to fit the bright purple theme variables */
+        .payhip-add-to-cart-btn {
+            background-color: var(--bright-purple) !important;
+            color: #ffffff !important;
+            border-radius: 4px !important;
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 600 !important;
+            letter-spacing: 1px !important;
+            text-transform: uppercase !important;
+            padding: 12px 24px !important;
+            font-size: 0.85rem !important;
         }
 
         footer {
@@ -224,10 +243,8 @@ title: Bracelets
             .product-grid { grid-template-columns: 1fr; gap: 30px; }
         }
     </style>
-    <script async src="https://stripe.com"></script>
 </head>
 <body>
-
     <nav>
         <a href="index.html">Home</a>
         <a href="resin-jewelry.html">Resin Jewelry</a>
@@ -241,7 +258,7 @@ title: Bracelets
 
     <header>
         <h1>Custom Beaded Bracelets</h1>
-        <p>Discover our beautiful collection of handmade beaded bracelets, carefully crafted by hand right here in the UK. Each design is created with high-quality beads, durably materials and great attention to detail - giving you pieces that are as strong as they are lovely to wear.  From colourful everyday styles and elegant beaded designs to eye-catching patterns and sparkling finishes - our bracelets suit every occassion, mood or outfit.  Perfect for daily wear, special moments or thoughful gifts for friends, family or yourself. every bracelet is unique, made with care and built to last.</p>
+        <p>Discover our beautiful collection of handmade beaded bracelets, carefully crafted by hand right here in the UK. Each design is created with high-quality beads, durable materials and great attention to detail - giving you pieces that are as strong as they are lovely to wear. From colourful everyday styles and elegant beaded designs to eye-catching patterns and sparkling finishes - our bracelets suit every occasion, mood or outfit. Perfect for daily wear, special moments or thoughtful gifts for friends, family or yourself. Every bracelet is unique, made with care and built to last.</p>
     </header>
 
     <div class="container">
@@ -258,16 +275,14 @@ title: Bracelets
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Handmade Blue Sandstone and Pearl Bracelet | UK Crystals</h3>
+                        <h3>Handmade Blue Sandstone and Pearl Bracelet</h3>
+                        <p class="price">£15.00</p>
                         <p>Add a touch of elegance to your daily wear with this stunning starlight pearl bracelet. Handcrafted in the UK, it features shimmering blue sandstone beads that catch the light like a clear starry night sky, paired beautifully with classic creamy faux pearls and gold details. Symbolising confidence and positive energy, it makes a meaningful crystal gift for a loved one or a luxurious treat for yourself.</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-                    <stripe-buy-button
-                      buy-button-id="buy_btn_1TpjafDuVnIeP5UhWNQRLDoW"
-                      publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
-                    ></stripe-buy-button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 1 DIRECTLY BELOW -->
+                   <a href="https://payhip.com/b/xizrC" class="payhip-buy-button" data-theme="green" data-product="xizrC">Add To Cart</a> 
                 </div>
             </div>
 
@@ -282,16 +297,14 @@ title: Bracelets
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Lava Stone and Map Jasper Diffuser Bracelet | Handcrafted UK</h3>
+                        <h3>Lava Stone and Map Jasper Diffuser Bracelet</h3>
+                        <p class="price">£25.00</p>
                         <p>Experience grounding energy on the go with our handmade lava stone bracelet. Designed with natural volcanic rock beads, this piece doubles as a portable essential oil diffuser—simply add a drop of your favourite oil to the porous stone. Complemented by earthy Map Jasper beads for stability and modern textured gold spacers, it is the perfect wellness gift for men or women looking for a stylish everyday balance.</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-                    <stripe-buy-button
-                      buy-button-id="buy_btn_1Tpjh6DuVnIeP5Uh3LDz2K2H"
-                      publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
-                    ></stripe-buy-button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 2 DIRECTLY BELOW -->
+                    <a href="https://payhip.com/b/1lRnw" class="payhip-buy-button" data-theme="green" data-product="1lRnw">Add To Cart</a>
                 </div>
             </div>
 
@@ -306,16 +319,14 @@ title: Bracelets
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Natural Map Jasper and Amethyst Gemstone Bracelet | UK Craft</h3>
+                        <h3>Natural Map Jasper and Amethyst Gemstone Bracelet</h3>
+                        <p class="price">£15.00</p>
                         <p>Bring calm and serenity into your routine with the Purple Earth gemstone bracelet. This unique piece combines the grounding properties of natural Map Jasper with the soothing vibes of rich purple glass amethyst beads. Accented with bright gold-toned findings for a high-quality boutique finish, this comfortable, stretch-fit bracelet is perfect for layering or wearing solo as a daily reminder of peace.</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-                    <stripe-buy-button
-                      buy-button-id="buy_btn_1Tpk8pDuVnIeP5UhXnAlpzgl"
-                      publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
-                    ></stripe-buy-button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 3 DIRECTLY BELOW -->
+                    <a href="https://payhip.com/b/6NXW3" class="payhip-buy-button" data-theme="green" data-product="6NXW3">Add To Cart</a>
                 </div>
             </div>
 
@@ -330,16 +341,14 @@ title: Bracelets
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Unakite and Green Chalcedony Healing Crystal Bracelet/h3>
+                        <h3>Unakite and Green Chalcedony Healing Crystal Bracelet</h3>
+                        <p class="price">£32.50</p>
                         <p>Embrace emotional harmony and growth with the Forest Bloom healing crystal bracelet. Handcrafted using premium polished Unakite and serene green chalcedony beads, its soft, natural tones capture the quiet beauty of a forest floor. This lightweight, comfortable gemstone bracelet is perfect for nature lovers and crystal enthusiasts seeking a subtle piece for casual styling.</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-                    <stripe-buy-button
-                      buy-button-id="buy_btn_1TpkEuDuVnIeP5UhdeDGQzwA"
-                      publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
-                    ></stripe-buy-button>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 4 DIRECTLY BELOW -->
+                    <a href="https://payhip.com/b/l1Xm6" class="payhip-buy-button" data-theme="green" data-product="l1Xm6">Add To Cart</a>
                 </div>
             </div>
 
@@ -354,22 +363,14 @@ title: Bracelets
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Wild Stone Wander Bohemian Unakite and Raw Crystal Bracelet | UK Shop</h3>
+                        <h3>Wild Stone Wander Bohemian Unakite and Raw Crystal Bracelet</h3>
+                        <p class="price">£15.00</p>
                         <p>Embrace your free-spirited style with our Wild Stone Wander beaded bracelet. Handcrafted in the UK, this beautiful bohemian piece features a playful mix of smooth, round natural Unakite stones paired with raw, unique irregular crystal beads and bright gold-toned spacer accents. Offering a truly one-of-a-kind boho charm, its compact design features an adjustable length of 15 to 20 cm (6.5" to 8"), making it ideal for smaller wrists or layering alongside your other favourite stacking bracelets. It makes a thoughtful healing crystal gift or a gorgeous artisan treat for anyone who loves earthy, natural fashion.</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1TqVgODuVnIeP5UhY9CQoGLT"
-  publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
->
-</stripe-buy-button>
-                    
-                </div>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 5 DIRECTLY BELOW -->
+                    <a href="https://payhip.com/b/QeY7l" class="payhip-buy-button" data-theme="green" data-product="QeY7l">Add To Cart</a>                </div>
             </div>
 
             <!-- Item 6: Jungle Drift -->
@@ -383,33 +384,24 @@ title: Bracelets
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Jungle Drift Natural Wood and Malachite Earthy Bracelet | Men & Women UK</h3>
+                        <h3>Jungle Drift Natural Wood and Malachite Earthy Bracelet</h3>
+                        <p class="price">£15.00</p>
                         <p>Connect with nature with our striking Jungle Drift adjustable bracelet. This rich, nature-inspired design blends the organic textures of warm natural wood beads with the deep, captivating bands of green Malachite and smooth, soothing green chalcedony, all elegantly accented with textured gold ring spacers. Embodying a bold, rustic, and earthy vibe, this standout piece features a longer adjustable length of 20 to 25 cm (8" to 10"), making it the perfect comfortable fit for larger wrists or a stylish unisex statement piece. Handcrafted in the UK, it makes a meaningful, high-quality gift for eco-conscious shoppers and lovers of organic fashion.</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1TqVlwDuVnIeP5UhOb9nUVR9"
-  publishable-key="pk_live_51TaWzmDuVnIeP5UheLefG30kxSSQOSfDQCsAHgtqbXdeIQIJ2QNudXyOvmSMv3lnHR5i4xPROQ4fBWwJYmGSUNtk00rOMA4619"
->
-</stripe-buy-button>
-                    
-                </div>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 6 DIRECTLY BELOW -->
+                    <a href="https://payhip.com/b/VFdTU" class="payhip-buy-button" data-theme="green" data-product="VFdTU">Add To Cart</a>                </div>
             </div>
-
-                    
 
         </div> <!-- End of .product-grid -->
     </div> <!-- End of .container -->
 
     <footer>
-        <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures.</p>
+        <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK via Tracked Evri Delivery.</p>
     </footer>
 
+    <!-- Interactive Multiview Gallery Controller Script -->
     <script>
         document.querySelectorAll('.slideshow-container').forEach(slideshow => {
             const images = slideshow.querySelectorAll('img');
@@ -439,4 +431,5 @@ title: Bracelets
 </body>
 </html>
 
+          
    
