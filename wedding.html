@@ -201,9 +201,9 @@ title: Weddings & Hen Parties
             font-weight: 400;
         }
 
-        /* This centered container expands to give your Payhip button room to breathe */
+        /* Centered container button wrap limits */
         .stripe-container {
-            max-width: 220px; /* Expands the width so it isn't tiny and squished */
+            max-width: 220px;
             margin: auto auto 0 auto;
             padding: 0 5px;
             min-height: 45px;
@@ -212,30 +212,43 @@ title: Weddings & Hen Parties
             justify-content: center;
         }
 
-        /* 🚀 THIS MAGIC CODE FORCES PAYHIP'S BUTTON TO EXPAND & MATCH YOUR BOUTIQUE STYLES */
+        /* 🚀 MASTER OVERRIDE: TARGETS AND FORCES ALL 12 CODES TO BECOME PREMIUM RECTANGLES */
+        .stripe-container div,
         .stripe-container iframe, 
         .stripe-container .payhip-embed-btn,
-        .stripe-container button {
+        .stripe-container .payhip-buy-button,
+        .stripe-container button,
+        .stripe-container a {
             width: 100% !important;
             max-width: 220px !important;
             min-width: 180px !important;
-            display: block !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
             height: 46px !important;
             border-radius: 4px !important;
+            box-sizing: border-box !important;
+            text-decoration: none !important;
         }
-       
 
-        /* Tailoring Payhip's button template styles to fit the champagne gold wedding aesthetic variables */
-        .payhip-add-to-cart-btn {
+        /* Uniformly coloring and lettering every variation style row link */
+        .payhip-buy-button, 
+        .payhip-add-to-cart-btn, 
+        .payhip-embed-btn {
             background-color: var(--gold-detail) !important;
             color: #ffffff !important;
-            border-radius: 4px !important;
             font-family: 'Inter', sans-serif !important;
             font-weight: 600 !important;
             letter-spacing: 1px !important;
             text-transform: uppercase !important;
-            padding: 12px 24px !important;
             font-size: 0.85rem !important;
+            cursor: pointer !important;
+            transition: background-color 0.2s !important;
+        }
+        
+        .payhip-buy-button:hover, 
+        .payhip-add-to-cart-btn:hover {
+            background-color: #cda272 !important;
         }
 
         footer {
@@ -259,7 +272,7 @@ title: Weddings & Hen Parties
     </style>
 </head>
 <body>
-     <nav>
+ <nav>
         <a href="index.html">Home</a>
         <a href="resin-jewelry.html">Resin Jewelry</a>
         <a href="beaded-pens.html">Beaded Pens</a>
@@ -311,8 +324,7 @@ title: Weddings & Hen Parties
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 1 DIRECTLY BELOW -->
-                    <a href="https://payhip.com/b/2IkF9" class="payhip-buy-button" data-theme="green" data-product="2IkF9">Add To Cart</a>
+                    <a href="https://payhip.com/b/2IkF9" class="payhip-buy-button" data-theme="none" data-product="2IkF9">Add To Basket</a>
                 </div>
             </div>
 
@@ -333,8 +345,7 @@ title: Weddings & Hen Parties
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 2 DIRECTLY BELOW -->
-                    <a href="https://payhip.com/b/WnE89" class="payhip-buy-button" data-theme="green" data-product="WnE89">Add To Cart</a>
+                    <a href="https://payhip.com/b/WnE89" class="payhip-buy-button" data-theme="none" data-product="WnE89">Add To Basket</a>
                 </div>
             </div>
 
@@ -355,8 +366,7 @@ title: Weddings & Hen Parties
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 3 DIRECTLY BELOW -->
-                    <a href="https://payhip.com/b/p7PkS" class="payhip-buy-button" data-theme="green" data-product="p7PkS">Add To Cart</a>
+                    <a href="https://payhip.com/b/p7PkS" class="payhip-buy-button" data-theme="none" data-product="p7PkS">Add To Basket</a>
                 </div>
             </div>
 
@@ -377,8 +387,7 @@ title: Weddings & Hen Parties
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 4 DIRECTLY BELOW -->
-                   <a href="https://payhip.com/b/9r6DO" class="payhip-buy-button" data-theme="green" data-product="9r6DO">Add To Cart</a> 
+                   <a href="https://payhip.com/b/9r6DO" class="payhip-buy-button" data-theme="none" data-product="9r6DO">Add To Basket</a> 
                 </div>
             </div>
 
@@ -399,8 +408,7 @@ title: Weddings & Hen Parties
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 5 DIRECTLY BELOW -->
-                    <a href="https://payhip.com/b/nFB5R" class="payhip-buy-button" data-theme="green" data-product="nFB5R">Add To Cart</a>
+                    <a href="https://payhip.com/b/nFB5R" class="payhip-buy-button" data-theme="none" data-product="nFB5R">Add To Basket</a>
                 </div>
             </div>
 
@@ -421,14 +429,11 @@ title: Weddings & Hen Parties
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 6 DIRECTLY BELOW -->
-                    <a href="https://payhip.com/b/jMbok" class="payhip-buy-button" data-theme="green" data-product="jMbok">Add To Cart</a>
+                    <a href="https://payhip.com/b/jMbok" class="payhip-buy-button" data-theme="none" data-product="jMbok">Add To Basket</a>
                 </div>
             </div>
             
-<div class="product-grid">
-            
-            <!-- Item 1: Olive Green Elegance -->
+            <!-- Item 7: Olive Green Elegance Keepsake Bracelet -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -439,18 +444,17 @@ title: Weddings & Hen Parties
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Personalised Olive Green Bridesmaid Bracelet | Handmade UK Wedding Favor </h3>
+                        <h3>Personalised Olive Green Bridesmaid Bracelet | Handmade UK Wedding Favor</h3>
                         <p class="price">£10.00</p>
-                        <p>Treat your bridal squad to our lovely Olive Green Elegance wedding bracelet. Handcrafted in the UK, this personalized keepsake features custom "Bridesmaid" lettering beads paired with earthy olive-green glass beads on a durable twisted alloy band [🔍]. Finished with an adjustable chain and a silver heart charm, it is the perfect unique favor for rustic, autumn, or botanical wedding aesthetics [🔍]. Sent via tracked Evri delivery.</p>
+                        <p>Treat your bridal squad to our lovely Olive Green Elegance wedding bracelet. Handcrafted in the UK, this personalized keepsake features custom "Bridesmaid" lettering beads paired with earthy olive-green glass beads on a durable twisted alloy band. Finished with an adjustable chain and a silver heart charm, it is the perfect unique favor for rustic, autumn, or botanical wedding aesthetics. Sent via tracked Evri delivery.</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <!-- 🌟 PASTE THE PAYHIP EMBED CODE FOR ITEM 1 DIRECTLY BELOW -->
-                    <a href="https://payhip.com/b/gjFYD" class="payhip-buy-button" data-theme="green" data-product="gjFYD">Add To Cart</a>
+                    <a href="https://payhip.com/b/gjFYD" class="payhip-buy-button" data-theme="none" data-product="gjFYD">Add To Basket</a>
                 </div>
             </div>
 
-            <!-- Item 2: Classic Pearl -->
+            <!-- Item 8: Classic Pearl Keepsake Bracelet -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -463,16 +467,15 @@ title: Weddings & Hen Parties
                     <div>
                         <h3>Personalised Pearl Bridesmaid Bracelet | Traditional UK Wedding Keepsake</h3>
                         <p class="price">£10.00</p>
-                        <p>Greet your bridal party with the timeless sophistication of our Classic Pearl wedding bracelet. Lovingly handcrafted in the UK, this beautiful keepsake combines lustrous faux pearl accents with custom "Bridesmaid" letter beads on a durable twisted alloy core. Soft, elegant, and perfectly bridal, it makes a stunning thank-you token or a beautiful addition to your wedding morning bridesmaid proposal box gifts</p>
+                        <p>Greet your bridal party with the timeless sophistication of our Classic Pearl wedding bracelet. Lovingly handcrafted in the UK, this beautiful keepsake combines lustrous faux pearl accents with custom "Bridesmaid" letter beads on a durable twisted alloy core. Soft, elegant, and perfectly bridal, it makes a stunning thank-you token or a beautiful addition to your wedding morning bridesmaid proposal box gifts.</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <!-- 🌟 PASTE THE PAYHIP EMBED CODE FOR ITEM 2 DIRECTLY BELOW -->
-                    <a href="https://payhip.com/b/fXqTZ" class="payhip-buy-button" data-theme="green" data-product="fXqTZ">Add To Cart</a>
+                    <a href="https://payhip.com/b/fXqTZ" class="payhip-buy-button" data-theme="none" data-product="fXqTZ">Add To Basket</a>
                 </div>
             </div>
 
-            <!-- Item 3: Sparkling Crystal -->
+            <!-- Item 9: Sparkling Crystal Keepsake Bracelet -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -483,18 +486,17 @@ title: Weddings & Hen Parties
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Sparkling Crystal Bridesmaid Bracelet | Glamorous Personalised Wedding Gift </h3>
+                        <h3>Sparkling Crystal Bridesmaid Bracelet | Glamorous Personalised Wedding Gift</h3>
                         <p class="price">£10.00</p>
-                        <p>Add high-shine luxury to your bridal wear with our Sparkling Crystal bridesmaid bracelet. Handcrafted in the UK, this glamorous wedding party keepsake features shimmering Austrian-style crystal glass beads that surround your custom "Bridesmaid" letter beads. Structured on a sturdy twisted alloy band with an adjustable silver extension, it catches the wedding reception lights beautifully with every single movement </p>
+                        <p>Add high-shine luxury to your bridal wear with our Sparkling Crystal bridesmaid bracelet. Handcrafted in the UK, this glamorous wedding party keepsake features shimmering Austrian-style crystal glass beads that surround your custom "Bridesmaid" letter beads. Structured on a sturdy twisted alloy band with an adjustable silver extension, it catches the wedding reception lights beautifully with every single movement.</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <!-- 🌟 PASTE THE PAYHIP EMBED CODE FOR ITEM 3 DIRECTLY BELOW -->
-                    <a href="https://payhip.com/b/sgEAp" class="payhip-buy-button" data-theme="green" data-product="sgEAp">Add To Cart</a>
+                    <a href="https://payhip.com/b/sgEAp" class="payhip-buy-button" data-theme="none" data-product="sgEAp">Add To Basket</a>
                 </div>
             </div>
 
-            <!-- Item 4: Glitter & Shine -->
+            <!-- Item 10: Glitter & Shine Keepsake Bracelet -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -507,16 +509,15 @@ title: Weddings & Hen Parties
                     <div>
                         <h3>Personalised Glitter Maid of Honour Bracelet | Magical UK Chief Bridesmaid Gift</h3>
                         <p class="price">£10.00</p>
-                        <p>Make your chief bridesmaid feel extra-special with our Glitter & Shine Maid of Honour bracelet. Handcrafted in the UK, this bright and magical design features distinct "Maid of Honour" letter beads paired with light-catching iridescent glitter acrylic beads on a durable twisted alloy band. Finished with a silver heart accent, it makes a beautiful, sparkling choice for a Maid of Honour proposal box filler</p>
+                        <p>Make your chief bridesmaid feel extra-special with our Glitter & Shine Maid of Honour bracelet. Handcrafted in the UK, this bright and magical design features distinct "Maid of Honour" letter beads paired with light-catching iridescent glitter acrylic beads on a durable twisted alloy band. Finished with a silver heart accent, it makes a beautiful, sparkling choice for a Maid of Honour proposal box filler.</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <!-- 🌟 PASTE THE PAYHIP EMBED CODE FOR ITEM 4 DIRECTLY BELOW -->
-                    <a href="https://payhip.com/b/6ALSo" class="payhip-buy-button" data-theme="green" data-product="6ALSo">Add To Cart</a>
+                    <a href="https://payhip.com/b/6ALSo" class="payhip-buy-button" data-theme="none" data-product="6ALSo">Add To Basket</a>
                 </div>
             </div>
 
-            <!-- Item 5: Rainbow Pearl -->
+            <!-- Item 11: Rainbow Pearl Keepsake Bracelet -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -527,18 +528,17 @@ title: Weddings & Hen Parties
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Rainbow Pearl Maid of Honour Bracelet | Colorful Unique UK Wedding Favor </h3>
+                        <h3>Rainbow Pearl Maid of Honour Bracelet | Colorful Unique UK Wedding Favor</h3>
                         <p class="price">£10.00</p>
-                        <p>Celebrate your right-hand lady with a cheerful, pretty twist on traditional bridal jewelry with our Rainbow Pearl Maid of Honour bracelet. Handcrafted in the UK, this unique keepsake pairs distinct "Maid of Honour" letter beads with a vibrant, smooth spectrum of colorful faux pearls on a twisted alloy band. A perfect, playful statement token for festival, spring, or whimsical wedding themes</p>
+                        <p>Celebrate your right-hand lady with a cheerful, pretty twist on traditional bridal jewelry with our Rainbow Pearl Maid of Honour bracelet. Handcrafted in the UK, this unique keepsake pairs distinct "Maid of Honour" letter beads with a vibrant, smooth spectrum of colorful faux pearls on a twisted alloy band. A perfect, playful statement token for festival, spring, or whimsical wedding themes.</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <!-- 🌟 PASTE THE PAYHIP EMBED CODE FOR ITEM 5 DIRECTLY BELOW -->
-                    <a href="https://payhip.com/b/13TzJ" class="payhip-buy-button" data-theme="green" data-product="13TzJ">Add To Cart</a>
+                    <a href="https://payhip.com/b/13TzJ" class="payhip-buy-button" data-theme="none" data-product="13TzJ">Add To Basket</a>
                 </div>
             </div>
 
-            <!-- Item 6: Gold-Accent Pearl -->
+            <!-- Item 12: Gold-Accent Pearl Keepsake Bracelet -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -551,17 +551,14 @@ title: Weddings & Hen Parties
                     <div>
                         <h3>Luxe Gold Accent Pearl Maid of Honour Bracelet | Sophisticated UK Wedding Gift</h3>
                         <p class="price">£10.00</p>
-                        <p>Spoil your chief lady with the refined luxury of our Gold-Accent Pearl Maid of Honour bracelet. Handcrafted in the UK, this sophisticated keepsake features premium faux pearls paired with elegant, gold-trimmed "Maid of Honour" letter beads. Completed with an adjustable silver extension chain and heart charm, this luxe mixed-metal design makes a stunning, high-end wedding morning thank-you token</p>
+                        <p>Spoil your chief lady with the refined luxury of our Gold-Accent Pearl Maid of Honour bracelet. Handcrafted in the UK, this sophisticated keepsake features premium faux pearls paired with elegant, gold-trimmed "Maid of Honour" letter beads. Completed with an adjustable silver extension chain and heart charm, this luxe mixed-metal design makes a stunning, high-end wedding morning thank-you token.</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <!-- 🌟 PASTE THE PAYHIP EMBED CODE FOR ITEM 6 DIRECTLY BELOW -->
-                    <a href="https://payhip.com/b/t1qwr" class="payhip-buy-button" data-theme="green" data-product="t1qwr">Add To Cart</a>
+                    <!-- 🌟 data-theme changed to "none" to unlock custom gold rectangle layout -->
+                    <a href="https://payhip.com/b/t1qwr" class="payhip-buy-button" data-theme="none" data-product="t1qwr">Add To Basket</a>
                 </div>
             </div>
-
-        </div> <!-- End of .product-grid -->
-
 
         </div> <!-- End of .product-grid -->
     </div> <!-- End of .container -->
@@ -599,3 +596,6 @@ title: Weddings & Hen Parties
     </script>
 </body>
 </html>
+            
+
+          
