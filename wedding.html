@@ -7,10 +7,13 @@ title: Weddings & Hen Parties
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Handmade Hen Party Wine Glass Bracelets & Personalized Glass Charms | UK Shop</title>
+    <title>Handmade Hen Party Wine Glass Bracelets & Personalised Glass Charms | UK Shop</title>
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com" rel="stylesheet">
+    
+    <!-- Payhip Secure Shopping Cart Loader -->
+    <script type="text/javascript" src="https://payhip.com"></script>
     
     <style>
         :root {
@@ -198,12 +201,28 @@ title: Weddings & Hen Parties
             font-weight: 400;
         }
 
+        /* Perfectly centered container for Payhip's direct button rows */
         .stripe-container {
-            max-width: 180px;
+            max-width: 160px;
             margin: auto auto 0 auto;
             padding: 0 5px;
             min-height: 45px;
             width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Tailoring Payhip's button template styles to fit the champagne gold wedding aesthetic variables */
+        .payhip-add-to-cart-btn {
+            background-color: var(--gold-detail) !important;
+            color: #ffffff !important;
+            border-radius: 4px !important;
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 600 !important;
+            letter-spacing: 1px !important;
+            text-transform: uppercase !important;
+            padding: 12px 24px !important;
+            font-size: 0.85rem !important;
         }
 
         footer {
@@ -225,11 +244,9 @@ title: Weddings & Hen Parties
             .product-grid { grid-template-columns: 1fr; gap: 30px; }
         }
     </style>
-    <script async src="https://stripe.com"></script>
 </head>
 <body>
-
-   <nav>
+     <nav>
         <a href="index.html">Home</a>
         <a href="resin-jewelry.html">Resin Jewelry</a>
         <a href="beaded-pens.html">Beaded Pens</a>
@@ -246,21 +263,22 @@ title: Weddings & Hen Parties
     </header>
 
     <div class="container">
-      <!-- Group Discount & Bulk Booking Banner Box -->
-<div class="info-section" style="border: 2px dashed var(--gold-detail); background-color: #fffaf8; margin-bottom: 50px; text-align: center; padding: 40px 30px;">
-    <h2 style="color: var(--primary-dark); font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 10px;">Plan Your Perfect Celebration</h2>
-    <h3 style="color: var(--gold-detail); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; margin-top: 0; margin-bottom: 20px;">📦 Exclusive Bulk & Hen Party Discounts Available</h3>
-    <p style="font-size: 1rem; line-height: 1.7; color: var(--primary-dark); max-width: 800px; margin: 0 auto 25px auto;">
-        Whether you are styling intimate tables for your wedding day or hosting a sparkling hen party weekend, we love crafting custom orders for your guests! Every glass charm bracelet can be individually personalised with initials or color themes to match your wedding palette. 
-    </p>
-    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 25px;">
-        <span style="background: #ffffff; border: 1px solid var(--bridal-pink); padding: 10px 20px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; color: var(--primary-dark);">💖 Orders over 10 items: 10% OFF</span>
-        <span style="background: #ffffff; border: 1px solid var(--bridal-pink); padding: 10px 20px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; color: var(--primary-dark);">🥂 Orders over 20 items: 15% OFF</span>
-    </div>
-    <p style="font-size: 0.9rem; font-style: italic; color: var(--text-muted); margin: 0;">
-        Need custom wedding colors or custom lettering? Head over to our <a href="contact.html" style="color: var(--gold-detail); font-weight: 600; text-decoration: underline;">Contact Page</a> to chat directly with Sophie & Dee about your bespoke layout package!
-    </p>
-</div>
+        <!-- Group Discount & Bulk Booking Banner Box -->
+        <div class="info-section" style="border: 2px dashed var(--gold-detail); background-color: #fffaf8; margin-bottom: 50px; text-align: center; padding: 40px 30px;">
+            <h2 style="color: var(--primary-dark); font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 10px;">Plan Your Perfect Celebration</h2>
+            <h3 style="color: var(--gold-detail); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; margin-top: 0; margin-bottom: 20px;">📦 Exclusive Bulk & Hen Party Discounts Available</h3>
+            <p style="font-size: 1rem; line-height: 1.7; color: var(--primary-dark); max-width: 800px; margin: 0 auto 25px auto;">
+                Whether you are styling intimate tables for your wedding day or hosting a sparkling hen party weekend, we love crafting custom orders for your guests! Every glass charm bracelet can be individually personalised with initials or color themes to match your wedding palette. 
+            </p>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 25px;">
+                <span style="background: #ffffff; border: 1px solid var(--bridal-pink); padding: 10px 20px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; color: var(--primary-dark);">💖 Orders over 10 items: 10% OFF</span>
+                <span style="background: #ffffff; border: 1px solid var(--bridal-pink); padding: 10px 20px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; color: var(--primary-dark);">🥂 Orders over 20 items: 15% OFF</span>
+            </div>
+            <p style="font-size: 0.9rem; font-style: italic; color: var(--text-muted); margin: 0;">
+                Need custom wedding colors or custom lettering? Head over to our <a href="contact.html" style="color: var(--gold-detail); font-weight: 600; text-decoration: underline;">Contact Page</a> to chat directly with Sophie & Dee about your bespoke layout package!
+            </p>
+        </div>
+
         <div class="product-grid">
             
             <!-- Item 1: Classic Elegance -->
@@ -275,13 +293,13 @@ title: Weddings & Hen Parties
                 <div class="product-info">
                     <div>
                         <h3>Classic Elegance Pearl Wedding Wine Glass Charms</h3>
+                        <p class="price">£3.00</p>
                         <p>Bring timeless sophistication to your reception tables with our Classic Elegance pearl wedding wine glass charms. Handcrafted in the UK using premium creamy faux pearls, delicate silver crystals, and traditional silver charms, these elegant glass bracelets double as memorable favors for your wedding guests.</p>
-                        <p>£3.00</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                <a href="https://buy.stripe.com/fZu28raJ8eE42hK1ZucAo1e"><button>BuyNow</button>
-                </a>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 1 DIRECTLY BELOW -->
+                    <a href="https://payhip.com/b/2IkF9" class="payhip-buy-button" data-theme="green" data-product="2IkF9">Add To Cart</a>
                 </div>
             </div>
 
@@ -296,14 +314,14 @@ title: Weddings & Hen Parties
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Bright & Playful Hen Party Wine Glass Bracelets | Custom UK Favors</h3>
+                        <h3>Bright & Playful Hen Party Wine Glass Bracelets</h3>
+                        <p class="price">£3.00</p>
                         <p>Make your bridal party pop with our vibrant Bright & Playful hen party wine glass bracelets. Featuring a fun, energetic mix of bold boutique colors and custom focal charms, these handmade glass markers add a lively touch to your bridesmaid boxes, cocktail gatherings, or girls' weekend getaway.</p>
-                        <p>£3.00</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                <a href="https://buy.stripe.com/4gM9AT6sS9jK7C45bGcAo17"><button>BuyNow</button>
-                </a>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 2 DIRECTLY BELOW -->
+                    <a href="https://payhip.com/b/WnE89" class="payhip-buy-button" data-theme="green" data-product="WnE89">Add To Cart</a>
                 </div>
             </div>
 
@@ -318,17 +336,18 @@ title: Weddings & Hen Parties
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Rustic Sweetness Country Wedding Glass Charms | Barn Wedding Decor</h3>
+                        <h3>Rustic Sweetness Country Wedding Glass Charms</h3>
+                        <p class="price">£3.00</p>
                         <p>Perfect for countryside barn weddings and vintage bridal showers, our Rustic Sweetness country wedding glass charms offer organic beauty. Handmade with a combination of warm neutral details and dainty accents, these charming rustic tabletop placeholders look beautiful layered around delicate glassware stems.</p>
-                        <p>£3.00</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                 <a href="https://buy.stripe.com/28E5kDeZocvW2hKcE8cAo18"><button>BuyNow</button>
-                 </a>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 3 DIRECTLY BELOW -->
+                    <a href="https://payhip.com/b/p7PkS" class="payhip-buy-button" data-theme="green" data-product="p7PkS">Add To Cart</a>
                 </div>
             </div>
-           <!-- Item 4: Soft Pastel Charm -->
+
+            <!-- Item 4: Soft Pastel Charm -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -339,14 +358,14 @@ title: Weddings & Hen Parties
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Soft Pastel Charm Bridal Brunch Glass Bracelets | UK Spring Wedding</h3>
+                        <h3>Soft Pastel Charm Bridal Brunch Glass Bracelets</h3>
+                        <p class="price">£3.00</p>
                         <p>Accent your table with the romantic vibes of our Soft Pastel Charm bridal brunch glass bracelets. Expertly woven with a calming blend of delicate blush pinks, soft lavenders, and sweet mint beads, these handmade charms make an enchanting addition to springtime wedding displays or outdoor engagement lunches.</p>
-                        <p>£3.00</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-               <a href="https://buy.stripe.com/eVq4gz2cCbrS5tW7jOcAo19"><button>BuyNow</button>
-               </a>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 4 DIRECTLY BELOW -->
+                   <a href="https://payhip.com/b/9r6DO" class="payhip-buy-button" data-theme="green" data-product="9r6DO">Add To Cart</a> 
                 </div>
             </div>
 
@@ -361,14 +380,14 @@ title: Weddings & Hen Parties
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Luxury Sparkle & Glamour Crystal Hen Do Charms | UK Night Out Accessories</h3>
+                        <h3>Luxury Sparkle & Glamour Crystal Hen Do Charms</h3>
+                        <p class="price">£3.00</p>
                         <p>Add high-shine luxury to your bridal celebrations with our Sparkle & Glamour crystal hen do charms. Loaded with premium faceted crystals and shimmering metallic spacer beads that catch the party lighting perfectly, these glamorous drink identifiers ensure your bridal squad celebrates in absolute boutique style.</p>
-                        <p>£3.00</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                   <a href="https://buy.stripe.com/eVq28r3gGeE4cWoaw0cAo1c"><button>BuyNow</button>
-                   </a>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 5 DIRECTLY BELOW -->
+                    
                 </div>
             </div>
 
@@ -383,14 +402,14 @@ title: Weddings & Hen Parties
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Fun Boho Style Festival Wedding Wine Glass Charms | Handmade UK</h3>
+                        <h3>Fun Boho Style Festival Wedding Wine Glass Charms</h3>
+                        <p class="price">£3.00</p>
                         <p>Unleash your free spirit with our eclectic Fun Boho Style festival wedding wine glass charms. Featuring an organic, one-of-a-kind mix of natural irregular crystals and textured bohemian details, these unique bag charm bracelets are perfect for woodland themed weddings, glamping hen dos, and creative brides.</p>
-                        <p>£3.00</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                  <a href="https://buy.stripe.com/bJeaEXbNc7bCbSk5bGcAo1b"><button>BuyNow</button>
-                  </a>
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 6 DIRECTLY BELOW -->
+                    
                 </div>
             </div>
 
@@ -430,4 +449,3 @@ title: Weddings & Hen Parties
     </script>
 </body>
 </html>
-    
