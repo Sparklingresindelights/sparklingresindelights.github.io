@@ -201,9 +201,9 @@ title: Weddings & Hen Parties
             font-weight: 400;
         }
 
-        /* Perfectly centered container for Payhip's direct button rows */
+        /* This centered container expands to give your Payhip button room to breathe */
         .stripe-container {
-            max-width: 160px;
+            max-width: 220px; /* Expands the width so it isn't tiny and squished */
             margin: auto auto 0 auto;
             padding: 0 5px;
             min-height: 45px;
@@ -211,6 +211,19 @@ title: Weddings & Hen Parties
             display: flex;
             justify-content: center;
         }
+
+        /* 🚀 THIS MAGIC CODE FORCES PAYHIP'S BUTTON TO EXPAND & MATCH YOUR BOUTIQUE STYLES */
+        .stripe-container iframe, 
+        .stripe-container .payhip-embed-btn,
+        .stripe-container button {
+            width: 100% !important;
+            max-width: 220px !important;
+            min-width: 180px !important;
+            display: block !important;
+            height: 46px !important;
+            border-radius: 4px !important;
+        }
+       
 
         /* Tailoring Payhip's button template styles to fit the champagne gold wedding aesthetic variables */
         .payhip-add-to-cart-btn {
