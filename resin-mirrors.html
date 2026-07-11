@@ -1,0 +1,410 @@
+---
+layout: null
+title: Resin Mirrors & Brushes
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handmade Resin Mirror & Hair Brush Sets | Luxury Vanity UK Gift Page</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com" rel="stylesheet">
+    
+    <!-- Payhip Secure Shopping Cart Loader -->
+    <script type="text/javascript" src="https://payhip.com"></script>
+    
+    <style>
+        :root {
+            --bg-color: #fffbfc; /* Airy white with a tiny hint of blush pink */
+            --primary-dark: #2d3748; /* Soft readable charcoal text color */
+            --baby-pink: #ffeef2; /* Dreamy pale baby pink for accents */
+            --pink-focal: #ffb6c1; /* Soft pink for focal highlights and hover effects */
+            --card-bg: #ffffff;
+            --text-muted: #5a6a75;
+        }
+        
+         /* Centered container button wrap limits */
+        .stripe-container {
+            max-width: 220px;
+            margin: auto auto 0 auto;
+            padding: 0 5px;
+            min-height: 45px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Forces Payhip's links and iframe elements to expand into rectangles */
+        .stripe-container div,
+        .stripe-container iframe, 
+        .stripe-container .payhip-embed-btn,
+        .stripe-container .payhip-buy-button,
+        .stripe-container button,
+        .stripe-container a {
+            width: 100% !important;
+            max-width: 220px !important;
+            min-width: 180px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            height: 46px !important;
+            border-radius: 4px !important;
+            box-sizing: border-box !important;
+            text-decoration: none !important;
+        }
+
+        /* Tailors the button background color to your soft pink focus theme */
+        .payhip-buy-button, .payhip-add-to-cart-btn, .payhip-embed-btn {
+            background-color: var(--pink-focal) !important;
+            color: #ffffff !important;
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 600 !important;
+            letter-spacing: 1px !important;
+            text-transform: uppercase !important;
+            font-size: 0.85rem !important;
+            cursor: pointer !important;
+            transition: background-color 0.2s !important;
+        }
+        .payhip-buy-button:hover, .payhip-add-to-cart-btn:hover {
+            background-color: #ff99ab !important; /* Slightly darker pink hover */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color); 
+            color: var(--primary-dark);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            background-color: #ffffff;
+            padding: 20px 15px;
+            text-align: center;
+            border-bottom: 2px solid var(--baby-pink);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: var(--primary-dark);
+            margin: 0 18px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: var(--pink-focal);
+        }
+
+        /* Editorial Header with a baby pink fading softly into a subtle white */
+        header {
+            background: linear-gradient(135deg, #ffdeee 0%, #fffbfd 100%); 
+            color: var(--primary-dark);
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 3px solid #ffffff;
+            box-shadow: 0 4px 20px rgba(255, 222, 238, 0.25);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3.5rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+        header p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin: 15px 0 0 0;
+            font-style: italic;
+            color: var(--text-muted);
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .product-card {
+            background: var(--card-bg);
+            border: 2px solid var(--baby-pink);
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 25px;
+            box-shadow: 0 8px 24px rgba(45, 55, 72, 0.02);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--pink-focal);
+            box-shadow: 0 12px 30px rgba(255, 182, 193, 0.2);
+        }
+
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 300px; 
+            overflow: hidden;
+            background: radial-gradient(circle, #ffffff 60%, #fff5f7 100%);
+            border-bottom: 2px solid var(--baby-pink);
+        }
+        .slideshow-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+            padding: 15px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            pointer-events: none;
+        }
+        .slideshow-container img.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .slide-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid var(--baby-pink);
+            color: var(--primary-dark);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            transition: all 0.2s;
+            z-index: 50;
+            user-select: none;
+        }
+        .slide-btn:hover {
+            background: var(--pink-focal);
+            border-color: var(--pink-focal);
+            color: #ffffff;
+        }
+        .prev-btn { left: 10px; }
+        .next-btn { right: 10px; }
+
+        .product-info {
+            padding: 25px 20px 0 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-card h3 {
+            margin: 0 0 10px 0;
+            color: var(--primary-dark);
+            font-size: 1.3rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+        .product-card .price {
+            font-weight: 600;
+            color: var(--pink-focal);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+        .product-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0 0 25px 0;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        /* Perfectly centered container for Payhip's direct button injection */
+        .stripe-container {
+            max-width: 160px;
+            margin: auto auto 0 auto;
+            padding: 0 5px;
+            min-height: 45px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Tailoring Payhip's button template styles to fit the baby pink aesthetic variables */
+        .payhip-add-to-cart-btn {
+            background-color: var(--pink-focal) !important;
+            color: #ffffff !important;
+            border-radius: 4px !important;
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 600 !important;
+            letter-spacing: 1px !important;
+            text-transform: uppercase !important;
+            padding: 12px 24px !important;
+            font-size: 0.85rem !important;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #ffffff;
+            background-color: var(--primary-dark);
+            border-top: 4px solid var(--baby-pink);
+            margin-top: 80px;
+        }
+
+        @media (max-width: 992px) {
+            .product-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .slideshow-container { height: 280px; }
+        }
+        @media (max-width: 650px) {
+            .product-grid { grid-template-columns: 1fr; gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="resin-jewelry.html">Resin Jewelry</a>
+        <a href="beaded-pens.html">Beaded Pens</a>
+        <a href="beaded-keychains.html">Keychains</a>
+        <a href="beaded-bracelets.html">Bracelets</a>
+        <a href="cups-and-glasses.html">Cups & Glasses</a>
+        <a href="wedding.html">Weddings & Hen Parties</a>
+        <a href="resin-mirrors.html">Resin Mirrors & Brushes</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <header>
+        <h1>Handmade Resin Mirror & Hair Brush Sets | Luxury Vanity UK Gift Page</h1>
+        <p>Bring a splash of playful charm to your beauty routine with our vibrant Handmade Resin Mirror & Hair Brush Collection. Handcrafted lovingly in the UK, these matching vanity duos boast a stunning range of custom resin finishes that add instant personality to your dressing table layout. Each piece features an intricate blend of high-shine textures and unique details that catch the light beautifully for the ultimate blend of edge and sweetness.</p>
+    </header>
+
+    <div class="container">
+        <div class="product-grid">
+            
+            <!-- Item 1: Winnie The Pooh -->
+            <div class="product-card">
+                <div class="slideshow-container">
+                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
+                    <img src="winnie the pooh.jpg" alt="Winnie The Pooh & Bubblebee Hairbrush View 1" class="active">
+                    <img src="winnie the pooh1.jpg" alt="Winnie The Pooh & Bubblebee Hairbrush View 2">
+                    <img src="winnie the pooh2.jpg" alt="Winnie The Pooh & Bubblebee Hairbrush View 3">
+                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Winnie the Pooh & Bumblebee Hair Brush | Cute Resin UK Vanity Gift</h3>
+                        <p class="price">£10.00</p>
+                        <p>Bring a splash of playful charm to your beauty routine with our vibrant Winnie the Pooh & Bumblebee custom resin hair brush. Handcrafted lovingly in the UK, this sweet, cheerful statement accessory boasts a durable, functional design that adds instant personality to your dressing table layout.The cheerful centerpiece features classic Winnie the Pooh figures paired beautifully with friendly bumblebee charms, pretty daisy flowers, tiny honey pots, sweet candy shapes, and a cute love heart detail. The entire whimsical scene is sealed in a glossy clear resin top layer, layered over a vibrant golden glitter base that catches the light beautifully with a warm, magical glow for the ultimate blend of edge and sweetness. Equipped with high-quality bristles for a premium finish, it makes a whimsical executive gift, a stunning vanity accessory, or a beautiful treat for hair care and honeybee lovers.</p>
+                    </div>
+                </div>
+                <div class="stripe-container">
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 1 DIRECTLY BELOW -->
+                 <a href="https://payhip.com/b/UxAkJ" class="payhip-buy-button" data-theme="none" data-product="UxAkJ">Add To Basket</a>
+                </div>
+            </div>
+
+               <!-- Item 2:Personalised Nola -->
+            <div class="product-card">
+                <div class="slideshow-container">
+                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
+                    <img src="personalised nola.jpg" alt="Personalised Nola Name Hairbrush View 1" class="active">
+                    <img src="personalised nola1.jpg" alt="Personalised Nola Name Hairbrush View 2">
+                    <img src="personlaised nola2.jpg" alt="Personalised Nola Name Hairbrush View 3">
+                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Personalised Nola Name Hair Brush | Custom Rhinestone UK Vanity Gift</h3>
+                        <p class="price">£10.00</p>
+                        <p>Bring a splash of playful charm to your beauty routine with our vibrant Personalised “Nola” custom resin hair brush. Handcrafted lovingly in the UK, this vibrant, custom statement accessory boasts a durable, functional design that adds instant personality to your dressing table layout.The cheerful centerpiece features sparkling rhinestone-encrusted letters spelling “Nola”, paired beautifully with pretty floral charms, a dainty bow, colourful candy accents, and a bright pink heart engraved with the word ”Love”. The entire fun, playful layout is encased in a shimmering clear resin top layer, blending pastel and bright tones that catch the light beautifully for the ultimate combination of edge and sweetness. Equipped with high-quality bristles for a premium finish, it makes a whimsical executive gift, a stunning vanity accessory, or a beautiful unique treat for custom hair care lovers.</p>
+                    </div>
+                </div>
+                <div class="stripe-container">
+                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 1 DIRECTLY BELOW -->
+                <a href="https://payhip.com/b/NRK78" class="payhip-buy-button" data-theme="none" data-product="NRK78">Add To Basket</a>
+                </div>
+            </div>
+
+           
+
+           
+
+           
+
+            
+
+           
+
+           
+
+            
+
+                    
+                    
+                    
+               
+                    
+        </div> <!-- End of .product-grid -->
+    </div> <!-- End of .container -->
+
+    <footer>
+        <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK via Tracked Evri Delivery.</p>
+    </footer>
+
+    <!-- Multi-View Image Slider Engine Controller -->
+    <script>
+        document.querySelectorAll('.slideshow-container').forEach(slideshow => {
+            const images = slideshow.querySelectorAll('img');
+            const prevBtn = slideshow.querySelector('.prev-btn');
+            const nextBtn = slideshow.querySelector('.next-btn');
+            let currentIndex = 0;
+
+            function updateSlides(newIndex) {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (newIndex + images.length) % images.length;
+                images[currentIndex].classList.add('active');
+            }
+
+            if(prevBtn && nextBtn) {
+                prevBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    updateSlides(currentIndex - 1);
+                });
+
+                nextBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    updateSlides(currentIndex + 1);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
+    
