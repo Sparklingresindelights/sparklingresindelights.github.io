@@ -271,10 +271,10 @@ tags: [handmade crafts uk, bespoke custom gifts, custom beaded pens, resin jewel
         <a href="contact.html">Contact Us</a>
     </nav>
 
-    <div class="split-layout">
+   <div class="split-layout">
         
         <!-- Left Side Main Column Layout -->
-        <div class="left-content">
+        <div class="left-content" style="flex: 1; min-width: 0;">
             
             <!-- Clean Header Branding Box -->
             <div class="header-box">
@@ -336,7 +336,7 @@ tags: [handmade crafts uk, bespoke custom gifts, custom beaded pens, resin jewel
             <!-- Tidied Web3Forms Review Form -->
             <div class="feedback-form-container">
                 <h3>Leave a 5-Star Review</h3>
-                <form action="https://api.web3forms.com/submit" method="POST">
+                <form action="https://web3forms.com" method="POST">
                     <input type="hidden" name="access_key" value="15079e1e-da27-45ee-850c-dfb1181e1342">
                     <input type="hidden" name="subject" value="New 5-Star Review">
                     <input type="hidden" name="replyto" value="sparklingresdelights1@gmail.com">
@@ -365,60 +365,57 @@ tags: [handmade crafts uk, bespoke custom gifts, custom beaded pens, resin jewel
                     <button type="submit" class="submit-btn">Submit Review</button>
                 </form>
             </div>
+
+            <!-- Real Customer Reviews Area -->
+            <div style="background-color: var(--pastel-yellow); padding: 40px 30px; border-radius: 8px; text-align: left; margin-bottom: 40px; border-bottom: 2px solid #f5ea9e;">
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 500; margin-bottom: 30px; color: var(--primary-dark);">Kind Words From Our Collectors</h2>
+                
+                <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px dashed var(--accent-gold);">
+                    <div style="color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 5px;">★★★★★</div>
+                    <p style="font-size: 0.95rem; font-style: italic; margin: 0 0 8px 0; color: var(--primary-dark); line-height: 1.6;">"Absolutely love my starlight pearl bracelet! The packaging was so pretty and it arrived tracked super fast with Evri."</p>
+                    <span style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: #5a6a75;">– Sarah M., Gloucestershire</span>
+                </div>
+
+                <div style="margin-bottom: 5px;">
+                    <div style="color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 5px;">★★★★★</div>
+                    <p style="font-size: 0.95rem; font-style: italic; margin: 0 0 8px 0; color: var(--primary-dark); line-height: 1.6;">"The beaded pens write like an absolute dream. Perfect boutique treasures for my office desk layout!"</p>
+                    <span style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: #5a6a75;">– Emma L., Bristol</span>
+                </div>
+            </div>
+
         </div> <!-- End of .left-content -->
 
-       <!-- Real Customer Reviews Area -->
-        <div style="background-color: var(--pastel-yellow); padding: 40px 30px; border-radius: 8px; text-align: left; margin-bottom: 40px; border-bottom: 2px solid #f5ea9e;">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 500; margin-bottom: 30px; color: var(--primary-dark);">Kind Words From Our Collectors</h2>
-            
-            <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px dashed var(--accent-gold);">
-                <div style="color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 5px;">★★★★★</div>
-                <p style="font-size: 0.95rem; font-style: italic; margin: 0 0 8px 0; color: var(--primary-dark); line-height: 1.6;">"Absolutely love my starlight pearl bracelet! The packaging was so pretty and it arrived tracked super fast with Evri."</p>
-                <span style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: #5a6a75;">– Sarah M., Gloucestershire</span>
+        <!-- Right Side: Expanded 4-Image Boutique Panel Layout (Locked to the right side) -->
+        <div class="right-image-panel" style="width: 420px; flex-shrink: 0; display: flex; flex-direction: column; gap: 20px;">
+            <div class="showcase-image-box" style="height: 320px;">
+                <img src="sea-turtle.jpg" alt="Sea Turtle Glass View">
             </div>
-
-            <div style="margin-bottom: 5px;">
-                <div style="color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 5px;">★★★★★</div>
-                <p style="font-size: 0.95rem; font-style: italic; margin: 0 0 8px 0; color: var(--primary-dark); line-height: 1.6;">"The beaded pens write like an absolute dream. Perfect boutique treasures for my office desk layout!"</p>
-                <span style="font-size: 0.8rem; font-weight: 600; text-transform: uppercase; color: #5a6a75;">– Emma L., Bristol</span>
+            <div class="showcase-image-box" style="height: 320px;">
+                <img src="resin - earrings.jpg" alt="Sparkling Boutique Showcase Item">
+            </div>
+            <div class="showcase-image-box" style="height: 320px;">
+                <img src="pearl and twisted gold bridal.jpg" alt="Wedding & Hen Party Collection Display">
+            </div>
+            <div class="showcase-image-box" style="height: 320px;">
+                <img src="tiger eye and lava stone.jpg" alt="Handcrafted Bracelet">
             </div>
         </div>
 
-    </div> <!-- End of .left-content -->
+    </div> <!-- End of .split-layout -->
 
-    <!-- Right Side: Expanded 4-Image Boutique Panel Layout -->
-    <div class="right-image-panel">
-        <div class="showcase-image-box">
-            <img src="sea-turtle.jpg" alt="Sea Turtle Glass View">
-        </div>
-        <div class="showcase-image-box">
-            <img src="resin - earrings.jpg" alt="Sparkling Boutique Showcase Item">
-        </div>
-        <div class="showcase-image-box">
-            <img src="pearl and twisted gold bridal.jpg" alt="Wedding & Hen Parties Display">
-        </div>
-        <div class="showcase-image-box">
-            <img src="tiger eye and lava stone.jpg" alt="Handmade Bracelet Layout">
-        </div>
-    </div>
+    <footer>
+        <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK via Tracked Evri Delivery.</p>
+    </footer>
 
-</div> <!-- End of .split-layout -->
-
-<footer>
-    <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK via Tracked Evri Delivery.</p>
-</footer>
-
-<!-- Bottom Left Slideshow Animation Engine -->
-<script>
-    const bottomSlides = document.querySelectorAll('.bottomSlide');
-    let bottomIndex = 0;
-    setInterval(() => {
-        bottomSlides[bottomIndex].classList.remove('active');
-        bottomIndex = (bottomIndex + 1) % bottomSlides.length;
-        bottomSlides[bottomIndex].classList.add('active');
-    }, 3800);
-</script>
+    <!-- Bottom Left Slideshow Animation Engine -->
+    <script>
+        const bottomSlides = document.querySelectorAll('.bottomSlide');
+        let bottomIndex = 0;
+        setInterval(() => {
+            bottomSlides[bottomIndex].classList.remove('active');
+            bottomIndex = (bottomIndex + 1) % bottomSlides.length;
+            bottomSlides[bottomIndex].classList.add('active');
+        }, 3800);
+    </script>
 </body>
 </html>
-
-   
