@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://sitemaps.org">
-  <!-- Homepage -->
+<urlset xmlns="https://sitemaps.org">
+  <!-- Index -->
   <url>
     <loc>https://sparklingresindelights.co.uk</loc>
     <priority>1.00</priority>
@@ -15,12 +15,12 @@
     <loc>https://sparklingresindelights.co.uk</loc>
     <priority>0.80</priority>
   </url>
-  <!-- Keychains -->
+  <!-- Beaded Keychains -->
   <url>
     <loc>https://sparklingresindelights.co.uk</loc>
     <priority>0.80</priority>
   </url>
-  <!-- Bracelets -->
+  <!-- Beaded Bracelets -->
   <url>
     <loc>https://sparklingresindelights.co.uk</loc>
     <priority>0.80</priority>
