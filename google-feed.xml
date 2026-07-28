@@ -1,0 +1,23 @@
+---
+layout: null
+permalink: /google-feed.xml
+---
+<?xml version="1.0"?>
+<rss xmlns:g="http://google.com" version="2.0">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <link>{{ site.url }}</link>
+    <description>Google Merchant Product Feed</description>
+    {% for product in site.products %}
+    <item>
+      <g:id>{{ product.id | default: product.slug | xml_escape }}</g:id>
+      <g:title>{{ product.title | strip_html | xml_escape }}</g:title>
+      <g:description>{{ product.description | default: product.content | strip_html | truncatewords: 50 | xml_escape }}</g:description>
+      <link>{{ site.url }}{{ product.url }}</link>
+      <g:image_link>{{ site.url }}{{ product.image }}</g:image_link>
+      <g:availability>in_stock</g:availability>
+      <g:price>{{ product.price }} {{ site.currency | default: 'GBP' }}</g:price>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
