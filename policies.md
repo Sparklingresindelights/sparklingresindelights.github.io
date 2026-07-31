@@ -4,8 +4,8 @@ title: Store Policies
 tags: [handmade crafts uk, boutique store policies, sparkling resin delights, shipping returns disclaimer]
 permalink: /policies/
 ---
+{% raw %}
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,7 +18,7 @@ permalink: /policies/
     <meta name="description" content="View the store policies for Sparkling Resin Delights. Read our UK delivery terms, easy returns information, and handcrafted product safety disclaimers.">
     
     <!-- 🚀 ADDED FOR SEO SEARCH ENGINE RELEVANCE -->
-    <meta name="keywords" content="{{ page.tags | join: ', ' }}">
+    <meta name="keywords" content="handmade crafts uk, boutique store policies, sparkling resin delights, shipping returns disclaimer">
     
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
@@ -143,18 +143,18 @@ permalink: /policies/
 </head>
 <body>
 
-  <!-- 🧭 NAVIGATION BAR -->
+    <!-- 🧭 NAVIGATION BAR -->
     <nav>
-        <a href="{{ site.baseurl }}/index.html">Home</a>
-        <a href="{{ site.baseurl }}/resin-jewelry.html">Resin Jewelry</a>
-        <a href="{{ site.baseurl }}/beaded-pens.html">Beaded Pens</a>
-        <a href="{{ site.baseurl }}/beaded-keychains.html">Keychains</a>
-        <a href="{{ site.baseurl }}/beaded-bracelets.html">Bracelets</a>
-        <a href="{{ site.baseurl }}/cups-and-glasses.html">Cups & Glasses</a>
-        <a href="{{ site.baseurl }}/wedding.html">Weddings & Hen Parties</a>
-        <a href="{{ site.baseurl }}/resin-mirrors.html">Resin Mirrors & Hairbrushes</a>
-        <a href="{{ site.baseurl }}/contact.html">Contact Us</a>
-        <a href="{{ site.baseurl }}/policies/" style="color: var(--accent-gold);">Store Policies</a>
+        <a href="../index.html">Home</a>
+        <a href="../resin-jewelry.html">Resin Jewelry</a>
+        <a href="../beaded-pens.html">Beaded Pens</a>
+        <a href="../beaded-keychains.html">Keychains</a>
+        <a href="../beaded-bracelets.html">Bracelets</a>
+        <a href="../cups-and-glasses.html">Cups & Glasses</a>
+        <a href="../wedding.html">Weddings & Hen Parties</a>
+        <a href="../resin-mirrors.html">Resin Mirrors & Hairbrushes</a>
+        <a href="../contact.html">Contact Us</a>
+        <a href="../policies/" style="color: var(--accent-gold);">Store Policies</a>
     </nav>
 
     <!-- 📦 MAIN POLICY CONTENT -->
@@ -167,16 +167,16 @@ permalink: /policies/
         </div>
 
         <div class="info-section">
-            <p>Thank you for supporting our UK handmade boutique home! By purchasing from our website, you agree to the terms, delivery times, and product disclaimers outlined below.</p>
+            <p>Thank you for supporting our UK handmade boutique studio! By purchasing from our website, you agree to the terms, delivery times, and product disclaimers outlined below.</p>
         </div>
 
         <!-- SECTION 1 -->
         <div class="info-section">
             <h2>📦 1. Delivery & Processing Times</h2>
             <ul>
-                <li><strong>Processing Time:</strong> All of our items are handcrafted with care in our UK home. Orders are processed and dispatched within 1 to 3 business days.</li>
+                <li><strong>Processing Time:</strong> All of our items are handcrafted with care in our UK studio. Orders are processed and dispatched within 1 to 3 business days.</li>
                 <li><strong>Shipping Method:</strong> We ship orders securely across the UK using Evri or Royal Mail.</li>
-                <li><strong>Standard Shipping Fee:</strong> Evri or Royal Mail dependant on size of parcel £3.65 - £4.99).</li>
+                <li><strong>Standard Shipping Fee:</strong> £3.65 - £4.99 dependant on size of parcel.</li>
                 <li><strong>Estimated Transit Time:</strong> Once dispatched, orders typically arrive within 2 to 4 business days.</li>
             </ul>
             <p class="note-text">Please note: Sparkling Resin Delights is not responsible for any courier delays once your package has been handed over to Evri, but we will always assist you in tracking your parcel.</p>
@@ -213,3 +213,4 @@ permalink: /policies/
 
 </body>
 </html>
+{% endraw %}
