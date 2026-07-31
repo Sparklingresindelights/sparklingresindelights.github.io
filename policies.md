@@ -1,0 +1,207 @@
+---
+layout: null
+title: Store Policies
+tags: [handmade crafts uk, boutique store policies, sparkling resin delights, shipping returns disclaimer]
+permalink: /policies/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 🌟 GOOGLE META TITLE -->
+    <title>Store Policies | Sparkling Resin Delights</title>
+    
+    <!-- 🌟 GOOGLE META DESCRIPTION -->
+    <meta name="description" content="View the store policies for Sparkling Resin Delights. Read our UK delivery terms, easy returns information, and handcrafted product safety disclaimers.">
+    
+    <!-- 🚀 ADDED FOR SEO SEARCH ENGINE RELEVANCE -->
+    <meta name="keywords" content="{{ page.tags | join: ', ' }}">
+    
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com" rel="stylesheet">
+    
+    <style>
+        :root {
+            --pastel-bg: #fffdf2; /* Soft, calming pastel cream-yellow */
+            --primary-dark: #2d3748; /* Premium dark charcoal for readable text */
+            --pastel-yellow: #fcf6cb; /* Relaxing warm buttercup yellow accent frames */
+            --accent-gold: #cca43b; /* Subtle golden touch for stars and highlights */
+            --card-white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--pastel-bg);
+            font-family: 'Inter', sans-serif;
+            color: var(--primary-dark);
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            background-color: #ffffff;
+            padding: 20px 15px;
+            text-align: center;
+            border-bottom: 2px solid var(--pastel-yellow);
+        }
+        nav a {
+            color: var(--primary-dark);
+            margin: 0 18px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+        
+        .main-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 30px;
+            box-sizing: border-box;
+        }
+
+        .header-box {
+            background-color: var(--pastel-yellow);
+            padding: 40px;
+            border-bottom: 2px solid #f5ea9e;
+            border-radius: 8px;
+            box-sizing: border-box;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(245, 234, 158, 0.1);
+            text-align: center;
+        }
+        .header-text h1 {
+            margin: 0; 
+            font-size: 2.8rem; 
+            font-family: 'Playfair Display', serif; 
+            font-weight: 600; 
+            letter-spacing: -0.5px; 
+            color: var(--primary-dark);
+        }
+
+        .info-section {
+            background: var(--card-white);
+            border: 1px solid #f2e7b6;
+            border-radius: 8px;
+            padding: 35px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+        }
+        .info-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+            border-bottom: 1px solid var(--pastel-yellow);
+            padding-bottom: 10px;
+        }
+        .info-section p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #4a5568;
+            margin-bottom: 15px;
+        }
+        .info-section ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        .info-section li {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #4a5568;
+            margin-bottom: 10px;
+        }
+        .info-section strong {
+            color: var(--primary-dark);
+        }
+        .note-text {
+            font-style: italic;
+            border-left: 3px solid var(--accent-gold);
+            padding-left: 15px;
+            color: #718096 !important;
+        }
+
+        footer {
+            background-color: var(--primary-dark);
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            margin-top: 60px;
+            border-top: 4px solid var(--pastel-yellow);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 🧭 NAVIGATION BAR -->
+    <nav>
+        <a href="{{ site.baseurl }}/">Home</a>
+        <a href="{{ site.baseurl }}/contact.html">Contact Me</a>
+        <a href="{{ site.baseurl }}/policies/" style="color: var(--accent-gold);">Store Policies</a>
+    </nav>
+
+    <!-- 📦 MAIN POLICY CONTENT -->
+    <div class="main-container">
+        
+        <div class="header-box">
+            <div class="header-text">
+                <h1>Store Policies</h1>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <p>Thank you for supporting our UK handmade boutique studio! By purchasing from our website, you agree to the terms, delivery times, and product disclaimers outlined below.</p>
+        </div>
+
+        <!-- SECTION 1 -->
+        <div class="info-section">
+            <h2>📦 1. Delivery & Processing Times</h2>
+            <ul>
+                <li><strong>Processing Time:</strong> All of our items are handcrafted with care in our UK studio. Orders are processed and dispatched within 1 to 3 business days.</li>
+                <li><strong>Shipping Method:</strong> We ship orders securely across the UK using Evri.</li>
+                <li><strong>Standard Shipping Fee:</strong> £3.65 (Flat Rate).</li>
+                <li><strong>Estimated Transit Time:</strong> Once dispatched, orders typically arrive within 2 to 4 business days.</li>
+            </ul>
+            <p class="note-text">Please note: Sparkling Resin Delights is not responsible for any courier delays once your package has been handed over to Evri, but we will always assist you in tracking your parcel.</p>
+        </div>
+
+        <!-- SECTION 2 -->
+        <div class="info-section">
+            <h2>🔄 2. Returns, Refunds & Exchanges</h2>
+            <p>In accordance with the UK Consumer Rights Act, we want you to be completely happy with your purchase:</p>
+            <ul>
+                <li><strong>Reporting a Fault:</strong> If your item arrives broken or faulty upon delivery, please contact us within 14 days of receipt with a photograph of the damage. We will happily arrange a replacement or a full refund.</li>
+                <li><strong>Change of Mind Returns:</strong> Due to the small-batch, handmade nature of our items, buyers are responsible for return postage costs if they wish to return an item due to a change of mind. The item must be returned in its original, unused condition within 14 days of delivery.</li>
+                <li><strong>Exclusions:</strong> Custom or personalized orders cannot be returned or refunded unless they arrive damaged.</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 3 -->
+        <div class="info-section">
+            <h2>⚠️ 3. Product Safety Disclaimer & Limitation of Liability</h2>
+            <ul>
+                <li><strong>Intended Use:</strong> All items sold by Sparkling Resin Delights (including charms, pens, keychains, ornaments, and jewelry) are handcrafted boutique accessories intended solely for decorative or personal wear.</li>
+                <li><strong>Safety Warning:</strong> Our products contain small components, including acrylic beads, natural stones, metal charms, and small hardware fittings, which may pose a choking hazard. Our items are not toys. They are not intended for infants, children under 3 years of age, or any individual who may ingest small objects.</li>
+                <li><strong>Junior Collection Notice:</strong> Items inside our Junior Collection are designed for older children as fashion accessories. Adult supervision is strictly required at all times while these items are being handled or worn.</li>
+                <li><strong>Limitation of Liability:</strong> Upon successful delivery of the item to the buyer, Sparkling Resin Delights accepts no responsibility or liability for any subsequent wear and tear, accidental damage, alteration, misuse, or handling of the product. By completing your purchase, you acknowledge that proper use and supervision of the item is the sole responsibility of the buyer.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- <footer> -->
+    <footer>
+        <p>&copy; 2026 Sparkling Resin Delights. Handmade in the UK. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
