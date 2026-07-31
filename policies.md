@@ -3,10 +3,9 @@ layout: null
 title: Store Policies
 tags: [handmade crafts uk, boutique store policies, sparkling resin delights, shipping returns disclaimer]
 permalink: /policies/
-
 ---
-
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
