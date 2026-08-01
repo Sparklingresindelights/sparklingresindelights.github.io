@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:g="http://google.com" version="2.0">
+  <channel>
+    <title>Sparkling Resin Delights Products</title>
+    <link>https://sparklingresindelights.co.uk</link>
+    <description>Handcrafted Beaded Walking Stick Charms, Premium Pens, and Boutique Gifts from the UK.</description>
+    
+    <!-- PRODUCT 1: PINK LADY STRAP -->
+    <item>
+      <g:id>srd_walking_stick_pink_lady</g:id>
+      <g:title>Pink Lady Beaded Walking Stick Charm | Pastel Wrist Strap</g:title>
+      <g:description>Elevate your outdoor adventures with an accessory that radiates sweet, playful confidence and vibrant modern charm. The Pink Lady Walking Stick Charm masterfully couples soft, romantic pastels with a bright, eye-catching finish. Features custom lettering, bubblegum pink silicone, clay disc stacks, faux pearls, and crystal-clear crackle glass spheres.</g:description>
+      <g:link>https://sparklingresindelights.co.uk</g:link>
+      <g:image_link>https://sparklingresindelights.co.uk</g:image_link>
+      <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>9.99 GBP</g:price>
+      <g:brand>Sparkling Resin Delights</g:brand>
+      <g:google_product_category>Health &amp; Beauty &gt; Personal Care &gt; Mobility &amp; Accessibility &gt; Walking Sticks &amp; Canes</g:google_product_category>
+      <g:product_type>Walking Accessories &gt; Walking Stick Charms</g:product_type>
+      <g:shipping>
+        <g:country>GB</g:country>
+        <g:service>Tracked Delivery</g:service>
+        <g:price>3.65 GBP</g:price>
+      </g:shipping>
+      <g:shipping_weight>0.1 kg</g:shipping_weight>
+      <g:custom_label_0>Walking Stick Charms</g:custom_label_0>
+    </item>
+
+    <!-- PRODUCT 2: SARAH COWPRINT STRAP -->
+    <item>
+      <g:id>srd_walking_stick_sarah_cow</g:id>
+      <g:title>Sarah Beaded Walking Cane Charm | Neutral Wrist Strap</g:title>
+      <g:description>Step out onto the trails with an accessory that radiates rustic elegance, grounded confidence, and trendy western charm. The Sarah Walking Stick Charm masterfully couples earthy, organic textures with a clean, modern aesthetic. Designed with a custom name layout, bold cow-print focal bead, natural cowrie shell drop, and rich wooden grains.</g:description>
+      <g:link>https://sparklingresindelights.co.uk</g:link>
+      <g:image_link>https://sparklingresindelights.co.uk</g:image_link>
+      <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>9.99 GBP</g:price>
+      <g:brand>Sparkling Resin Delights</g:brand>
+      <g:google_product_category>Health &amp; Beauty &gt; Personal Care &gt; Mobility &amp; Accessibility &gt; Walking Sticks &amp; Canes</g:google_product_category>
+      <g:product_type>Walking Accessories &gt; Walking Stick Charms</g:product_type>
+      <g:shipping>
+        <g:country>GB</g:country>
+        <g:service>Tracked Delivery</g:service>
+        <g:price>3.65 GBP</g:price>
+      </g:shipping>
+      <g:shipping_weight>0.1 kg</g:shipping_weight>
+      <g:custom_label_0>Walking Stick Charms</g:custom_label_0>
+    </item>
+
+    <!-- PRODUCT 3: AUTUMN WOODLANDS STRAP -->
+    <item>
+      <g:id>srd_walking_stick_autumn_woodlands</g:id>
+      <g:title>Autumn Woodlands Wooden Walking Stick Wrist Strap</g:title>
+      <g:description>Celebrate the changing seasons with an accessory that radiates warm, tactile comfort and rugged outdoor luxury. This standout piece features a sequence of rich, darkly stained natural wood beads detailed with iconic circular grains, nested eye-catchingly between plush, ultra-soft pom-poms and a light-refracting amber marbled focal sphere.</g:description>
+      <g:link>https://sparklingresindelights.co.uk</g:link>
+      <g:image_link>https://sparklingresindelights.co.uk</g:image_link>
+      <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>9.99 GBP</g:price>
+      <g:brand>Sparkling Resin Delights</g:brand>
+      <g:google_product_category>Health &amp; Beauty &gt; Personal Care &gt; Mobility &amp; Accessibility &gt; Walking Sticks &amp; Canes</g:google_product_category>
+      <g:product_type>Walking Accessories &gt; Walking Stick Charms</g:product_type>
+      <g:shipping>
+        <g:country>GB</g:country>
+        <g:service>Tracked Delivery</g:service>
+        <g:price>3.65 GBP</g:price>
+      </g:shipping>
+      <g:shipping_weight>0.1 kg</g:shipping_weight>
+      <g:custom_label_0>Walking Stick Charms</g:custom_label_0>
+    </item>
+
+  </channel>
+</rss>
