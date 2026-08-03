@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, follow">
+    <title>Redirecting to Shop...</title>
+    <script>
+        // 1. Extract the unique tracking code from the end of the web URL path
+        const pathSegments = window.location.pathname.split('/');
+        const productKey = pathSegments[pathSegments.length - 1] || pathSegments[pathSegments.length - 2];
+        
+        // 2. Comprehensive dictionary mapping all 73 product codes directly to Payhip
+        const redirectMap = {
+            "xizrC": "https://payhip.com", // Blue Sandstone Bracelet
+            "B5mkM": "https://payhip.com", // Queen Anne's Lace Necklace
+            "ZEuxP": "https://payhip.com", // Gold Sun Celestial Earrings
+            "xAF98": "https://payhip.com", // Pink Buttercup Necklace
+            "eMZPn": "https://payhip.com", // Pink Glitter Oval Hoops
+            "QeY7l": "https://payhip.com", // Bohemian Unakite Bracelet
+            "VFdTU": "https://payhip.com", // Jungle Drift Wood Bracelet
+            "uBECc": "https://payhip.com", // Candy Dream Pen & Bracelet Set
+            "7rskP": "https://payhip.com", // Fresh Nature Beaded Bracelet
+            "PX4lZ": "https://payhip.com", // Pink Rhinestone Pearl Bracelet
+            "RX7FP": "https://payhip.com", // Natural Wood Heart Bracelet
+            "tbo2X": "https://payhip.com", // Pink Glass Luxe Bracelet
+            "MeO6N": "https://payhip.com", // Pastel Ombre Gumball Bracelet
+            "aYkZF": "https://payhip.com", // Pearl Gold Heart Stack Bracelet
+            "BCd6c": "https://payhip.com", // Natural Stone Calm Bracelet
+            "aVdZ1": "https://payhip.com", // Sophisticated Black Crystal Bracelet
+            "H1RK3": "https://payhip.com", // Golden Swan Wood Bracelet
+            "Cg8Oo": "https://payhip.com", // Tiger Eye Lava Diffuser Bracelet
+            "YIvKw": "https://payhip.com", // Handcrafted European Bracelet Set
+            "2jywf": "https://payhip.com", // Summer Bracelet & Anklet Set
+            "RaXI1": "https://payhip.com", // Healing Crystal Gemstone Collection
+            "2t96a": "https://payhip.com", // Handcrafted Gemstone Pearl Stack
+            "Iz0cU": "https://payhip.com", // Beaded Walking Stick Charms
+            "rpwUZ": "https://payhip.com", // Sunset Gummy Bear Drops
+            "HET4w": "https://payhip.com", // Warm Marbled Orange Ovals
+            "OnJiN": "https://payhip.com", // Resin Vintage Pendant Earrings
+            "5yiSO": "https://payhip.com", // Map Jasper Love Heart Necklace
+            "viLeX": "https://payhip.com", // Teardrop Crystal Amethyst Necklace
+            "6xVcm": "https://payhip.com", // Novelty Beaded Pens Collection
+            "DTdw2": "https://payhip.com", // The Willie Pink Beaded Pen
+            "Ccriv": "https://payhip.com", // Purple Butterfly Beaded Pen
+            "LisgJ": "https://payhip.com", // Lilac Have Fun Custom Pen
+            "JjZtY": "https://payhip.com", // Hot Pink Rhinestone Sparkle Pen
+            "DZ1Ie": "https://payhip.com", // Cute Green Frog Beaded Pen
+            "0FTVe": "https://payhip.com", // Highland Cow Beaded Pens Collection
+            "lhfzF": "https://payhip.com", // Handmade Custom Beaded Pens Collection
+            "yAfhV": "https://payhip.com", // 3-Piece Luxury Beaded Pen Gift Set
+            "3928C": "https://payhip.com", // Gothic Whimsical Keychain Collection
+            "CZ8vL": "https://payhip.com", // Cottagecore Coastal Keychain Collection
+            "ArjN6": "https://payhip.com", // Hydrating Hand Cleaner Holders
+            "Nk5qW": "https://payhip.com", // Sunset Peach Pen & Keychain Gift Set
+            "W5FYZ": "https://payhip.com", // Pink Butterfly Crystal Keychain
+            "4vTbl": "https://payhip.com", // Grey Wood Flower Charm Keychain
+            "ZKTX5": "https://payhip.com", // Iridescent Diamond Vintage Keychain
+            "xulXw": "https://payhip.com", // Astronaut Cosmic Vintage Keychain
+            "n5CAg": "https://payhip.com", // Whimsical Sensory Fidget Bag Charms
+            "cb4Vp": "https://payhip.com", // Novelty Fidget Charms & Bag Keepsakes
+            "PqD0R": "https://payhip.com", // Handcrafted Pen & Keychain Sets
+            "kw2AC": "https://payhip.com", // Novelty Illustrated Ceramic Mugs
+            "k1uLN": "https://payhip.com", // Sparkling Resin Sea Turtle Ornament
+            "f7QLO": "https://payhip.com", // Pearl & Twisted Gold Bridal Bracelet
+            "Qy2Pn": "https://payhip.com", // Pastel Gemstone Wedding Bracelet
+            "bNpm0": "https://payhip.com", // Personalized Maid of Honour Bracelets
+            "5O0WX": "https://payhip.com", // Personalized Bridesmaid Bracelets
+            "5yIah": "https://payhip.com", // Hen Party & Wedding Wine Glass Charms
+            "p16yE": "https://payhip.com", // Handmade Bridal Keepsake Charms Collection
+            "Ooe8L": "https://payhip.com", // Something Blue Wedding Keepsakes Collection
+            "7pBxY": "https://payhip.com", // Rose Pink Bridesmaid & Hen Party Charms
+            "Lt68N": "https://payhip.com", // Handmade Bridal Keepsakes & Pastel Charms
+            "uYPsK": "https://payhip.com", // Handmade Peach Bridal Keepsake Charms
+            "wcytb": "https://payhip.com", // Handmade Novelty Wedding Keepsakes
+            "V0f6C": "https://payhip.com", // Handmade Wedding Keepsakes Star Selection
+            "uAlWD": "https://payhip.com", // Something Blue Wedding Charms Collection
+            "R8hBc": "https://payhip.com", // Luxury Beaded Bridal Makeup Brushes Set
+            "UxAkJ": "https://payhip.com", // Winnie the Pooh & Bumblebee Hair Brush
+            "NRK78": "https://payhip.com", // Personalised Nola Name Hair Brush
+            "OhaTA": "https://payhip.com"  // Cherry & Floral Compact Brush & Mirror
+        };
 
+        // 3. Evaluate the extracted key and route the user safely to Payhip
+        if (redirectMap[productKey]) {
+            window.location.href = redirectMap[productKey];
+        } else {
+            // Fallback routing: if an invalid key is hit, safely return to main domain index
+            window.location.href = "https://sparklingresindelights.co.uk";
+        }
+    </script>
+</head>
+<body>
+    <p>Forwarding you safely over to our boutique shop counter...</p>
+</body>
+</html>
