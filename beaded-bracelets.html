@@ -21,17 +21,20 @@ tags: [handcrafted beaded bracelets, gemstone jewelry uk, golden swan stone brac
     <!-- Payhip Secure Shopping Cart Loader -->
     <script type="text/javascript" src="https://payhip.com"></script>
     
-    <style>
+ <style>
         :root {
-            --bg-color: #fff9f5; /* Matching the bright, energetic warm cream from Cups & Glasses */
-            --primary-dark: #1e293b; /* Deep Slate text & footer background */
-            --bright-purple: #7000ff; /* Energetic boutique purple accent */
-            --bright-blue: #00d2ff; /* Fresh blue accent */
+            --bg-color: #fff9f5; /* A bright, energetic warm cream */
+            --primary-dark: #1e293b;
+            --olive-dark: #2c3524;   /* Deep olive for high-contrast text */
+            --olive-mid: #3b4731;    /* Mid-tone olive for titles */
+            --bright-cyan: #00d2ff;  /* Fresh glass accent */
             --card-bg: #ffffff;
             --text-muted: #475569;
+            /* Your custom soft pale-to-olive green gradient */
+            --green-gradient: linear-gradient(135deg, #e2ecc8 0%, #a4b494 100%);
         }
         
-           /* Centered container button wrap limits */
+         /* Centered container button wrap limits */
         .stripe-container {
             max-width: 220px;
             margin: auto auto 0 auto;
@@ -61,20 +64,21 @@ tags: [handcrafted beaded bracelets, gemstone jewelry uk, golden swan stone brac
             text-decoration: none !important;
         }
 
-        /* Tailors the button background color to your bright purple focus theme */
+        /* Tailors the button background color to your soft green gradient theme */
         .payhip-buy-button, .payhip-add-to-cart-btn, .payhip-embed-btn {
-            background-color: var(--bright-purple) !important;
-            color: #ffffff !important;
+            background: var(--green-gradient) !important;
+            color: var(--olive-dark) !important; 
             font-family: 'Inter', sans-serif !important;
             font-weight: 600 !important;
             letter-spacing: 1px !important;
             text-transform: uppercase !important;
             font-size: 0.85rem !important;
             cursor: pointer !important;
-            transition: background-color 0.2s !important;
+            border: none !important;
+            transition: opacity 0.2s !important;
         }
         .payhip-buy-button:hover, .payhip-add-to-cart-btn:hover {
-            background-color: #5e00e6 !important; /* Slightly darker purple hover */
+            opacity: 0.85 !important; /* Elegant soft fade on hover */
         }
         
         body {
@@ -90,7 +94,7 @@ tags: [handcrafted beaded bracelets, gemstone jewelry uk, golden swan stone brac
             background-color: #ffffff;
             padding: 20px 15px;
             text-align: center;
-            border-bottom: 2px solid var(--bright-purple); /* Fun bright accent border */
+            border-bottom: 2px solid #a4b494; /* Soft olive border to tie navigation together */
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -106,33 +110,34 @@ tags: [handcrafted beaded bracelets, gemstone jewelry uk, golden swan stone brac
             transition: color 0.2s;
         }
         nav a:hover {
-            color: var(--bright-purple);
+            color: var(--olive-mid);
         }
 
-         /* Vibrant Editorial Header with a striking background gradient */
+        /* Elegant Editorial Header with your custom green background gradient */
         header {
-            background: linear-gradient(135deg, #00c49f 0%, #2f3e46 50%, #ffb703 100%); 
-            color: #ffffff;
+            background: var(--green-gradient); 
+            color: var(--olive-dark);
             padding: 80px 20px;
             text-align: center;
             border-bottom: 3px solid #ffffff;
-            box-shadow: 0 4px 20px rgba(0, 196, 159, 0.15);
+            box-shadow: 0 4px 20px rgba(164, 180, 148, 0.2);
         }
         header h1 {
             margin: 0;
-            font-size: 1.75rem; /* Keeps the heading nice and compact */
+            font-size: 3.5rem;
             font-family: 'Playfair Display', serif;
             font-weight: 600;
             letter-spacing: -0.5px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            color: var(--olive-dark);
+            text-shadow: 0 1px 4px rgba(255,255,255,0.4);
         }
         header p {
             font-family: 'Playfair Display', serif;
-            font-size: 0.95rem; /* UPDATED: Slightly larger for comfortable reading */
+            font-size: 1.4rem;
             margin: 15px 0 0 0;
             font-style: italic;
-            color: #ffffff;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            color: var(--olive-mid);
+            text-shadow: 0 1px 3px rgba(255,255,255,0.4);
             opacity: 0.95;
         }
 
@@ -164,8 +169,8 @@ tags: [handcrafted beaded bracelets, gemstone jewelry uk, golden swan stone brac
         }
         .product-card:hover {
             transform: translateY(-6px);
-            border-color: var(--bright-blue);
-            box-shadow: 0 12px 30px rgba(0, 210, 255, 0.15);
+            border-color: #a4b494;
+            box-shadow: 0 12px 30px rgba(164, 180, 148, 0.25);
         }
 
         /* Bright Slideshow Container height parameters */
@@ -174,7 +179,7 @@ tags: [handcrafted beaded bracelets, gemstone jewelry uk, golden swan stone brac
             width: 100%;
             height: 300px; 
             overflow: hidden;
-            background: radial-gradient(circle, #ffffff 60%, #f5f0ff 100%);
+            background: radial-gradient(circle, #ffffff 60%, #f4f6f0 100%);
             border-bottom: 2px solid #eae6e1;
         }
         .slideshow-container img {
@@ -200,8 +205,8 @@ tags: [handcrafted beaded bracelets, gemstone jewelry uk, golden swan stone brac
             top: 50%;
             transform: translateY(-50%);
             background: rgba(255, 255, 255, 0.95);
-            border: 2px solid var(--bright-purple);
-            color: var(--bright-purple);
+            border: 2px solid #a4b494;
+            color: var(--olive-mid);
             width: 36px;
             height: 36px;
             border-radius: 50%;
@@ -211,13 +216,13 @@ tags: [handcrafted beaded bracelets, gemstone jewelry uk, golden swan stone brac
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 10px rgba(112, 0, 255, 0.1);
+            box-shadow: 0 4px 10px rgba(164, 180, 148, 0.15);
             transition: all 0.2s;
             z-index: 50;
             user-select: none;
         }
         .slide-btn:hover {
-            background: var(--bright-purple);
+            background: #a4b494;
             color: #ffffff;
         }
         .prev-btn { left: 10px; }
@@ -230,69 +235,17 @@ tags: [handcrafted beaded bracelets, gemstone jewelry uk, golden swan stone brac
             flex-direction: column;
             justify-content: space-between;
         }
+
+        /* Global product text rules: sizes and colours */
         .product-card h3 {
             margin: 0 0 10px 0;
-            color: var(--primary-dark);
-            font-size: 1.3rem;
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-        }
-        .product-card .price {
-            font-weight: 600;
-            color: var(--bright-purple);
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            letter-spacing: 0.5px;
+            color: var(--olive-mid);
+            font-size: 1.35rem; /* Adjust this number to scale title sizes */
         }
         .product-card p {
-            font-size: 0.9rem;
+            font-size: 0.95rem; /* Adjust this number to scale text description sizes */
             color: var(--text-muted);
-            margin: 0 0 25px 0;
-            line-height: 1.6;
-            font-weight: 400;
-        }
-
-        /* Perfectly centered container for Payhip's direct button injection rules */
-        .stripe-container {
-            max-width: 160px;
-            margin: auto auto 0 auto;
-            padding: 0 5px;
-            min-height: 45px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-
-        /* Tailoring Payhip's template buttons to fit the bright purple theme variables */
-        .payhip-add-to-cart-btn {
-            background-color: var(--bright-purple) !important;
-            color: #ffffff !important;
-            border-radius: 4px !important;
-            font-family: 'Inter', sans-serif !important;
-            font-weight: 600 !important;
-            letter-spacing: 1px !important;
-            text-transform: uppercase !important;
-            padding: 12px 24px !important;
-            font-size: 0.85rem !important;
-        }
-
-        footer {
-            text-align: center;
-            padding: 60px 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #ffffff;
-            background-color: var(--primary-dark);
-            border-top: 4px solid var(--bright-purple);
-            margin-top: 80px;
-        }
-
-        @media (max-width: 992px) {
-            .product-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-            .slideshow-container { height: 280px; }
-        }
-        @media (max-width: 650px) {
-            .product-grid { grid-template-columns: 1fr; gap: 30px; }
+            line-height: 1.5;
         }
     </style>
     <!-- 🌟 GOOGLE MERCHANDISING STRUCTURED DATA SCHEMA: PEN & JEWELRY GIFT SETS COLLECTION -->
