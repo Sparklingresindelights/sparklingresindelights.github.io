@@ -26,10 +26,11 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
     <script type="text/javascript" src="https://payhip.com"></script>
      <style>
         :root {
-            --bg-color: #fbf9f4; /* Calming pastel beige background */
+            --bg-color: #AEC6CF; /* Beautiful pastel blue background */
             --primary-dark: #2d3748; /* Premium charcoal text for clear reading */
-            --beige-accent: #f3edd7; /* Warm, rich cream accent frame */
-            --gold-detail: #c5a059; /* Soft gold for high-end borders and buttons */
+            --header-blue: #3A6073; /* Rich slate blue for header container */
+            --ice-blue-accent: #E6F2F7; /* Elegant pale ice blue for borders and backgrounds */
+            --button-blue: #4A7A96; /* Coordinating blue for Payhip button highlights */
             --card-bg: #ffffff;
             --text-muted: #5a6a75;
         }
@@ -64,9 +65,9 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
             text-decoration: none !important;
         }
 
-        /* Tailors the button background color to your soft gold theme */
+        /* Tailors the button background color to your new blue focus theme */
         .payhip-buy-button, .payhip-add-to-cart-btn, .payhip-embed-btn {
-            background-color: var(--gold-detail) !important;
+            background-color: var(--button-blue) !important;
             color: #ffffff !important;
             font-family: 'Inter', sans-serif !important;
             font-weight: 600 !important;
@@ -77,7 +78,7 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
             transition: background-color 0.2s !important;
         }
         .payhip-buy-button:hover, .payhip-add-to-cart-btn:hover {
-            background-color: #bfa15f !important; /* Slightly darker gold hover */
+            background-color: #3A6073 !important; /* Slightly darker blue hover */
         }
         body {
             font-family: 'Inter', sans-serif;
@@ -92,7 +93,7 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
             background-color: #ffffff;
             padding: 20px 15px;
             text-align: center;
-            border-bottom: 2px solid var(--beige-accent);
+            border-bottom: 2px solid var(--ice-blue-accent);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -108,32 +109,33 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
             transition: color 0.2s;
         }
         nav a:hover {
-            color: var(--gold-detail);
+            color: var(--button-blue);
         }
-          /* Vibrant Editorial Header with a striking background gradient */
+        
+        /* Standardised Two-Tone Slate Blue Editorial Header Bar */
         header {
-            background: linear-gradient(135deg, #00c49f 0%, #2f3e46 50%, #ffb703 100%); 
+            background: var(--header-blue); 
             color: #ffffff;
-            padding: 80px 20px;
+            padding: 50px 20px;
             text-align: center;
-            border-bottom: 3px solid #ffffff;
-            box-shadow: 0 4px 20px rgba(0, 196, 159, 0.15);
+            border-bottom: 3px solid var(--ice-blue-accent);
+            box-shadow: 0 4px 20px rgba(58, 96, 115, 0.15);
         }
         header h1 {
             margin: 0;
-            font-size: 1.75rem; /* Keeps the heading nice and compact */
+            font-size: 2.2rem; /* Uniform sizing matches other layout standards */
             font-family: 'Playfair Display', serif;
             font-weight: 600;
             letter-spacing: -0.5px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         header p {
             font-family: 'Playfair Display', serif;
-            font-size: 0.95rem; /* UPDATED: Slightly larger for comfortable reading */
-            margin: 15px 0 0 0;
+            font-size: 1.05rem; /* Uniform sizing matches other layout standards */
+            margin: 12px 0 0 0;
             font-style: italic;
             color: #ffffff;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            text-shadow: 0 2px 5px rgba(0,0,0,0.1);
             opacity: 0.95;
         }
 
@@ -152,7 +154,7 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
         
         .product-card {
             background: var(--card-bg);
-            border: 2px solid var(--beige-accent);
+            border: 2px solid var(--ice-blue-accent);
             border-radius: 8px;
             overflow: hidden;
             text-align: center;
@@ -165,8 +167,8 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
         }
         .product-card:hover {
             transform: translateY(-6px);
-            border-color: var(--gold-detail);
-            box-shadow: 0 12px 30px rgba(197, 160, 89, 0.12);
+            border-color: var(--button-blue);
+            box-shadow: 0 12px 30px rgba(74, 122, 150, 0.15);
         }
 
         /* Slide Container Parameter Frame */
@@ -175,8 +177,8 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
             width: 100%;
             height: 300px; 
             overflow: hidden;
-            background: radial-gradient(circle, #ffffff 60%, #faf6ec 100%);
-            border-bottom: 2px solid var(--beige-accent);
+            background: radial-gradient(circle, #ffffff 60%, #f4f9fc 100%);
+            border-bottom: 2px solid var(--ice-blue-accent);
         }
         .slideshow-container img {
             position: absolute;
@@ -201,7 +203,7 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
             top: 50%;
             transform: translateY(-50%);
             background: rgba(255, 255, 255, 0.95);
-            border: 2px solid var(--beige-accent);
+            border: 2px solid var(--ice-blue-accent);
             color: var(--primary-dark);
             width: 36px;
             height: 36px;
@@ -216,10 +218,9 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
             transition: all 0.2s;
             z-index: 50;
             user-select: none;
-        }
-        .slide-btn:hover {
-            background: var(--gold-detail);
-            border-color: var(--gold-detail);
+            .slide-btn:hover {
+            background: var(--button-blue);
+            border-color: var(--button-blue);
             color: #ffffff;
         }
         .prev-btn { left: 10px; }
@@ -235,22 +236,22 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
          .product-card h3 {
             margin: 0 0 10px 0;
             color: var(--primary-dark);
-            font-size: 1.3rem;
+            font-size: 1rem; /* UPDATED: Sized down cleanly to match other storefront indexes */
             font-family: 'Playfair Display', serif;
             font-weight: 600;
         }
         .product-card .price {
             font-weight: 600;
-            color: var(--gold-detail);
-            font-size: 1.3rem;
+            color: var(--button-blue);
+            font-size: 1.1rem; /* UPDATED: Adjusted cleanly to preserve scale ratios */
             margin-bottom: 15px;
             letter-spacing: 0.5px;
         }
         .product-card p {
-            font-size: 0.9rem;
+            font-size: 0.8rem; /* UPDATED: Tightened text parameters for uniform presentation */
             color: var(--text-muted);
             margin: 0 0 25px 0;
-            line-height: 1.6;
+            line-height: 1.5;
             font-weight: 400;
         }
 
@@ -267,7 +268,7 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
 
         /* Customizing Payhip's standard injected layout button style variables */
         .payhip-add-to-cart-btn {
-            background-color: var(--gold-detail) !important;
+            background-color: var(--button-blue) !important;
             color: #ffffff !important;
             border-radius: 4px !important;
             font-family: 'Inter', sans-serif !important;
@@ -285,7 +286,7 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
             font-weight: 500;
             color: #ffffff;
             background-color: var(--primary-dark);
-            border-top: 4px solid var(--beige-accent);
+            border-top: 4px solid var(--ice-blue-accent);
             margin-top: 80px;
         }
 
@@ -689,6 +690,7 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
   }
 }
 </script>
+</head>
     <!-- 🌟 GOOGLE MERCHANDISING STRUCTURED DATA SCHEMA: FIDGET KEEPSAKE COLLECTION -->
 <script type="application/ld+json">
 {
@@ -803,9 +805,10 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
         <a href="policies/">Store Policies</a>
     </nav>
 
-    <header>
-        <h1>Handcrafted Beaded Keychains, Bag Charms & Fidget Sensory Gifts</h1>
-        <p>Keep your keys stylishly secure and your mind focused with our vibrant collection of handmade beaded keychains, bag charms, and tactile fidget accessories. Crafted using ultra-durable hardware, sensory-friendly silicone, unique printed beads, and whimsical 3D focal charms, these unique designs add instant personality and satisfying textures to any purse, backpack, or car keyring. From elegant accents to playful, rotating sensory fidgets, they make affordable, high-quality gifts, stocking fillers, or personal treats to brighten up your daily essentials.</p>
+    <!-- Standardised Centered Two-Tone Header -->
+    <header style="background-color: #3A6073; color: #ffffff; padding: 50px 20px; text-align: center; border-bottom: 3px solid #E6F2F7; box-shadow: 0 4px 20px rgba(58, 96, 115, 0.15); display: block; width: 100%; box-sizing: border-box;">
+        <h1 style="margin: 0; font-size: 2.2rem; font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.5px; color: #ffffff; text-align: center;">Handcrafted Beaded Keychains & Fidget Sensory Gifts</h1>
+        <p style="font-family: 'Playfair Display', serif; font-size: 1.05rem; margin: 12px 0 0 0; font-style: italic; color: #ffffff; opacity: 0.95; text-align: center;">Keep your keys stylishly secure and your mind focused with our vibrant collection of handmade beaded keychains, bag charms, and tactile fidget accessories.</p>
     </header>
 
     <div class="container">
@@ -957,8 +960,8 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
              <a href="https://payhip.com/b/ZKTX5" class="payhip-buy-button" data-theme="none" data-product="ZKTX5">View Item Details</a>
             </div>
            </div>  
-                
-                   <!-- Item 8: Astronaut Cosmic Resin Vintage  -->
+
+            <!-- Item 8: Astronaut Cosmic Resin Vintage  -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -997,7 +1000,6 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 6 DIRECTLY BELOW -->
          <a href="https://payhip.com/b/P0gIT" class="payhip-buy-button" data-theme="none" data-product="P0gIT">View Item Details</a>
             </div>
            </div>    
@@ -1067,9 +1069,9 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
                 <div class="stripe-container">
         <a href="https://payhip.com/b/cb4Vp" class="payhip-buy-button" data-theme="none" data-product="cb4Vp">View Item Details</a>
             </div>
-           </div>
+           </div>      
 
-                    <!-- Item 13: Pen & Keychain Sets  -->
+            <!-- Item 13: Pen & Keychain Sets  -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -1100,6 +1102,11 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
 
     <footer>
         <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK via Tracked Evri Delivery.</p>
+        <div style="margin-top: 15px; font-size: 0.85rem; opacity: 0.8;">
+            Follow Our Journey: 
+            <a href="https://instagram.com" target="_blank" style="color: #ffffff; margin: 0 10px; text-decoration: underline;">Instagram</a> | 
+            <a href="https://payhip.com" target="_blank" style="color: #ffffff; margin: 0 10px; text-decoration: underline;">Payhip Profile</a>
+        </div>
     </footer>
 
     <!-- Multi-View Image Slider Engine Controller -->
@@ -1131,8 +1138,4 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
     </script>
 </body>
 </html>
-
-
-   
-
-                
+         
