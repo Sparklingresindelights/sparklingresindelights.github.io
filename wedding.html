@@ -27,14 +27,64 @@ tags: [wedding favours uk, custom bridal gifts, personalized hen party accessori
     
     <style>
         :root {
-            --bg-color: #fffdfd; /* Romantic soft blush/ivory background */
-            --primary-dark: #2d3748; /* Soft charcoal text for premium reading */
-            --bridal-pink: #fbeee8; /* Elegant pale bridal pink for borders and banners */
-            --gold-detail: #dcae82; /* Luxurious champagne gold for highlights and headers */
+            --bg-color: #fff9f5; /* A bright, energetic warm cream */
+            --primary-dark: #1e293b;
+            --olive-dark: #2c3524;   /* Deep olive for high-contrast text */
+            --olive-mid: #3b4731;    /* Mid-tone olive for titles */
+            --bright-cyan: #00d2ff;  /* Fresh glass accent */
             --card-bg: #ffffff;
-            --text-muted: #64748b;
+            --text-muted: #475569;
+            /* Your custom soft pale-to-olive green gradient */
+            --green-gradient: linear-gradient(135deg, #e2ecc8 0%, #a4b494 100%);
+        }
+        
+         /* Centered container button wrap limits */
+        .stripe-container {
+            max-width: 220px;
+            margin: auto auto 0 auto;
+            padding: 0 5px;
+            min-height: 45px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
         }
 
+        /* Forces Payhip's links and iframe elements to expand into rectangles */
+        .stripe-container div,
+        .stripe-container iframe, 
+        .stripe-container .payhip-embed-btn,
+        .stripe-container .payhip-buy-button,
+        .stripe-container button,
+        .stripe-container a {
+            width: 100% !important;
+            max-width: 220px !important;
+            min-width: 180px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            height: 46px !important;
+            border-radius: 4px !important;
+            box-sizing: border-box !important;
+            text-decoration: none !important;
+        }
+
+        /* Tailors the button background color to your soft green gradient theme */
+        .payhip-buy-button, .payhip-add-to-cart-btn, .payhip-embed-btn {
+            background: var(--green-gradient) !important;
+            color: var(--olive-dark) !important; 
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 600 !important;
+            letter-spacing: 1px !important;
+            text-transform: uppercase !important;
+            font-size: 0.78rem !important; /* Made slightly smaller and sleeker */
+            cursor: pointer !important;
+            border: none !important;
+            transition: opacity 0.2s !important;
+        }
+        .payhip-buy-button:hover, .payhip-add-to-cart-btn:hover {
+            opacity: 0.85 !important; /* Elegant soft fade on hover */
+        }
+        
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
@@ -46,9 +96,9 @@ tags: [wedding favours uk, custom bridal gifts, personalized hen party accessori
 
         nav {
             background-color: #ffffff;
-            padding: 20px 15px;
+            padding: 16px 15px; /* Slightly tightened padding */
             text-align: center;
-            border-bottom: 2px solid var(--bridal-pink);
+            border-bottom: 2px solid #a4b494; /* Soft olive border to tie navigation together */
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -58,50 +108,50 @@ tags: [wedding favours uk, custom bridal gifts, personalized hen party accessori
             margin: 0 18px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.78rem; /* Reduced from 0.85rem for a more delicate header link */
             letter-spacing: 1.5px;
             text-transform: uppercase;
             transition: color 0.2s;
         }
         nav a:hover {
-            color: var(--gold-detail);
+            color: var(--olive-mid);
         }
 
-        /* Romantic Editorial Header with a dreamy bridal blush to ivory white gradient */
+        /* Elegant Editorial Header with your custom green background gradient */
         header {
-            background: linear-gradient(135deg, #fbeee8 0%, #fffbfc 100%); 
-            color: var(--primary-dark);
-            padding: 80px 20px;
+            background: var(--green-gradient); 
+            color: var(--olive-dark);
+            padding: 60px 20px; /* Reduced from 80px to match the smaller text */
             text-align: center;
             border-bottom: 3px solid #ffffff;
-            box-shadow: 0 4px 20px rgba(251, 238, 232, 0.3);
+            box-shadow: 0 4px 20px rgba(164, 180, 148, 0.2);
         }
         header h1 {
             margin: 0;
-            font-size: 3.5rem;
+            font-size: 2.6rem; /* Reduced from 3.5rem so it feels balanced and not overwhelming */
             font-family: 'Playfair Display', serif;
             font-weight: 600;
             letter-spacing: -0.5px;
+            color: var(--olive-dark);
+            text-shadow: 0 1px 4px rgba(255,255,255,0.4);
         }
         header p {
             font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            margin: 15px 0 0 0;
+            font-size: 1.15rem; /* Reduced from 1.4rem */
+            margin: 12px 0 0 0;
             font-style: italic;
-            color: var(--text-muted);
+            color: var(--olive-mid);
+            text-shadow: 0 1px 3px rgba(255,255,255,0.4);
             opacity: 0.95;
-            max-width: 800px;
-            margin: 15px auto 0 auto;
-            line-height: 1.6;
         }
 
         .container {
             max-width: 1200px;
-            margin: 60px auto;
+            margin: 45px auto; /* Reduced from 60px to compact the page layout */
             padding: 0 20px;
         }
 
-        /* 3-Column Balanced Product Card Layout */
+        /* Fixed Grid Layout: Balanced columns across screen sizes */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -110,12 +160,12 @@ tags: [wedding favours uk, custom bridal gifts, personalized hen party accessori
         
         .product-card {
             background: var(--card-bg);
-            border: 2px solid var(--bridal-pink);
+            border: 2px solid #eae6e1;
             border-radius: 8px;
             overflow: hidden;
             text-align: center;
             padding-bottom: 25px;
-            box-shadow: 0 8px 24px rgba(45, 55, 72, 0.01);
+            box-shadow: 0 8px 24px rgba(30, 41, 59, 0.04);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -123,17 +173,18 @@ tags: [wedding favours uk, custom bridal gifts, personalized hen party accessori
         }
         .product-card:hover {
             transform: translateY(-6px);
-            border-color: var(--gold-detail);
-            box-shadow: 0 12px 30px rgba(220, 174, 130, 0.15);
+            border-color: #a4b494;
+            box-shadow: 0 12px 30px rgba(164, 180, 148, 0.25);
         }
 
+        /* Bright Slideshow Container height parameters */
         .slideshow-container {
             position: relative;
             width: 100%;
             height: 300px; 
             overflow: hidden;
-            background: radial-gradient(circle, #ffffff 60%, #fffaf8 100%);
-            border-bottom: 2px solid var(--bridal-pink);
+            background: radial-gradient(circle, #ffffff 60%, #f4f6f0 100%);
+            border-bottom: 2px solid #eae6e1;
         }
         .slideshow-container img {
             position: absolute;
@@ -158,25 +209,24 @@ tags: [wedding favours uk, custom bridal gifts, personalized hen party accessori
             top: 50%;
             transform: translateY(-50%);
             background: rgba(255, 255, 255, 0.95);
-            border: 2px solid var(--bridal-pink);
-            color: var(--primary-dark);
-            width: 36px;
-            height: 36px;
+            border: 2px solid #a4b494;
+            color: var(--olive-mid);
+            width: 32px; /* Slightly reduced button scale */
+            height: 32px;
             border-radius: 50%;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 10px rgba(164, 180, 148, 0.15);
             transition: all 0.2s;
             z-index: 50;
             user-select: none;
         }
         .slide-btn:hover {
-            background: var(--gold-detail);
-            border-color: var(--gold-detail);
+            background: #a4b494;
             color: #ffffff;
         }
         .prev-btn { left: 10px; }
@@ -189,94 +239,17 @@ tags: [wedding favours uk, custom bridal gifts, personalized hen party accessori
             flex-direction: column;
             justify-content: space-between;
         }
+
+        /* Global product text rules: sizes and colours */
         .product-card h3 {
-            margin: 0 0 10px 0;
-            color: var(--primary-dark);
-            font-size: 1.3rem;
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-        }
-        .product-card .price {
-            font-weight: 600;
-            color: var(--gold-detail);
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            letter-spacing: 0.5px;
+            margin: 0 0 8px 0;
+            color: var(--olive-mid);
+            font-size: 1.15rem; /* Reduced from 1.35rem for a sharper, cleaner title */
         }
         .product-card p {
-            font-size: 0.9rem;
+            font-size: 0.85rem; /* Reduced from 0.95rem for neat description text */
             color: var(--text-muted);
-            margin: 0 0 25px 0;
-            line-height: 1.6;
-            font-weight: 400;
-        }
-
-        /* Centered container button wrap limits */
-        .stripe-container {
-            max-width: 220px;
-            margin: auto auto 0 auto;
-            padding: 0 5px;
-            min-height: 45px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-        /* 🚀 MASTER OVERRIDE: TARGETS AND FORCES ALL 12 CODES TO BECOME PREMIUM RECTANGLES */
-        .stripe-container div,
-        .stripe-container iframe, 
-        .stripe-container .payhip-embed-btn,
-        .stripe-container .payhip-buy-button,
-        .stripe-container button,
-        .stripe-container a {
-            width: 100% !important;
-            max-width: 220px !important;
-            min-width: 180px !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            height: 46px !important;
-            border-radius: 4px !important;
-            box-sizing: border-box !important;
-            text-decoration: none !important;
-        }
-
-        /* Uniformly coloring and lettering every variation style row link */
-        .payhip-buy-button, 
-        .payhip-add-to-cart-btn, 
-        .payhip-embed-btn {
-            background-color: var(--gold-detail) !important;
-            color: #ffffff !important;
-            font-family: 'Inter', sans-serif !important;
-            font-weight: 600 !important;
-            letter-spacing: 1px !important;
-            text-transform: uppercase !important;
-            font-size: 0.85rem !important;
-            cursor: pointer !important;
-            transition: background-color 0.2s !important;
-        }
-        
-        .payhip-buy-button:hover, 
-        .payhip-add-to-cart-btn:hover {
-            background-color: #cda272 !important;
-        }
-
-        footer {
-            text-align: center;
-            padding: 60px 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #ffffff;
-            background-color: var(--primary-dark);
-            border-top: 4px solid var(--bridal-pink);
-            margin-top: 80px;
-        }
-
-        @media (max-width: 992px) {
-            .product-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-            .slideshow-container { height: 280px; }
-        }
-        @media (max-width: 650px) {
-            .product-grid { grid-template-columns: 1fr; gap: 30px; }
+            line-height: 1.5;
         }
     </style>
     <!-- 🌟 GOOGLE MERCHANDISING STRUCTURED DATA SCHEMA: BRIDAL CHARMS RANGE -->
