@@ -24,18 +24,20 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
     
     <!-- Payhip Secure Shopping Cart Loader -->
     <script type="text/javascript" src="https://payhip.com"></script>
-     <style>
+         <style>
         :root {
-            --bg-color: #AEC6CF; /* Beautiful pastel blue background */
-            --primary-dark: #2d3748; /* Premium charcoal text for clear reading */
-            --header-blue: #3A6073; /* Rich slate blue for header container */
-            --ice-blue-accent: #E6F2F7; /* Elegant pale ice blue for borders and backgrounds */
-            --button-blue: #4A7A96; /* Coordinating blue for Payhip button highlights */
+            --bg-color: #fff9f5; /* A bright, energetic warm cream */
+            --primary-dark: #1e293b;
+            --olive-dark: #2c3524;   /* Deep olive for high-contrast text */
+            --olive-mid: #3b4731;    /* Mid-tone olive for titles */
+            --bright-cyan: #00d2ff;  /* Fresh glass accent */
             --card-bg: #ffffff;
-            --text-muted: #5a6a75;
+            --text-muted: #475569;
+            /* Your custom soft pale-to-olive green gradient */
+            --green-gradient: linear-gradient(135deg, #e2ecc8 0%, #a4b494 100%);
         }
-         
-          /* Centered container button wrap limits */
+        
+         /* Centered container button wrap limits */
         .stripe-container {
             max-width: 220px;
             margin: auto auto 0 auto;
@@ -65,21 +67,23 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
             text-decoration: none !important;
         }
 
-        /* Tailors the button background color to your new blue focus theme */
+        /* Tailors the button background color to your soft green gradient theme */
         .payhip-buy-button, .payhip-add-to-cart-btn, .payhip-embed-btn {
-            background-color: var(--button-blue) !important;
-            color: #ffffff !important;
+            background: var(--green-gradient) !important;
+            color: var(--olive-dark) !important; 
             font-family: 'Inter', sans-serif !important;
             font-weight: 600 !important;
             letter-spacing: 1px !important;
             text-transform: uppercase !important;
-            font-size: 0.85rem !important;
+            font-size: 0.78rem !important; /* Made slightly smaller and sleeker */
             cursor: pointer !important;
-            transition: background-color 0.2s !important;
+            border: none !important;
+            transition: opacity 0.2s !important;
         }
         .payhip-buy-button:hover, .payhip-add-to-cart-btn:hover {
-            background-color: #3A6073 !important; /* Slightly darker blue hover */
+            opacity: 0.85 !important; /* Elegant soft fade on hover */
         }
+        
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
@@ -91,9 +95,9 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
 
         nav {
             background-color: #ffffff;
-            padding: 20px 15px;
+            padding: 16px 15px; /* Slightly tightened padding */
             text-align: center;
-            border-bottom: 2px solid var(--ice-blue-accent);
+            border-bottom: 2px solid #a4b494; /* Soft olive border to tie navigation together */
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -103,49 +107,50 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
             margin: 0 18px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.78rem; /* Reduced from 0.85rem for a more delicate header link */
             letter-spacing: 1.5px;
             text-transform: uppercase;
             transition: color 0.2s;
         }
         nav a:hover {
-            color: var(--button-blue);
+            color: var(--olive-mid);
         }
-        
-        /* Standardised Two-Tone Slate Blue Editorial Header Bar */
+
+        /* Elegant Editorial Header with your custom green background gradient */
         header {
-            background: var(--header-blue); 
-            color: #ffffff;
-            padding: 50px 20px;
+            background: var(--green-gradient); 
+            color: var(--olive-dark);
+            padding: 60px 20px; /* Reduced from 80px to match the smaller text */
             text-align: center;
-            border-bottom: 3px solid var(--ice-blue-accent);
-            box-shadow: 0 4px 20px rgba(58, 96, 115, 0.15);
+            border-bottom: 3px solid #ffffff;
+            box-shadow: 0 4px 20px rgba(164, 180, 148, 0.2);
         }
         header h1 {
             margin: 0;
-            font-size: 2.2rem; /* Uniform sizing matches other layout standards */
+            font-size: 2.6rem; /* Reduced from 3.5rem so it feels balanced and not overwhelming */
             font-family: 'Playfair Display', serif;
             font-weight: 600;
             letter-spacing: -0.5px;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            color: var(--olive-dark);
+            text-shadow: 0 1px 4px rgba(255,255,255,0.4);
         }
         header p {
             font-family: 'Playfair Display', serif;
-            font-size: 1.05rem; /* Uniform sizing matches other layout standards */
+            font-size: 1.15rem; /* Reduced from 1.4rem */
             margin: 12px 0 0 0;
             font-style: italic;
-            color: #ffffff;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            color: var(--olive-mid);
+            text-shadow: 0 1px 3px rgba(255,255,255,0.4);
             opacity: 0.95;
         }
 
         .container {
             max-width: 1200px;
-            margin: 60px auto;
+            margin: 45px auto; /* Reduced from 60px to compact the page layout */
             padding: 0 20px;
         }
 
-        /* Strict Grid Configuration for balanced row spacing */
+        /* Fixed Grid Layout: Balanced columns across screen sizes */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -154,12 +159,12 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
         
         .product-card {
             background: var(--card-bg);
-            border: 2px solid var(--ice-blue-accent);
+            border: 2px solid #eae6e1;
             border-radius: 8px;
             overflow: hidden;
             text-align: center;
             padding-bottom: 25px;
-            box-shadow: 0 8px 24px rgba(45, 55, 72, 0.02);
+            box-shadow: 0 8px 24px rgba(30, 41, 59, 0.04);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -167,18 +172,18 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
         }
         .product-card:hover {
             transform: translateY(-6px);
-            border-color: var(--button-blue);
-            box-shadow: 0 12px 30px rgba(74, 122, 150, 0.15);
+            border-color: #a4b494;
+            box-shadow: 0 12px 30px rgba(164, 180, 148, 0.25);
         }
 
-        /* Slide Container Parameter Frame */
+        /* Bright Slideshow Container height parameters */
         .slideshow-container {
             position: relative;
             width: 100%;
             height: 300px; 
             overflow: hidden;
-            background: radial-gradient(circle, #ffffff 60%, #f4f9fc 100%);
-            border-bottom: 2px solid var(--ice-blue-accent);
+            background: radial-gradient(circle, #ffffff 60%, #f4f6f0 100%);
+            border-bottom: 2px solid #eae6e1;
         }
         .slideshow-container img {
             position: absolute;
@@ -203,24 +208,24 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
             top: 50%;
             transform: translateY(-50%);
             background: rgba(255, 255, 255, 0.95);
-            border: 2px solid var(--ice-blue-accent);
-            color: var(--primary-dark);
-            width: 36px;
-            height: 36px;
+            border: 2px solid #a4b494;
+            color: var(--olive-mid);
+            width: 32px; /* Slightly reduced button scale */
+            height: 32px;
             border-radius: 50%;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 10px rgba(164, 180, 148, 0.15);
             transition: all 0.2s;
             z-index: 50;
             user-select: none;
-            .slide-btn:hover {
-            background: var(--button-blue);
-            border-color: var(--button-blue);
+        }
+        .slide-btn:hover {
+            background: #a4b494;
             color: #ffffff;
         }
         .prev-btn { left: 10px; }
@@ -233,74 +238,20 @@ tags: [handcrafted beaded keychains, custom bag charms uk, personalized resin ke
             flex-direction: column;
             justify-content: space-between;
         }
-         ..product-card h3 {
-            margin: 0 0 10px 0 !important;
-            color: var(--primary-dark) !important;
-            font-size: 1rem !important; /* Forces your titles to match Resin layout sizes */
-            font-family: 'Playfair Display', serif !important;
-            font-weight: 600 !important;
-            text-align: center !important;
-        }
-        .product-card .price {
-            font-weight: 600 !important;
-            color: var(--button-blue) !important;
-            font-size: 1.1rem !important;
-            margin-bottom: 15px !important;
-            letter-spacing: 0.5px !important;
-            text-align: center !important;
+
+        /* Global product text rules: sizes and colours */
+        .product-card h3 {
+            margin: 0 0 8px 0;
+            color: var(--olive-mid);
+            font-size: 1.15rem; /* Reduced from 1.35rem for a sharper, cleaner title */
         }
         .product-card p {
-            font-size: 0.8rem !important; /* Forces descriptions to match Resin layout sizes */
-            color: var(--text-muted) !important;
-            margin: 0 0 25px 0 !important;
-            line-height: 1.5 !important;
-            font-weight: 400 !important;
-            text-align: center !important;
-        }
-
-        /* Perfectly centered container for Payhip's direct button rows */
-        .stripe-container {
-            max-width: 160px;
-            margin: auto auto 0 auto;
-            padding: 0 5px;
-            min-height: 45px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-
-        /* Customizing Payhip's standard injected layout button style variables */
-        .payhip-add-to-cart-btn {
-            background-color: var(--button-blue) !important;
-            color: #ffffff !important;
-            border-radius: 4px !important;
-            font-family: 'Inter', sans-serif !important;
-            font-weight: 600 !important;
-            letter-spacing: 1px !important;
-            text-transform: uppercase !important;
-            padding: 12px 24px !important;
-            font-size: 0.85rem !important;
-        }
-
-        footer {
-            text-align: center;
-            padding: 60px 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #ffffff;
-            background-color: var(--primary-dark);
-            border-top: 4px solid var(--ice-blue-accent);
-            margin-top: 80px;
-        }
-
-        @media (max-width: 992px) {
-            .product-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-            .slideshow-container { height: 280px; }
-        }
-        @media (max-width: 650px) {
-            .product-grid { grid-template-columns: 1fr; gap: 30px; }
+            font-size: 0.85rem; /* Reduced from 0.95rem for neat description text */
+            color: var(--text-muted);
+            line-height: 1.5;
         }
     </style>
+
     <!-- 🌟 GOOGLE MERCHANDISING STRUCTURED DATA SCHEMA -->
 <script type="application/ld+json">
 {
