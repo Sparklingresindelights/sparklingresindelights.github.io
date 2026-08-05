@@ -27,10 +27,11 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
     
     <style>
         :root {
-            --bg-color: #fffbfc; /* Airy white with a tiny hint of blush pink */
+            --bg-color: #AEC6CF; /* Beautiful pastel blue background */
             --primary-dark: #2d3748; /* Soft readable charcoal text color */
-            --baby-pink: #ffeef2; /* Dreamy pale baby pink for accents */
-            --pink-focal: #ffb6c1; /* Soft pink for focal highlights and hover effects */
+            --header-blue: #3A6073; /* Rich slate blue for header */
+            --ice-blue-accent: #E6F2F7; /* Soft ice blue for accents and borders */
+            --button-blue: #4A7A96; /* Coordinating blue for Payhip buttons */
             --card-bg: #ffffff;
             --text-muted: #5a6a75;
         }
@@ -65,9 +66,9 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
             text-decoration: none !important;
         }
 
-        /* Tailors the button background color to your soft pink focus theme */
+        /* Tailors the button background color to your new blue focus theme */
         .payhip-buy-button, .payhip-add-to-cart-btn, .payhip-embed-btn {
-            background-color: var(--pink-focal) !important;
+            background-color: var(--button-blue) !important;
             color: #ffffff !important;
             font-family: 'Inter', sans-serif !important;
             font-weight: 600 !important;
@@ -78,7 +79,7 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
             transition: background-color 0.2s !important;
         }
         .payhip-buy-button:hover, .payhip-add-to-cart-btn:hover {
-            background-color: #ff99ab !important; /* Slightly darker pink hover */
+            background-color: #3A6073 !important; /* Slightly darker blue hover */
         }
         body {
             font-family: 'Inter', sans-serif;
@@ -93,7 +94,7 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
             background-color: #ffffff;
             padding: 20px 15px;
             text-align: center;
-            border-bottom: 2px solid var(--baby-pink);
+            border-bottom: 2px solid var(--ice-blue-accent);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -109,33 +110,33 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
             transition: color 0.2s;
         }
         nav a:hover {
-            color: var(--pink-focal);
+            color: var(--button-blue);
         }
 
-        /* Vibrant Editorial Header with a striking background gradient */
+        /* Beautiful Two-Tone Slate Blue Header Bar */
         header {
-            background: linear-gradient(135deg, #00c49f 0%, #2f3e46 50%, #ffb703 100%); 
+            background: var(--header-blue); 
             color: #ffffff;
-            padding: 80px 20px;
+            padding: 50px 20px;
             text-align: center;
-            border-bottom: 3px solid #ffffff;
-            box-shadow: 0 4px 20px rgba(0, 196, 159, 0.15);
+            border-bottom: 3px solid var(--ice-blue-accent);
+            box-shadow: 0 4px 20px rgba(58, 96, 115, 0.15);
         }
         header h1 {
             margin: 0;
-            font-size: 1.75rem; /* Keeps the heading nice and compact */
+            font-size: 2.2rem;
             font-family: 'Playfair Display', serif;
             font-weight: 600;
             letter-spacing: -0.5px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         header p {
             font-family: 'Playfair Display', serif;
-            font-size: 0.95rem
-            margin: 15px 0 0 0;
+            font-size: 1.05rem;
+            margin: 12px 0 0 0;
             font-style: italic;
             color: #ffffff;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            text-shadow: 0 2px 5px rgba(0,0,0,0.1);
             opacity: 0.95;
         }
 
@@ -154,7 +155,7 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
         
         .product-card {
             background: var(--card-bg);
-            border: 2px solid var(--baby-pink);
+            border: 2px solid var(--ice-blue-accent);
             border-radius: 8px;
             overflow: hidden;
             text-align: center;
@@ -167,8 +168,8 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
         }
         .product-card:hover {
             transform: translateY(-6px);
-            border-color: var(--pink-focal);
-            box-shadow: 0 12px 30px rgba(255, 182, 193, 0.2);
+            border-color: var(--button-blue);
+            box-shadow: 0 12px 30px rgba(74, 122, 150, 0.15);
         }
 
         .slideshow-container {
@@ -176,8 +177,8 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
             width: 100%;
             height: 300px; 
             overflow: hidden;
-            background: radial-gradient(circle, #ffffff 60%, #fff5f7 100%);
-            border-bottom: 2px solid var(--baby-pink);
+            background: radial-gradient(circle, #ffffff 60%, #f4f9fc 100%);
+            border-bottom: 2px solid var(--ice-blue-accent);
         }
         .slideshow-container img {
             position: absolute;
@@ -202,7 +203,7 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
             top: 50%;
             transform: translateY(-50%);
             background: rgba(255, 255, 255, 0.95);
-            border: 2px solid var(--baby-pink);
+            border: 2px solid var(--ice-blue-accent);
             color: var(--primary-dark);
             width: 36px;
             height: 36px;
@@ -219,13 +220,12 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
             user-select: none;
         }
         .slide-btn:hover {
-            background: var(--pink-focal);
-            border-color: var(--pink-focal);
+            background: var(--button-blue);
+            border-color: var(--button-blue);
             color: #ffffff;
         }
         .prev-btn { left: 10px; }
         .next-btn { right: 10px; }
-
         .product-info {
             padding: 25px 20px 0 20px;
             flex-grow: 1;
@@ -242,7 +242,7 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
         }
         .product-card .price {
             font-weight: 600;
-            color: var(--bright-teal);
+            color: var(--button-blue);
             font-size: 1.1rem; /* UPDATED: Sized down slightly to balance with titles */
             margin-bottom: 15px;
             letter-spacing: 0.5px;
@@ -268,7 +268,7 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
 
         /* Payhip button styling */
         .payhip-add-to-cart-btn {
-            background-color: var(--pink-focal) !important;
+            background-color: var(--button-blue) !important;
             color: #ffffff !important;
             border-radius: 4px !important;
             font-family: 'Inter', sans-serif !important;
@@ -286,7 +286,7 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
             font-weight: 500;
             color: #ffffff;
             background-color: var(--primary-dark);
-            border-top: 4px solid var(--baby-pink);
+            border-top: 4px solid var(--ice-blue-accent);
             margin-top: 80px;
         }
 
@@ -438,26 +438,7 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
                 </div>
             </div>
 
-            <!-- Item 2: The Willie Pen -->
-            <div class="product-card">
-                <div class="slideshow-container">
-                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
-                    <img src="willie - pen.jpg" alt="Willie Pen" class="active">
-                    <img src="willie - pen1.jpg" alt="Willie Pen View 2">
-                    <img src="willie - pen3.jpg" alt="Willie Pen 3">
-                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
-                </div>
-                <div class="product-info">
-                    <h3>The Willie Pink Beaded Pen | Luxury Custom Stationery</h3>
-                    <p class="price">£6.00</p>
-                    <p>Shop The Willie pink beaded pen in the UK. Handcrafted with sparkling crystal detailing and smooth black ink. The perfect luxury boutique office gift.</p>
-                </div>
-                <div class="stripe-container">
-                 <a href="https://payhip.com/b/DTdw2" class="payhip-buy-button" data-theme="none" data-product="DTdw2">View Item Details</a>
-                </div>
-            </div>
-
-                <!-- Item 2: Purple Butterfly Beaded Pen -->
+            <!-- Item 2: Purple Butterfly Beaded Pen -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -478,7 +459,7 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
 
            
             
-                 <!-- Item 4: Lilac Have Fun Pen -->
+                 <!-- Item 3: Lilac Have Fun Pen -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -499,7 +480,7 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
                 </div>
             </div>
                     
-            <!-- Item 5: Hot Pink Rhinestone -->
+            <!-- Item 4: Hot Pink Rhinestone -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -520,7 +501,7 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
                 </div>
             </div>
 
-            <!-- Item 6: Cute Green Frog -->
+            <!-- Item 5: Cute Green Frog -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -541,7 +522,7 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
                 </div>
             </div>
 
-            <!-- Item 7: Highland Cow Beaded Pens Collection -->
+            <!-- Item 6: Highland Cow Beaded Pens Collection -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -562,7 +543,7 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
                 </div>
             </div>
 
-            <!-- Item 8: Handmade Custom Beaded Pens Collection -->
+            <!-- Item 7: Handmade Custom Beaded Pens Collection -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -582,74 +563,39 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
                     </div>
                 </div>
                 <div class="stripe-container">
-                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 5 DIRECTLY BELOW -->
               <a href="https://payhip.com/b/lhfzF" class="payhip-buy-button" data-theme="none" data-product="lhfzF">View Item Details</a>
                      </div>
                   </div>
-
-                  <!-- Item 9: 3-Piece Luxury Beaded Pen -->
-            <div class="product-card">
-                <div class="slideshow-container">
-                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
-                    <img src="luxury beaded pen.jpg" alt="3-Piece Luxury Beaded Pen Gift Set View 1" class="active">
-                    <img src="the red ombre western cow.jpg" alt="The Red Ombre Western Cow Pen View 2">
-                    <img src="the neon sunset floral.jpg" alt="The Neon Sunset Floral Pen View 3">
-                     <img src="the winter willow porcelain.jpg" alt="The Winter Willow Porcelain Pen View 4">
-                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
-                </div>
-                <div class="product-info">
-                    <div>
-                        <h3>3-Piece Luxury Beaded Pen Gift Set | Novelty Stationery UK</h3>
-                        <p class="price">£12.00</p>
-                        <p>Shop our custom 3-Piece Beaded Pen Gift Set in the UK. Handcrafted novelty stationery bundle featuring cow print, neon floral, and porcelain-style designs.</p>
-                    </div>
-                </div>
-                <div class="stripe-container">
-                    <!-- 🌟 PASTE YOUR PAYHIP EMBED CODE FOR ITEM 5 DIRECTLY BELOW -->
-               <a href="https://payhip.com/b/yAfhV" class="payhip-buy-button" data-theme="none" data-product="yAfhV">View Item Details</a>
-                     </div>
-                  </div>
-
-
-                  
-                    
-                    
-                    
-                    
-               
-                    
-        </div> <!-- End of .product-grid -->
+         </div> <!-- End of .product-grid -->
     </div> <!-- End of .container -->
 
     <footer>
         <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK via Tracked Evri Delivery.</p>
+        <div style="margin-top: 15px; font-size: 0.85rem; opacity: 0.8;">
+            Follow Our Journey: 
+            <a href="https://instagram.com" target="_blank" style="color: #ffffff; margin: 0 10px; text-decoration: underline;">Instagram</a> | 
+            <a href="https://payhip.com" target="_blank" style="color: #ffffff; margin: 0 10px; text-decoration: underline;">Payhip Profile</a>
+        </div>
     </footer>
 
-    <!-- Multi-View Image Slider Engine Controller -->
+    <!-- Interactive Image Slideshow Script Engine -->
     <script>
-        document.querySelectorAll('.slideshow-container').forEach(slideshow => {
-            const images = slideshow.querySelectorAll('img');
-            const prevBtn = slideshow.querySelector('.prev-btn');
-            const nextBtn = slideshow.querySelector('.next-btn');
+        document.querySelectorAll('.product-card').forEach(card => {
+            const slides = card.querySelectorAll('.slideshow-container img');
+            if (slides.length <= 1) return; 
+            
             let currentIndex = 0;
-
-            function updateSlides(newIndex) {
-                images[currentIndex].classList.remove('active');
-                currentIndex = (newIndex + images.length) % images.length;
-                images[currentIndex].classList.add('active');
+            const prevBtn = card.querySelector('.prev-btn');
+            const nextBtn = card.querySelector('.next-btn');
+            
+            function showSlide(index) {
+                slides[currentIndex].classList.remove('active');
+                currentIndex = (index + slides.length) % slides.length;
+                slides[currentIndex].classList.add('active');
             }
-
-            if(prevBtn && nextBtn) {
-                prevBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    updateSlides(currentIndex - 1);
-                });
-
-                nextBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    updateSlides(currentIndex + 1);
-                });
-            }
+            
+            prevBtn.addEventListener('click', (e) => { e.preventDefault(); showSlide(currentIndex - 1); });
+            nextBtn.addEventListener('click', (e) => { e.preventDefault(); showSlide(currentIndex + 1); });
         });
     </script>
 </body>
