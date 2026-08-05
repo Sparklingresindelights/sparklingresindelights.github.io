@@ -24,12 +24,15 @@ tags: [handmade crafts uk, bespoke custom gifts, custom beaded pens, resin jewel
     
     <style>
         :root {
-            --pastel-bg: #AEC6CF; /* Beautiful pastel blue background */
-            --pastel-blue-accent: #E6F2F7; /* Soft ice blue accent to replace the old yellow */
-            --primary-dark: #2d3748; /* Premium dark charcoal for readable text */
-            --crisp-grey: #f8f9fa; /*A crisp, bright grey.*/
-            --accent-gold: #cca43b; /* Subtle golden touch for stars and highlights */
+            --pastel-bg: #cde0c9; /* Updated to a beautiful soft sage/pastel green background */
+            --olive-dark: #000000;   /* Forced solid black for high contrast */
+            --olive-mid: #2c3524;    /* Deep olive dark charcoal tone */
+            --primary-dark: #1e293b; /* Premium dark slate text */
+            --crisp-grey: #f8f9fa;   /* A crisp, bright grey */
+            --accent-gold: #8d997d;  /* Muted olive-tint gold highlight for buttons/stars */
             --card-white: #ffffff;
+            /* Your custom soft pale-to-olive green gradient */
+            --green-gradient: linear-gradient(135deg, #e2ecc8 0%, #a4b494 100%);
         }
 
         body {
@@ -42,28 +45,28 @@ tags: [handmade crafts uk, bespoke custom gifts, custom beaded pens, resin jewel
         }
         nav {
             background-color: #ffffff;
-            padding: 20px 15px;
+            padding: 16px 15px; /* Compacted navigation padding */
             text-align: center;
-            border-bottom: 2px solid var(--pastel-blue-accent);
+            border-bottom: 2px solid #a4b494; /* Soft olive border matching product pages */
         }
         nav a {
             color: var(--primary-dark);
             margin: 0 18px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.78rem; /* Scaled down for a sleek, delicate text menu */
             letter-spacing: 1.5px;
             text-transform: uppercase;
             transition: color 0.2s;
         }
         nav a:hover {
-            color: var(--accent-gold);
+            color: var(--olive-mid);
         }
         
         .split-layout {
             display: flex;
             max-width: 1300px;
-            margin: 40px auto;
+            margin: 30px auto; /* Compacted layout margins */
             padding: 0 30px;
             gap: 40px;
         }
@@ -73,22 +76,23 @@ tags: [handmade crafts uk, bespoke custom gifts, custom beaded pens, resin jewel
             flex-direction: column;
         }
 
+        /* Home Header Box styled with your stunning custom green gradient */
         .header-box {
-            background-color: var(--pastel-blue-accent);
-            padding: 40px;
-            border-bottom: 2px solid #cbdde6;
+            background: var(--green-gradient) !important;
+            padding: 35px 40px;
+            border-bottom: 2px solid #a4b494;
             border-radius: 8px;
             box-sizing: border-box;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 15px rgba(203, 221, 230, 0.2);
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(164, 180, 148, 0.2);
         }
         .header-text h1 {
             margin: 0; 
-            font-size: 2.8rem; 
+            font-size: 2.4rem; /* Scaled down from 2.8rem for a balanced header */
             font-family: 'Playfair Display', serif; 
             font-weight: 600; 
             letter-spacing: -0.5px; 
-            color: var(--primary-dark);
+            color: var(--olive-dark) !important; /* Forced crisp black text */
         }
 
         /* Improved Slideshow Frame Box for clean resizing */
@@ -98,9 +102,9 @@ tags: [handmade crafts uk, bespoke custom gifts, custom beaded pens, resin jewel
             position: relative;
             overflow: hidden;
             border-radius: 8px;
-            border: 1px solid var(--pastel-blue-accent);
-            background: radial-gradient(circle, #ffffff 60%, #f4f9fc 100%);
-            margin-bottom: 40px;
+            border: 1px solid #a4b494;
+            background: radial-gradient(circle, #ffffff 60%, #f4f6f0 100%);
+            margin-bottom: 30px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.02);
         }
         .bottomSlide {
@@ -112,7 +116,7 @@ tags: [handmade crafts uk, bespoke custom gifts, custom beaded pens, resin jewel
             opacity: 0;
             transition: opacity 1.2s ease-in-out;
             box-sizing: border-box;
-            padding: 20px; /* Adds breathing room around the product images */
+            padding: 20px; 
         }
         .bottomSlide.active {
             opacity: 1;
@@ -120,7 +124,7 @@ tags: [handmade crafts uk, bespoke custom gifts, custom beaded pens, resin jewel
         .bottomSlide img {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Keeps same images but prevents stretching/cutting off */
+            object-fit: contain; 
         }
         
         .right-image-panel {
@@ -135,7 +139,7 @@ tags: [handmade crafts uk, bespoke custom gifts, custom beaded pens, resin jewel
             border: 1px solid #eae6e1;
             overflow: hidden;
             box-shadow: 0 8px 25px rgba(0,0,0,0.02);
-            background-color: var(--pastel-blue-accent);
+            background-color: #ffffff;
         }
         .showcase-image-box img {
             width: 100%;
@@ -145,53 +149,53 @@ tags: [handmade crafts uk, bespoke custom gifts, custom beaded pens, resin jewel
 
         .info-section {
             background: var(--card-white);
-            border: 1px solid #cbdde6;
+            border: 1px solid #eae6e1;
             border-radius: 8px;
-            padding: 35px;
-            margin-bottom: 40px;
+            padding: 30px;
+            margin-bottom: 30px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.01);
         }
         .info-section h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
+            font-size: 1.6rem; /* Slightly reduced text size */
             margin-top: 0;
-            color: var(--primary-dark);
+            color: var(--olive-mid);
         }
         .info-section p {
-            font-size: 0.95rem;
+            font-size: 0.88rem; /* Slightly smaller reading text */
             line-height: 1.6;
             color: #4a5568;
         }
         .delivery-badge {
             display: inline-flex;
             align-items: center;
-            background-color: #f4f9fc;
-            border: 1px solid var(--accent-gold);
-            padding: 10px 18px;
+            background-color: #f4f6f0;
+            border: 1px solid #a4b494;
+            padding: 8px 16px;
             border-radius: 50px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
-            color: var(--primary-dark);
+            color: var(--olive-mid);
             margin-top: 15px;
             letter-spacing: 0.5px;
         }
 
         .feedback-form-container {
             background: var(--card-white); 
-            padding: 40px 30px; 
+            padding: 35px 30px; 
             border-radius: 8px; 
-            border: 1px solid #cbdde6; 
+            border: 1px solid #eae6e1; 
             text-align: left; 
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.01);
         }
         .feedback-form-container h3 {
             font-family: 'Playfair Display', serif; 
             font-weight: 500; 
-            font-size: 1.6rem; 
+            font-size: 1.4rem; /* Scaled down slightly */
             margin-top: 0; 
-            margin-bottom: 25px; 
-            color: var(--primary-dark);
+            margin-bottom: 20px; 
+            color: var(--olive-mid);
             text-align: center;
         }
         .form-group {
@@ -201,59 +205,57 @@ tags: [handmade crafts uk, bespoke custom gifts, custom beaded pens, resin jewel
             display: block; 
             font-weight: 600; 
             margin-bottom: 8px; 
-            font-size: 0.8rem; 
+            font-size: 0.75rem; 
             text-transform: uppercase; 
             letter-spacing: 1px; 
-            color: var(--primary-dark);
+            color: var(--olive-mid);
         }
         .feedback-form-container input,
         .feedback-form-container select,
         .feedback-form-container textarea {
             width: 100%; 
-            padding: 14px; 
+            padding: 12px; 
             border: 1px solid #cbdde6; 
             border-radius: 4px; 
             box-sizing: border-box; 
-            font-size: 0.95rem; 
+            font-size: 0.9rem; 
             background-color: #fbfdfe;
             font-family: 'Inter', sans-serif;
             color: var(--primary-dark);
         }
         .feedback-form-container textarea {
-            min-height: 120px;
+            min-height: 110px;
             resize: vertical;
         }
+        
+        /* Form button custom styled with matching elegant olive theme gradient */
         .submit-btn {
             display: block; 
             width: 100%; 
-            background-color: var(--accent-gold); 
-            color: #ffffff; 
-            padding: 16px; 
+            background: var(--green-gradient); 
+            color: var(--olive-dark); 
+            padding: 14px; 
             border: none; 
             border-radius: 4px; 
             font-weight: 600; 
-            font-size: 0.9rem; 
-            text-transform: uppercase; 1.5px; 
+            font-size: 0.85rem; 
+            text-transform: uppercase;
+            letter-spacing: 1.5px; 
             cursor: pointer;
-            transition: background-color 0.2s;
+            transition: opacity 0.2s;
         }
         .submit-btn:hover {
-            background-color: #b38f32;
+            opacity: 0.85;
         }
 
         footer {
-            background-color: var(--primary-dark);
+            background-color: var(--olive-mid); /* Deep olive background for footer grounding */
             color: #ffffff;
             text-align: center;
-            padding: 40px 20px;
-            font-size: 0.9rem;
-            margin-top: 60px;
-            border-top: 4px solid var(--pastel-blue-accent);
-        }
-        @media (max-width: 992px) {
-            .split-layout { flex-direction: column; }
-            .right-image-panel { width: 100%; height: auto; }
-            .showcase-image-box { height: 300px; }
+            padding: 35px 20px;
+            font-size: 0.85rem;
+            margin-top: 50px;
+            border-top: 4px solid #e2ecc8;
         }
     </style>
     <meta name="facebook-domain-verification" content="8mm2j9d9yfiypvkbqq1apgfhwrzqin" />
