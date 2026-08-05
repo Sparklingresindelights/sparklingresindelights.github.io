@@ -112,28 +112,30 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
             color: var(--pink-focal);
         }
 
-        /* Editorial Header with a baby pink fading softly into a subtle white */
+       /* Vibrant Editorial Header with a striking background gradient */
         header {
-            background: linear-gradient(135deg, #ffdeee 0%, #fffbfd 100%); 
-            color: var(--primary-dark);
+            background: linear-gradient(135deg, #00c49f 0%, #2f3e46 50%, #ffb703 100%); 
+            color: #ffffff;
             padding: 80px 20px;
             text-align: center;
             border-bottom: 3px solid #ffffff;
-            box-shadow: 0 4px 20px rgba(255, 222, 238, 0.25);
-        }
+            box-shadow: 0 4px 20px rgba(0, 196, 159, 0.15);
+       }
         header h1 {
             margin: 0;
-            font-size: 3.5rem;
+            font-size: 1.75rem; /* UPDATED: Shrunk to exactly half size (was 3.5rem) */
             font-family: 'Playfair Display', serif;
             font-weight: 600;
             letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
         header p {
             font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
+            font-size: 0.7rem; /* UPDATED: Shrunk to exactly half size (was 1.4rem) */
             margin: 15px 0 0 0;
             font-style: italic;
-            color: var(--text-muted);
+            color: #ffffff;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
             opacity: 0.95;
         }
 
@@ -143,6 +145,7 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
             padding: 0 20px;
         }
 
+         /* Fixed Grid Layout: Balanced columns across screen sizes */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -233,22 +236,22 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
         .product-card h3 {
             margin: 0 0 10px 0;
             color: var(--primary-dark);
-            font-size: 1.3rem;
+            font-size: 1rem; /* UPDATED: Made smaller to sit cleanly on your new backdrop */
             font-family: 'Playfair Display', serif;
             font-weight: 600;
         }
         .product-card .price {
             font-weight: 600;
-            color: var(--pink-focal);
-            font-size: 1.3rem;
+            color: var(--bright-teal);
+            font-size: 1.1rem; /* UPDATED: Sized down slightly to balance with titles */
             margin-bottom: 15px;
             letter-spacing: 0.5px;
         }
-        .product-card p {
-            font-size: 0.9rem;
+       product-card p {
+            font-size: 0.8rem; /* UPDATED: Tightened text parameters for a sleeker look */
             color: var(--text-muted);
             margin: 0 0 25px 0;
-            line-height: 1.6;
+            line-height: 1.5;
             font-weight: 400;
         }
 
