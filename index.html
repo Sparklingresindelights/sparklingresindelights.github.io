@@ -338,38 +338,51 @@ tags: [handmade crafts uk, bespoke custom gifts, custom beaded pens, resin jewel
             </div>
             
             <!-- Tidied Web3Forms Review Form -->
-            <div class="feedback-form-container">
-                <h3>Leave a 5-Star Review</h3>
-                <form action="https://web3forms.com" method="POST">
-                    <input type="hidden" name="access_key" value="cb4b22c0-fa2c-4ffc-828d-6a2504dda17b">
-                    <input type="hidden" name="subject" value="New 5-Star Review">
-                    <input type="hidden" name="replyto" value="sparklingresdelights1@gmail.com">
+<div class="feedback-form-container">
+    <h3>Leave a 5-Star Review</h3>
+    <!-- 🚀 FIXED: Pointed action directly to the Web3Forms submit API endpoint -->
+    <form action="https://web3forms.com" method="POST">
+        <input type="hidden" name="access_key" value="15079e1e-da27-45ee-850c-dfb1181e1342">
+        <input type="hidden" name="subject" value="New 5-Star Review">
+        <input type="hidden" name="replyto" value="sparklingresdelights1@gmail.com">
+        
+        <!-- 🚀 OPTIONAL: Automatically redirects users back to your homepage after submitting -->
+        <input type="hidden" name="redirect" value="https://sparklingresindelights.co.uk">
 
-                    <div class="form-group">
-                        <label>Your Name</label>
-                        <input type="text" name="name" required placeholder="Enter your name">
-                    </div>
+        <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" name="name" required placeholder="Enter your name">
+        </div>
 
-                    <div class="form-group">
-                        <label for="rating">Rating</label>
-                        <select id="rating" name="rating" required>
-                            <option value="5">★★★★★ (5 Stars)</option>
-                            <option value="4">★★★★☆ (4 Stars)</option>
-                            <option value="3">★★★☆☆ (3 Stars)</option>
-                            <option value="2">★★☆☆☆ (2 Stars)</option>
-                            <option value="1">★☆☆☆☆ (1 Star)</option>
-                        </select>
-                       </div>
-
-                    <div class="form-group">
-                        <label>Review Comments</label>
-                        <textarea name="comments" required placeholder="Write your comments..."></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Submit Review</button>
-                </form>
+        <!-- 🚀 IMPROVED: Beautiful Interactive Star Rating System -->
+        <div class="form-group">
+            <label>Rating</label>
+            <div class="star-rating-widget">
+                <input type="radio" id="star5" name="rating" value="5 Stars" required />
+                <label for="star5" title="5 stars">★</label>
+                
+                <input type="radio" id="star4" name="rating" value="4 Stars" />
+                <label for="star4" title="4 stars">★</label>
+                
+                <input type="radio" id="star3" name="rating" value="3 Stars" />
+                <label for="star3" title="3 stars">★</label>
+                
+                <input type="radio" id="star2" name="rating" value="2 Stars" />
+                <label for="star2" title="2 stars">★</label>
+                
+                <input type="radio" id="star1" name="rating" value="1 Star" />
+                <label for="star1" title="1 star">★</label>
             </div>
+        </div>
 
+        <div class="form-group">
+            <label>Review Comments</label>
+            <textarea name="comments" required placeholder="Write your comments..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Review</button>
+    </form>
+</div>
             <!-- Real Customer Reviews Area -->
             <div style="background-color: #f4f9fc; padding: 40px 30px; border-radius: 8px; text-align: left; margin-bottom: 40px; border-bottom: 2px solid #cbdde6;">
                 <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 500; margin-bottom: 30px; color: var(--primary-dark);">Kind Words From Our Collectors</h2>
