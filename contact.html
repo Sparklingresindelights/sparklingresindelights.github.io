@@ -8,69 +8,80 @@
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
     
-    <style>
+   <style>
+        :root {
+            --bg-color: #f4f6f4; 
+            --primary-dark: #1e293b; /* Consistent dark slate text */
+            --olive-dark: #000000;   /* Forced solid black for high contrast */
+            --olive-mid: #2c3524;    /* Deep olive dark tone */
+            --green-gradient: linear-gradient(135deg, #e2ecc8 0%, #a4b494 100%);
+        }
+
         body { 
             font-family: 'Inter', Arial, sans-serif; 
             margin: 0; 
             padding: 0; 
-            background-color: #f4f6f4; 
-            color: #2f3e46; 
+            background-color: var(--bg-color); 
+            color: var(--primary-dark); 
             -webkit-font-smoothing: antialiased;
         }
         
         nav { 
             background-color: #ffffff; 
-            padding: 20px 15px; 
+            padding: 16px 15px; /* Compacted navigation padding */
             text-align: center; 
-            border-bottom: 2px solid #cbd5e1;
+            border-bottom: 2px solid #a4b494; /* Matching soft olive nav border */
             position: sticky;
             top: 0;
             z-index: 1000;
         }
         nav a { 
-            color: #1e293b; 
+            color: var(--primary-dark); 
             margin: 0 18px; 
             text-decoration: none; 
             font-weight: 600; 
-            font-size: 0.85rem; 
+            font-size: 0.78rem; /* Scaled down for a sleek, delicate text menu */
             letter-spacing: 1.5px;
             text-transform: uppercase;
             transition: color 0.2s;
         }
         nav a:hover { 
-            color: #78866b; 
+            color: var(--olive-mid); 
         }
         
+        /* Contact Header Box styled with your stunning custom green gradient */
         header { 
-            background: linear-gradient(135deg, #a3b19b 0%, #2f3e46 100%); 
-            color: #ffffff; 
-            padding: 80px 20px; 
+            background: var(--green-gradient) !important; 
+            color: var(--olive-dark) !important; /* Forced crisp black text */
+            padding: 60px 20px; /* Reduced from 80px to match smaller scale */
             text-align: center; 
-            box-shadow: 0 4px 20px rgba(47, 62, 70, 0.15);
+            box-shadow: 0 4px 20px rgba(164, 180, 148, 0.2);
         }
         header h1 { 
             margin: 0; 
-            font-size: 3.5rem; 
+            font-size: 2.6rem; /* Reduced from 3.5rem for balance */
             font-family: 'Playfair Display', serif; 
             font-weight: 600;
             letter-spacing: -0.5px;
+            color: var(--olive-dark) !important; /* Forced crisp black text */
         }
         header p { 
             font-family: 'Playfair Display', serif; 
-            font-size: 1.4rem; 
-            margin: 15px auto 0 auto; 
+            font-size: 1.15rem; /* Reduced from 1.4rem */
+            margin: 12px auto 0 auto; 
             font-style: italic; 
             max-width: 800px;
             line-height: 1.6;
+            color: var(--olive-dark) !important; /* Forced crisp black subtext */
             opacity: 0.95;
         }
         
         .container { 
             max-width: 600px; 
-            margin: 60px auto; 
+            margin: 45px auto; /* Compacted margins */
             padding: 40px; 
             background: #ffffff; 
-            border: 1px solid #e2e8f0; 
+            border: 1px solid #eae6e1; 
             border-radius: 12px; 
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.02); 
         }
@@ -94,49 +105,50 @@
             border-radius: 6px; 
             box-sizing: border-box; 
             font-family: inherit; 
-            font-size: 0.95rem; 
+            font-size: 0.9rem; /* Clean text size inside boxes */
             background-color: #f8fafc; 
             transition: all 0.2s;
         }
         input:focus, textarea:focus { 
             outline: none; 
-            border-color: #78866b; 
+            border-color: #a4b494; /* Soft olive highlight border on click */
             background-color: #ffffff; 
-            box-shadow: 0 0 0 3px rgba(120, 134, 107, 0.15);
+            box-shadow: 0 0 0 3px rgba(164, 180, 148, 0.15);
         }
         textarea { 
             resize: vertical; 
             min-height: 160px; 
         }
         
+        /* Submit button custom styled with matching elegant olive theme gradient */
         .submit-btn { 
             display: block; 
             width: 100%; 
-            background-color: #2f3e46; 
-            color: #ffffff; 
-            padding: 16px; 
+            background: var(--green-gradient); 
+            color: var(--olive-dark); 
+            padding: 14px; 
             border: none; 
             border-radius: 4px; 
             font-weight: 600; 
-            font-size: 0.95rem; 
+            font-size: 0.85rem; /* Sleeker text size */
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             cursor: pointer; 
-            transition: background 0.2s; 
+            transition: opacity 0.2s; 
         }
         .submit-btn:hover { 
-            background-color: #78866b; 
+            opacity: 0.85; /* Soft hover effect to match product checkout buttons */
         }
 
         footer {
             text-align: center;
-            padding: 40px 20px;
-            font-size: 0.9rem;
+            padding: 35px 20px;
+            font-size: 0.85rem;
             font-weight: 500;
             color: #64748b;
             background-color: #ffffff;
             border-top: 1px solid #e2e8f0;
-            margin-top: 80px;
+            margin-top: 60px;
         }
 
         @media (max-width: 650px) {
@@ -144,8 +156,8 @@
                 flex-direction: column;
                 gap: 25px;
             }
-            header h1 { font-size: 2.5rem; }
-            header p { font-size: 1.15rem; }
+            header h1 { font-size: 2.2rem; }
+            header p { font-size: 1.1rem; }
             .container { padding: 25px; margin: 30px 15px; }
         }
     </style>
