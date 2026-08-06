@@ -28,7 +28,7 @@ permalink: /policies/
         :root {
             --pastel-bg: #fffdf2; /* Retaining your clean, calming background */
             --olive-dark: #000000;   /* Forced solid black for high contrast */
-            --olive-mid: #2c3524;    /* Deep olive dark charcoal tone */
+            --olive-mid: #2c3524;    /* Deep olive dark grounding colour */
             --primary-dark: #1e293b; /* Premium dark slate text */
             --card-white: #ffffff;
             /* Your custom soft pale-to-olive green gradient */
@@ -43,24 +43,26 @@ permalink: /policies/
             color: var(--primary-dark);
             -webkit-font-smoothing: antialiased;
         }
+
+        /* 🧭 Cohesive Deep Olive Top Navigation Bar Frame */
         nav {
-            background-color: #ffffff;
+            background-color: var(--olive-mid); 
             padding: 16px 15px; /* Compacted navigation padding */
             text-align: center;
-            border-bottom: 2px solid #a4b494; /* Soft olive border matching your shop pages */
+            border-bottom: 2px solid #e2ecc8; /* Soft pale-to-light green border line */
         }
         nav a {
-            color: var(--primary-dark);
+            color: #ffffff; /* Crisp white links for excellent contrast */
             margin: 0 18px;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.78rem; /* Scaled down for a sleek, delicate text menu */
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            transition: color 0.2s;
+            transition: opacity 0.2s;
         }
         nav a:hover {
-            color: var(--olive-mid);
+            opacity: 0.8;
         }
         
         .main-container {
@@ -133,8 +135,9 @@ permalink: /policies/
             color: #718096 !important;
         }
 
+        /* 🧭 Grounded dark olive footer layout match */
         footer {
-            background-color: var(--olive-mid); /* Deep olive background for footer grounding */
+            background-color: var(--olive-mid); 
             color: #ffffff;
             text-align: center;
             padding: 35px 20px;
