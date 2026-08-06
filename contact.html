@@ -8,12 +8,12 @@
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
     
-   <style>
+     <style>
         :root {
             --bg-color: #f4f6f4; 
             --primary-dark: #1e293b; /* Consistent dark slate text */
             --olive-dark: #000000;   /* Forced solid black for high contrast */
-            --olive-mid: #2c3524;    /* Deep olive dark tone */
+            --olive-mid: #2c3524;    /* Deep olive dark grounding colour */
             --green-gradient: linear-gradient(135deg, #e2ecc8 0%, #a4b494 100%);
         }
 
@@ -26,27 +26,28 @@
             -webkit-font-smoothing: antialiased;
         }
         
+        /* 🧭 Cohesive Deep Olive Top Navigation Bar Frame */
         nav { 
-            background-color: #ffffff; 
+            background-color: var(--olive-mid); 
             padding: 16px 15px; /* Compacted navigation padding */
             text-align: center; 
-            border-bottom: 2px solid #a4b494; /* Matching soft olive nav border */
+            border-bottom: 2px solid #e2ecc8; /* Soft pale-to-light green border line */
             position: sticky;
             top: 0;
             z-index: 1000;
         }
         nav a { 
-            color: var(--primary-dark); 
+            color: #ffffff; /* Crisp white links for excellent contrast */
             margin: 0 18px; 
             text-decoration: none; 
             font-weight: 600; 
             font-size: 0.78rem; /* Scaled down for a sleek, delicate text menu */
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            transition: color 0.2s;
+            transition: opacity 0.2s;
         }
         nav a:hover { 
-            color: var(--olive-mid); 
+            opacity: 0.8; 
         }
         
         /* Contact Header Box styled with your stunning custom green gradient */
@@ -140,15 +141,15 @@
             opacity: 0.85; /* Soft hover effect to match product checkout buttons */
         }
 
+        /* 🧭 Grounded dark olive footer layout match */
         footer {
+            background-color: var(--olive-mid); 
+            color: #ffffff;
             text-align: center;
             padding: 35px 20px;
             font-size: 0.85rem;
-            font-weight: 500;
-            color: #64748b;
-            background-color: #ffffff;
-            border-top: 1px solid #e2e8f0;
-            margin-top: 60px;
+            margin-top: 50px;
+            border-top: 4px solid #e2ecc8;
         }
 
         @media (max-width: 650px) {
@@ -161,6 +162,7 @@
             .container { padding: 25px; margin: 30px 15px; }
         }
     </style>
+
 </head>
 <body>
 
