@@ -22,234 +22,235 @@ tags: [handmade crafts uk, bespoke custom gifts, custom beaded pens, resin jewel
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com" rel="stylesheet">
     
-    <style>
+   <style>
         :root {
-            --pastel-bg: #cde0c9; /* Updated to a beautiful soft sage/pastel green background */
+            --bg-color: #fff9f5; /* A bright, energetic warm cream */
+            --primary-dark: #1e293b;
             --olive-dark: #000000;   /* Forced solid black for high contrast */
-            --olive-mid: #2c3524;    /* Deep olive dark charcoal tone */
-            --primary-dark: #1e293b; /* Premium dark slate text */
-            --crisp-grey: #f8f9fa;   /* A crisp, bright grey */
-            --accent-gold: #8d997d;  /* Muted olive-tint gold highlight for buttons/stars */
-            --card-white: #ffffff;
+            --olive-mid: #2c3524;    /* Deep olive grounding colour */
+            --bright-cyan: #00d2ff;  /* Fresh glass accent */
+            --card-bg: #ffffff;
+            --text-muted: #475569;
             /* Your custom soft pale-to-olive green gradient */
             --green-gradient: linear-gradient(135deg, #e2ecc8 0%, #a4b494 100%);
         }
+        
+         /* Centered container button wrap limits */
+        .stripe-container {
+            max-width: 220px;
+            margin: auto auto 0 auto;
+            padding: 0 5px;
+            min-height: 45px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
 
+        /* Forces Payhip's links and iframe elements to expand into rectangles */
+        .stripe-container div,
+        .stripe-container iframe, 
+        .stripe-container .payhip-embed-btn,
+        .stripe-container .payhip-buy-button,
+        .stripe-container button,
+        .stripe-container a {
+            width: 100% !important;
+            max-width: 220px !important;
+            min-width: 180px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            height: 46px !important;
+            border-radius: 4px !important;
+            box-sizing: border-box !important;
+            text-decoration: none !important;
+        }
+
+        /* Tailors the button background color to your soft green gradient theme */
+        .payhip-buy-button, .payhip-add-to-cart-btn, .payhip-embed-btn {
+            background: var(--green-gradient) !important;
+            color: var(--olive-dark) !important; 
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 600 !important;
+            letter-spacing: 1px !important;
+            text-transform: uppercase !important;
+            font-size: 0.78rem !important;
+            cursor: pointer !important;
+            border: none !important;
+            transition: opacity 0.2s !important;
+        }
+        .payhip-buy-button:hover, .payhip-add-to-cart-btn:hover {
+            opacity: 0.85 !important;
+        }
+        
         body {
+            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--pastel-bg);
-            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color); 
             color: var(--primary-dark);
             -webkit-font-smoothing: antialiased;
         }
+
+        /* 🧭 UPDATED: Deep olive navigation bar header frame */
         nav {
-            background-color: #ffffff;
-            padding: 16px 15px; /* Compacted navigation padding */
+            background-color: var(--olive-mid); 
+            padding: 16px 15px;
             text-align: center;
-            border-bottom: 2px solid #a4b494; /* Soft olive border matching product pages */
+            border-bottom: 2px solid #e2ecc8;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav a {
-            color: var(--primary-dark);
+            color: #ffffff; 
             margin: 0 18px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.78rem; /* Scaled down for a sleek, delicate text menu */
+            font-size: 0.78rem;
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            transition: color 0.2s;
+            transition: opacity 0.2s;
         }
         nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* Elegant Editorial Header with your custom green background gradient */
+        header {
+            background: var(--green-gradient); 
+            color: var(--olive-dark) !important;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 3px solid #ffffff;
+            box-shadow: 0 4px 20px rgba(164, 180, 148, 0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.6rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            color: var(--olive-dark) !important;
+        }
+        header p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            margin: 12px 0 0 0;
+            font-style: italic;
             color: var(--olive-mid);
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 45px auto;
+            padding: 0 20px;
+        }
+
+        /* Fixed Grid Layout: Balanced columns across screen sizes */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
         }
         
-        .split-layout {
-            display: flex;
-            max-width: 1300px;
-            margin: 30px auto; /* Compacted layout margins */
-            padding: 0 30px;
-            gap: 40px;
-        }
-        .left-content {
-            flex: 1;
+        .product-card {
+            background: var(--card-bg);
+            border: 2px solid #eae6e1;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 25px;
+            box-shadow: 0 8px 24px rgba(30, 41, 59, 0.04);
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-6px);
+            border-color: #a4b494;
+            box-shadow: 0 12px 30px rgba(164, 180, 148, 0.25);
         }
 
-        /* Home Header Box styled with your stunning custom green gradient */
-        .header-box {
-            background: var(--green-gradient) !important;
-            padding: 35px 40px;
-            border-bottom: 2px solid #a4b494;
-            border-radius: 8px;
-            box-sizing: border-box;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(164, 180, 148, 0.2);
-        }
-        .header-text h1 {
-            margin: 0; 
-            font-size: 2.4rem; /* Scaled down from 2.8rem for a balanced header */
-            font-family: 'Playfair Display', serif; 
-            font-weight: 600; 
-            letter-spacing: -0.5px; 
-            color: var(--olive-dark) !important; /* Forced crisp black text */
-        }
-
-        /* Improved Slideshow Frame Box for clean resizing */
-        .bottom-left-slideshow {
-            width: 100%;
-            height: 380px;
+        /* Bright Slideshow Container height parameters */
+        .slideshow-container {
             position: relative;
+            width: 100%;
+            height: 300px; 
             overflow: hidden;
-            border-radius: 8px;
-            border: 1px solid #a4b494;
             background: radial-gradient(circle, #ffffff 60%, #f4f6f0 100%);
-            margin-bottom: 30px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.02);
+            border-bottom: 2px solid #eae6e1;
         }
-        .bottomSlide {
+        .slideshow-container img {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0;
-            transition: opacity 1.2s ease-in-out;
-            box-sizing: border-box;
-            padding: 20px; 
-        }
-        .bottomSlide.active {
-            opacity: 1;
-        }
-        .bottomSlide img {
-            width: 100%;
-            height: 100%;
             object-fit: contain; 
+            padding: 15px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            pointer-events: none;
         }
-        
-        .right-image-panel {
-            width: 420px;
+        .slideshow-container img.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .slide-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid #a4b494;
+            color: var(--olive-mid);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(164, 180, 148, 0.15);
+            transition: all 0.2s;
+            z-index: 50;
+            user-select: none;
+        }
+        .slide-btn:hover {
+            background: #a4b494;
+            color: #ffffff;
+        }
+        .prev-btn { left: 10px; }
+        .next-btn { right: 10px; }
+
+        .product-info {
+            padding: 25px 20px 0 20px;
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
-            gap: 20px;
-        }
-        .showcase-image-box {
-            flex: 1;
-            border-radius: 8px;
-            border: 1px solid #eae6e1;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.02);
-            background-color: #ffffff;
-        }
-        .showcase-image-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            justify-content: space-between;
         }
 
-        .info-section {
-            background: var(--card-white);
-            border: 1px solid #eae6e1;
-            border-radius: 8px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.01);
-        }
-        .info-section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem; /* Slightly reduced text size */
-            margin-top: 0;
+        /* Global product text rules: sizes and colours */
+        .product-card h3 {
+            margin: 0 0 8px 0;
             color: var(--olive-mid);
+            font-size: 1.15rem;
         }
-        .info-section p {
-            font-size: 0.88rem; /* Slightly smaller reading text */
-            line-height: 1.6;
-            color: #4a5568;
-        }
-        .delivery-badge {
-            display: inline-flex;
-            align-items: center;
-            background-color: #f4f6f0;
-            border: 1px solid #a4b494;
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--olive-mid);
-            margin-top: 15px;
-            letter-spacing: 0.5px;
+        .product-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
         }
 
-        .feedback-form-container {
-            background: var(--card-white); 
-            padding: 35px 30px; 
-            border-radius: 8px; 
-            border: 1px solid #eae6e1; 
-            text-align: left; 
-            margin-bottom: 30px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.01);
-        }
-        .feedback-form-container h3 {
-            font-family: 'Playfair Display', serif; 
-            font-weight: 500; 
-            font-size: 1.4rem; /* Scaled down slightly */
-            margin-top: 0; 
-            margin-bottom: 20px; 
-            color: var(--olive-mid);
-            text-align: center;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .feedback-form-container label {
-            display: block; 
-            font-weight: 600; 
-            margin-bottom: 8px; 
-            font-size: 0.75rem; 
-            text-transform: uppercase; 
-            letter-spacing: 1px; 
-            color: var(--olive-mid);
-        }
-        .feedback-form-container input,
-        .feedback-form-container select,
-        .feedback-form-container textarea {
-            width: 100%; 
-            padding: 12px; 
-            border: 1px solid #cbdde6; 
-            border-radius: 4px; 
-            box-sizing: border-box; 
-            font-size: 0.9rem; 
-            background-color: #fbfdfe;
-            font-family: 'Inter', sans-serif;
-            color: var(--primary-dark);
-        }
-        .feedback-form-container textarea {
-            min-height: 110px;
-            resize: vertical;
-        }
-        
-        /* Form button custom styled with matching elegant olive theme gradient */
-        .submit-btn {
-            display: block; 
-            width: 100%; 
-            background: var(--green-gradient); 
-            color: var(--olive-dark); 
-            padding: 14px; 
-            border: none; 
-            border-radius: 4px; 
-            font-weight: 600; 
-            font-size: 0.85rem; 
-            text-transform: uppercase;
-            letter-spacing: 1.5px; 
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
-        .submit-btn:hover {
-            opacity: 0.85;
-        }
-
+        /* 🧭 Grounded dark olive footer layout match */
         footer {
-            background-color: var(--olive-mid); /* Deep olive background for footer grounding */
+            background-color: var(--olive-mid); 
             color: #ffffff;
             text-align: center;
             padding: 35px 20px;
