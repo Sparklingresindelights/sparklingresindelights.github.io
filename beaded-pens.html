@@ -25,12 +25,12 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
     <!-- Payhip Secure Shopping Cart Loader -->
     <script type="text/javascript" src="https://payhip.com"></script>
     
-    <style>
+   <style>
         :root {
             --bg-color: #fff9f5; /* A bright, energetic warm cream */
             --primary-dark: #1e293b;
-            --olive-dark: #2c3524;   /* Deep olive for high-contrast text */
-            --olive-mid: #3b4731;    /* Mid-tone olive for titles */
+            --olive-dark: #000000;   /* Forced solid black for high contrast */
+            --olive-mid: #2c3524;    /* Deep olive grounding colour */
             --bright-cyan: #00d2ff;  /* Fresh glass accent */
             --card-bg: #ffffff;
             --text-muted: #475569;
@@ -76,13 +76,13 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
             font-weight: 600 !important;
             letter-spacing: 1px !important;
             text-transform: uppercase !important;
-            font-size: 0.78rem !important; /* Made slightly smaller and sleeker */
+            font-size: 0.78rem !important;
             cursor: pointer !important;
             border: none !important;
             transition: opacity 0.2s !important;
         }
         .payhip-buy-button:hover, .payhip-add-to-cart-btn:hover {
-            opacity: 0.85 !important; /* Elegant soft fade on hover */
+            opacity: 0.85 !important;
         }
         
         body {
@@ -94,60 +94,59 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
             -webkit-font-smoothing: antialiased;
         }
 
+        /* 🧭 UPDATED: Deep olive navigation bar header frame */
         nav {
-            background-color: #ffffff;
-            padding: 16px 15px; /* Slightly tightened padding */
+            background-color: var(--olive-mid); 
+            padding: 16px 15px;
             text-align: center;
-            border-bottom: 2px solid #a4b494; /* Soft olive border to tie navigation together */
+            border-bottom: 2px solid #e2ecc8;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
         nav a {
-            color: var(--primary-dark);
+            color: #ffffff; 
             margin: 0 18px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.78rem; /* Reduced from 0.85rem for a more delicate header link */
+            font-size: 0.78rem;
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            transition: color 0.2s;
+            transition: opacity 0.2s;
         }
         nav a:hover {
-            color: var(--olive-mid);
+            opacity: 0.8;
         }
 
         /* Elegant Editorial Header with your custom green background gradient */
         header {
             background: var(--green-gradient); 
-            color: var(--olive-dark);
-            padding: 60px 20px; /* Reduced from 80px to match the smaller text */
+            color: var(--olive-dark) !important;
+            padding: 60px 20px;
             text-align: center;
             border-bottom: 3px solid #ffffff;
             box-shadow: 0 4px 20px rgba(164, 180, 148, 0.2);
         }
         header h1 {
             margin: 0;
-            font-size: 2.6rem; /* Reduced from 3.5rem so it feels balanced and not overwhelming */
+            font-size: 2.6rem;
             font-family: 'Playfair Display', serif;
             font-weight: 600;
             letter-spacing: -0.5px;
-            color: var(--olive-dark);
-            text-shadow: 0 1px 4px rgba(255,255,255,0.4);
+            color: var(--olive-dark) !important;
         }
         header p {
             font-family: 'Playfair Display', serif;
-            font-size: 1.15rem; /* Reduced from 1.4rem */
+            font-size: 1.15rem;
             margin: 12px 0 0 0;
             font-style: italic;
             color: var(--olive-mid);
-            text-shadow: 0 1px 3px rgba(255,255,255,0.4);
             opacity: 0.95;
         }
 
         .container {
             max-width: 1200px;
-            margin: 45px auto; /* Reduced from 60px to compact the page layout */
+            margin: 45px auto;
             padding: 0 20px;
         }
 
@@ -211,7 +210,7 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
             background: rgba(255, 255, 255, 0.95);
             border: 2px solid #a4b494;
             color: var(--olive-mid);
-            width: 32px; /* Slightly reduced button scale */
+            width: 32px;
             height: 32px;
             border-radius: 50%;
             font-size: 1.1rem;
@@ -244,12 +243,23 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
         .product-card h3 {
             margin: 0 0 8px 0;
             color: var(--olive-mid);
-            font-size: 1.15rem; /* Reduced from 1.35rem for a sharper, cleaner title */
+            font-size: 1.15rem;
         }
         .product-card p {
-            font-size: 0.85rem; /* Reduced from 0.95rem for neat description text */
+            font-size: 0.85rem;
             color: var(--text-muted);
             line-height: 1.5;
+        }
+
+        /* 🧭 Grounded dark olive footer layout match */
+        footer {
+            background-color: var(--olive-mid); 
+            color: #ffffff;
+            text-align: center;
+            padding: 35px 20px;
+            font-size: 0.85rem;
+            margin-top: 50px;
+            border-top: 4px solid #e2ecc8;
         }
     </style>
     <!-- 🌟 GOOGLE MERCHANDISING STRUCTURED DATA SCHEMA: 3-PIECE BEADED PEN SET BUNDLE -->
