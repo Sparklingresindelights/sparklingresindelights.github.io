@@ -260,6 +260,59 @@ tags: [handmade crafts uk, bespoke custom gifts, custom beaded pens, resin jewel
             margin-top: 50px;
             border-top: 4px solid #e2ecc8;
         }
+       /* 📱 HOMEPAGE MOBILE OVERRIDE SWITCH */
+        @media (max-width: 768px) {
+            /* 1. Stacks your side-by-side split layout panels into 1 clean vertical column */
+            .split-layout {
+                flex-direction: column !important;
+                gap: 25px !important;
+                margin: 20px auto !important;
+                padding: 0 15px !important;
+            }
+
+            /* 2. Expands your right-hand image panel to fill the full screen width */
+            .right-image-panel {
+                width: 100% !important;
+            }
+            .showcase-image-box {
+                height: 250px !important; /* Sets a neat standard height for phone displays */
+            }
+
+            /* 3. Scales down text inside your homepage header box so it fits comfortably */
+            .header-box {
+                padding: 25px 20px !important;
+                margin-bottom: 20px !important;
+            }
+            .header-text h1 {
+                font-size: 1.8rem !important;
+                text-align: center;
+            }
+
+            /* 4. Compacts the spacing on your info cards and customer review forms */
+            .info-section, .feedback-form-container {
+                padding: 25px 20px !important;
+                margin-bottom: 25px !important;
+            }
+            .info-section h2, .feedback-form-container h3 {
+                font-size: 1.3rem !important;
+            }
+
+            /* 5. Safe framework scaling for your homepage slideshow frame */
+            .bottom-left-slideshow {
+                height: 260px !important;
+                margin-bottom: 25px !important;
+            }
+
+            /* 6. Spaces out and centers your long navigation menu bar links nicely */
+            nav {
+                padding: 12px 10px !important;
+            }
+            nav a {
+                display: inline-block !important;
+                margin: 6px 10px !important; /* Tightens gaps so titles fit */
+                font-size: 0.72rem !important; /* Slightly smaller text for mobile viewing */
+            }
+        }
     </style>
     <meta name="facebook-domain-verification" content="8mm2j9d9yfiypvkbqq1apgfhwrzqin" />
 </head>
