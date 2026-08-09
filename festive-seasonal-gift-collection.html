@@ -1,1 +1,383 @@
+---
+layout: null
+title:Festive and Seasonal
+tags: [christmas presnets, christmas tree decorations, ]
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 🌟 GOOGLE META TITLE (Under 60 Characters Display Limit) -->
+    <title>Seasonal & Handmade Personalised Gifts | Boutique</title>
+    
+    <!-- 🌟 GOOGLE META DESCRIPTION -->
+    <meta name="description" content="Shop unique handmade beaded gifts for every season. Unique beaded pens, keychains, christmas tree decorations, personalised itmes.">
+    
+    <!-- 🚀 ADDED FOR SEO SEARCH ENGINE RELEVANCE -->
+    <meta name="keywords" content="{{ page.tags | join: ', ' }}">
+    
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com" rel="stylesheet">
+    
+    <!-- Payhip Secure Shopping Cart Loader -->
+    <script type="text/javascript" src="https://payhip.com"></script>
+    
+   <style>
+        :root {
+            --bg-color: #fff9f5; /* A bright, energetic warm cream */
+            --primary-dark: #1e293b;
+            --olive-dark: #000000;   /* Forced solid black for high contrast */
+            --olive-mid: #2c3524;    /* Deep olive grounding colour */
+            --bright-cyan: #00d2ff;  /* Fresh glass accent */
+            --card-bg: #ffffff;
+            --text-muted: #475569;
+            /* Your custom soft pale-to-olive green gradient */
+            --green-gradient: linear-gradient(135deg, #e2ecc8 0%, #a4b494 100%);
+        }
+        
+         /* Centered container button wrap limits */
+        .stripe-container {
+            max-width: 220px;
+            margin: auto auto 0 auto;
+            padding: 0 5px;
+            min-height: 45px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
 
+        /* Forces Payhip's links and iframe elements to expand into rectangles */
+        .stripe-container div,
+        .stripe-container iframe, 
+        .stripe-container .payhip-embed-btn,
+        .stripe-container .payhip-buy-button,
+        .stripe-container button,
+        .stripe-container a {
+            width: 100% !important;
+            max-width: 220px !important;
+            min-width: 180px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            height: 46px !important;
+            border-radius: 4px !important;
+            box-sizing: border-box !important;
+            text-decoration: none !important;
+        }
+
+        /* Tailors the button background color to your soft green gradient theme */
+        .payhip-buy-button, .payhip-add-to-cart-btn, .payhip-embed-btn {
+            background: var(--green-gradient) !important;
+            color: var(--olive-dark) !important; 
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 600 !important;
+            letter-spacing: 1px !important;
+            text-transform: uppercase !important;
+            font-size: 0.78rem !important;
+            cursor: pointer !important;
+            border: none !important;
+            transition: opacity 0.2s !important;
+        }
+        .payhip-buy-button:hover, .payhip-add-to-cart-btn:hover {
+            opacity: 0.85 !important;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color); 
+            color: var(--primary-dark);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 🧭 UPDATED: Deep olive navigation bar header frame */
+        nav {
+            background-color: var(--olive-mid); 
+            padding: 16px 15px;
+            text-align: center;
+            border-bottom: 2px solid #e2ecc8;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #ffffff; 
+            margin: 0 18px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.78rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: opacity 0.2s;
+        }
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* Elegant Editorial Header with your custom green background gradient */
+        header {
+            background: var(--green-gradient); 
+            color: var(--olive-dark) !important;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 3px solid #ffffff;
+            box-shadow: 0 4px 20px rgba(164, 180, 148, 0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.6rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            color: var(--olive-dark) !important;
+        }
+        header p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            margin: 12px 0 0 0;
+            font-style: italic;
+            color: var(--olive-mid);
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 45px auto;
+            padding: 0 20px;
+        }
+
+        /* Fixed Grid Layout: Balanced columns across screen sizes */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .product-card {
+            background: var(--card-bg);
+            border: 2px solid #eae6e1;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 25px;
+            box-shadow: 0 8px 24px rgba(30, 41, 59, 0.04);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-6px);
+            border-color: #a4b494;
+            box-shadow: 0 12px 30px rgba(164, 180, 148, 0.25);
+        }
+
+        /* Bright Slideshow Container height parameters */
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 300px; 
+            overflow: hidden;
+            background: radial-gradient(circle, #ffffff 60%, #f4f6f0 100%);
+            border-bottom: 2px solid #eae6e1;
+        }
+        .slideshow-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+            padding: 15px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            pointer-events: none;
+        }
+        .slideshow-container img.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .slide-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid #a4b494;
+            color: var(--olive-mid);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(164, 180, 148, 0.15);
+            transition: all 0.2s;
+            z-index: 50;
+            user-select: none;
+        }
+        .slide-btn:hover {
+            background: #a4b494;
+            color: #ffffff;
+        }
+        .prev-btn { left: 10px; }
+        .next-btn { right: 10px; }
+
+        .product-info {
+            padding: 25px 20px 0 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Global product text rules: sizes and colours */
+        .product-card h3 {
+            margin: 0 0 8px 0;
+            color: var(--olive-mid);
+            font-size: 1.15rem;
+        }
+        .product-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* 🧭 Grounded dark olive footer layout match */
+        footer {
+            background-color: var(--olive-mid); 
+            color: #ffffff;
+            text-align: center;
+            padding: 35px 20px;
+            font-size: 0.85rem;
+            margin-top: 50px;
+            border-top: 4px solid #e2ecc8;
+        }
+        /* 📱 MOBILE MEDIA OVERRIDE SWITCH */
+        @media (max-width: 768px) {
+            /* 1. Stacks your 3-column desktop grid into 1 single column on mobile */
+            .product-grid {
+                grid-template-columns: repeat(1, 1fr) !important;
+                gap: 25px !important;
+            }
+
+            /* 2. Slightly decreases header fonts so they don't break lines awkwardly */
+            header h1 {
+                font-size: 1.9rem !important;
+            }
+            header p {
+                font-size: 1rem !important;
+            }
+
+            /* 3. Evens out the page padding boundaries for narrower screens */
+            .container {
+                margin: 25px auto !important;
+                padding: 0 15px !important;
+            }
+
+            /* 4. Scales down your slideshow display container framework safely */
+            .slideshow-container {
+                height: 240px !important;
+            }
+        }
+       @media (max-width: 768px) {
+            nav {
+                padding: 12px 10px !important;
+            }
+            nav a {
+                display: inline-block !important;
+                margin: 6px 10px !important; /* Tightens gaps so names fit comfortably */
+                font-size: 0.72rem !important; /* Slightly smaller text for mobile fingers */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 🧭 NAVIGATION BAR -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="resin-jewelry.html">Resin Jewelry</a>
+        <a href="beaded-pens.html">Beaded Pens</a>
+        <a href="beaded-keychains.html">Keychains</a>
+        <a href="beaded-bracelets.html">Bracelets</a>
+        <a href="cups-and-glasses.html">Cups & Glasses</a>
+        <a href="wedding.html">Weddings & Hen Parties</a>
+        <a href="resin-mirrors.html">Resin Mirrors & Hairbrushes</a>
+        <a href="festive-seasonal-gift-collection.html">Festive Seasonal Gift Collection</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="policies/">Store Policies</a>
+    </nav>
+    <header>
+        <h1>The Personalized Holiday Gift Guide</h1>
+        <p>Skip the generic and gift something truly unique. From hand-beaded pens and custom keychains to personalized jewelry and festive tree ornaments, find the perfect custom-made treasures for everyone on your list.</p>
+    </header>
+
+    <div class="container">
+        <div class="product-grid">
+
+            <!-- Item 1: Novelty Ceramic Mug Collection -->
+            <div class="product-card">
+                <div class="slideshow-container">
+                    <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
+                    <img src="hello kitty sunflower.jpg" alt="Hello Kitty Sunflower Ceramic Mug View 1" class="active">
+                    <img src="luxury - heel.jpg" alt="Luxury Heel Glass View 2">
+                    <img src="fairy-cow.jpg" alt="Fairy Highland Cow Ceramic Mug View 3">
+                    <button class="slide-btn next-btn" type="button">&rsaquo;</button>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Novelty Illustrated Ceramic Mugs | Magical & Chic UK Giftware</h3>
+                        <p class="price">From £12.50</p>
+                        <p>Sip your daily coffee surrounded by pure storytelling charm. Hand-selected for premium quality, this collectible novelty mug series features a choice of three vibrant wrap-around graphics covered in a protective high-gloss glaze. Choose from the magical <strong>Fairy Highland Cow</strong> with glittering wings, the high-fashion <strong>Luxury Heel & Peony</strong> illustration, or the sunny <strong>Hello Kitty Sunflower</strong> design featuring sweet polka dots and bumble bees.</p>
+                    </div>
+                </div>
+                <div class="stripe-container">
+                  <a href="https://payhip.com/b/kw2AC" class="payhip-buy-button" data-theme="none" data-product="kw2AC">View Item Details</a>
+                </div>
+            </div>
+
+           
+
+        </div> <!-- End of .product-grid -->
+    </div> <!-- End of .container -->
+
+    <footer>
+        <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK via Tracked Evri Delivery.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.slideshow-container').forEach(slideshow => {
+            const images = slideshow.querySelectorAll('img');
+            const prevBtn = slideshow.querySelector('.prev-btn');
+            const nextBtn = slideshow.querySelector('.next-btn');
+            let currentIndex = 0;
+
+            function updateSlides(newIndex) {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (newIndex + images.length) % images.length;
+                images[currentIndex].classList.add('active');
+            }
+
+            if(prevBtn && nextBtn) {
+                prevBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    updateSlides(currentIndex - 1);
+                });
+
+                nextBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    updateSlides(currentIndex + 1);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
