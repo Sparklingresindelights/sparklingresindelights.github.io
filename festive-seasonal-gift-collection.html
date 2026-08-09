@@ -321,6 +321,31 @@ tags: [christmas presnets, christmas tree decorations, ]
     </header>
 
     <div class="container">
+        <div id="holiday-banner" style="background-color: #D81B60; color: white; text-align: center; padding: 10px; font-weight: bold; font-family: sans-serif; display: none;">
+   ✨ <span id="countdown-text"></span> ✨
+</div>
+
+<script>
+   // Set your offer end date (Year, Month [0-11], Day) -> Dec 18, 2026
+   const endDate = new Date(2026, 11, 18); 
+   const today = new Date();
+   
+   // Calculate remaining days
+   const timeDiff = endDate - today;
+   const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+   if (daysLeft >= 0) {
+      const banner = document.getElementById('holiday-banner');
+      const text = document.getElementById('countdown-text');
+      
+      if (daysLeft === 0) {
+         text.innerHTML = "LAST DAY! Get FREE UK postage on orders over £35 before it ends tonight! 📦";
+      } else {
+         text.innerHTML = "🎁 Only " + daysLeft + " days left to get FREE UK postage on orders over £35! 🎄";
+      }
+      banner.style.display = 'block'; // Show banner if offer is active
+   }
+</script>
         <div class="product-grid">
 
             <!-- Item 1: Novelty Ceramic Mug Collection -->
