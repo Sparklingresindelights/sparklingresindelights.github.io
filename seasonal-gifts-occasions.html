@@ -298,6 +298,80 @@ tags: [christmas presnets, christmas tree decorations, Handmade stationery gift 
                 font-size: 0.72rem !important; /* Slightly smaller text for mobile fingers */
             }
         }
+        .collection-intro {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 40px;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #eae6e1;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+        }
+        .intro-text {
+            flex: 1;
+            text-align: left;
+        }
+        .intro-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--olive-mid);
+            margin: 0 0 10px 0;
+        }
+        .intro-text p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        
+        /* Compact Header-Right Promo Box */
+        .header-promo-box {
+            width: 320px;
+            background: var(--green-gradient);
+            border: 2px dashed #2c3524;
+            border-radius: 6px;
+            padding: 15px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .header-promo-box h4 {
+            margin: 0 0 4px 0;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #000000;
+        }
+        .header-promo-box p {
+            margin: 0 0 8px 0;
+            font-size: 0.8rem;
+            color: #2c3524;
+            font-weight: 500;
+        }
+        .promo-code-badge {
+            display: inline-block;
+            background: #ffffff;
+            border: 1px solid #a4b494;
+            padding: 4px 15px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            color: #000000;
+        }
+
+        /* 📱 Mobile view framework collapse */
+        @media (max-width: 768px) {
+            .collection-intro {
+                flex-direction: column !important;
+                padding: 20px !important;
+                gap: 20px !important;
+            }
+            .intro-text { text-align: center !important; }
+            .intro-text h2 { font-size: 1.6rem !important; }
+            .header-promo-box { width: 100% !important; }
+        }
     </style>
 </head>
 <body>
@@ -315,22 +389,27 @@ tags: [christmas presnets, christmas tree decorations, Handmade stationery gift 
         <a href="contact.html">Contact Us</a>
         <a href="policies/">Store Policies</a>
     </nav>
+    
+    <div class="container">
+        
+        <!-- 📝 PAGE INTRO & INTEGRATED RIGHT-SIDE PROMO BOX -->
+        <div class="collection-intro">
+            <div class="intro-text">
+                <h2>The Festive Seasonal Gift Collection</h2>
+                <p>Celebrate the season with meaning. Explore our exclusive collection of unique, hand-decorated notebook bundles, beautiful keepsakes, and seasonal treasures proudly handmade with care right here in the UK.</p>
+            </div>
+            
+            <!-- Compact Offer Frame (Locked to the right side) -->
+            <div class="header-promo-box">
+                <h4>✨ Special Studio Offer ✨</h4>
+                <p>Pick Any 3 Xmas Ornaments for £15.00</p>
+                <div class="promo-code-badge">CODE: Xmas15</div>
+            </div>
+        </div>
     <header>
         <h1>✨ Seasonsonal Sparkle Shop ✨</h1>
         <p>Handmde Gifts - Every Season - All Year Long </p>
     </header>
-    
-<!-- 🎄 EXCLUSIVE CHRISTMAS ORNAMENT OFFER BANNER -->
-        <div class="xmas-bundle-banner" style="background: linear-gradient(135deg, #e2ecc8 0%, #a4b494 100%); border: 2px dashed #2c3524; border-radius: 8px; padding: 20px; text-align: center; margin-bottom: 35px; box-shadow: 0 4px 15px rgba(164, 180, 148, 0.15); font-family: 'Inter', sans-serif;">
-            <h2 style="margin: 0 0 6px 0; font-family: 'Playfair Display', serif; color: #000000; font-size: 1.4rem; font-weight: 600;">✨ Special Studio Offer: Pick Any 3 Ornaments for £12.00 ✨</h2>
-            <p style="margin: 0 0 12px 0; color: #2c3524; font-size: 0.95rem; font-weight: 500;">Mix and match your choice of our lovely handmade Christmas tree decorations!</p>
-            <div style="display: inline-block; background-color: #ffffff; border: 1px solid #a4b494; padding: 6px 20px; border-radius: 4px; font-weight: 700; font-size: 1.1rem; letter-spacing: 2px; color: #000000;">
-                Xmas15
-            </div>
-            <p style="margin: 10px 0 0 0; font-size: 0.8rem; font-style: italic; color: #2c3524; opacity: 0.8;">
-                Simply enter this discount code inside your shopping basket checkout tray to apply the deal.
-            </p>
-        </div>
     
     <div class="container">
         <div id="holiday-banner" style="background-color: #D81B60; color: white; text-align: center; padding: 10px; font-weight: bold; font-family: sans-serif; display: none;">
