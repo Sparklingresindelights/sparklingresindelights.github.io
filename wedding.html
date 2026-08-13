@@ -840,21 +840,6 @@ tags: [wedding favours uk, custom bridal gifts, personalized hen party accessori
 </script>
 </head>
 <body>
-    <!-- Emergency Sitewide Maintenance Banner -->
-<div id="maintenance-banner" style="position: sticky; top: 0; left: 0; width: 100%; background-color: #fff9fa; border-bottom: 2px solid #e0a3b2; color: #333; text-align: center; padding: 12px 20px; font-family: sans-serif; font-size: 0.95rem; line-height: 1.4; z-index: 99999; box-sizing: border-box; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap;">
-        <span style="font-size: 1.2rem;">🛍️</span> 
-        <strong>System Update Underway:</strong> 
-        <span style="color: #555;">Our checkout provider is experiencing a technical glitch affecting some items.</span>
-        <span style="font-weight: bold; color: #b5526c;">We are still taking orders manually!</span> 
-        <span>Please DM us on Instagram or email us to secure your favorite pieces directly.</span>
-    </div>
-</div>
-
-<!-- Optional: Smooth push for the rest of your site content -->
-<style>
-    body { margin-top: 0 !important; }
-</style>
  <!-- 🧭 NAVIGATION BAR -->
      <nav>
         <a href="index.html">Home</a>
@@ -1374,5 +1359,50 @@ tags: [wedding favours uk, custom bridal gifts, personalized hen party accessori
             }
         });
     </script>
+    <!-- Back to Top Button HTML -->
+<button id="backToTopBtn" title="Go to top" style="
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: #b5526c; 
+    color: white; 
+    cursor: pointer; 
+    padding: 12px 16px; 
+    border-radius: 50%; 
+    font-size: 18px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: background-color 0.2s, transform 0.2s;
+" onmouseover="this.style.backgroundColor='#e0a3b2'; this.style.transform='scale(1.1)';" onmouseout="this.style.backgroundColor='#b5526c'; this.style.transform='scale(1.0)';">
+  ↑
+</button>
+
+<!-- Back to Top Logic (JavaScript) -->
+<script>
+    // Get the button element
+    const mybutton = document.getElementById("backToTopBtn");
+
+    // When the user scrolls down 400px from the top of the document, show the button
+    window.onscroll = function() { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, smoothly scroll to the top of the document
+    mybutton.addEventListener("click", function(){
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
 </body>
 </html>
