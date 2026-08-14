@@ -1,7 +1,7 @@
 ---
 layout: null
-title:Seasonal Gifts Occasions
-tags: [christmas presnets, christmas tree decorations, Handmade stationery gift setPersonalized notebook and penHand decorated notebookCustom beaded pen setFestive stocking fillers UKAesthetic stationery bundleUnique gifts for herHandcrafted Christmas giftsCustom keychain and pen setPersonalised stationary gifts]
+title: Seasonal Gifts Occasions
+tags: [christmas presents, chtistmas tree decorations, handmade stationary gift set, personalisonalised notebook & penhand, decorated notebook, custom beaded pen set, festivestocking fillers, UK aesthetic stationery bundles, unique gifts for her, handcrafted christmas gift, christmas gift, custom keychain & pen set, personalised stationery gifts]
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -10,10 +10,10 @@ tags: [christmas presnets, christmas tree decorations, Handmade stationery gift 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- 🌟 GOOGLE META TITLE (Under 60 Characters Display Limit) -->
-    <title>Seasonal & Handmade Personalised Gifts | Boutique</title>
+    <title>Seasonal & Handmade Persoanlised Gifts | Boutique</title>
     
     <!-- 🌟 GOOGLE META DESCRIPTION -->
-    <meta name="description" content="Shop unique handmade beaded gifts for every season. Unique beaded pens, keychains, christmas tree decorations, personalised itmes.">
+    <meta name="description" content="Shop unique handmade beaded gifts for every season. Unique beaded pens, keychains, christmas tree decorations, personalised items.">
     
     <!-- 🚀 ADDED FOR SEO SEARCH ENGINE RELEVANCE -->
     <meta name="keywords" content="{{ page.tags | join: ', ' }}">
@@ -298,6 +298,45 @@ tags: [christmas presnets, christmas tree decorations, Handmade stationery gift 
                 font-size: 0.72rem !important; /* Slightly smaller text for mobile fingers */
             }
         }
+       /* 🏷️ STRICT SEASONAL GIFTS BUNDLE BANNER DESIGN */
+        .seasonal-gifts-bundle-banner {
+            background: linear-gradient(135deg, #e2ecc8 0%, #a4b494 100%);
+            border: 2px dashed #3b4731;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 35px;
+            box-shadow: 0 4px 15px rgba(164, 180, 148, 0.15);
+        }
+        .seasonal-gifts-bundle-banner h2 {
+            margin: 0 0 5px 0 !important;
+            font-family: 'Playfair Display', serif !important;
+            color: #000000 !important;
+            font-size: 1.4rem !important;
+            font-weight: 600 !important;
+            text-transform: none !important;
+            letter-spacing: 0px !important;
+        }
+        .seasonal-gifts-bundle-banner p {
+            margin: 0 !important;
+            color: #2c3524 !important;
+            font-size: 0.9rem !important;
+            font-weight: 500 !important;
+        }
+
+        /* Responsive scaling for mobile phones */
+        @media (max-width: 768px) {
+            .seasonal-gifts-bundle-banner {
+                padding: 15px 10px !important;
+                margin-bottom: 25px !important;
+            }
+            .seasonal-gifts-bundle-banner h2 {
+                font-size: 1.15rem !important;
+            }
+            .seasonal-gifts-bundle-banner p {
+                font-size: 0.8rem !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -320,10 +359,7 @@ tags: [christmas presnets, christmas tree decorations, Handmade stationery gift 
     <header>
         <h1>✨ Seasonsonal Sparkle Shop ✨</h1>
         <p>Handmde Gifts - Every Season - All Year Long </p>
-    </header>
-    
-    <div class="container">
-        <div id="holiday-banner" style="background-color: #D81B60; color: white; text-align: center; padding: 10px; font-weight: bold; font-family: sans-serif; display: none;">
+         <div id="holiday-banner" style="background-color: #D81B60; color: white; text-align: center; padding: 10px; font-weight: bold; font-family: sans-serif; display: none;">
    ✨ <span id="countdown-text"></span> ✨
 </div>
 
@@ -348,6 +384,9 @@ tags: [christmas presnets, christmas tree decorations, Handmade stationery gift 
       banner.style.display = 'block'; // Show banner if offer is active
    }
 </script>
+    </header>
+    
+    <div class="container">
         <div class="product-grid">
 
             <!-- Item 1: Midnight Butterfly Notebook & Beaded Pen  -->
