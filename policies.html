@@ -229,7 +229,51 @@ permalink: /policies/
     <footer>
         <p>&copy; 2026 Sparkling Resin Delights. Handmade in the UK. All Rights Reserved.</p>
     </footer>
+<!-- Back to Top Button HTML -->
+<button id="backToTopBtn" title="Go to top" style="
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: #b5526c; 
+    color: white; 
+    cursor: pointer; 
+    padding: 12px 16px; 
+    border-radius: 50%; 
+    font-size: 18px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: background-color 0.2s, transform 0.2s;
+" onmouseover="this.style.backgroundColor='#e0a3b2'; this.style.transform='scale(1.1)';" onmouseout="this.style.backgroundColor='#b5526c'; this.style.transform='scale(1.0)';">
+  ↑
+</button>
 
+<!-- Back to Top Logic (JavaScript) -->
+<script>
+    // Get the button element
+    const mybutton = document.getElementById("backToTopBtn");
+
+    // When the user scrolls down 400px from the top of the document, show the button
+    window.onscroll = function() { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, smoothly scroll to the top of the document
+    mybutton.addEventListener("click", function(){
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
 </body>
 </html>
 {% endraw %}
