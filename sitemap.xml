@@ -2,62 +2,62 @@
 <urlset xmlns="http://sitemaps.org">
   <!-- Main Homepage -->
   <url>
-    <loc>https://sparklingresindelights.co.ukindex.html</loc>
+    <loc>https://sparklingresindelights.co.uk</loc>
     <priority>1.00</priority>
   </url>
-  <!-- Seasonal & Holiday Gifts Page -->
+  <!-- Seasonal Gifts & Occasions -->
   <url>
-    <loc>https://sparklingresindelights.co.ukseasonal-gifts-occasions.html</loc>
+    <loc>https://sparklingresindelights.co.uk</loc>
     <priority>0.90</priority>
   </url>
-  <!-- Our Story Page -->
+  <!-- Our Studio -->
   <url>
-    <loc>https://sparklingresindelights.co.ukour-studio.html</loc>
+    <loc>https://sparklingresindelights.co.uk</loc>
     <priority>0.70</priority>
   </url>
-  <!-- Store Policies Page -->
+  <!-- Policies -->
   <url>
-    <loc>https://sparklingresindelights.co.ukpolicies.html</loc>
+    <loc>https://sparklingresindelights.co.uk</loc>
     <priority>0.50</priority>
   </url>
-  <!-- Contact Us Page -->
+  <!-- Contact Us -->
   <url>
-    <loc>https://sparklingresindelights.co.ukcontact.html</loc>
+    <loc>https://sparklingresindelights.co.uk</loc>
     <priority>0.60</priority>
+  </url>
+  <!-- Resin Jewelry -->
   <url>
-    <!-- Resin Jewerly -->
- <url>  
-    <loc>https://sparklingresindelights.co.ukresin-jewelry.html</loc>
+    <loc>https://sparklingresindelights.co.uk</loc>
     <priority>0.60</priority>
-   <url>  
-     <!-- Beaded Pens -->
+  </url>
+  <!-- Beaded Pens -->
   <url>
-    <loc>https://sparklingresindelights.co.ukbeaded-pens.html</loc>
+    <loc>https://sparklingresindelights.co.uk</loc>
     <priority>0.60</priority>
-   <url>
-     <!-- Keychains -->
+  </url>
+  <!-- Beaded Keychains -->
   <url>
-    <loc>https://sparklingresindelights.co.ukbeaded-keychains.html</loc>
+    <loc>https://sparklingresindelights.co.uk</loc>
     <priority>0.60</priority>
-  <url> 
-     <!-- Bracelets -->
+  </url>
+  <!-- Beaded Bracelets -->
   <url>
-    <loc>https://sparklingresindelights.co.ukbeaded-bracelets.html</loc>
+    <loc>https://sparklingresindelights.co.uk</loc>
     <priority>0.60</priority>
-  <url>  
-     <!-- Cups & Glasses -->
+  </url>
+  <!-- Cups & Glasses -->
   <url>
-    <loc>https://sparklingresindelights.co.ukcups-and-glasses.html</loc>
+    <loc>https://sparklingresindelights.co.uk</loc>
     <priority>0.60</priority>
-   <url> 
-     <!-- Wedding -->
+  </url>
+  <!-- Wedding & Hen Parties -->
   <url>
-    <loc>https://sparklingresindelights.co.ukwedding.html</loc>
+    <loc>https://sparklingresindelights.co.uk</loc>
     <priority>0.60</priority>
-   <url>
-    <!-- Resin Mirrors -->
+  </url>
+  <!-- Resin Mirrors & Brushes -->
   <url>
-    <loc>https://sparklingresindelights.co.ukresin-mirrors.html</loc>
+    <loc>https://sparklingresindelights.co.uk</loc>
     <priority>0.60</priority>
   </url>
 </urlset>
