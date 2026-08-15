@@ -1,0 +1,6 @@
+# Allow all search engines to crawl our boutique site
+User-agent: *
+Allow: /
+
+# Point Google and Bing directly to our corrected sitemap file
+Sitemap: https://sparklingresindelights.co.uk
