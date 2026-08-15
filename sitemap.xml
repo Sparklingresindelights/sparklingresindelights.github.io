@@ -1,48 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://sitemaps.org">
-  <!-- Index -->
+<urlset xmlns="http://sitemaps.org">
+  <!-- Main Homepage -->
   <url>
-    <loc>https://sparklingresindelights.co.uk</loc>
+    <loc>https://sparklingresindelights.co.ukindex.html</loc>
     <priority>1.00</priority>
   </url>
-  <!-- Resin Jewelry -->
+  <!-- Seasonal & Holiday Gifts Page -->
   <url>
-    <loc>https://sparklingresindelights.co.uk</loc>
-    <priority>0.80</priority>
+    <loc>https://sparklingresindelights.co.ukseasonal-gifts-occasions.html</loc>
+    <priority>0.90</priority>
   </url>
-  <!-- Beaded Pens -->
+  <!-- Our Story Page -->
   <url>
-    <loc>https://sparklingresindelights.co.uk</loc>
-    <priority>0.80</priority>
+    <loc>https://sparklingresindelights.co.ukour-studio.html</loc>
+    <priority>0.70</priority>
   </url>
-  <!-- Beaded Keychains -->
+  <!-- Store Policies Page -->
   <url>
-    <loc>https://sparklingresindelights.co.uk</loc>
-    <priority>0.80</priority>
-  </url>
-  <!-- Beaded Bracelets -->
-  <url>
-    <loc>https://sparklingresindelights.co.uk</loc>
-    <priority>0.80</priority>
-  </url>
-  <!-- Cups & Glasses -->
-  <url>
-    <loc>https://sparklingresindelights.co.uk</loc>
-    <priority>0.80</priority>
-  </url>
-  <!-- Wedding & Hen Parties -->
-  <url>
-    <loc>https://sparklingresindelights.co.uk</loc>
-    <priority>0.80</priority>
-  </url>
-  <!-- Resin Mirrors & Hairbrushes -->
-  <url>
-    <loc>https://sparklingresindelights.co.uk</loc>
-    <priority>0.80</priority>
-  </url>
-  <!-- Contact Page -->
-  <url>
-    <loc>https://sparklingresindelights.co.uk</loc>
+    <loc>https://sparklingresindelights.co.ukpolicies.html</loc>
     <priority>0.50</priority>
+  </url>
+  <!-- Contact Us Page -->
+  <url>
+    <loc>https://sparklingresindelights.co.ukcontact.html</loc>
+    <priority>0.60</priority>
+  <url>
+    <!-- Resin Jewerly -->
+ <url>  
+    <loc>https://sparklingresindelights.co.ukresin-jewelry.html</loc>
+    <priority>0.60</priority>
+   <url>  
+     <!-- Beaded Pens -->
+  <url>
+    <loc>https://sparklingresindelights.co.ukbeaded-pens.html</loc>
+    <priority>0.60</priority>
+   <url>
+     <!-- Keychains -->
+  <url>
+    <loc>https://sparklingresindelights.co.ukbeaded-keychains.html</loc>
+    <priority>0.60</priority>
+  <url> 
+     <!-- Bracelets -->
+  <url>
+    <loc>https://sparklingresindelights.co.ukbeaded-bracelets.html</loc>
+    <priority>0.60</priority>
+  <url>  
+     <!-- Cups & Glasses -->
+  <url>
+    <loc>https://sparklingresindelights.co.ukcups-and-glasses.html</loc>
+    <priority>0.60</priority>
+   <url> 
+     <!-- Wedding -->
+  <url>
+    <loc>https://sparklingresindelights.co.ukwedding.html</loc>
+    <priority>0.60</priority>
+   <url>
+    <!-- Resin Mirrors -->
+  <url>
+    <loc>https://sparklingresindelights.co.ukresin-mirrors.html</loc>
+    <priority>0.60</priority>
   </url>
 </urlset>
