@@ -60,4 +60,9 @@
     <loc>https://sparklingresindelights.co.uk</loc>
     <priority>0.60</priority>
   </url>
+   <!-- Dedicated Earrings Page -->
+  <url>
+    <loc>https://sparklingresindelights.co.uk</loc>
+    <priority>0.85</priority>
+  </url>
 </urlset>
