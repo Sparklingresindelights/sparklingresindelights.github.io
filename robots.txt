@@ -1,6 +1,9 @@
-# Allow all search engines to crawl our boutique site
+# Allow all search engines to crawl our main storefront
 User-agent: *
 Allow: /
 
-# Point Google and Bing directly to our corrected sitemap file
+# Prevent crawlers from indexing raw HTML layout snippets and components
+Disallow: /safety-notice.html
+
+# Point Google and Bing directly to our validated sitemap
 Sitemap: https://sparklingresindelights.co.uk
