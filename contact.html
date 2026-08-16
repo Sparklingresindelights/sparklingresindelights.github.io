@@ -9,43 +9,54 @@
 <body style="margin:0; padding:0; font-family:sans-serif; background-color:#ffffff; color:#333;">
 
     <!-- Top Compact Utility Bar (Admin Pages) -->
-    <div style="width: 100%; background-color: #fcf8f9; border-bottom: 1px solid #f2e2e5; padding: 5px 0; font-size: 0.75rem; text-align: right; box-sizing: border-box;">
-        <div style="max-width: 1300px; margin: 0 auto; padding-right: 20px; display: flex; justify-content: flex-end; gap: 15px;">
+    <div class="top-utility-bar" style="width: 100%; background-color: #fcf8f9; border-bottom: 1px solid #f2e2e5; padding: 4px 0; font-size: 0.75rem; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; gap: 15px;">
             <a href="our-studio.html" style="text-decoration: none; color: #777;" onmouseover="this.style.color='#b5526c'" onmouseout="this.style.color='#777'">Our Studio</a>
             <a href="contact.html" style="text-decoration: none; color: #777;" onmouseover="this.style.color='#b5526c'" onmouseout="this.style.color='#777'">Contact Us</a>
             <a href="policies.html" style="text-decoration: none; color: #777;" onmouseover="this.style.color='#b5526c'" onmouseout="this.style.color='#777'">Store Policies</a>
         </div>
     </div>
 
-    <!-- MAIN SIDE-BY-SIDE CONTAINER -->
-    <div style="display: flex; max-width: 1300px; margin: 0 auto; min-height: 100vh; flex-wrap: wrap;">
+    <!-- Tidy, Narrow Main Navigation Bar (Smaller Tabs) -->
+    <nav class="site-navigation" style="width: 100%; border-bottom: 1px solid #f0d5db; background-color: #ffffff; padding: 8px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap;">
+            
+            <a href="index.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Home</a>
+            
+            <!-- Shrunken Highlighted Earring Link -->
+            <a href="earrings.html" style="text-decoration: none; color: #b5526c; font-size: 0.85rem; font-weight: bold; padding: 4px 10px; border: 1px dashed #e0a3b2; border-radius: 4px; background-color: #fff9fa;" onmouseover="this.style.backgroundColor='#fbebee'" onmouseout="this.style.backgroundColor='#fff9fa'">✨ Earrings</a>
 
-        <!-- LEFT-HAND SIDE NAVIGATION BAR -->
-        <aside style="width: 220px; min-width: 220px; background-color: #ffffff; border-right: 1px solid #f0d5db; padding: 25px 15px; box-sizing: border-box;">
-            <h3 style="color: #b5526c; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 0; margin-bottom: 15px; border-bottom: 1px solid #f0d5db; padding-bottom: 5px;">Shop Categories</h3>
-            <nav style="display: flex; flex-direction: column; gap: 8px;">
-                <a href="index.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 6px 8px; border-radius: 4px; transition: 0.2s;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Home</a>
-                
-                <!-- Active Page Highlight Style Example -->
-                <a href="earrings.html" style="text-decoration: none; color: #b5526c; font-size: 0.85rem; font-weight: bold; padding: 6px 8px; border-left: 3px solid #b5526c; background-color: #fff9fa; border-radius: 0 4px 4px 0;">✨ Earrings</a>
-                
-                <a href="resin-jewelry.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 6px 8px; border-radius: 4px; transition: 0.2s;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Resin Jewelry</a>
-                
-                <a href="beaded-pens.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 6px 8px; border-radius: 4px; transition: 0.2s;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Beaded Pens</a>
-                
-                <a href="beaded-keychains.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 6px 8px; border-radius: 4px; transition: 0.2s;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Keychains</a>
-                
-                <a href="beaded-bracelets.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 6px 8px; border-radius: 4px; transition: 0.2s;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Bracelets</a>
-                
-                <a href="resin-mirrors.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 6px 8px; border-radius: 4px; transition: 0.2s;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Mirrors &amp; Brushes</a>
-                
-                <a href="cups-and-glasses.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 6px 8px; border-radius: 4px; transition: 0.2s;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Cups &amp; Glasses</a>
-                
-                <a href="wedding.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 6px 8px; border-radius: 4px; transition: 0.2s;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Wedding Favours</a>
-                
-                <a href="seasonal-gifts-occasions.html" style="text-decoration: none; color: #e67e22; font-size: 0.85rem; font-weight: bold; padding: 6px 8px; border-radius: 4px; transition: 0.2s;" onmouseover="this.style.color='#d35400'; this.style.backgroundColor='#fffaf5';" onmouseout="this.style.color='#e67e22'; this.style.backgroundColor='transparent';">🍁 Autumn &amp; Halloween</a>
-            </nav>
-        </aside>
+            <a href="resin-jewelry.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Resin Jewelry</a>
+            
+            <a href="beaded-pens.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Beaded Pens</a>
+            
+            <a href="beaded-keychains.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Keychains</a>
+            
+            <a href="beaded-bracelets.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Bracelets</a>
+
+            <a href="resin-mirrors.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Mirrors &amp; Brushes</a>
+
+            <a href="cups-and-glasses.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Cups &amp; Glasses</a>
+            
+            <a href="wedding.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Wedding</a>
+            
+            <a href="seasonal-gifts-occasions.html" style="text-decoration: none; color: #e67e22; font-size: 0.85rem; font-weight: bold; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.color='#d35400'; this.style.backgroundColor='#fffaf5';" onmouseout="this.style.color='#e67e22'; this.style.backgroundColor='transparent';">🍁 Seasonal</a>
+
+        </div>
+    </nav>
+
+    <!-- Sleek, Low-Profile Category Heading Box -->
+    <div class="category-header-container" style="width: 100%; max-width: 1200px; margin: 15px auto 15px auto; padding: 12px 20px; background-color: #fff9fa; border-bottom: 2px solid #b5526c; text-align: center; box-sizing: border-box; border-radius: 4px;">
+        <!-- Compact Writing Size -->
+        <h1 style="margin: 0; color: #b5526c; font-size: 1.3rem; font-weight: bold; letter-spacing: 0.3px;">
+            Handmade 925 Sterling Silver &amp; Statement Earrings
+        </h1>
+        <p style="margin: 4px auto 0 auto; max-width: 800px; color: #555; font-size: 0.88rem; line-height: 1.4;">
+            Handcrafted with hypoallergenic 925 sterling silver and luxury 18k gold plating. Safe for sensitive ears, our jewelry pairs precious metals with natural stones, elegant pearls, and whimsical characters.
+        </p>
+    </div>
+
+    <!-- YOUR PRODUCT CARDS START DIRECTLY BELOW THIS LINE -->
 
         <!-- RIGHT-HAND SIDE MAIN CONTENT AREA -->
         <main style="flex: 1; min-width: 300px; padding: 25px; box-sizing: border-box;">
@@ -63,9 +74,7 @@
             </div>
 
             <!-- YOUR PRODUCT CARDS / IMAGES GRID STARTS HERE -->
-            <div class="product-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px;">
-                <!-- Drop your product cards in here -->
-            </div>
+           
     <header>
         <h1>Contact Sparkling Resin Delights | Custom Orders UK</h1>
         <p>Have a question about our handmade resin crafts or custom beaded jewelry? Get in touch with Sparkling Resin Delights. We love creating bespoke color schemes, bulk party favors, and personalized orders shipped directly across the UK from our Gloucestershire home. Fill out our contact form today and we will get back to you shortly.</p>
