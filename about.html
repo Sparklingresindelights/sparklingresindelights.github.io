@@ -1,62 +1,162 @@
+---
+layout: null
+title: About Us
+---
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Handmade Statement &amp; Sterling Silver Earrings</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Our Story | Sparkling Resin Delights</title>
+    <meta name="description" content="Meet Dee and Sophie, the mother-daughter duo behind Sparkling Resin Delights. Read how crafting helps us navigate FND and ADHD.">
+    
+    <style>
+        :root {
+            --bg-color: #fff9f5; 
+            --olive-dark: #000000;   
+            --olive-mid: #2c3524;    
+            --card-bg: #ffffff;
+            --text-muted: #475569;
+            --green-gradient: linear-gradient(135deg, #e2ecc8 0%, #a4b494 100%);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color); 
+            color: #1e293b;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            background-color: var(--olive-mid); 
+            padding: 16px 15px;
+            text-align: center;
+            border-bottom: 2px solid #e2ecc8;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #ffffff; 
+            margin: 0 18px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.78rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        header {
+            background: var(--green-gradient); 
+            color: var(--olive-dark) !important;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 3px solid #ffffff;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.4rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .about-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background: var(--card-bg);
+            border: 2px solid #eae6e1;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(30, 41, 59, 0.04);
+        }
+
+        .about-container h2 {
+            color: var(--olive-mid);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            margin-top: 0;
+        }
+
+        .about-container p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #334155;
+            margin-bottom: 20px;
+        }
+
+        .roles-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .role-card {
+            background: #fdfcf9;
+            border: 1px dashed #a4b494;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .role-card h3 {
+            margin-top: 0;
+            color: var(--olive-mid);
+        }
+
+        .shop-btn-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .shop-btn {
+            background: var(--green-gradient);
+            color: var(--olive-dark);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            display: inline-block;
+            transition: opacity 0.2s;
+        }
+        .shop-btn:hover { opacity: 0.85; }
+
+        footer {
+            background-color: var(--olive-mid); 
+            color: #ffffff;
+            text-align: center;
+            padding: 35px 20px;
+            font-size: 0.85rem;
+            margin-top: 60px;
+            border-top: 4px solid #e2ecc8;
+        }
+
+        @media (max-width: 768px) {
+            .roles-grid { grid-template-columns: 1fr; }
+            .about-container { margin: 20px; padding: 20px; }
+        }
+    </style>
 </head>
-<body style="margin:0; padding:0; font-family:sans-serif; background-color:#ffffff; color:#333;">
+<body>
 
-    <!-- Top Compact Utility Bar (Admin Pages) -->
-    <div class="top-utility-bar" style="width: 100%; background-color: #fcf8f9; border-bottom: 1px solid #f2e2e5; padding: 4px 0; font-size: 0.75rem; text-align: center;">
-        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; gap: 15px;">
-            <a href="about.html" style="text-decoration: none; color: #777;" onmouseover="this.style.color='#b5526c'" onmouseout="this.style.color='#777'">Our Studio</a>
-            <a href="contact.html" style="text-decoration: none; color: #777;" onmouseover="this.style.color='#b5526c'" onmouseout="this.style.color='#777'">Contact Us</a>
-            <a href="policies.html" style="text-decoration: none; color: #777;" onmouseover="this.style.color='#b5526c'" onmouseout="this.style.color='#777'">Store Policies</a>
-        </div>
-    </div>
-
-    <!-- Tidy, Narrow Main Navigation Bar (Smaller Tabs) -->
-    <nav class="site-navigation" style="width: 100%; border-bottom: 1px solid #f0d5db; background-color: #ffffff; padding: 8px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
-        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap;">
-            
-            <a href="index.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Home</a>
-            
-            <!-- Shrunken Highlighted Earring Link -->
-            <a href="earrings.html" style="text-decoration: none; color: #b5526c; font-size: 0.85rem; font-weight: bold; padding: 4px 10px; border: 1px dashed #e0a3b2; border-radius: 4px; background-color: #fff9fa;" onmouseover="this.style.backgroundColor='#fbebee'" onmouseout="this.style.backgroundColor='#fff9fa'">✨ Earrings</a>
-
-            <a href="resin-jewelry.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Resin Jewelry</a>
-            
-            <a href="beaded-pens.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Beaded Pens</a>
-            
-            <a href="beaded-keychains.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Keychains</a>
-            
-            <a href="beaded-bracelets.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Bracelets</a>
-
-            <a href="resin-mirrors.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Mirrors &amp; Brushes</a>
-
-            <a href="cups-and-glasses.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Cups &amp; Glasses</a>
-            
-            <a href="wedding.html" style="text-decoration: none; color: #555; font-size: 0.85rem; font-weight: 600; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.color='#b5526c'; this.style.backgroundColor='#fff9fa';" onmouseout="this.style.color='#555'; this.style.backgroundColor='transparent';">Wedding</a>
-            
-            <a href="seasonal-gifts-occasions.html" style="text-decoration: none; color: #e67e22; font-size: 0.85rem; font-weight: bold; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.color='#d35400'; this.style.backgroundColor='#fffaf5';" onmouseout="this.style.color='#e67e22'; this.style.backgroundColor='transparent';">🍁 Seasonal</a>
-
-        </div>
+   <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">Our Story</a> 
+        <a href="earrings.html">Earrings</a>
+        <a href="resin-jewelry.html">Resin Jewelry</a>
+        <a href="beaded-pens.html">Beaded Pens</a>
+        <a href="beaded-keychains.html">Keychains</a>
+        <a href="beaded-bracelets.html">Bracelets</a>
+        <a href="cups-and-glasses.html">Cups & Glasses</a>
+        <a href="wedding.html">Weddings & Hen Parties</a>
+        <a href="resin-mirrors.html">Resin Mirrors & Hairbrushes</a>
+          <a href="seasonal-gifts-occasions.html">Seasonal Gifts Occasions</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="policies/">Store Policies</a>
     </nav>
-
-    <!-- Sleek, Low-Profile Category Heading Box -->
-    <div class="category-header-container" style="width: 100%; max-width: 1200px; margin: 15px auto 15px auto; padding: 12px 20px; background-color: #fff9fa; border-bottom: 2px solid #b5526c; text-align: center; box-sizing: border-box; border-radius: 4px;">
-        <!-- Compact Writing Size -->
-        <h1 style="margin: 0; color: #b5526c; font-size: 1.3rem; font-weight: bold; letter-spacing: 0.3px;">
-            Handmade 925 Sterling Silver &amp; Statement Earrings
-        </h1>
-        <p style="margin: 4px auto 0 auto; max-width: 800px; color: #555; font-size: 0.88rem; line-height: 1.4;">
-            Handcrafted with hypoallergenic 925 sterling silver and luxury 18k gold plating. Safe for sensitive ears, our jewelry pairs precious metals with natural stones, elegant pearls, and whimsical characters.
-        </p>
-    </div>
-
-    <!-- YOUR PRODUCT CARDS START DIRECTLY BELOW THIS LINE -->
 
     <header>
         <h1>Our Story</h1>
