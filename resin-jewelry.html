@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: null
 title: Resin Jewelry
 tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings uk, bespoke botanical pendants, custom crystal jewelry, wearable resin artforest queen anne's lace necklace, pressed flower resin jewelry, real wildflower pendant uk, cottagecore botanical necklace, handmade resin floral gifts, bespoke nature jewelry, pink glitter oval hoops, split design resin earrings, pastel pink shimmer dangles, handmade glitter hoops uk, transparent pink oval earrings, elegant boutique resin jewelry]
 ---
@@ -27,7 +27,7 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
     
   <style>
         :root {
-            --bg-color: #fff9f5; /* A bright, energetic warm cream */
+            --bg-color: #cde0c9; /* Updated background to match your beautiful soft sage across your store layout */
             --primary-dark: #1e293b;
             --olive-dark: #000000;   /* Forced solid black for high contrast */
             --olive-mid: #2c3524;    /* Deep olive grounding colour */
@@ -94,50 +94,64 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
             -webkit-font-smoothing: antialiased;
         }
 
-        /* 🧭 UPDATED: Changed to White Background with Black Text & Light Border */
+        /* 🧭 UPDATED: Pure White Top Navigation Container Layout */
         nav {
-            background-color: #ffffff; 
-            padding: 16px 15px;
+            background-color: #ffffff !important; 
+            background: #ffffff !important;
+            padding: 20px 15px 12px 15px;
             text-align: center;
+            border-top: 6px solid #ffffff !important; /* Pure white top border accent line */
             border-bottom: 2px solid #eae6e1;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
+
+        /* 🧭 UPDATED: Links styled as Clear Tabs with Black Writing */
         nav a {
-            color: #000000; 
-            margin: 0 18px;
+            background-color: transparent !important; 
+            color: #000000 !important;               
+            margin: 0 4px;
+            padding: 8px 14px;
+            border-radius: 4px 4px 0 0; 
+            border: 1px solid transparent;            
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.78rem;
+            font-size: 0.75rem; 
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            transition: opacity 0.2s;
+            transition: all 0.2s ease-in-out;
+            display: inline-block;
         }
         nav a:hover {
-            opacity: 0.8;
+            background-color: rgba(0, 0, 0, 0.05) !important; 
+            border: 1px solid rgba(0, 0, 0, 0.15);           
+            color: #000000 !important;
         }
 
         /* Elegant Editorial Header with your custom green background gradient */
         header {
             background: var(--green-gradient); 
             color: var(--olive-dark) !important;
-            padding: 60px 20px;
+            padding: 50px 20px;
             text-align: center;
-            border-bottom: 3px solid #ffffff;
+            border-bottom: none !important; /* Stripped border line to blend seamlessly with background panel color */
             box-shadow: 0 4px 20px rgba(164, 180, 148, 0.2);
         }
+
+        /* 📐 UPDATED: Main heading writing made smaller */
         header h1 {
             margin: 0;
-            font-size: 2.6rem;
+            font-size: 1.9rem; /* Reduced from 2.6rem */
             font-family: 'Playfair Display', serif;
             font-weight: 600;
             letter-spacing: -0.5px;
             color: var(--olive-dark) !important;
+            border-bottom: none !important; /* Hides horizontal rule lines */
         }
        header p {
             font-family: 'Playfair Display', serif;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             margin: 12px 0 0 0;
             font-style: italic;
             color: #000000 !important; /* 🌟 Forces the subtitle small writing to crisp black */
@@ -203,32 +217,7 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
             opacity: 1;
             pointer-events: auto;
         }
-	  .slide-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.95);
-            border: 2px solid #a4b494;
-            color: var(--olive-mid);
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 10px rgba(164, 180, 148, 0.15);
-            transition: all 0.2s;
-            z-index: 50;
-            user-select: none;
-        }
-        .slide-btn:hover {
-            background: #a4b494;
-            color: #ffffff;
-        }
-        .prev-btn { left: 10px; }
+	  .prev-btn { left: 10px; }
         .next-btn { right: 10px; }
 
         .product-info {
@@ -243,7 +232,8 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
         .product-card h3 {
             margin: 0 0 8px 0;
             color: var(--olive-mid);
-            font-size: 1.15rem;
+            font-size: 1.1rem; /* Balanced alignment scale reduction */
+            border-bottom: none !important; /* Strips gray lines from cards */
         }
         .product-card p {
             font-size: 0.85rem;
@@ -259,7 +249,7 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
             padding: 35px 20px;
             font-size: 0.85rem;
             margin-top: 50px;
-            border-top: 4px solid #e2ecc8;
+            border-top: none !important; /* Stripped line to match green theme blend */
         }
 	   /* 📱 MOBILE MEDIA OVERRIDE SWITCH */
         @media (max-width: 768px) {
@@ -271,10 +261,11 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
 
             /* 2. Slightly decreases header fonts so they don't break lines awkwardly */
             header h1 {
-                font-size: 1.9rem !important;
+                font-size: 1.5rem !important; /* Made smaller for neat layout scaling */
+                border-bottom: none !important;
             }
             header p {
-                font-size: 1rem !important;
+                font-size: 0.95rem !important;
             }
 
             /* 3. Evens out the page padding boundaries for narrower screens */
@@ -289,41 +280,46 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
             }
         }
 	    @media (max-width: 768px) {
-            /* 🧭 UPDATED FOR MOBILE: Clean white menu bar & black text */
+            /* 🧭 UPDATED FOR MOBILE: Clean white menu bar with clear tabs */
             nav {
                 background-color: #ffffff !important;
-                padding: 12px 10px !important;
+                padding: 12px 6px !important;
+                border-top: 4px solid #ffffff !important;
                 border-bottom: 2px solid #eae6e1 !important;
             }
             nav a {
+                background-color: transparent !important; /* Clear tabs on mobile views */
                 color: #000000 !important;
                 display: inline-block !important;
-                margin: 6px 10px !important; /* Tightens gaps so names fit comfortably */
-                font-size: 0.72rem !important; /* Slightly smaller text for mobile fingers */
+                margin: 4px 2px !important; /* Tightens padding gaps to prevent line wraps */
+                padding: 6px 8px !important;
+                border-radius: 4px !important;
+                font-size: 0.68rem !important; 
             }
         }
     </style>
 </head>
 <body>
-    <!-- 🧭 NAVIGATION BAR -->
-  <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">Our Story</a> 
-        <a href="earrings.html">Earrings</a>
-        <a href="resin-jewelry.html">Resin Jewelry</a>
-        <a href="beaded-pens.html">Beaded Pens</a>
-        <a href="beaded-keychains.html">Keychains</a>
-        <a href="beaded-bracelets.html">Bracelets</a>
-        <a href="cups-and-glasses.html">Cups & Glasses</a>
-        <a href="wedding.html">Weddings & Hen Parties</a>
-        <a href="resin-mirrors.html">Resin Mirrors & Hairbrushes</a>
-          <a href="seasonal-gifts-occasions.html">Seasonal Gifts Occasions</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="policies/">Store Policies</a>
+    <!-- 🧭 FIXED NAVIGATION BAR WITH JEKYLL ROUTING -->
+    <nav>
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/about.html' | relative_url }}">Our Story</a> 
+        <a href="{{ '/earrings.html' | relative_url }}">Earrings</a>
+        <a href="{{ '/resin-jewelry.html' | relative_url }}">Resin Jewelry</a>
+        <a href="{{ '/beaded-pens.html' | relative_url }}">Beaded Pens</a>
+        <a href="{{ '/beaded-keychains.html' | relative_url }}">Keychains</a>
+        <a href="{{ '/beaded-bracelets.html' | relative_url }}">Bracelets</a>
+        <a href="{{ '/cups-and-glasses.html' | relative_url }}">Cups & Glasses</a>
+        <a href="{{ '/wedding.html' | relative_url }}">Weddings & Hen Parties</a>
+        <a href="{{ '/resin-mirrors.html' | relative_url }}">Resin Mirrors & Hairbrushes</a>
+        <a href="{{ '/seasonal-gifts-occasions.html' | relative_url }}">Seasonal Gifts Occasions</a>
+        <a href="{{ '/contact.html' | relative_url }}">Contact Us</a>
+        <a href="{{ '/policies/' | relative_url }}">Store Policies</a>
     </nav>
- <header style="background-color: #3A6073; color: #ffffff; padding: 50px 20px; text-align: center; border-bottom: 3px solid #E6F2F7; box-shadow: 0 4px 20px rgba(58, 96, 115, 0.15); display: block; width: 100%; box-sizing: border-box;">
-        <h1 style="margin: 0; font-size: 2.2rem; font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.5px; color: #ffffff; text-align: center;">Handmade Resin Jewelry & Crystal Pendants</h1>
-        <p style="font-family: 'Playfair Display', serif; font-size: 1.05rem; margin: 12px 0 0 0; font-style: italic; color: #ffffff; opacity: 0.95; text-align: center;">Discover unique, wearable art handcrafted in the UK with preserved botanicals, vibrant sparkles, and crystal-clear finishes.</p>
+
+    <header>
+        <h1>Handmade Resin Jewelry & Crystal Pendants</h1>
+        <p>Discover unique, wearable art handcrafted in the UK with preserved botanicals, vibrant sparkles, and crystal-clear finishes.</p>
     </header>
 
     <div class="container">
@@ -340,7 +336,7 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Pressed Flower Resin Necklace | Queen Anne’s Lace Boutique</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Pressed Flower Resin Necklace | Queen Anne’s Lace Boutique</h3>
                         <p class="price">£18.99</p>
                         <p>Shop our Forest Queen Anne’s Lace pressed flower resin necklace in the UK. Handcrafted botanical wildflower pendant jewelry. Perfect cottagecore gift.</p>
                     </div>
@@ -350,7 +346,7 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>
             </div>
 
-            <!-- Item 2: Gold Sun Celestial Earrings -->
+			<!-- Item 2: Gold Sun Celestial Earrings -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -361,7 +357,7 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Handmade Gold Sun Celestial Resin Drop Earrings | Boutique</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Handmade Gold Sun Celestial Resin Drop Earrings | Boutique</h3>
                         <p class="price">£12.00</p>
                         <p>Shop our gold sun celestial resin drop earrings in the UK. Handcrafted with shimmering iridescent shards and high-gloss boutique charms. Perfect boho gift.</p>
                     </div>
@@ -381,7 +377,7 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Pink Buttercup Pressed Flower Resin Necklace | Boutique</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Pink Buttercup Pressed Flower Resin Necklace | Boutique</h3>
                         <p class="price">£18.99</p>
                         <p>Shop our Pink Buttercup pressed flower resin necklace in the UK. Handcrafted botanical wildflower pendant jewelry. Perfect delicate cottagecore gift.</p>
                     </div>
@@ -402,7 +398,7 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Pink Glitter Oval Hoops | Handmade Resin Earrings</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Pink Glitter Oval Hoops | Handmade Resin Earrings</h3>
                         <p class="price">£7.50</p>
                         <p>Shop our Pink Glitter Oval Hoops in the UK. Handcrafted from crystal-clear resin with a unique transparent and pink shimmer half-and-half split design.</p>
                     </div>
@@ -423,7 +419,7 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Sunset Gummy Bear Drops | Handmade Novelty Earrings</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Sunset Gummy Bear Drops | Handmade Novelty Earrings</h3>
                         <p class="price">£8.00</p>
                         <p>Shop our Sunset Gummy Bear Drops in the UK. Handcrafted from premium resin with a stunning red-to-peach ombre gradient. The perfect playful boutique gift.</p>
                     </div>
@@ -444,7 +440,7 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Warm Marbled Orange Ovals | Handmade Resin Earrings</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Warm Marbled Orange Ovals | Handmade Resin Earrings</h3>
                         <p class="price">£8.00</p>
                         <p>Shop our Warm Marbled Orange Ovals in the UK. Handcrafted from high-gloss boutique resin, individually swirled with rich natural orange and amber tones.</p>
                     </div>
@@ -465,7 +461,7 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Resin Vintage Pendant Earrings | Handmade Floral Gift</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Resin Vintage Pendant Earrings | Handmade Floral Gift</h3>
                         <p class="price">£15.00</p>
                         <p>Shop our Resin Vintage Pendant Earrings in the UK. Handcrafted antique bronze dangles featuring real pressed small pink flowers and green botanical leaves.</p>
                     </div>
@@ -486,7 +482,7 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Map Jasper & Love Heart Necklace | Handmade Gemstone</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Map Jasper & Love Heart Necklace | Handmade Gemstone</h3>
                         <p class="price">£18.00</p>
                         <p>Shop our Map Jasper & Love Heart custom beaded necklace in the UK. Handcrafted 21" silver-toned chain featuring natural swirled stone beads and a LOVE charm.</p>
                     </div>
@@ -496,7 +492,7 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>			
            </div>  
 
-			<!-- Item 9: Teardrop Crystal & Amethy Necklace -->
+			<!-- Item 9: Teardrop Crystal & Amethyst Necklace -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -507,7 +503,7 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Teardrop Crystal & Amethyst Necklace | Purple Gemstone</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Teardrop Crystal & Amethyst Necklace | Purple Gemstone</h3>
                         <p class="price">£9.00</p>
                         <p>Shop our Teardrop Crystal & Amethyst Necklace in the UK. Handcrafted 21" silver chain featuring a rainbow prism crystal pendant and raw purple amethyst.</p>
                     </div>
@@ -527,8 +523,8 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>💙Aurora Clover Crystal Necklace | Handmade UK Jewellery</h3>
-                        <p class="price">18.99</p>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">💙Aurora Clover Crystal Necklace | Handmade UK Jewellery</h3>
+                        <p class="price">£18.99</p>
                         <p>Shop the Aurora Clover Crystal Necklace. Features shimmering iridescent crystal beads reflecting blue, green & gold, finished with a thoughtful heart charm.</p>
                     </div>
                 </div>
@@ -548,8 +544,8 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>🌙Celestial Moonlight Crystal Necklace | Silver Moon Charm</h3>
-                        <p class="price">18.99</p>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">🌙Celestial Moonlight Crystal Necklace | Silver Moon Charm</h3>
+                        <p class="price">£18.99</p>
                         <p>Discover our Celestial Moonlight Crystal Necklace. Features an intricate silver crescent moon, a dangling aura quartz crystal drop, and a delicate star charm.</p>
                     </div>
                 </div>
@@ -568,8 +564,8 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Midnight Galaxy Chunky Glitter Resin Earrings | Purple & Teal Oval Hoops</h3>
-                        <p class="price">10.00</p>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Midnight Galaxy Chunky Glitter Resin Earrings | Purple & Teal Oval Hoops</h3>
+                        <p class="price">£10.00</p>
                         <p>Sparkle all night with the Midnight Galaxy resin earrings. Clear oval hoops packed with chunky deep purple, turquoise, and iridescent glitter.</p>
                     </div>
                 </div>
@@ -588,8 +584,8 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Tropical Sunset Neon Marbled Resin Earrings | Monstera Leaf Dangles</h3>
-                        <p class="price">10.00</p>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Tropical Sunset Neon Marbled Resin Earrings | Monstera Leaf Dangles</h3>
+                        <p class="price">£10.00</p>
                         <p>Brighten your day with the Tropical Sunset resin earrings. Features vibrant swirls of neon hot pink and zesty yellow-green in a monstera leaf shape.</p>
                     </div>
                 </div>
@@ -598,7 +594,7 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>
             </div>
 
-			       <!-- Item 14:The Emerald Arbor Botanical Pendant   -->
+			<!-- Item 14:The Emerald Arbor Botanical Pendant   -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -608,8 +604,8 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>The Emerald Arbor Botanical Pendant | Real Flower Necklace</h3>
-                        <p class="price">21.99</p>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">The Emerald Arbor Botanical Pendant | Real Flower Necklace</h3>
+                        <p class="price">£21.99</p>
                         <p>Adorn yourself with nature. The Emerald Arbor handmade resin pendant features a real dried lace flower bouquet on a glittering green background. Gift boxed!</p>
                     </div>
                 </div>
@@ -629,7 +625,7 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Iridescent Diamond Resin Vintage Keychain | Boutique UK</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Iridescent Diamond Resin Vintage Keychain | Boutique UK</h3>
                         <p class="price">£8.00</p>
                         <p>Shop our Iridescent Diamond Resin Vintage Keychain in the UK. Hand-cast geometric gold-plated bezel charm featuring shifting emerald, sapphire & teal flakes.</p>
                     </div>
@@ -650,7 +646,7 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Handmade Astronaut Cosmic Resin Vintage Keychain | Boutique</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Handmade Astronaut Cosmic Resin Vintage Keychain | Boutique</h3>
                         <p class="price">£8.00</p>
                         <p>Shop our Astronaut Cosmic Resin Vintage Keychain in the UK. Handcrafted space-themed rectangular gold charm featuring fine stargazing glitter fields.</p>
                     </div>
@@ -671,7 +667,7 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Handmade Triangle Botanical Resin Vintage Keychain | UK</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Handmade Triangle Botanical Resin Vintage Keychain | UK</h3>
                         <p class="price">£8.00</p>
                         <p>Shop our Triangle Botanical Resin Vintage Keychain in the UK. Handcrafted antique bronze charm featuring real pink pressed flowers and blue iridescent foil.</p>
                     </div>
@@ -692,7 +688,7 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Handmade Oval Vintage Flower Resin Keychain | Boutique</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Handmade Oval Vintage Flower Resin Keychain | Boutique</h3>
                         <p class="price">£8.00</p>
                         <p>Shop our Oval Vintage Flower Resin Keychain in the UK. Handcrafted classic pendant featuring real pressed pink & white flowers, foliage, and gold glitter.</p>
                     </div>
@@ -702,19 +698,19 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
             </div>
            </div>
 
-			      <!-- Item 19: The Fushsia Meadow Vintage Keychain  -->
+			      <!-- Item 19: The Fuchsia Meadow Vintage Keychain  -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
-                    <img src="fuchsia meadow.jpg" alt="The Fushsia Meadow Vintage Keychain View 1" class="active">
-                    <img src="fuchsia meadow1.jpg" alt="The Fushsia Meadow Vintage Keychain View 2">
+                    <img src="fuchsia meadow.jpg" alt="The Fuchsia Meadow Vintage Keychain View 1" class="active">
+                    <img src="fuchsia meadow1.jpg" alt="The Fuchsia Meadow Vintage Keychain View 2">
                     <button class="slide-btn next-btn" type="button">&rsaquo;</button>
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>The Fushsia Meadow Vintage Keychain | Pressed Flower Charm</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">The Fuchsia Meadow Vintage Keychain | Pressed Flower Charm</h3>
                         <p class="price">£13.99</p>
-                        <p>Elevate your keys with The Fushsia Meadow Keychain. Features real pressed white Queen Anne's lace flowers set against a vibrant hot pink background.</p>
+                        <p>Elevate your keys with The Fuchsia Meadow Keychain. Features real pressed white Queen Anne's lace flowers set against a vibrant hot pink background.</p>
                     </div>
                 </div>
                 <div class="stripe-container">
@@ -722,7 +718,7 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
           </div>
            </div>
 
-			   <!-- Item 20: The Midnight Celestial Moon Keychain -->
+			<!-- Item 20: The Midnight Celestial Moon Keychain -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -732,27 +728,22 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>The Midnight Celestial Moon Keychain | Blue Flower Charm</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">The Midnight Celestial Moon Keychain | Blue Flower Charm</h3>
                         <p class="price">£13.99</p>
                         <p>Carry the night sky with The Midnight Celestial Moon resin Keychain. Features genuine golden star bursts and delicate blue micro-glitter floral textures.</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-        <a href="https://payhip.com/b/zK21t" class="payhip-buy-button" data-theme="none" data-product="zK21t">View Item Details</a>
-          </div>
+                    <a href="https://payhip.com/b/zK21t" class="payhip-buy-button" data-theme="none" data-product="zK21t">View Item Details</a>
+                </div>
            </div>
 
-			     
-
-
-			   
-			
-            
         </div> <!-- End of .product-grid -->
     </div> <!-- End of .container -->
 
     <footer>
         <p>&copy; 2026 Sparkling Resin Delights. Handmade in the UK. All Rights Reserved.</p>
+        <div style="margin-top: 15px; font-size: 0.85rem; opacity: 0.8;">
             Follow Our Journey: 
             <a href="https://instagram.com" target="_blank" style="color: #ffffff; margin: 0 10px; text-decoration: underline;">Instagram</a> | 
             <a href="https://payhip.com" target="_blank" style="color: #ffffff; margin: 0 10px; text-decoration: underline;">Payhip Profile</a>
@@ -786,50 +777,69 @@ tags: [handmade resin jewelry, dried flower necklaces, unique glitter earrings u
             }
         });
     </script>
-	<!-- Back to Top Button HTML -->
-<button id="backToTopBtn" title="Go to top" style="
-    display: none; 
-    position: fixed; 
-    bottom: 20px; 
-    right: 20px; 
-    z-index: 99; 
-    border: none; 
-    outline: none; 
-    background-color: #b5526c; 
-    color: white; 
-    cursor: pointer; 
-    padding: 12px 16px; 
-    border-radius: 50%; 
-    font-size: 18px; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transition: background-color 0.2s, transform 0.2s;
-" onmouseover="this.style.backgroundColor='#e0a3b2'; this.style.transform='scale(1.1)';" onmouseout="this.style.backgroundColor='#b5526c'; this.style.transform='scale(1.0)';">
-  ↑
-</button>
+    
+    <!-- Back to Top Button HTML -->
+    <button id="backToTopBtn" title="Go to top" style="
+        display: none; 
+        position: fixed; 
+        bottom: 20px; 
+        right: 20px; 
+        z-index: 99; 
+        border: none; 
+        outline: none; 
+        background-color: #b5526c; 
+        color: white; 
+        cursor: pointer; 
+        padding: 12px 16px; 
+        border-radius: 50%; 
+        font-size: 18px; 
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        transition: background-color 0.2s, transform 0.2s;
+    " onmouseover="this.style.backgroundColor='#e0a3b2'; this.style.transform='scale(1.1)';" onmouseout="this.style.backgroundColor='#b5526c'; this.style.transform='scale(1.0)';">
+      ↑
+    </button>
 
-<!-- Back to Top Logic (JavaScript) -->
-<script>
-    // Get the button element
-    const mybutton = document.getElementById("backToTopBtn");
-
-    // When the user scrolls down 400px from the top of the document, show the button
-    window.onscroll = function() { scrollFunction() };
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
+    <!-- Back to Top Logic (JavaScript) -->
+    <script>
+        // Get the button element
+        const mybutton = document.getElementById("backToTopBtn");
+    
+        // When the user scrolls down 400px from the top of the document, show the button
+        window.onscroll = function() { scrollFunction() };
+    
+        function scrollFunction() {
+            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
         }
-    }
-
-    // When the user clicks on the button, smoothly scroll to the top of the document
-    mybutton.addEventListener("click", function(){
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+    
+        // When the user clicks on the button, smoothly scroll to the top of the document
+        mybutton.addEventListener("click", function(){
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         });
-    });
-</script>
+    </script>
 </body>
-</html> 
+</html>
+     
+      
+
+ 
+          
+             
+
+           
+           
+            
+   
+         
+       
+      
+      
+        
+
+			   
