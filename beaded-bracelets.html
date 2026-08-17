@@ -90,18 +90,18 @@ tags: [handcrafted beaded bracelets, gemstone jewelry uk, golden swan stone brac
             -webkit-font-smoothing: antialiased;
         }
 
-        /* 🧭 UPDATED: Deep olive navigation bar header frame */
+        /* 🧭 UPDATED: Changed to White Background with Black Text & Light Border */
         nav {
-            background-color: var(--olive-mid); 
+            background-color: #ffffff; 
             padding: 16px 15px;
             text-align: center;
-            border-bottom: 2px solid #e2ecc8;
+            border-bottom: 2px solid #eae6e1;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
         nav a {
-            color: #ffffff; 
+            color: #000000; 
             margin: 0 18px;
             text-decoration: none;
             font-weight: 600;
@@ -235,7 +235,7 @@ tags: [handcrafted beaded bracelets, gemstone jewelry uk, golden swan stone brac
             justify-content: space-between;
         }
 
-        /* Global product text rules: sizes and colours */
+       /* Global product text rules: sizes and colours */
         .product-card h3 {
             margin: 0 0 8px 0;
             color: var(--olive-mid);
@@ -285,10 +285,14 @@ tags: [handcrafted beaded bracelets, gemstone jewelry uk, golden swan stone brac
             }
         }
        @media (max-width: 768px) {
+            /* 🧭 UPDATED FOR MOBILE: Clean white menu bar & black text */
             nav {
+                background-color: #ffffff !important;
                 padding: 12px 10px !important;
+                border-bottom: 2px solid #eae6e1 !important;
             }
             nav a {
+                color: #000000 !important;
                 display: inline-block !important;
                 margin: 6px 10px !important; /* Tightens gaps so names fit comfortably */
                 font-size: 0.72rem !important; /* Slightly smaller text for mobile fingers */
@@ -430,6 +434,8 @@ tags: [handcrafted beaded bracelets, gemstone jewelry uk, golden swan stone brac
           "@type": "QuantitativeValue",
           "minValue": 1,
           "maxValue": 3,
+          "unitCode": "DAY"
+"maxValue": 3,
           "unitCode": "DAY"
         },
         "transitTime": {
