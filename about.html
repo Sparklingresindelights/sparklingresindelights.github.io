@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: null
 title: About Us
 ---
 <!DOCTYPE html>
@@ -11,158 +11,103 @@ title: About Us
     <meta name="description" content="Meet Dee and Sophie, the mother-daughter duo behind Sparkling Resin Delights. Read how crafting helps us navigate FND and ADHD.">
     
     <style>
-        :root {
-            --bg-color: #fff9f5; 
-            --olive-dark: #000000;   
-            --olive-mid: #2c3524;    
-            --card-bg: #ffffff;
-            --text-muted: #475569;
-            --green-gradient: linear-gradient(135deg, #e2ecc8 0%, #a4b494 100%);
-        }
-        
+         /* 🎨 Set the page background color to match your soft sage green */
         body {
-            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--bg-color); 
+            background-color: #cde0c9 !important; /* Soft sage green background */
+            font-family: 'Inter', sans-serif;
             color: #1e293b;
-            -webkit-font-smoothing: antialiased;
         }
 
+        /* 📐 Make heading sizes smaller on this page */
+        h1 { font-size: 1.8rem !important; margin-top: 10px; }
+        h2 { font-size: 1.4rem !important; }
+        h3 { font-size: 1.15rem !important; }
+
+        /* 🎨 Strip out any gray theme lines or boxed frames */
+        h1, h2, h3, h4, h5, h6 {
+            border-bottom: none !important;
+        }
+
+        /* 🧭 Top White Border Container */
         nav {
             background-color: #ffffff; 
-            padding: 16px 15px;
+            padding: 20px 15px 12px 15px;
             text-align: center;
+            border-top: 6px solid #ffffff; /* Crisp Top White Border */
             border-bottom: 2px solid #eae6e1;
             position: sticky;
             top: 0;
             z-index: 1000;
+            margin-bottom: 30px;
         }
+        
+        /* 🧭 Clear Navigation Tabs with Black Writing */
         nav a {
-            color: #000000; 
-            margin: 0 18px;
+            background-color: transparent !important; 
+            color: #000000 !important;               
+            margin: 0 4px;
+            padding: 8px 14px;
+            border-radius: 4px 4px 0 0; 
+            border: 1px solid transparent;            
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.78rem;
+            font-size: 0.75rem; 
             letter-spacing: 1.5px;
             text-transform: uppercase;
-        }
-
-        header {
-            background: var(--green-gradient); 
-            color: var(--olive-dark) !important;
-            padding: 50px 20px;
-            text-align: center;
-            border-bottom: 3px solid #ffffff;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.4rem;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .about-container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 30px;
-            background: var(--card-bg);
-            border: 2px solid #eae6e1;
-            border-radius: 8px;
-            box-shadow: 0 8px 24px rgba(30, 41, 59, 0.04);
-        }
-
-        .about-container h2 {
-            color: var(--olive-mid);
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            margin-top: 0;
-        }
-
-        .about-container p {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: #334155;
-            margin-bottom: 20px;
-        }
-
-        .roles-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin: 30px 0;
-        }
-
-        .role-card {
-            background: #fdfcf9;
-            border: 1px dashed #a4b494;
-            padding: 20px;
-            border-radius: 6px;
-        }
-
-        .role-card h3 {
-            margin-top: 0;
-            color: var(--olive-mid);
-        }
-
-        .shop-btn-container {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .shop-btn {
-            background: var(--green-gradient);
-            color: var(--olive-dark);
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 4px;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
+            transition: all 0.2s ease-in-out;
             display: inline-block;
-            transition: opacity 0.2s;
         }
-        .shop-btn:hover { opacity: 0.85; }
-
-        footer {
-            background-color: var(--olive-mid); 
-            color: #ffffff;
-            text-align: center;
-            padding: 35px 20px;
-            font-size: 0.85rem;
-            margin-top: 60px;
-            border-top: 4px solid #e2ecc8;
+        nav a:hover {
+            background-color: rgba(0, 0, 0, 0.05) !important; 
+            border: 1px solid rgba(0, 0, 0, 0.15);           
+            color: #000000 !important;
         }
 
+        /* Standard body content wrapper to stop stretching */
+        .page-content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 30px;
+            background-color: #ffffff; /* Clean white card container for readability */
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+        
+        /* Mobile scaling rules */
         @media (max-width: 768px) {
-            .roles-grid { grid-template-columns: 1fr; }
-            .about-container { margin: 20px; padding: 20px; }
+            nav { padding: 12px 6px !important; }
+            nav a { margin: 4px 2px !important; padding: 6px 8px !important; font-size: 0.68rem !important; }
+            .page-content-container { margin: 10px; padding: 15px; }
         }
     </style>
 </head>
 <body>
 
-   <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">Our Story</a> 
-        <a href="earrings.html">Earrings</a>
-        <a href="resin-jewelry.html">Resin Jewelry</a>
-        <a href="beaded-pens.html">Beaded Pens</a>
-        <a href="beaded-keychains.html">Keychains</a>
-        <a href="beaded-bracelets.html">Bracelets</a>
-        <a href="cups-and-glasses.html">Cups & Glasses</a>
-        <a href="wedding.html">Weddings & Hen Parties</a>
-        <a href="resin-mirrors.html">Resin Mirrors & Hairbrushes</a>
-          <a href="seasonal-gifts-occasions.html">Seasonal Gifts Occasions</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="policies/">Store Policies</a>
+    <!-- 🧭 ERROR-FREE NAVIGATION MENU -->
+    <nav>
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/about.html' | relative_url }}">Our Story</a> 
+        <a href="{{ '/earrings.html' | relative_url }}">Earrings</a>
+        <a href="{{ '/resin-jewelry.html' | relative_url }}">Resin Jewelry</a>
+        <a href="{{ '/beaded-pens.html' | relative_url }}">Beaded Pens</a>
+        <a href="{{ '/beaded-keychains.html' | relative_url }}">Keychains</a>
+        <a href="{{ '/beaded-bracelets.html' | relative_url }}">Bracelets</a>
+        <a href="{{ '/cups-and-glasses.html' | relative_url }}">Cups & Glasses</a>
+        <a href="{{ '/wedding.html' | relative_url }}">Weddings & Hen Parties</a>
+        <a href="{{ '/resin-mirrors.html' | relative_url }}">Resin Mirrors & Hairbrushes</a>
+        <a href="{{ '/seasonal-gifts-occasions.html' | relative_url }}">Seasonal Gifts Occasions</a>
+        <a href="{{ '/contact.html' | relative_url }}">Contact Us</a>
+        <a href="{{ '/policies/' | relative_url }}">Store Policies</a>
     </nav>
 
     <header>
         <h1>Our Story</h1>
     </header>
 
-    <div class="about-container">
+    <!-- Main Text Container -->
+    <div class="page-content-container">
         <h2>Welcome to Sparkling Resin Delights!</h2>
         
         <!-- 📸 OVERVIEW IMAGE OF OUR WORKSPACE / CRAFTS -->
@@ -203,5 +148,6 @@ title: About Us
         <p>&copy; 2026 Sparkling Resin Delights. Handcrafted Boutique Treasures Shipped Across the UK via Tracked Evri Delivery.</p>
     </footer>
 
+ </div> <!-- Closes your page content container -->
 </body>
 </html>
