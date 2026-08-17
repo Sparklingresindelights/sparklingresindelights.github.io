@@ -1,3 +1,8 @@
+---
+layout: default
+title: Home
+tags: [handmade crafts uk, bespoke custom gifts, custom beaded pens, resin jewelry boutique, sparkling resin delights, personalized home decor]
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,28 +44,36 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* 🧭 UPDATED: Changed to White Background with Black Text & Light Border */
+        /* 🧭 UPDATED: White background container with a bold Top White Border */
         nav {
             background-color: #ffffff; 
-            padding: 16px 15px;
+            padding: 20px 15px 12px 15px;
             text-align: center;
+            border-top: 6px solid #ffffff; /* White Top Border applied here */
             border-bottom: 2px solid #eae6e1;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
+        
+        /* 🧭 UPDATED: Links now styled as distinct Black Tabs with White Writing */
         nav a {
-            color: #000000; 
-            margin: 0 18px;
+            background-color: #000000;
+            color: #ffffff; 
+            margin: 0 8px;
+            padding: 8px 16px;
+            border-radius: 4px 4px 0 0; /* Creates the tab appearance */
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.78rem; /* Scaled down for a sleek look */
+            font-size: 0.75rem; /* Made slightly smaller for a sleek look */
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            transition: opacity 0.2s;
+            transition: background-color 0.2s;
+            display: inline-block;
         }
         nav a:hover {
-            opacity: 0.8;
+            background-color: #333333; /* Soft dark grey shift on hover */
+            color: #ffffff;
         }
         
         /* 📐 RESTORED: Your Homepage Split layout panel frames */
@@ -81,19 +94,22 @@
         .header-box {
             background: var(--green-gradient) !important;
             padding: 35px 40px;
-            border-bottom: 2px solid #a4b494;
+            border-bottom: none; /* Changed border to blend cleanly with gradient background */
             border-radius: 8px;
             box-sizing: border-box;
             margin-bottom: 30px;
             box-shadow: 0 4px 15px rgba(164, 180, 148, 0.2);
         }
+        
+        /* 📐 UPDATED: Main heading writing made smaller */
         .header-text h1 {
             margin: 0; 
-            font-size: 2.4rem; /* Balanced header size */
+            font-size: 1.9rem; /* Made smaller from 2.4rem for balance */
             font-family: 'Playfair Display', serif; 
             font-weight: 600; 
             letter-spacing: -0.5px; 
             color: var(--olive-dark) !important; /* Forced crisp black text */
+            border-bottom: none !important; /* Blends border out into the page background color */
         }
 
         /* Slideshow Frame Box for clean resizing */
@@ -156,11 +172,14 @@
             margin-bottom: 30px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.01);
         }
+        
+        /* 📐 UPDATED: Secondary heading writing made smaller */
         .info-section h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
+            font-size: 1.35rem; /* Made smaller from 1.6rem */
             margin-top: 0;
             color: var(--olive-mid);
+            border-bottom: none !important; /* Blends border out into white card background */
         }
         .info-section p {
             font-size: 0.88rem; /* Smaller, neat reading text */
@@ -190,14 +209,17 @@
             margin-bottom: 30px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.01);
         }
+        
+        /* 📐 UPDATED: Form heading writing made smaller */
         .feedback-form-container h3 {
             font-family: 'Playfair Display', serif; 
             font-weight: 500; 
-            font-size: 1.4rem; 
+            font-size: 1.2rem; /* Made smaller from 1.4rem */
             margin-top: 0; 
             margin-bottom: 20px; 
             color: var(--olive-mid);
             text-align: center;
+            border-bottom: none !important;
         }
         .form-group {
             margin-bottom: 20px;
@@ -228,8 +250,7 @@
             min-height: 110px;
             resize: vertical;
         }
-        
-        .submit-btn {
+      .submit-btn {
             display: block; 
             width: 100%; 
             background: var(--green-gradient); 
@@ -256,7 +277,7 @@
             padding: 35px 20px;
             font-size: 0.85rem;
             margin-top: 50px;
-            border-top: 4px solid #e2ecc8;
+            border-top: none !important; /* Removed contrasting border line to blend cleanly */
         }
        /* 📱 HOMEPAGE MOBILE OVERRIDE SWITCH */
         @media (max-width: 768px) {
@@ -282,8 +303,9 @@
                 margin-bottom: 20px !important;
             }
             .header-text h1 {
-                font-size: 1.8rem !important;
+                font-size: 1.5rem !important; /* Made smaller for better mobile scaling */
                 text-align: center;
+                border-bottom: none !important;
             }
 
             /* 4. Compacts the spacing on your info cards and customer review forms */
@@ -292,7 +314,8 @@
                 margin-bottom: 25px !important;
             }
             .info-section h2, .feedback-form-container h3 {
-                font-size: 1.3rem !important;
+                font-size: 1.15rem !important; /* Scaled down for mobile */
+                border-bottom: none !important;
             }
 
             /* 5. Safe framework scaling for your homepage slideshow frame */
@@ -301,38 +324,42 @@
                 margin-bottom: 25px !important;
             }
 
-            /* 6. 🧭 UPDATED FOR MOBILE: Clean white menu bar & black text */
+            /* 6. 🧭 UPDATED FOR MOBILE: Clean black tab styling with white text */
             nav {
                 background-color: #ffffff !important;
-                padding: 12px 10px !important;
+                padding: 12px 6px !important;
+                border-top: 4px solid #ffffff !important; /* Maintains top white border */
                 border-bottom: 2px solid #eae6e1 !important;
             }
             nav a {
-                color: #000000 !important;
+                background-color: #000000 !important;
+                color: #ffffff !important;
                 display: inline-block !important;
-                margin: 6px 10px !important; /* Tightens gaps so titles fit */
-                font-size: 0.72rem !important; /* Slightly smaller text for mobile viewing */
+                margin: 4px 3px !important; /* Tightens padding gaps to prevent overflow tracking */
+                padding: 6px 10px !important;
+                border-radius: 4px 4px 0 0 !important;
+                font-size: 0.68rem !important; /* Fits long category tabs on narrow screen sizes */
             }
         }
     </style>
     <meta name="facebook-domain-verification" content="8mm2j9d9yfiypvkbqq1apgfhwrzqin" />
 </head>
 <body>
-    <!-- 🧭 NAVIGATION BAR -->
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">Our Story</a> 
-        <a href="earrings.html">Earrings</a>
-        <a href="resin-jewelry.html">Resin Jewelry</a>
-        <a href="beaded-pens.html">Beaded Pens</a>
-        <a href="beaded-keychains.html">Keychains</a>
-        <a href="beaded-bracelets.html">Bracelets</a>
-        <a href="cups-and-glasses.html">Cups & Glasses</a>
-        <a href="wedding.html">Weddings & Hen Parties</a>
-        <a href="resin-mirrors.html">Resin Mirrors & Hairbrushes</a>
-          <a href="seasonal-gifts-occasions.html">Seasonal Gifts Occasions</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="policies/">Store Policies</a>
+    <!-- 🧭 FIXED NAVIGATION BAR WITH JEKYLL ROUTING -->
+    <nav>
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/about.html' | relative_url }}">Our Story</a> 
+        <a href="{{ '/earrings.html' | relative_url }}">Earrings</a>
+        <a href="{{ '/resin-jewelry.html' | relative_url }}">Resin Jewelry</a>
+        <a href="{{ '/beaded-pens.html' | relative_url }}">Beaded Pens</a>
+        <a href="{{ '/beaded-keychains.html' | relative_url }}">Keychains</a>
+        <a href="{{ '/beaded-bracelets.html' | relative_url }}">Bracelets</a>
+        <a href="{{ '/cups-and-glasses.html' | relative_url }}">Cups & Glasses</a>
+        <a href="{{ '/wedding.html' | relative_url }}">Weddings & Hen Parties</a>
+        <a href="{{ '/resin-mirrors.html' | relative_url }}">Resin Mirrors & Hairbrushes</a>
+        <a href="{{ '/seasonal-gifts-occasions.html' | relative_url }}">Seasonal Gifts Occasions</a>
+        <a href="{{ '/contact.html' | relative_url }}">Contact Us</a>
+        <a href="{{ '/policies/' | relative_url }}">Store Policies</a>
     </nav>
 
    <div class="split-layout">
@@ -351,7 +378,7 @@
             
             <!-- First Order 10% Discount Announcement Banner -->
             <div class="info-section" style="border: 2px dashed var(--accent-gold); background-color: #f4f9fc; text-align: center; padding: 25px 20px; margin-bottom: 40px;">
-                <h3 style="margin: 0 0 8px 0; font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--primary-dark);">✨ Special Welcome Gift ✨</h3>
+                <h3 style="margin: 0 0 8px 0; font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--primary-dark); border-bottom: none !important;">✨ Special Welcome Gift ✨</h3>
                 <p style="margin: 0 0 15px 0; font-size: 0.95rem; color: #4a5568;">
                     Enjoy an exclusive <strong>10% OFF</strong> your very first boutique order with us!
                 </p>
@@ -375,20 +402,19 @@
                 <p>We want your handcrafted goodies to reach you safely and quickly. All orders across the UK are carefully packaged and sent with reliable tracking via Evri or Royal Mail postage services, giving you absolute peace of mind from our studio home straight to your front door.</p>
                 <div class="delivery-badge">📦 Tracked UK Delivery via Evri or Royal Mail</div>
             </div>
-
             <!-- Collections Index Links -->
             <div style="margin-bottom: 60px; font-family: 'Playfair Display', serif;">
-                <h3 style="font-size: 1.4rem; font-weight: 500; border-bottom: 2px solid var(--pastel-blue-accent); padding-bottom: 10px; margin-bottom: 20px; color: var(--primary-dark);">Explore Our Collections</h3>
-                <a href="earrings.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #cbdde6; font-weight: 500;">&rarr; Earrings</a>
-                <a href="resin-jewelry.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #cbdde6; font-weight: 500;">&rarr; Resin Jewelry</a>
-                <a href="beaded-pens.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #cbdde6; font-weight: 500;">&rarr; Beaded Pens</a>
-                <a href="beaded-keychains.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #cbdde6; font-weight: 500;">&rarr; Handmade Keychains</a>
-                <a href="beaded-bracelets.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #cbdde6; font-weight: 500;">&rarr; Beaded Bracelets</a>
-                <a href="cups-and-glasses.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #cbdde6; font-weight: 500;">&rarr; Cups & Glasses</a>
-                <a href="wedding.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #cbdde6; font-weight: 500;">&rarr; Weddings & Hen Parties</a>
-                <a href="resin-mirrors.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #cbdde6; font-weight: 500;">&rarr; Resin Mirrors / Hairbrushes</a>
-                <a href="seasonal-gifts-occasions.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #cbdde6; font-weight: 500;">&rarr; Seasonal Gifts Occasions</a>
-                <a href="contact.html" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #cbdde6; font-weight: 500;">&rarr; Contact Us</a>
+                <h3 style="font-size: 1.2rem; font-weight: 500; border-bottom: none !important; padding-bottom: 10px; margin-bottom: 20px; color: var(--primary-dark);">Explore Our Collections</h3>
+                <a href="{{ '/earrings.html' | relative_url }}" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #cbdde6; font-weight: 500;">&rarr; Earrings</a>
+                <a href="{{ '/resin-jewelry.html' | relative_url }}" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #cbdde6; font-weight: 500;">&rarr; Resin Jewelry</a>
+                <a href="{{ '/beaded-pens.html' | relative_url }}" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #cbdde6; font-weight: 500;">&rarr; Beaded Pens</a>
+                <a href="{{ '/beaded-keychains.html' | relative_url }}" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #cbdde6; font-weight: 500;">&rarr; Handmade Keychains</a>
+                <a href="{{ '/beaded-bracelets.html' | relative_url }}" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #cbdde6; font-weight: 500;">&rarr; Beaded Bracelets</a>
+                <a href="{{ '/cups-and-glasses.html' | relative_url }}" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #cbdde6; font-weight: 500;">&rarr; Cups & Glasses</a>
+                <a href="{{ '/wedding.html' | relative_url }}" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #cbdde6; font-weight: 500;">&rarr; Weddings & Hen Parties</a>
+                <a href="{{ '/resin-mirrors.html' | relative_url }}" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #cbdde6; font-weight: 500;">&rarr; Resin Mirrors / Hairbrushes</a>
+                <a href="{{ '/seasonal-gifts-occasions.html' | relative_url }}" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #cbdde6; font-weight: 500;">&rarr; Seasonal Gifts Occasions</a>
+                <a href="{{ '/contact.html' | relative_url }}" style="display: block; padding: 14px 0; color: var(--primary-dark); text-decoration: none; font-size: 1.15rem; border-bottom: 1px dotted #cbdde6; font-weight: 500;">&rarr; Contact Us</a>
             </div>
 
             <!-- Interactive Bottom Left Slideshow Gallery -->
@@ -433,8 +459,8 @@
     </form>
 </div>
             <!-- Real Customer Reviews Area -->
-            <div style="background-color: #f4f9fc; padding: 40px 30px; border-radius: 8px; text-align: left; margin-bottom: 40px; border-bottom: 2px solid #cbdde6;">
-                <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 500; margin-bottom: 30px; color: var(--primary-dark);">Kind Words From Our Collectors</h2>
+            <div style="background-color: #f4f9fc; padding: 40px 30px; border-radius: 8px; text-align: left; margin-bottom: 40px; border-bottom: none !important;">
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 1.45rem; font-weight: 500; margin-bottom: 30px; color: var(--primary-dark); border-bottom: none !important;">Kind Words From Our Collectors</h2>
                 
                 <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px dashed var(--accent-gold);">
                     <div style="color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 5px;">★★★★★</div>
@@ -478,7 +504,6 @@
         <a href="https://payhip.com" target="_blank" style="color: #ffffff; margin: 0 10px; text-decoration: underline;">Payhip Profile</a>
     </div>
     </footer>
-
     <!-- Bottom Left Slideshow Animation Engine -->
     <script>
         const bottomSlides = document.querySelectorAll('.bottomSlide');
@@ -535,4 +560,4 @@
     });
 </script>
 </body>
-</html>       
+</html>
