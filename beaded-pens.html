@@ -94,18 +94,18 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
             -webkit-font-smoothing: antialiased;
         }
 
-        /* 🧭 UPDATED: Deep olive navigation bar header frame */
+        /* 🧭 UPDATED: Changed to White Background with Black Text & Light Border */
         nav {
-            background-color: var(--olive-mid); 
+            background-color: #ffffff; 
             padding: 16px 15px;
             text-align: center;
-            border-bottom: 2px solid #e2ecc8;
+            border-bottom: 2px solid #eae6e1;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
         nav a {
-            color: #ffffff; 
+            color: #000000; 
             margin: 0 18px;
             text-decoration: none;
             font-weight: 600;
@@ -230,7 +230,7 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
         }
         .prev-btn { left: 10px; }
         .next-btn { right: 10px; }
-
+       
         .product-info {
             padding: 25px 20px 0 20px;
             flex-grow: 1;
@@ -288,11 +288,15 @@ tags: [custom beaded pens, handmade luxury stationery, personalized bubblegum pe
                 height: 240px !important;
             }
         }
-       @media (max-width: 768px) {
+        @media (max-width: 768px) {
+            /* 🧭 UPDATED FOR MOBILE: Clean white menu bar & black text */
             nav {
+                background-color: #ffffff !important;
                 padding: 12px 10px !important;
+                border-bottom: 2px solid #eae6e1 !important;
             }
             nav a {
+                color: #000000 !important;
                 display: inline-block !important;
                 margin: 6px 10px !important; /* Tightens gaps so names fit comfortably */
                 font-size: 0.72rem !important; /* Slightly smaller text for mobile fingers */
