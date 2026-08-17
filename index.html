@@ -56,24 +56,26 @@ tags: [handmade crafts uk, bespoke custom gifts, custom beaded pens, resin jewel
             z-index: 1000;
         }
         
-        /* 🧭 UPDATED: Links now styled as distinct Black Tabs with White Writing */
+         /* 🧭 UPDATED: Links styled as Clear Tabs with Black Writing */
         nav a {
-            background-color: #000000;
-            color: #ffffff; 
-            margin: 0 8px;
-            padding: 8px 16px;
-            border-radius: 4px 4px 0 0; /* Creates the tab appearance */
+            background-color: transparent !important; /* Makes the tabs clear */
+            color: #000000 !important;               /* Solid black text */
+            margin: 0 4px;
+            padding: 8px 14px;
+            border-radius: 4px 4px 0 0; 
+            border: 1px solid transparent;            /* Invisible border until hovered */
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.75rem; /* Made slightly smaller for a sleek look */
+            font-size: 0.75rem; 
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            transition: background-color 0.2s;
+            transition: all 0.2s ease-in-out;
             display: inline-block;
         }
         nav a:hover {
-            background-color: #333333; /* Soft dark grey shift on hover */
-            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.05) !important; /* Subtle tint when hovered */
+            border: 1px solid rgba(0, 0, 0, 0.15);           /* Soft outline looks like a clear tab */
+            color: #000000 !important;
         }
         
         /* 📐 RESTORED: Your Homepage Split layout panel frames */
