@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: null
 title: Seasonal Gifts Occasions
 tags: [christmas presents, christmas tree decorations, handmade stationary gift set, personalisonalised notebook & penhand, decorated notebook, custom beaded pen set, festivestocking fillers, UK aesthetic stationery bundles, unique gifts for her, handcrafted christmas gift, christmas gift, custom keychain & pen set, personalised stationery gifts]
 ---
@@ -10,7 +10,7 @@ tags: [christmas presents, christmas tree decorations, handmade stationary gift 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- 🌟 GOOGLE META TITLE (Under 60 Characters Display Limit) -->
-    <title>Seasonal & Handmade Persoanlised Gifts | Boutique</title>
+    <title>Seasonal & Handmade Personalised Gifts | Boutique</title>
     
     <!-- 🌟 GOOGLE META DESCRIPTION -->
     <meta name="description" content="Shop unique handmade beaded gifts for every season. Unique beaded pens, keychains, christmas tree decorations, personalised items.">
@@ -27,7 +27,7 @@ tags: [christmas presents, christmas tree decorations, handmade stationary gift 
     
    <style>
         :root {
-            --bg-color: #fff9f5; /* A bright, energetic warm cream */
+            --bg-color: #cde0c9; /* Set background color to match your soft sage green across your store pages */
             --primary-dark: #1e293b;
             --olive-dark: #000000;   /* Forced solid black for high contrast */
             --olive-mid: #2c3524;    /* Deep olive grounding colour */
@@ -94,50 +94,64 @@ tags: [christmas presents, christmas tree decorations, handmade stationary gift 
             -webkit-font-smoothing: antialiased;
         }
 
-        /* 🧭 UPDATED: Changed to White Background with Black Text & Light Border */
+        /* 🧭 UPDATED: Pure White Top Bar Container Layout */
         nav {
-            background-color: #ffffff; 
-            padding: 16px 15px;
+            background-color: #ffffff !important; 
+            background: #ffffff !important;
+            padding: 20px 15px 12px 15px;
             text-align: center;
+            border-top: 6px solid #ffffff !important; /* Pure white top banner line */
             border-bottom: 2px solid #eae6e1;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
+
+        /* 🧭 UPDATED: Links styled as Clear Tabs with Black Writing */
         nav a {
-            color: #000000; 
-            margin: 0 18px;
+            background-color: transparent !important; 
+            color: #000000 !important;               
+            margin: 0 4px;
+            padding: 8px 14px;
+            border-radius: 4px 4px 0 0; 
+            border: 1px solid transparent;            
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.78rem;
+            font-size: 0.75rem; 
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            transition: opacity 0.2s;
+            transition: all 0.2s ease-in-out;
+            display: inline-block;
         }
         nav a:hover {
-            opacity: 0.8;
+            background-color: rgba(0, 0, 0, 0.05) !important; 
+            border: 1px solid rgba(0, 0, 0, 0.15);           
+            color: #000000 !important;
         }
 
         /* Elegant Editorial Header with your custom green background gradient */ 
         header {
             background: var(--green-gradient); 
             color: var(--olive-dark) !important;
-            padding: 60px 20px;
+            padding: 50px 20px;
             text-align: center;
-            border-bottom: 3px solid #ffffff;
-            box-shadow: 0 4px 20px rgba(164, 180, 148, 0.2); !important;
+            border-bottom: none !important; /* Stripped border line to blend seamlessly with background panel color */
+            box-shadow: 0 4px 20px rgba(164, 180, 148, 0.2);
         }
+
+        /* 📐 UPDATED: Main heading writing made smaller */
         header h1 {
             margin: 0;
-            font-size: 2.6rem;
+            font-size: 1.9rem; /* Reduced from 2.6rem */
             font-family: 'Playfair Display', serif;
             font-weight: 600;
             letter-spacing: -0.5px;
             color: var(--olive-dark) !important;
+            border-bottom: none !important; /* Hides horizontal rule lines */
         }
         header p {
             font-family: 'Playfair Display', serif;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             margin: 12px 0 0 0;
             font-style: italic;
             color: var(--olive-mid);
@@ -243,7 +257,8 @@ tags: [christmas presents, christmas tree decorations, handmade stationary gift 
         .product-card h3 {
             margin: 0 0 8px 0;
             color: var(--olive-mid);
-            font-size: 1.15rem;
+            font-size: 1.1rem; /* Slightly smaller from 1.15rem for a balanced alignment */
+            border-bottom: none !important; /* Strips grey layout lines */
         }
         .product-card p {
             font-size: 0.85rem;
@@ -259,7 +274,7 @@ tags: [christmas presents, christmas tree decorations, handmade stationary gift 
             padding: 35px 20px;
             font-size: 0.85rem;
             margin-top: 50px;
-            border-top: 4px solid #e2ecc8;
+            border-top: none !important; /* Stripped border line to blend seamlessly with background panel color */
         }
         /* 📱 MOBILE MEDIA OVERRIDE SWITCH */
         @media (max-width: 768px) {
@@ -271,10 +286,11 @@ tags: [christmas presents, christmas tree decorations, handmade stationary gift 
 
             /* 2. Slightly decreases header fonts so they don't break lines awkwardly */
             header h1 {
-                font-size: 1.9rem !important;
+                font-size: 1.5rem !important; /* Shrunk for improved viewport fitting */
+                border-bottom: none !important;
             }
             header p {
-                font-size: 1rem !important;
+                font-size: 0.95rem !important;
             }
 
             /* 3. Evens out the page padding boundaries for narrower screens */
@@ -289,17 +305,21 @@ tags: [christmas presents, christmas tree decorations, handmade stationary gift 
             }
         }
         @media (max-width: 768px) {
-            /* 🧭 UPDATED FOR MOBILE: Clean white menu bar & black text */
+            /* 🧭 UPDATED FOR MOBILE: Clean white menu bar with clear tabs */
             nav {
                 background-color: #ffffff !important;
-                padding: 12px 10px !important;
+                padding: 12px 6px !important;
+                border-top: 4px solid #ffffff !important; /* White top border accent maintained */
                 border-bottom: 2px solid #eae6e1 !important;
             }
             nav a {
+                background-color: transparent !important; /* Clear on mobile views */
                 color: #000000 !important;
                 display: inline-block !important;
-                margin: 6px 10px !important; /* Tightens gaps so names fit comfortably */
-                font-size: 0.72rem !important; /* Slightly smaller text for mobile fingers */
+                margin: 4px 2px !important; /* Tightens padding gaps to prevent line wraps */
+                padding: 6px 8px !important;
+                border-radius: 4px !important;
+                font-size: 0.68rem !important; 
             }
         }
        /* 🏷️ STRICT SEASONAL GIFTS BUNDLE BANNER DESIGN */
@@ -316,15 +336,16 @@ tags: [christmas presents, christmas tree decorations, handmade stationary gift 
             margin: 0 0 5px 0 !important;
             font-family: 'Playfair Display', serif !important;
             color: #000000 !important;
-            font-size: 1.4rem !important;
+            font-size: 1.25rem !important; /* Shrunk slightly for unified typography */
             font-weight: 600 !important;
             text-transform: none !important;
             letter-spacing: 0px !important;
+            border-bottom: none !important;
         }
         .seasonal-gifts-bundle-banner p {
             margin: 0 !important;
             color: #2c3524 !important;
-            font-size: 0.9rem !important;
+            font-size: 0.85rem !important;
             font-weight: 500 !important;
         }
 
@@ -335,7 +356,7 @@ tags: [christmas presents, christmas tree decorations, handmade stationary gift 
                 margin-bottom: 25px !important;
             }
             .seasonal-gifts-bundle-banner h2 {
-                font-size: 1.15rem !important;
+                font-size: 1.1rem !important;
             }
             .seasonal-gifts-bundle-banner p {
                 font-size: 0.8rem !important;
@@ -344,52 +365,51 @@ tags: [christmas presents, christmas tree decorations, handmade stationary gift 
     </style>
 </head>
 <body>
-    <!-- 🧭 NAVIGATION BAR -->
-   <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">Our Story</a> 
-        <a href="earrings.html">Earrings</a>
-        <a href="resin-jewelry.html">Resin Jewelry</a>
-        <a href="beaded-pens.html">Beaded Pens</a>
-        <a href="beaded-keychains.html">Keychains</a>
-        <a href="beaded-bracelets.html">Bracelets</a>
-        <a href="cups-and-glasses.html">Cups & Glasses</a>
-        <a href="wedding.html">Weddings & Hen Parties</a>
-        <a href="resin-mirrors.html">Resin Mirrors & Hairbrushes</a>
-          <a href="seasonal-gifts-occasions.html">Seasonal Gifts Occasions</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="policies/">Store Policies</a>
+    <!-- 🧭 FIXED NAVIGATION BAR WITH JEKYLL ROUTING -->
+    <nav>
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/about.html' | relative_url }}">Our Story</a> 
+        <a href="{{ '/earrings.html' | relative_url }}">Earrings</a>
+        <a href="{{ '/resin-jewelry.html' | relative_url }}">Resin Jewelry</a>
+        <a href="{{ '/beaded-pens.html' | relative_url }}">Beaded Pens</a>
+        <a href="{{ '/beaded-keychains.html' | relative_url }}">Keychains</a>
+        <a href="{{ '/beaded-bracelets.html' | relative_url }}">Bracelets</a>
+        <a href="{{ '/cups-and-glasses.html' | relative_url }}">Cups & Glasses</a>
+        <a href="{{ '/wedding.html' | relative_url }}">Weddings & Hen Parties</a>
+        <a href="{{ '/resin-mirrors.html' | relative_url }}">Resin Mirrors & Hairbrushes</a>
+        <a href="{{ '/seasonal-gifts-occasions.html' | relative_url }}">Seasonal Gifts Occasions</a>
+        <a href="{{ '/contact.html' | relative_url }}">Contact Us</a>
+        <a href="{{ '/policies/' | relative_url }}">Store Policies</a>
     </nav>
-    <div class="container">
-            
+    
     <header>
-        <h1>✨ Seasonsonal Sparkle Shop ✨</h1>
-        <p>Handmde Gifts - Every Season - All Year Long </p>
-         <div id="holiday-banner" style="background-color: #D81B60; color: white; text-align: center; padding: 10px; font-weight: bold; font-family: sans-serif; display: none;">
-   ✨ <span id="countdown-text"></span> ✨
-</div>
+        <h1>✨ Seasonal Sparkle Shop ✨</h1>
+        <p>Handmade Gifts - Every Season - All Year Long</p>
+        <div id="holiday-banner" style="background-color: #D81B60; color: white; text-align: center; padding: 10px; font-weight: bold; font-family: sans-serif; display: none;">
+           ✨ <span id="countdown-text"></span> ✨
+        </div>
 
-<script>
-   // Set your offer end date (Year, Month [0-11], Day) -> Dec 18, 2026
-   const endDate = new Date(2026, 11, 18); 
-   const today = new Date();
-   
-   // Calculate remaining days
-   const timeDiff = endDate - today;
-   const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+        <script>
+           // Set your offer end date (Year, Month [0-11], Day) -> Dec 18, 2026
+           const endDate = new Date(2026, 11, 18); 
+           const today = new Date();
+           
+           // Calculate remaining days
+           const timeDiff = endDate - today;
+           const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
 
-   if (daysLeft >= 0) {
-      const banner = document.getElementById('holiday-banner');
-      const text = document.getElementById('countdown-text');
-      
-      if (daysLeft === 0) {
-         text.innerHTML = "LAST DAY! Get FREE UK postage on orders over £35 before it ends tonight! 📦";
-      } else {
-         text.innerHTML = "🎁 Only " + daysLeft + " days left to get FREE UK postage on orders over £35! 🎄";
-      }
-      banner.style.display = 'block'; // Show banner if offer is active
-   }
-</script>
+           if (daysLeft >= 0) {
+              const banner = document.getElementById('holiday-banner');
+              const text = document.getElementById('countdown-text');
+              
+              if (daysLeft === 0) {
+                 text.innerHTML = "LAST DAY! Get FREE UK postage on orders over £35 before it ends tonight! 📦";
+              } else {
+                 text.innerHTML = "🎁 Only " + daysLeft + " days left to get FREE UK postage on orders over £35! 🎄";
+              }
+              banner.style.display = 'block'; // Show banner if offer is active
+           }
+        </script>
     </header>
     
     <div class="container">
@@ -402,22 +422,22 @@ tags: [christmas presents, christmas tree decorations, handmade stationary gift 
                     <img src="midnight butterfly.jpg" alt="Midnight Butterfly Notebook & Beaded Pen Gift Set View 1" class="active">
                     <img src="midnight butterfly1.jpg" alt="Midnight Butterfly Notebook & Beaded Pen Gift Set View 2">
                     <img src="midnight butterfly2.jpg" alt="Midnight Butterfly Notebook & Beaded Pen Gift Set View 3">
-                      <img src="midnight butterfly3.jpg" alt="Midnight Butterfly Notebook & Beaded Pen Gift Set View 4">
+                    <img src="midnight butterfly3.jpg" alt="Midnight Butterfly Notebook & Beaded Pen Gift Set View 4">
                     <button class="slide-btn next-btn" type="button">&rsaquo;</button>
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Midnight Butterfly Notebook & Beaded Pen Gift Set</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Midnight Butterfly Notebook & Beaded Pen Gift Set</h3>
                         <p class="price">From £15.00</p>
                         <p>Embrace the magic with our Midnight Butterfly Bundle. Features a dreamy purple notebook with bold blue butterflies and a matching custom beaded pen.</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-                <a href="https://payhip.com/b/toOnf" class="payhip-buy-button" data-theme="none" data-product="toOnf">View Item Details</a>
+                    <a href="https://payhip.com/b/toOnf" class="payhip-buy-button" data-theme="none" data-product="toOnf">View Item Details</a>
                 </div>
             </div>
 
-                    <!-- Item 2: Sweet Citrus Bee Notebook  -->
+            <!-- Item 2: Sweet Citrus Bee Notebook  -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -429,7 +449,7 @@ tags: [christmas presents, christmas tree decorations, handmade stationary gift 
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Sweet Citrus Bee Notebook & Golden Beaded Pen Set</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Sweet Citrus Bee Notebook & Golden Beaded Pen Set</h3>
                         <p class="price">From £15.00</p>
                         <p>Brighten your desk with the Sweet Citrus Bee Bundle! Includes a cheerful lemon-themed notebook and an adorable, handmade golden bee beaded pen.</p>
                     </div>
@@ -451,7 +471,7 @@ tags: [christmas presents, christmas tree decorations, handmade stationary gift 
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Enchanted Violet Notebook, Pen & Keychain Gift Set</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Enchanted Violet Notebook, Pen & Keychain Gift Set</h3>
                         <p class="price">From £22.00</p>
                         <p>Discover mystery with our Enchanted Violet Bundle. Features a fantasy floral notebook, mystical artwork, a matching purple beaded pen, and a keychain.</p>
                     </div>
@@ -474,7 +494,7 @@ tags: [christmas presents, christmas tree decorations, handmade stationary gift 
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Pink Leopard Glam Notebook & Fluffy Beaded Pen Set</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Pink Leopard Glam Notebook & Fluffy Beaded Pen Set</h3>
                         <p class="price">From £15.00</p>
                         <p>Unleash your wild side with the Pink Leopard Glam Bundle. Packed with bows, hearts, and leopard print, it comes complete with a fluffy matching pen.</p>
                     </div>
@@ -494,12 +514,12 @@ tags: [christmas presents, christmas tree decorations, handmade stationary gift 
                       <img src="twinkle toes angel.jpg" alt="Twinkle Toes Angel View 4">
                      <img src="rudolphs christmas.jpg" alt="Rudolph's Christmas Jingle View 5">
                      <img src="merry christmas.jpg" alt="Merry Christmas Angel View 6">
-                     <img src="merry and bright.jpg" alt="Merry & Bright Beaded Christmas Tree Decoration View 6">
+                     <img src="merry and bright.jpg" alt="Merry & Bright Beaded Christmas Tree Decoration View 7">
                     <button class="slide-btn next-btn" type="button">&rsaquo;</button>
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Handmade Beaded Christmas Tree Decorations | Angel Charms</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Handmade Beaded Christmas Tree Decorations | Angel Charms</h3>
                         <p class="price">From £6.50</p>
                         <p>A charming collection of handmade beaded christmas decorations, featuring colorful festive beads, cheerful characters & delicate charms. Perfect for adding a little handmade magic to your christmas tree.🎄✨​</p>
                     </div>
@@ -522,7 +542,7 @@ tags: [christmas presents, christmas tree decorations, handmade stationary gift 
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Handmade Beaded Angel Tree Ornaments Collection | UK Boutique</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Handmade Beaded Angel Tree Ornaments Collection | UK Boutique</h3>
                         <p class="price">From £5.50</p>
                         <p>Shop our Handmade Beaded Angel Tree Ornaments in the UK. Handcrafted novelty festive decorations featuring friendly smile faces, light-catching holiday beads, and delicate angel charms.✨​</p>
                     </div>
@@ -532,8 +552,7 @@ tags: [christmas presents, christmas tree decorations, handmade stationary gift 
                 </div>
             </div>
 
-                  
-                   <!-- Item 7:  Scream Queen Horror Resin Earrings  -->
+            <!-- Item 7:  Scream Queen Horror Resin Earrings  -->
             <div class="product-card">
                 <div class="slideshow-container">
                     <button class="slide-btn prev-btn" type="button">&lsaquo;</button>
@@ -544,13 +563,13 @@ tags: [christmas presents, christmas tree decorations, handmade stationary gift 
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3> Scream Queen Horror Resin Earrings | Halloween Teardrop Jewelry</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Scream Queen Horror Resin Earrings | Halloween Teardrop Jewelry</h3>
                         <p class="price">£10.00</p>
                         <p>Shop the Scream Queen resin earrings. Handmade teardrop dangles featuring spooky bleeding red details and a striking horror movie face design.​</p>
                     </div>
                 </div>
                 <div class="stripe-container">
-            <a href="https://payhip.com/b/E46pi" class="payhip-buy-button" data-theme="none" data-product="E46pi">View Items Details</a>
+                    <a href="https://payhip.com/b/E46pi" class="payhip-buy-button" data-theme="none" data-product="E46pi">View Item Details</a>
                 </div>
             </div>
 
@@ -567,7 +586,7 @@ tags: [christmas presents, christmas tree decorations, handmade stationary gift 
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Spooky Beaded Halloween Phone Charms & Straps | Custom Tech Gifts</h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Spooky Beaded Halloween Phone Charms & Straps | Custom Tech Gifts</h3>
                         <p class="price">£8.99</p>
                         <p>Dress up your tech this autumn with our collection of handmade Halloween beaded phone charms. Available to buy individually, each spooky wristlet features custom-molded focal charms, textured accent beads, and shimmering crystals. From cute ghosts and bats to pumpkin spice aesthetics, choose your perfect seasonal statement accessory before they vanish!​</p>
                     </div>
@@ -587,7 +606,7 @@ tags: [christmas presents, christmas tree decorations, handmade stationary gift 
                 </div>
                 <div class="product-info">
                     <div>
-                        <h3>Handmade Character Phone Charms & Beaded Straps/h3>
+                        <h3 style="font-size: 1.15rem !important; border-bottom: none !important;">Handmade Character Phone Charms & Beaded Straps</h3>
                         <p class="price">£11.99</p>
                         <p>Upgrade your tech with our individual handmade character phone charms! From cute winter pups to out-of-this-world cosmic aliens, these beaded wristlets feature detailed focal characters, vibrant crystals, and soft, fuzzy textures.​</p>
                     </div>
@@ -633,3 +652,6 @@ tags: [christmas presents, christmas tree decorations, handmade stationary gift 
     </script>
 </body>
 </html>
+
+                  
+               
