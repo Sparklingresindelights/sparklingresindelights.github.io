@@ -1,4 +1,4 @@
----
+  ---
 layout: null
 title: Home
 tags: [handmade crafts uk, bespoke custom gifts, custom beaded pens, resin jewelry boutique, sparkling resin delights, personalized home decor]
@@ -44,15 +44,18 @@ tags: [handmade crafts uk, bespoke custom gifts, custom beaded pens, resin jewel
             -webkit-font-smoothing: antialiased;
         }
 
-        /* 🧭 Cohesive Deep Olive Top Navigation Bar Frame */
+        /* 🧭 UPDATED: Changed to White Background with Black Text & Light Border */
         nav {
-            background-color: var(--olive-mid); 
+            background-color: #ffffff; 
             padding: 16px 15px;
             text-align: center;
-            border-bottom: 2px solid #e2ecc8;
+            border-bottom: 2px solid #eae6e1;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav a {
-            color: #ffffff; 
+            color: #000000; 
             margin: 0 18px;
             text-decoration: none;
             font-weight: 600;
@@ -245,7 +248,7 @@ tags: [handmade crafts uk, bespoke custom gifts, custom beaded pens, resin jewel
             letter-spacing: 1.5px; 
             cursor: pointer;
             transition: opacity 0.2s;
-        }
+            }
         .submit-btn:hover {
             opacity: 0.85;
         }
@@ -303,11 +306,14 @@ tags: [handmade crafts uk, bespoke custom gifts, custom beaded pens, resin jewel
                 margin-bottom: 25px !important;
             }
 
-            /* 6. Spaces out and centers your long navigation menu bar links nicely */
+            /* 6. 🧭 UPDATED FOR MOBILE: Clean white menu bar & black text */
             nav {
+                background-color: #ffffff !important;
                 padding: 12px 10px !important;
+                border-bottom: 2px solid #eae6e1 !important;
             }
             nav a {
+                color: #000000 !important;
                 display: inline-block !important;
                 margin: 6px 10px !important; /* Tightens gaps so titles fit */
                 font-size: 0.72rem !important; /* Slightly smaller text for mobile viewing */
