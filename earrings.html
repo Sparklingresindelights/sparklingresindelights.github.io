@@ -45,7 +45,7 @@ tags: [handcrafted earrings, golden filigree earrings, crown pearl drops, vintag
             min-height: 45px;
             width: 100%;
             display: flex;
-            justify-content: center;
+      justify-content: center;
         }
 
         /* Forces Payhip's links and iframe elements to expand into rectangles */
@@ -93,18 +93,18 @@ tags: [handcrafted earrings, golden filigree earrings, crown pearl drops, vintag
             -webkit-font-smoothing: antialiased;
         }
 
-        /* 🧭 UPDATED: Deep olive navigation bar header frame */
+        /* 🧭 UPDATED: Changed to White Background with Black Text & Light Border */
         nav {
-            background-color: var(--olive-mid); 
+            background-color: #ffffff; 
             padding: 16px 15px;
             text-align: center;
-            border-bottom: 2px solid #e2ecc8;
+            border-bottom: 2px solid #eae6e1;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
         nav a {
-            color: #ffffff; 
+            color: #000000; 
             margin: 0 18px;
             text-decoration: none;
             font-weight: 600;
@@ -227,7 +227,7 @@ tags: [handcrafted earrings, golden filigree earrings, crown pearl drops, vintag
         .slide-btn:hover {
             background: #a4b494;
             color: #ffffff;
-        }
+            }
         .prev-btn { left: 10px; }
         .next-btn { right: 10px; }
 
@@ -261,7 +261,7 @@ tags: [handcrafted earrings, golden filigree earrings, crown pearl drops, vintag
             margin-top: 50px;
             border-top: 4px solid #e2ecc8;
         }
- /* 📱 MOBILE MEDIA OVERRIDE SWITCH */
+        /* 📱 MOBILE MEDIA OVERRIDE SWITCH */
         @media (max-width: 768px) {
             /* 1. Stacks your 3-column desktop grid into 1 single column on mobile */
             .product-grid {
@@ -288,11 +288,15 @@ tags: [handcrafted earrings, golden filigree earrings, crown pearl drops, vintag
                 height: 240px !important;
             }
         }
-           @media (max-width: 768px) {
+        @media (max-width: 768px) {
+            /* 🧭 UPDATED FOR MOBILE: Clean white menu bar & black text */
             nav {
+                background-color: #ffffff !important;
                 padding: 12px 10px !important;
+                border-bottom: 2px solid #eae6e1 !important;
             }
             nav a {
+                color: #000000 !important;
                 display: inline-block !important;
                 margin: 6px 10px !important; /* Tightens gaps so names fit comfortably */
                 font-size: 0.72rem !important; /* Slightly smaller text for mobile fingers */
